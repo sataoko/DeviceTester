@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Miteq UPC Switch</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.10.47</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163509.2.0</InstructionBytes>
+    <Explanation>status (abr&gt; a Unit A. b unit b. r RSU)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587944426403860695</ID>
+    <Explanation>online</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163509.1.0</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

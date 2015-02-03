@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ110</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>192.168.10.50</IP>
+    <Port>8080</Port>
+    <CheckSumType>
+    </CheckSumType>
+    <InstructionStructure>
+    </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>46 0D</InstructionBytes>
+    <Explanation>Get Status</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8587937748219093934</ID>
+    <Explanation>Get Status in ASCII</Explanation>
+    <InstructionBytes>F</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587937726943271222</ID>
+    <Explanation>set frequency and reference level</Explanation>
+    <InstructionBytes>F 2148 00 -75.0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587937682935579791</ID>
+    <Explanation>set frequency</Explanation>
+    <InstructionBytes>F 2149.00</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+</DeviceInstructions>

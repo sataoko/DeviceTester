@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Advantech SSPA</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>10.64.14.250</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>70,13</InstructionBytes>
+    <Explanation>Get Status: FREQ=1555.50,REF=-65.0dB</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>70,82,69,81,32,49,53,53,53,46,50,48,32,45,54,48,46,48,13</InstructionBytes>
+    <Explanation>FREQ 1555.20 -60.0</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>01,13</InstructionBytes>
+    <Explanation>Hex address</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>94,65,32,49,53,53,53,46,53,48,32,45,54,53,46,48,13</InstructionBytes>
+    <Explanation>Set Freq (RS-485 mode)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Set Freq (ethernet mode)</Explanation>
+    <InstructionBytes>70,32,49,53,53,53,46,53,48,32,45,54,53,46,48,13</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

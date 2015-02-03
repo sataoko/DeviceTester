@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+<DeviceInfo>
+<DeviceName>CPI VZU 6997</DeviceName>
+<Explanation>Amplifier </Explanation>
+<IP>10.0.0.214</IP>
+<Port>50000</Port>
+<CheckSumType>Chekcsum</CheckSumType>
+<InstructionStructure>CIF Protocol: STX=2,address,command,parameters,ETX=3,checksum </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,48,3,6</InstructionBytes>
+<Explanation>Get CHPA Model And Computer Interface Version</Explanation>
+</Instruction>
+
+
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,49,3,6</InstructionBytes>
+<Explanation>Summary Status</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,48,50,3,7</InstructionBytes>
+<Explanation>Secondary Summary Status</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,48,52,3,12</InstructionBytes>
+<Explanation>Information Error Messages</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,48,54,3,12</InstructionBytes>
+<Explanation>Get Rf Output PowerIn dBm</Explanation>
+</Instruction>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,48,55,3,12</InstructionBytes>
+<Explanation>Get Rf Output Power In Watt</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,48,56,3,12</InstructionBytes>
+<Explanation>Get Attenuator Setting</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2, 48,58,3,12</InstructionBytes>
+<Explanation>Get Low Rf Alarm Trip Point</Explanation>
+</Instruction>
+
+
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,59,3,6</InstructionBytes>
+<Explanation>Get High Rf Alarm Trip Point</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48, 60, 3, 6</InstructionBytes>
+<Explanation>Get Low Rf Fault Trip Point</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48, 61, 3, 6</InstructionBytes>
+<Explanation>Get High Rf Fault Trip Point</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48, 62, 3, 6</InstructionBytes>
+<Explanation>Get Meter</Explanation>
+</Instruction>
+
+
+</DeviceInstructions>
+
+
+

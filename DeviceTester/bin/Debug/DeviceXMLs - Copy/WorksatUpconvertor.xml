@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DeviceInstructions>
+
+<DeviceInfo>
+<DeviceName>Worksat Upconvertor</DeviceName>
+<Explanation>Antenna Control Unit</Explanation>
+<IP>10.0.0.142</IP>
+<Port>50505</Port>
+<CheckSumType>Mod 95</CheckSumType>
+<InstructionStructure> {,Address,Command,},checksum  </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,65,125,92</InstructionBytes>
+<Explanation>Status Request A</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,66,125,93</InstructionBytes>
+<Explanation>Status Request B</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,90,68,63,125,89</InstructionBytes>
+<Explanation>Read Date Time</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,90,80,125,70</InstructionBytes>
+<Explanation>Read TCP Port Number</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,90,73,125,63</InstructionBytes>
+<Explanation>Read IP Address</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,84,63,125,47</InstructionBytes>
+<Explanation>Read Attenuation</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,70,69,63,125,70</InstructionBytes>
+<Explanation>Read Frequency</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,70,49,51,52,48,48,48,48,48,125,43</InstructionBytes>
+<Explanation>Set Frequency to 13.4 Ghz</Explanation>
+</Instruction>
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,70,49,52,53,48,48,48,48,48,125,45</InstructionBytes>
+<Explanation>Set Frequency to 14.5 Ghz</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,77,125,104</InstructionBytes>
+<Explanation>Mute on</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,85,125,104</InstructionBytes>
+<Explanation>Mute off (unmute)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,81,83,125,64</InstructionBytes>
+<Explanation>Read Device Status</Explanation>
+</Instruction>
+
+
+
+
+</DeviceInstructions>
+

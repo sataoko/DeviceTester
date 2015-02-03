@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>SWC 150</DeviceName>
+<Explanation>Switch</Explanation>
+<IP>10.0.0.139</IP>
+<Port>4001</Port>
+<CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+<InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,11,0,1,80,165,74</InstructionBytes>
+<Explanation>SYS1 Select A</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,11,0,1,81,180,195</InstructionBytes>
+<Explanation>SYS1 Select B</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,11,0,1,84,227,110</InstructionBytes>
+<Explanation>SYS1 Clear Faults</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,11,0,1,85,242,231</InstructionBytes>
+<Explanation>SYS1 Get Status</Explanation>
+</Instruction>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,12,0,1,80,242,107</InstructionBytes>
+<Explanation>SYS2 Select A</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,12,0,1,81,227,226</InstructionBytes>
+<Explanation>SYS2 Select B</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,12,0,1,84,180,79</InstructionBytes>
+<Explanation>SYS2 Clear Faults</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,5,12,0,1,85,165,198</InstructionBytes>
+<Explanation>SYS2 Get Status</Explanation>
+</Instruction>
+
+
+</DeviceInstructions>
+
+
+

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Vertex TRL-1S Beacon</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.0.0.226</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>?C</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587983552297305337</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>46 0D</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587983550451659772</ID>
+    <Explanation>Status</Explanation>
+    <InstructionBytes>53 0D</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

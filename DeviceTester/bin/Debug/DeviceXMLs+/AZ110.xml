@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ110</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>10.64.14.250</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>123,85,49,125,96</InstructionBytes>
+    <Explanation>CAs:</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,79, 79, 70, 63,3,28</InstructionBytes>
+    <Explanation>(Output Frequency)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,116, 120, 115, 63,3,37</InstructionBytes>
+    <Explanation>(Transmit Status)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,79, 79, 76, 63,3,22</InstructionBytes>
+    <Explanation>(Output Level)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Explanation>RF set transmit off</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406724688149412</ID>
+    <Explanation>RF set transmit on</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,49,3,1</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406721260803379</ID>
+    <Explanation>L Band Transmit on</Explanation>
+    <InstructionBytes>2,100,84,84,109,33,49,3,24</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406720968006632</ID>
+    <Explanation>L Band Transmit off</Explanation>
+    <InstructionBytes>2,100,84,84,109,33,48,3,25</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373091874481760</ID>
+    <Explanation>Internal L-Band Tx</Explanation>
+    <InstructionBytes>2,100,84,84,99,63,3,57</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373049162338766</ID>
+    <Explanation>Internal L-Band Tx ON</Explanation>
+    <InstructionBytes>2,100,84,84,99,33,49,3,22</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373048995059198</ID>
+    <Explanation>Internal L-Band Tx OFF</Explanation>
+    <InstructionBytes>2,100,84,84,99,33,48,3,23</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+</DeviceInstructions>

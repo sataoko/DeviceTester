@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Advantech SSPA Basic</DeviceName>
+    <Explanation>HPA</Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>12 23 AA AA AA AA DD</InstructionBytes>
+    <Explanation>Read Alarms and Status</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>12 25 5A AA AA AA 8F</InstructionBytes>
+    <Explanation>Read Output TX 1</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>13 25 5A AA AA AA 90</InstructionBytes>
+    <Explanation>Read Output TX 2</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Read Attenuation 1</Explanation>
+    <InstructionBytes>12 0A 5A AA AA AA 74</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067174538693951</ID>
+    <Explanation>Read Attenuation 2</Explanation>
+    <InstructionBytes>13 A 5A AA AA AA 75</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067174473193859</ID>
+    <Explanation>Switch TX out 1</Explanation>
+    <InstructionBytes>12 24 5A AA AA AA 8E</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125148020126</ID>
+    <Explanation>Switch TX out 2</Explanation>
+    <InstructionBytes>12 24 5B AA AA AA 8F</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125129549070</ID>
+    <Explanation>Read Temperature 1</Explanation>
+    <InstructionBytes>12 B 00 AA AA AA 1B</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125114988237</ID>
+    <Explanation>Read Temperature 2</Explanation>
+    <InstructionBytes>13 B 00 AA AA AA 1C</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125102507523</ID>
+    <Explanation>Read Hot Spot Temperature 1</Explanation>
+    <InstructionBytes>12 12 00 AA AA AA 22</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125088026695</ID>
+    <Explanation>Read Hot Spot Temperature 2</Explanation>
+    <InstructionBytes>13 12 00 AA AA AA 23</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066345401866057</ID>
+    <Explanation>Set Tx Redundancy Mode on</Explanation>
+    <InstructionBytes>13 1F 5A AA AA AA 8A</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066238181679051</ID>
+    <Explanation>Set Attenuation</Explanation>
+    <InstructionBytes>13 05 A5 00 FA AA 61</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062647502501168</ID>
+    <Explanation>Transmit</Explanation>
+    <InstructionBytes>13 05 A5 00 FA AA 61</InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062647485900219</ID>
+    <Explanation>Standby</Explanation>
+    <InstructionBytes>13 05 A5 00 FA AA 61</InstructionBytes>
+    <Order>14</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588060425838851601</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>12 A 5A AA AA AA 74</InstructionBytes>
+    <Order>15</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588060366100598539</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>01 01 08 5A AA AA AA 26</InstructionBytes>
+    <Order>16</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588060362402193362</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>12 0B 00 AA AA AA 7E</InstructionBytes>
+    <Order>17</Order>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>12 23 AA AA AA AA DD, read alarms and status
+13 25 5A AA AA AA 90, read output tx 1
+12 A 5A AA AA AA 74,  read attenuation 2
+13 A 5A AA AA AA 75,  read attenuation 3
+AD AS D 20 23 AA 23, aadfafasf</Instructions>
+  </WorkbenchData>
+</DeviceInstructions>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.10.11</IP>
+    <Port>3080</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>53 54 53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</InstructionBytes>
+    <Explanation>get status (STS)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+paratmeter 143 is longitude of sat 49.
+paratmeter 144 is polarization of sat 49.
+parametre 145 &gt; pos 00 az
+parametre 145 &gt; pos 00 el
+parametre 145 &gt; pos 00 pol
+
+till 294, device keeps positions. </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587809732735268959</ID>
+    <Explanation>step track (STP)</Explanation>
+    <InstructionBytes>53 54 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587809732726987671</ID>
+    <Explanation>set to remote (RON)</Explanation>
+    <InstructionBytes>52 4F 4E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587809720750313512</ID>
+    <Explanation>set to local (ROF)</Explanation>
+    <InstructionBytes>52 4F 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587809719459355526</ID>
+    <Explanation>standby (SBY)</Explanation>
+    <InstructionBytes>53 42 59 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587804752977737824</ID>
+    <Explanation>read nTh parameter (UPC 001)</Explanation>
+    <InstructionBytes>55 50 43 20 30 30 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587804699957117617</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>RON</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587804699393917630</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>ROF</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587803705779903999</ID>
+    <Explanation>azimuth of pos 13</Explanation>
+    <InstructionBytes>55 50 43 20 31 38 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587803702604323718</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>50 4F 53 20 32 30 37 2E 38 37 30 20 30 34 36 2E 31 34 30 20 30 30 30 2E 30 30 30 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587803702560959616</ID>
+    <Explanation>POS  206.304 045.45 000.000</Explanation>
+    <InstructionBytes>50 4F 53 20 32 30 37 2E 38 37 30 20 30 34 36 2E 31 34 30 20 30 30 30 2E 30 30 30 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587803035483384429</ID>
+    <Explanation>go to pos</Explanation>
+    <InstructionBytes>50 4F 53 20 32 30 36 2E 33 30 34 20 30 34 35 2E 34 35 20 30 30 30 2E 30 30 30 00 00 00 00 00 00 00 00 00 00 00 00</InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+</DeviceInstructions>

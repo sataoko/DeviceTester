@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+<DeviceInfo>
+<DeviceName>Actia Sodielec HPA</DeviceName>
+<Explanation>HPA</Explanation>
+<IP>10.0.0.148</IP>
+<Port>4001</Port>
+<CheckSumType>no checksum</CheckSumType>
+<InstructionStructure> 2,address,command,checksum,3 </InstructionStructure>
+</DeviceInfo>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,83,84,67,76,3</InstructionBytes>
+<Explanation>STC: Condensed Status</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,83,84,69,78,3</InstructionBytes>
+<Explanation>STE: States And Alarms</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,83,84,80,89,3</InstructionBytes>
+<Explanation>STP:Parameters</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,83,84,73,82,3</InstructionBytes>
+<Explanation>STI:System Identification</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,83,84,77,86,3</InstructionBytes>
+<Explanation>STM:System Measurements</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,65,79,70,56,3</InstructionBytes>
+<Explanation>AOF:Switch Off</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,65,79,78,64,3</InstructionBytes>
+<Explanation>AON:Switch On</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,72,79,78,71,3</InstructionBytes>
+<Explanation>HON:HPA Stand By</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,82,70,69,63,3</InstructionBytes>
+<Explanation>RFE:RF On</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,33,82,70,68,62,3</InstructionBytes>
+<Explanation>RFD:RF Off</Explanation>
+</Instruction>
+
+
+</DeviceInstructions>
+

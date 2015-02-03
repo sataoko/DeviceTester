@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ110</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>192.168.1.41</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 64 43 41 73 3F 03 2B</InstructionBytes>
+    <Explanation>CAs:</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 4F 4F 46 3F 03 1C</InstructionBytes>
+    <Explanation>(Output Frequency)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 74 78 73 3F 03 25</InstructionBytes>
+    <Explanation>(Transmit Status)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 4F 4F 4C 3F 03 16</InstructionBytes>
+    <Explanation>(Output Level)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Explanation>RF set transmit off</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406724688149412</ID>
+    <Explanation>RF set transmit on</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,49,3,1</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406721260803379</ID>
+    <Explanation>L Band Transmit on</Explanation>
+    <InstructionBytes>2,100,84,84,109,33,49,3,24</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588406720968006632</ID>
+    <Explanation>L Band Transmit off</Explanation>
+    <InstructionBytes>2,100,84,84,109,33,48,3,25</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373091874481760</ID>
+    <Explanation>Internal L-Band Tx</Explanation>
+    <InstructionBytes>2,100,84,84,99,63,3,57</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373049162338766</ID>
+    <Explanation>Internal L-Band Tx ON</Explanation>
+    <InstructionBytes>2,100,84,84,99,33,49,3,22</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588373048995059198</ID>
+    <Explanation>Internal L-Band Tx OFF</Explanation>
+    <InstructionBytes>2,100,84,84,99,33,48,3,23</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>02 64 4F 4F 46 3F 03 1C, output freq.
+02644F4F463F031C, output freq.
+02 64 43 41 6D 3F 03 35, CAm? alarm mode
+02 64 43 41 73 3F 03 2B, CAs? current alarm status
+02 64 43 61 73 3F 03 0B, Cas?
+02 64 43 61 73 3F 34 03 3F,Cas?4
+02 64 4D 41 73 3F 03 25, MAs? memorized alarm
+02 64 4D 61 73 3F 03 05, Mas? memorized alarm counter&gt;0:no alarm since last reset
+
+CAs?
+Readout of the concatenated string of all individual alarm status replies of the device. A get request returns the current alarm buffer contents. The buffer is not reset. A set command returns the current alarm buffer
+contents and resets the buffer.
+
+Cas?
+Readout of the current alarm status for the specified alarm from the alarm buffer.
+· 0 = Currently, no alarm is present.
+· 1 = Currently, the alarm is active. A get request returns the current
+alarm buffer contents without resetting the buffer.A set command
+returns the current alarm buffer contents and resets the buffer.
+
+Mas?
+Readout of the memorised alarm counter for the specified alarm.
+0 = No alarm events occurred since last alarm reset.
+n = n alarm
+
+MAs?
+Readout of the concatenated string describing the state of all individual
+memorised alarm counters.
+· 0: Indicates that the respective counter did not count any alarm
+events since last reset.
+· 1: Indicates that the respective counter did count alarm events since
+last reset.A get request returns the memorised alarm counter status.
+The counters are not reset. A set command returns the memorised
+alarm counter status and resets the counters.Remark: The number
+of events can be retrieved with the individual counter reading
+command
+</Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587869284337283350</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 64 4F 4F 4C 21 20 2D 32 30 2E 30 03 19</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587865773474718188</ID>
+    <Explanation>ASI  Switching mode.1)manual 0)automatic</Explanation>
+    <InstructionBytes>02 64 54 49 6D 3F 03 2A</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587865773048681439</ID>
+    <Explanation>Baseband  interface mode.</Explanation>
+    <InstructionBytes>02 64 45 52 54 3F 03 19</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587865772536688540</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 64 4F 4F 4C 21 2D 32 30 2E 30 03 39</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+</DeviceInstructions>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.70</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>.1.3.6.1.4.1.43586.1.1.91.0</InstructionBytes>
+    <Explanation>statusAsUniqueString</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8588027458046276890</ID>
+    <Explanation>warnings and errors.</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.43586.1.1.92.0</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588013592222573202</ID>
+    <Explanation>move in direction</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.43586.1.1.53.0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

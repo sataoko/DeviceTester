@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>MCL3200A</DeviceName>
+    <Explanation>HPA</Explanation>
+    <IP>10.0.0.136</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC16</CheckSumType>
+    <InstructionStructure>
+    </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 02 05 06 1E EA</InstructionBytes>
+    <CheckSum>30,234</CheckSum>
+    <Explanation>Report HPA Identification</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 01 07</InstructionBytes>
+    <CheckSum>224,110</CheckSum>
+    <Explanation>Report Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 01 08 A0 6A</InstructionBytes>
+    <CheckSum>160,106</CheckSum>
+    <Explanation>Report Block Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 02 05 04 9F 2B</InstructionBytes>
+    <CheckSum>159,43</CheckSum>
+    <Explanation>Report Current Date</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 02 05 05 5E EB</InstructionBytes>
+    <CheckSum>94,235</CheckSum>
+    <Explanation>Report Current Time</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>6</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 04 05 03 08 68 16</InstructionBytes>
+    <CheckSum>23,238</CheckSum>
+    <Explanation>Get RF Forward Power</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>7</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 04 05 03 04 0C 12 EB</InstructionBytes>
+    <CheckSum>18,235</CheckSum>
+    <Explanation>Get Tube Temperature</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>8</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,2,5,2,19,5,5,5</InstructionBytes>
+    <CheckSum>76,79</CheckSum>
+    <Explanation>Set Time to 05:05:05</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>9</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,2,05,2,18,5,5,11</InstructionBytes>
+    <CheckSum>204,119</CheckSum>
+    <Explanation>Set Date to 5.5.2011</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>10</ID>
+    <Order>1</Order>
+    <InstructionBytes>01 02 01 0B E0 6B</InstructionBytes>
+    <CheckSum>224,107</CheckSum>
+    <Explanation>Report Block Status 2</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>11</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,2,3,2,5,10</InstructionBytes>
+    <CheckSum>90,194</CheckSum>
+    <Explanation>Decrease Gain 1dB</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>12</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,2,3,2,5,0</InstructionBytes>
+    <CheckSum>218,197</CheckSum>
+    <Explanation>Report Logs</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8587874690511863274</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>01 02 00 50 A0</InstructionBytes>
+    <Order>2</Order>
+  </Instruction>
+</DeviceInstructions>

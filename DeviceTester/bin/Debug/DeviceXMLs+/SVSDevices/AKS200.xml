@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>AKS 200</DeviceName>
+    <Explanation>Antenna Controller</Explanation>
+    <IP>10.0.0.170</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+    <InstructionStructure>
+    </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,1,1,0,0,10</InstructionBytes>
+    <Explanation>Get System Datas</Explanation>
+    <CheckSum>188,142</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>2</Order>
+    <InstructionBytes>1,1,0,4,1,0,200,1,117,214</InstructionBytes>
+    <Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,1,0,4,1,0,200,1,58,34</InstructionBytes>
+    <Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,1,11,0,4,1,0,200,1,158,136</InstructionBytes>
+    <Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075677389786061</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>1,1,11,0,4,1,0,200,1,158,136</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

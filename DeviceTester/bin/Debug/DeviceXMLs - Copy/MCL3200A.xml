@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>MCL3200A</DeviceName>
+<Explanation>HPA</Explanation>
+<IP>10.0.0.136</IP>
+<Port>4001</Port>
+<CheckSumType>CRC16</CheckSumType>
+<InstructionStructure> </InstructionStructure>
+</DeviceInfo>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,2,5,6,30,234</InstructionBytes>
+<Explanation>Report HPA Identification</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,01,07,224,110</InstructionBytes>
+<Explanation>Report Status</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,01,08,160,106</InstructionBytes>
+<Explanation>Report Block Status</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,02,05,04,159,43</InstructionBytes>
+<Explanation>Report Current Date</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,02,05,05,94,235</InstructionBytes>
+<Explanation>Report Current Time</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,04,05,03,08,00,23,238</InstructionBytes>
+<Explanation>Get RF Forward Power</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,04,05,03,04,12,18,235</InstructionBytes>
+<Explanation>Get Tube Temperature</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,5,2,19,5,5,5,76,79</InstructionBytes>
+<Explanation>Set Time to 05:05:05</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,05,2,18,5,5,11,204,119</InstructionBytes>
+<Explanation>Set Date to 5.5.2011</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,01,11,224,107</InstructionBytes>
+<Explanation>Report Block Status 2</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,3,2,5,10,90,194</InstructionBytes>
+<Explanation>Decrease Gain 1dB</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,2,3,2,5,0,218,197</InstructionBytes>
+<Explanation>Report Logs</Explanation>
+</Instruction>
+
+</DeviceInstructions>
+
+
+

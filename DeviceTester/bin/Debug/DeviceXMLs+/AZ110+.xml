@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DeviceInstructions>
+<DeviceInfo>
+<DeviceName>Newtex AZ110</DeviceName>
+<Explanation>Modulator</Explanation>
+<IP>10.0.0.56</IP>
+<Port>5933</Port>
+<CheckSumType>CheckSum,1 Byte</CheckSumType>
+<InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>2</Order>
+<InstructionBytes>2,100,67,65,115,63,3,43</InstructionBytes>
+<Explanation>CAs:</Explanation>
+<CheckSum>1</CheckSum>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>1</Order>
+<InstructionBytes>2,100,79, 79, 70, 63,3,28</InstructionBytes>
+<Explanation>(Output Frequency)</Explanation>
+<CheckSum>1</CheckSum>
+</Instruction>
+
+
+<Instruction>
+<ID>3</ID>
+<Order>1</Order>
+<InstructionBytes>2,100,116, 120, 115, 63,3,37</InstructionBytes>
+<Explanation>(Transmit Status)</Explanation>
+<CheckSum>1</CheckSum>
+</Instruction>
+
+<Instruction>
+<ID>4</ID>
+<Order>1</Order>
+<InstructionBytes>2,100,79, 79, 76, 63,3,22</InstructionBytes>
+<Explanation>(Output Level)</Explanation>
+<CheckSum>1</CheckSum>
+</Instruction>
+
+<Instruction>
+<ID>5</ID>
+<Order>1</Order>
+<InstructionBytes>2,100,50, 50, 50, 63,3,22</InstructionBytes>
+<Explanation>Blank</Explanation>
+<CheckSum>1</CheckSum>
+</Instruction>
+
+</DeviceInstructions>
+
+
+

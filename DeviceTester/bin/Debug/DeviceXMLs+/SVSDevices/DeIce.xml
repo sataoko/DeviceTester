@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>SWC 100</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>192.168.1.155</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+    <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,11,11,21,0,0,135,51</InstructionBytes>
+    <CheckSum>1</CheckSum>
+    <Explanation>Get Current</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,5,1,0,1,81,104,109</InstructionBytes>
+    <CheckSum>2</CheckSum>
+    <Explanation>Select System B</Explanation>
+  </Instruction>
+</DeviceInstructions>

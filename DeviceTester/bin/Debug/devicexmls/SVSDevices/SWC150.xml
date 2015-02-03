@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>SWC 150</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>192.168.1.172</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+    <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS1 Select A</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS1 Select B</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS1 Clear Faults</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS1 Get Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS2 Select A</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS2 Select B</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS2 Clear Faults</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <Explanation>SYS2 Get Status</Explanation>
+  </Instruction>
+</DeviceInstructions>

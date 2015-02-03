@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>CPI VZU 6997</DeviceName>
+    <Explanation>Amplifier </Explanation>
+    <IP>192.168.1.30</IP>
+    <Port>4001</Port>
+    <CheckSumType>Chekcsum</CheckSumType>
+    <InstructionStructure>CIF Protocol: STX=2,address,command,parameters,ETX=3,checksum </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1322</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 41 31 03 17</InstructionBytes>
+    <Explanation>Meter  Query</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>22423</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 42 4D 30 35 30 31 03 48</InstructionBytes>
+    <Explanation>Get Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>13223322</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 41 3B 03 21</InstructionBytes>
+    <Explanation>GetHighRfAlarmTripPoint</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>3322331</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 41 4D 30 34 30 30 03 77</InstructionBytes>
+    <Explanation>Set High RF Alarm Trip Point</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>12342343</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 31 38 03 08</InstructionBytes>
+    <Explanation>Transmit</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>133223322</ID>
+    <Order>1234221532</Order>
+    <InstructionBytes>02 30 41 03 70</InstructionBytes>
+    <Explanation>Standby</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>12231212</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 41 43 31 30 2E 30 03 68</InstructionBytes>
+    <Explanation>set gain</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>154234234</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 42 31 03 03</InstructionBytes>
+    <Explanation>Get Rf Output Power In Watt</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>765672</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 41 32 03 02</InstructionBytes>
+    <Explanation>Secondary Summary Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>598452</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 41 33 03 02</InstructionBytes>
+    <Explanation>Get Fault Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>94765452</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 31 38 03 08</InstructionBytes>
+    <Explanation>Get Rf Output Power In Watt</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>29964444</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 30 4D 30 35 30 31 03 48</InstructionBytes>
+    <Explanation>Set High RF Alarm Trip Point</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>8587943576043441851</ID>
+    <Explanation>Get Info/Data</Explanation>
+    <InstructionBytes>02 42 34 03 01 05</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>2 41 3E 3 3, meter query
+
+
+02 41 34 03 02, get info data &gt; 06 41 34 48 40 03 78
+
+02 42 3E 03 01 05, get parameters 06 42 3E 35 30 2E 36 20 20 31 31 37 20 20 38 2E 30 31 20 20 38 2E 39 32 20 20 32 2E 33 20 20 20 30 03 66
+
+02 65 49 48 68 3 1, meter query  &gt; 06 41 31 30 44 03 01 
+
+02 42 31 03 03, rf output power  &gt; 06 42 31 30 44 03 02
+02 41 33 03 02, fault status  &gt; 06 41 33 40 40 40 40 03 77 
+02 41 32 03 02, secondary summary &gt; 06 41 32 30 40 03 06
+
+
+
+</Instructions>
+  </WorkbenchData>
+</DeviceInstructions>

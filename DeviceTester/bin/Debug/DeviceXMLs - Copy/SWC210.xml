@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>SWC 100</DeviceName>
+<Explanation>Switch</Explanation>
+<IP>10.0.0.215</IP>
+<Port>4001</Port>
+<CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+<InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,80,66,124</InstructionBytes>
+<Explanation>Select Auto</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,81,83,245</InstructionBytes>
+<Explanation>Select Manuel</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,82,97,110</InstructionBytes>
+<Explanation>Priority A</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,83,112,231</InstructionBytes>
+<Explanation>Priority Auto</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,84,4,88</InstructionBytes>
+<Explanation>Priority B</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,91,252,175</InstructionBytes>
+<Explanation>Clear Faults</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,3,1,0,1,64,82,253</InstructionBytes>
+<Explanation>Get Status</Explanation>
+</Instruction>
+
+
+
+
+</DeviceInstructions>
+
+
+

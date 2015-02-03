@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Dev Switch</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>10.0.0.211</IP>
+    <Port>4001</Port>
+    <CheckSumType>EXOR</CheckSumType>
+    <InstructionStructure>123,Addres,Command Length,Parameters,125,CheckSum ...</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Explanation>Get Status dff</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8588771259775244558</ID>
+    <Order>2</Order>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Explanation>aa</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8588771255008682058</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769615832588308</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769614507588308</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769573220713308</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769565515557058</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769564037900808</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769556506650808</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769555333838308</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>123,80,1,64,125,23</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+</DeviceInstructions>

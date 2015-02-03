@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>1.3.6.1.4.1.20712.2.1.3.1.2.5</InstructionBytes>
+    <Explanation>rf forward power</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587953954473220294</ID>
+    <Explanation>attenuation level</Explanation>
+    <InstructionBytes>1.3.6.1.4.1.20712.2.1.1.1.2.5</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

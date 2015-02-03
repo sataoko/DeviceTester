@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>LST</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587954824515320957</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>020101021F004269736d696c6c6168206865722068617972131620626115f131641317220e682a</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

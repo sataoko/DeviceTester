@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Advantech UPC</DeviceName>
+    <Explanation>Upconvertor</Explanation>
+    <IP>10.64.14.250</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Byte1: 0 Addres, Byte 2:Command, Byte3,4,5,6=AA,checksum (sum of all bytes)</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>1,1,170,170,170,170,170</InstructionBytes>
+    <Explanation>Request Status (01)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>2</InstructionBytes>
+    <Explanation>Set Mute Unmute (02)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,116, 120, 115, 63,3,37</InstructionBytes>
+    <Explanation>Set Att</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,79, 79, 76, 63,3,22</InstructionBytes>
+    <Explanation>Read Att</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Read Temperature</Explanation>
+    <InstructionBytes>1,18,170,170,170,170,187</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

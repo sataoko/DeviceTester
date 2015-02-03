@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+
+
+
+<DeviceInfo>
+<DeviceName>NWIEE ACU</DeviceName>
+<Explanation>Antenna Control Unit</Explanation>
+<IP>10.0.0.149</IP>
+<Port>4001</Port>
+<CheckSumType>no checksum</CheckSumType>
+<InstructionStructure> Command(CR)  </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>60,49,50,48,47,83,84,65,84,85,83,95,63,13</InstructionBytes>
+<Explanation>Status</Explanation>
+</Instruction>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>60,49,50,48,47,84,82,65,67,75,13</InstructionBytes>
+<Explanation>Start Tracking</Explanation>
+</Instruction>
+
+
+
+
+</DeviceInstructions>
+

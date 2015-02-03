@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Miteq UPC SNMP</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.10.145</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163995.1.22.0</InstructionBytes>
+    <Explanation>get frequency</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587944454689423148</ID>
+    <Explanation>alarm</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163995.1.1.0</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587944449960336764</ID>
+    <Explanation>attenunation</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163995.1.3.0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587944449956003691</ID>
+    <Explanation>mute</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163995.1.26.0</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587944449954329040</ID>
+    <Explanation>name</Explanation>
+    <InstructionBytes>.1.3.6.1.4.1.14994.25.163995.1.27.0</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587944441510766231</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>
+    </InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+</DeviceInstructions>

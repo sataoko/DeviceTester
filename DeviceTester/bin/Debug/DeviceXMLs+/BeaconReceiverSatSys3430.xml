@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ110</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>192.168.1.200</IP>
+    <Port>50000</Port>
+    <CheckSumType>
+    </CheckSumType>
+    <InstructionStructure>
+    </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>70,13</InstructionBytes>
+    <Explanation>Get Status</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+</DeviceInstructions>

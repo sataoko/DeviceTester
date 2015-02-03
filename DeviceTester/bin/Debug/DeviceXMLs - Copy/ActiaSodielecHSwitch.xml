@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+<DeviceInfo>
+<DeviceName>Actia Sodielec HPA</DeviceName>
+<Explanation>HPA</Explanation>
+<IP>10.0.0.148</IP>
+<Port>4001</Port>
+<CheckSumType>no checksum</CheckSumType>
+<InstructionStructure> 2,address+32,command,checksum (mod 95) (only address and command),3 </InstructionStructure>
+</DeviceInfo>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,83,84,67,75,3</InstructionBytes>
+<Explanation>STC: Condensed Status</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,83,84,69,77,3</InstructionBytes>
+<Explanation>STE: States And Alarms</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,83,84,73,81,3</InstructionBytes>
+<Explanation>STI:System Identification</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,73,84,70,119,3</InstructionBytes>
+<Explanation>ITF: Serial Interface Setup</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,65,68,82,109,3</InstructionBytes>
+<Explanation>ADR: RS-485 Address</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,80,79,82,109,3</InstructionBytes>
+<Explanation>POR: Port</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,79,48,51,61,70,70,109,3</InstructionBytes>
+<Explanation>O03=FF:switch on channel A</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,79,48,52,61,70,70,109,3</InstructionBytes>
+<Explanation>O04=FF:switch on channel B</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,79,48,53,61,70,70,109,3</InstructionBytes>
+<Explanation>O05=FF:auto mode on</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>2,32,79,48,53,61,48,48,109,3</InstructionBytes>
+<Explanation>O05=FF:auto mode off</Explanation>
+</Instruction>
+
+</DeviceInstructions>
+

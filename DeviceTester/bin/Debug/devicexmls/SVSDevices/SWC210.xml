@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>SWC 100</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>192.168.1.31</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+    <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 50 42 7C</InstructionBytes>
+    <Explanation>Select Auto</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 51 53 F5</InstructionBytes>
+    <Explanation>Select Manual</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 52 61 6E</InstructionBytes>
+    <Explanation>Priority A</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 53 70 E7</InstructionBytes>
+    <Explanation>Priority Auto</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 54 04 58</InstructionBytes>
+    <Explanation>Priority B</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>6</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 5B FC AF</InstructionBytes>
+    <Explanation>Clear Faults</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>7</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 03 01 00 01 40 52 FD</InstructionBytes>
+    <Explanation>Get Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8587940884206101398</ID>
+    <Explanation>get limits</Explanation>
+    <InstructionBytes>02 03 01 00 01 43 60 66</InstructionBytes>
+    <Order>2</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587939517884169087</ID>
+    <Explanation>get logs</Explanation>
+    <InstructionBytes>02 03 01 03 41 00 01 6C 58</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

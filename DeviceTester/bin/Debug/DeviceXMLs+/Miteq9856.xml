@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>Miteq U-9856-7-1K </DeviceName>
+<Explanation>Frequency Convertor</Explanation>
+<IP>10.0.0.81</IP>
+<Port>23</Port>
+<CheckSumType>Mod 95</CheckSumType>
+<InstructionStructure>123 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+</DeviceInfo>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,70,82,78,125,34</InstructionBytes>
+<Explanation>Get Frequency (?FRN)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,73,70,83,125,125,123</InstructionBytes>
+<Explanation>Get IF Selection (?IFS)</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,77,83,84,125,48</InstructionBytes>
+<Explanation>Get More System Status (?MST)</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,69,65,67,125,100</InstructionBytes>
+<Explanation>Get External Alarm Config (?EAC)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,76,79,71,48,48,48,125,78</InstructionBytes>
+<Explanation>Get Logs Count(?LOG000)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,65,76,82,125,122</InstructionBytes>
+<Explanation>Get System Fault Status(?ALR)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,64,63,69,65,68,125,100</InstructionBytes>
+<Explanation>Get  Ethernet Settings(?EAD)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,64,63,67,76,75,125,116</InstructionBytes>
+<Explanation>Get  Clock Settings(?CLK)</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,65,63,76,79,71,0,0,125,61</InstructionBytes>
+<Explanation>Get  Log(A?LOG00)</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>123,123,49,49,49,49,49,125,125,105</InstructionBytes>
+<Explanation>Login</Explanation>
+</Instruction>
+
+
+
+
+
+</DeviceInstructions>
+
+
+

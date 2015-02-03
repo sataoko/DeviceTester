@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Advantech SSPA</DeviceName>
+    <Explanation>HPA</Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02,8,170,170,170,170,178</InstructionBytes>
+    <Explanation>Read Serial Number B</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>5502085AAAAAAA62</InstructionBytes>
+    <Explanation>Read Serial Number A</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>1,37,90,170,170,170,126</InstructionBytes>
+    <Explanation>Read Identification</Explanation>
+    <CheckSum>246</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>85,2,37,90,170,170,170,127</InstructionBytes>
+    <Explanation>Read Output Power A (2)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Read OutputPower B</Explanation>
+    <InstructionBytes>85,2,37,165,170,170,170,202</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067174538693951</ID>
+    <Explanation>Read Output Power A(1)</Explanation>
+    <InstructionBytes>1,37,90,170,170,170,126</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067174473193859</ID>
+    <Explanation>Read OutputPower B</Explanation>
+    <InstructionBytes>1,37,165,170,170,170,201</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125148020126</ID>
+    <Explanation>Elapsed Time</Explanation>
+    <InstructionBytes>85,2,12,170,170,170,170,182</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125129549070</ID>
+    <Explanation>Read Alarms Status</Explanation>
+    <InstructionBytes>2,35,170,170,170,170,205</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125114988237</ID>
+    <Explanation>Read Temperature</Explanation>
+    <InstructionBytes>1,11,0,170,170,170,10</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125102507523</ID>
+    <Explanation>Read Gain</Explanation>
+    <InstructionBytes>
+    </InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588067125088026695</ID>
+    <Explanation>Mute SSPA 1</Explanation>
+    <InstructionBytes>18,2,90,170,170,170,108</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066345401866057</ID>
+    <Explanation>Mute SSPA 2</Explanation>
+    <InstructionBytes>18,2,165,170,170,170,183</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066344027964134</ID>
+    <Explanation>Read Serial Number</Explanation>
+    <InstructionBytes>2,8,90,170,170,170,98</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066344014164114</ID>
+    <Explanation>Read Configuration</Explanation>
+    <InstructionBytes>
+    </InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588066343998964093</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>
+    </InstructionBytes>
+    <Order>14</Order>
+  </Instruction>
+</DeviceInstructions>

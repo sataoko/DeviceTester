@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>SWC 100</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>192.168.10.143</IP>
+    <Port>4001</Port>
+    <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+    <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 50 79 E4</InstructionBytes>
+    <CheckSum>1</CheckSum>
+    <Explanation>Select System A</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 51 68 6D</InstructionBytes>
+    <CheckSum>2</CheckSum>
+    <Explanation>Select System B</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 52 5A F6</InstructionBytes>
+    <CheckSum>90,246</CheckSum>
+    <Explanation>Select Auto</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 53 4B 7F</InstructionBytes>
+    <CheckSum>75,127</CheckSum>
+    <Explanation>Clear Logs</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 54 3F C0</InstructionBytes>
+    <CheckSum>63,192</CheckSum>
+    <Explanation>Clear Faults</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>6</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 55 2E 49</InstructionBytes>
+    <CheckSum>46,73</CheckSum>
+    <Explanation>Get Status</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>7</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 05 01 00 01 56 1C D2</InstructionBytes>
+    <CheckSum>28,210</CheckSum>
+    <Explanation>Get Logs</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>8</ID>
+    <Order>1</Order>
+    <InstructionBytes>
+    </InstructionBytes>
+    <CheckSum>
+    </CheckSum>
+    <Explanation>Is Remote Control Enable</Explanation>
+  </Instruction>
+</DeviceInstructions>

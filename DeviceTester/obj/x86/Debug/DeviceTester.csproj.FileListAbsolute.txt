@@ -1,0 +1,144 @@
+G:\DeviceTester\DeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+G:\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+G:\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+G:\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+G:\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+G:\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+G:\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+G:\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+G:\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+G:\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.GenerateResource.Cache
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.GenerateResource.Cache
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+E:\__DropboxWorks\Dropbox\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Dropbox\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.GenerateResource.Cache
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+C:\SourceCodes\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.GenerateResource.Cache
+C:\SourceCodes\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+C:\SourceCodes\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.exe
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.pdb
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.exe
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmInputBox.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkCommands.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNetworkTools.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmNewFilename.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.GenerateResource.Cache
+F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\DeviceTester.pdb

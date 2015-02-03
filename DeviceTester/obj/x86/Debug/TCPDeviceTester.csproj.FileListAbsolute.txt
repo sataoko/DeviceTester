@@ -1,0 +1,102 @@
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+E:\__C#.NET Folders\NMS\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+C:\Users\user\Desktop\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.csproj.GenerateResource.Cache
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+E:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+F:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\__C#.NET Folders\C#.NET Broadcast Works\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Dropbox\C#\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.exe
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.pdb
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmComPortSettings.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmDeviceXMLs.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmHelp.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmMain.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmPrepareCommand.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.frmTryCommands.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\TCPDeviceTester.Properties.Resources.resources
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.read.4.tlog
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.read.1.tlog
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+G:\TCPDeviceTester\TCPDeviceTester\obj\x86\Debug\ResGen.write.1.tlog
+G:\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.exe
+G:\TCPDeviceTester\TCPDeviceTester\bin\Debug\TCPDeviceTester.pdb

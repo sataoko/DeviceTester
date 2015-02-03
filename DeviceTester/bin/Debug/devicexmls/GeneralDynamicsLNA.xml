@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>General Dynamics LNA</DeviceName>
+    <Explanation>LNA</Explanation>
+    <IP>192.168.1.131</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>
+    </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>2,7,1,32,42,75,3</InstructionBytes>
+    <Explanation>Get Status1</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,8,1,22,69,42,134,3</InstructionBytes>
+    <Explanation>Get Firmware Version</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,6,1,7,8,3</InstructionBytes>
+    <Explanation>test</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,7,2,22,65,89,3</InstructionBytes>
+    <Explanation>Get Power Supply Voltages</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Get Status 2</Explanation>
+    <InstructionBytes>2,7,2,32,42,76,3</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588063882452069281</ID>
+    <Explanation>Get Unit Currents</Explanation>
+    <InstructionBytes>2,7,2,22,64,88,3</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588063882438808522</ID>
+    <Explanation>Get Faults</Explanation>
+    <InstructionBytes>2,6,1,8,9,3</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588063882424887726</ID>
+    <Explanation>Redundancy Mode</Explanation>
+    <InstructionBytes>2,7,1,24,64,89,3</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588063882408456786</ID>
+    <Explanation>Switch to A</Explanation>
+    <InstructionBytes>2,8,1,25,64,49,139,3</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062999314730093</ID>
+    <Explanation>Switch to B</Explanation>
+    <InstructionBytes>2,8,1,25,64,50,140,3</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062887814711157</ID>
+    <Explanation>Set Redundancy Manual</Explanation>
+    <InstructionBytes>2,8,1,24,64,40,137,3</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062887796160096</ID>
+    <Explanation>Set Redundancy Auto</Explanation>
+    <InstructionBytes>2,8,1,24,64,49,138,3</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+</DeviceInstructions>

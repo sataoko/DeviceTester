@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ740</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>10.64.14.251</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>2,100,67,65,115,63,3,43</InstructionBytes>
+    <Explanation>CAs:</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,79, 79, 70, 63,3,28</InstructionBytes>
+    <Explanation>OOF (Output Frequency)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,84,84,116,63,3,46</InstructionBytes>
+    <Explanation>(Transmit Status)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,79, 79, 76, 63,3,22</InstructionBytes>
+    <Explanation>(Output Level)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Explanation>Transmit Off</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>8588410181776441253</ID>
+    <Explanation>SLs (Device Serial Number)</Explanation>
+    <InstructionBytes>2,100,116, 120, 115, 63,3,37</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>8588410173995686219</ID>
+    <Explanation>Transmit Off</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>8588410173995686219</ID>
+    <Explanation>Transmit Off</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>85884101739956219</ID>
+    <Explanation>FFo (Freq of Convertor LO)</Explanation>
+    <InstructionBytes>2,100,3</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>858841017399568219</ID>
+    <Explanation>Temperature</Explanation>
+    <InstructionBytes>2,100,8,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>858841017386219</ID>
+    <Explanation>RF Center Freq. Gain</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>858841017386219</ID>
+    <Explanation>RF Center Freq. Gain</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>858841017386219</ID>
+    <Explanation>RF Center Freq. Gain</Explanation>
+    <InstructionBytes>2,100,84,84,116,33,48,3,0</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

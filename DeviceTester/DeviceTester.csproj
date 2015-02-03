@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08E0D5AE-315D-40AC-9D16-B3F5BCDFD612}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCPDeviceTester</RootNamespace>
+    <AssemblyName>DeviceTester</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Graph.ico</ApplicationIcon>
+    <PublishUrl>http://localhost/TCPDeviceTester/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SnmpSharpNet, Version=0.9.4.0, Culture=neutral, PublicKeyToken=b2181aa3b9571feb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SnmpSharpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\CheckSum.cs" />
+    <Compile Include="App_Code\CL.cs" />
+    <Compile Include="App_Code\Common.cs" />
+    <Compile Include="App_Code\Convertor.cs" />
+    <Compile Include="App_Code\TCPClientWithTimeout.cs" />
+    <Compile Include="App_Code\WorkbenchData.cs" />
+    <Compile Include="App_Code\CRCTool.cs" />
+    <Compile Include="App_Code\DataTreeNode.cs" />
+    <Compile Include="App_Code\DeviceInfo.cs" />
+    <Compile Include="App_Code\Ini.cs" />
+    <Compile Include="App_Code\Instruction.cs" />
+    <Compile Include="App_Code\TCPConnection.cs" />
+    <Compile Include="App_Code\XMLHelper.cs" />
+    <Compile Include="App_Code\CRC.cs" />
+    <Compile Include="App_Code\DOSPrompt.cs" />
+    <Compile Include="App_Code\FileExplorer.cs" />
+    <Compile Include="frmComPortSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComPortSettings.Designer.cs">
+      <DependentUpon>frmComPortSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeviceXMLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeviceXMLs.Designer.cs">
+      <DependentUpon>frmDeviceXMLs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputBox.Designer.cs">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCommandTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNetworkCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNetworkCommands.Designer.cs">
+      <DependentUpon>frmNetworkCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNetworkTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNetworkTools.Designer.cs">
+      <DependentUpon>frmNetworkTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewFilename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewFilename.Designer.cs">
+      <DependentUpon>frmNewFilename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrepareCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrepareCommand.Designer.cs">
+      <DependentUpon>frmPrepareCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTryCommands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTryCommands.Designer.cs">
+      <DependentUpon>frmTryCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Code\XMLOperations.cs" />
+    <EmbeddedResource Include="frmComPortSettings.resx">
+      <DependentUpon>frmComPortSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeviceXMLs.resx">
+      <DependentUpon>frmDeviceXMLs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputBox.resx">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNetworkCommands.resx">
+      <DependentUpon>frmNetworkCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNetworkTools.resx">
+      <DependentUpon>frmNetworkTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewFilename.resx">
+      <DependentUpon>frmNewFilename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrepareCommand.resx">
+      <DependentUpon>frmPrepareCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTryCommands.resx">
+      <DependentUpon>frmTryCommands.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graph.ico" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\green_light.png" />
+    <None Include="Resources\red_light.png" />
+    <None Include="Resources\port-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

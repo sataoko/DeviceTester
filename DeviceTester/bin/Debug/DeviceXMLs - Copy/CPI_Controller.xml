@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>CPI Switch</DeviceName>
+<Explanation>HPA Switch Controller</Explanation>
+<IP>10.0.0.214</IP>
+<Port>50000</Port>
+<CheckSumType>Chekcsum</CheckSumType>
+<InstructionStructure>STX=123,address,command,ETX=125,checksum </InstructionStructure>
+</DeviceInfo>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,120,3,73</InstructionBytes>
+<Explanation>Set switch controller mode BCIP</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,116,49,3,116</InstructionBytes>
+<Explanation>Set switch controller mode BCIP</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,116,48,3,117</InstructionBytes>
+<Explanation>Set switch controller mode BCIP</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,117,49,32,49,3,100</InstructionBytes>
+<Explanation>Set switch 1 to Position 1</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>2</ID>
+<Order>2</Order>
+<InstructionBytes>2,48,117,49,32,50,3,103</InstructionBytes>
+<Explanation>Set switch 1 to Position 2</Explanation>
+</Instruction>
+
+
+
+
+</DeviceInstructions>
+
+
+
