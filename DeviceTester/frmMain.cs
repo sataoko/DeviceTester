@@ -11,7 +11,7 @@ using SnmpSharpNet;
 using System.Net;
 using Be.Windows.Forms;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmMain : Form
     {

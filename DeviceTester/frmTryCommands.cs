@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net.Sockets;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmTryCommands : Form
     {

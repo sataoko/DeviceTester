@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public class CL
     {

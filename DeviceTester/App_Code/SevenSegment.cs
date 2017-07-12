@@ -23,7 +23,7 @@ using System.Drawing.Drawing2D;
  * 
  */
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public class SevenSegment : UserControl
     {

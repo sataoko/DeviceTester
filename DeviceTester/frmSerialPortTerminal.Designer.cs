@@ -1,4 +1,4 @@
-﻿namespace TCPDeviceTester
+﻿namespace DeviceTester
 {
     partial class frmSerialPortTerminal
     {

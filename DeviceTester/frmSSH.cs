@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Tamir.SharpSsh;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmSSH : Form
     {

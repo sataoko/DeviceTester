@@ -23,7 +23,7 @@ using System.Drawing;
  * 
  */
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public class SevenSegmentArray : UserControl
     {

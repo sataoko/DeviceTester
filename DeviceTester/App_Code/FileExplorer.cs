@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     /* Class  :FileExplorer
      * Author : Chandana Subasinghe

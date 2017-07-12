@@ -1,4 +1,4 @@
-﻿namespace TCPDeviceTester
+﻿namespace DeviceTester
 {
     partial class frmMain
     {
@@ -255,11 +255,11 @@
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
-            this.chronometer1 = new TCPDeviceTester.Chronometer();
-            this.sevenSegmentArray2 = new TCPDeviceTester.SevenSegmentArray();
-            this.shellControl1 = new TCPDeviceTester.ShellControl();
-            this.bitDisplay1 = new TCPDeviceTester.BitDisplay();
-            this.bitDisplay2 = new TCPDeviceTester.BitDisplay();
+            this.chronometer1 = new DeviceTester.Chronometer();
+            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
+            this.shellControl1 = new DeviceTester.ShellControl();
+            this.bitDisplay1 = new DeviceTester.BitDisplay();
+            this.bitDisplay2 = new DeviceTester.BitDisplay();
             this.lbPyFiles = new System.Windows.Forms.ListBox();
             this.lnkApplyPython = new System.Windows.Forms.LinkLabel();
             this.statusStripMain.SuspendLayout();
@@ -682,7 +682,7 @@
             // 
             // tsbSaveIPPort
             // 
-            this.tsbSaveIPPort.Image = global::TCPDeviceTester.Properties.Resources.save;
+            this.tsbSaveIPPort.Image = global::DeviceTester.Properties.Resources.save;
             this.tsbSaveIPPort.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveIPPort.Name = "tsbSaveIPPort";
             this.tsbSaveIPPort.Size = new System.Drawing.Size(51, 22);
@@ -691,7 +691,7 @@
             // 
             // tsbConnectToIP
             // 
-            this.tsbConnectToIP.Image = global::TCPDeviceTester.Properties.Resources.red_light;
+            this.tsbConnectToIP.Image = global::DeviceTester.Properties.Resources.red_light;
             this.tsbConnectToIP.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConnectToIP.Name = "tsbConnectToIP";
             this.tsbConnectToIP.Size = new System.Drawing.Size(72, 22);
@@ -990,7 +990,7 @@
             // 
             this.tsbSendBytesToDevice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tsbSendBytesToDevice.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tsbSendBytesToDevice.Image = global::TCPDeviceTester.Properties.Resources.rightArrow;
+            this.tsbSendBytesToDevice.Image = global::DeviceTester.Properties.Resources.rightArrow;
             this.tsbSendBytesToDevice.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSendBytesToDevice.Name = "tsbSendBytesToDevice";
             this.tsbSendBytesToDevice.Size = new System.Drawing.Size(115, 22);
@@ -1363,7 +1363,7 @@
             // 
             this.tsbSendFromWorkbench.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tsbSendFromWorkbench.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tsbSendFromWorkbench.Image = global::TCPDeviceTester.Properties.Resources.rightArrow;
+            this.tsbSendFromWorkbench.Image = global::DeviceTester.Properties.Resources.rightArrow;
             this.tsbSendFromWorkbench.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tsbSendFromWorkbench.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSendFromWorkbench.Name = "tsbSendFromWorkbench";
@@ -1391,7 +1391,7 @@
             // 
             // tsbSaveWorkbenchText
             // 
-            this.tsbSaveWorkbenchText.Image = global::TCPDeviceTester.Properties.Resources.save;
+            this.tsbSaveWorkbenchText.Image = global::DeviceTester.Properties.Resources.save;
             this.tsbSaveWorkbenchText.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveWorkbenchText.Name = "tsbSaveWorkbenchText";
             this.tsbSaveWorkbenchText.Size = new System.Drawing.Size(115, 22);
@@ -2509,7 +2509,7 @@
             // 
             // tsbComPortSettings
             // 
-            this.tsbComPortSettings.Image = global::TCPDeviceTester.Properties.Resources.port_icon;
+            this.tsbComPortSettings.Image = global::DeviceTester.Properties.Resources.port_icon;
             this.tsbComPortSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbComPortSettings.Name = "tsbComPortSettings";
             this.tsbComPortSettings.Size = new System.Drawing.Size(123, 22);
@@ -2518,7 +2518,7 @@
             // 
             // tsbConnectToComPort
             // 
-            this.tsbConnectToComPort.Image = global::TCPDeviceTester.Properties.Resources.red_light;
+            this.tsbConnectToComPort.Image = global::DeviceTester.Properties.Resources.red_light;
             this.tsbConnectToComPort.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConnectToComPort.Name = "tsbConnectToComPort";
             this.tsbConnectToComPort.Size = new System.Drawing.Size(72, 22);
@@ -2561,7 +2561,7 @@
             this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
             this.shellControl1.Size = new System.Drawing.Size(493, 529);
             this.shellControl1.TabIndex = 26;
-            this.shellControl1.CommandEntered += new TCPDeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
+            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
             // 
             // bitDisplay1
             // 

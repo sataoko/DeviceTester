@@ -1,4 +1,4 @@
-﻿namespace TCPDeviceTester
+﻿namespace DeviceTester
 {
     partial class Chronometer
     {
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.sevenSegmentArray1 = new TCPDeviceTester.SevenSegmentArray();
+            this.sevenSegmentArray1 = new DeviceTester.SevenSegmentArray();
             this.SuspendLayout();
             // 
             // timer1

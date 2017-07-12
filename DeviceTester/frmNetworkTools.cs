@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Threading;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmNetworkTools : Form
     {

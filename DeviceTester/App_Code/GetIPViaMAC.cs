@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     class GetIPViaMAC
     {

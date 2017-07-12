@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmMain : Form
     {

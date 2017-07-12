@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmPython : Form
     {

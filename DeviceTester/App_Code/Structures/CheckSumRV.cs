@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     /// <summary>
     /// Check sum return value.

@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class Chronometer : UserControl
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
 	/// <summary>
 	/// Tool to calculate and add CRC codes to a string

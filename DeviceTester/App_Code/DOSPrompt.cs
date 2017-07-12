@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     class DOSPrompt
     {

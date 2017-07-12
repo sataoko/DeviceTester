@@ -1,4 +1,4 @@
-﻿namespace TCPDeviceTester
+﻿namespace DeviceTester
 {
     partial class frmSuperConsole
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.shellControl1 = new TCPDeviceTester.ShellControl();
+            this.shellControl1 = new DeviceTester.ShellControl();
             this.pnlConsoleSettings = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -83,7 +83,7 @@
             this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
             this.shellControl1.Size = new System.Drawing.Size(476, 487);
             this.shellControl1.TabIndex = 0;
-            this.shellControl1.CommandEntered += new TCPDeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
+            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
             // 
             // pnlConsoleSettings
             // 

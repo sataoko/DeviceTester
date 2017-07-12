@@ -6,7 +6,7 @@ using System.Text;
 
 #endregion
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     internal class CommandHistory
     {

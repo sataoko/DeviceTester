@@ -5,7 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using Xunit;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     class TCPConnection
     {

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Net;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public partial class frmHTTPTester : Form
     {

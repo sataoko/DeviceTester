@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
     public enum CRCType { SUM, XOR, Mod95, CRC16, CRC32, CRC_CCITT_Kermit, MODBUS,SumComplement }
 

@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
 	/// <summary>
     /// TreeNode that holds object.

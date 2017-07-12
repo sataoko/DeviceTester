@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Text;
 using System.Diagnostics;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
 
     internal class ShellTextBox : TextBox

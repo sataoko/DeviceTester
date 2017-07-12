@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TCPDeviceTester.Properties {
+namespace DeviceTester.Properties {
     using System;
     
     

@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
 
-namespace TCPDeviceTester
+namespace DeviceTester
 {
 	/// <summary>
 	/// Summary description for ShellControl.
