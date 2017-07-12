@@ -68,7 +68,7 @@ namespace TCPDeviceTester
 
         private void lmkGenerateCommands_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string startByte = string.Empty;
+          /*  string startByte = string.Empty;
             string endByte = string.Empty;
 
             if (rbASCII.Checked)
@@ -90,7 +90,7 @@ namespace TCPDeviceTester
                 int checkSum = CheckSum.CIFProtocolCheckSum(bytes, Common.GetByteCount(command));
                 command += "," + checkSum.ToString();
                 lbGeneratedCommands.Items.Add(command);
-			}
+			}*/
 
         }
 

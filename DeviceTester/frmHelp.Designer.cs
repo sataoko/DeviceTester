@@ -48,7 +48,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Name = "frmHelp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TCP Device Tester";
+            this.Text = "Device Tester";
             this.Load += new System.EventHandler(this.frmHelp_Load);
             this.ResumeLayout(false);
 

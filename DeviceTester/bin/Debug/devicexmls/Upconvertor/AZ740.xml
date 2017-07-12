@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Newtex AZ740</DeviceName>
+    <Explanation>Modulator</Explanation>
+    <IP>192.168.1.45</IP>
+    <Port>5933</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 64 43 41 73 3F 03 2B</InstructionBytes>
+    <Explanation>CAs:</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 4F 4F 46 3F 03 1C</InstructionBytes>
+    <Explanation>OOF (Output Frequency)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 54 54 74 3F 03 2E</InstructionBytes>
+    <Explanation>(Transmit Status)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 4F 4F 4C 3F 03 16</InstructionBytes>
+    <Explanation>(Output Level)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>5</ID>
+    <Order>1</Order>
+    <InstructionBytes>02 64 54 54 74 21 30 03 00</InstructionBytes>
+    <Explanation>Transmit Off</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>858841018177644125</ID>
+    <Explanation>SLs (Device Serial Number)</Explanation>
+    <InstructionBytes>02 64 74 78 73 3F 03 25</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>8588410195686219</ID>
+    <Explanation>Transmit Off</Explanation>
+    <InstructionBytes>02 64 54 54 74 21 30 03 00</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>588410173995686219</ID>
+    <Explanation>Transmit Off</Explanation>
+    <InstructionBytes>02 64 54 54 74 21 30 03 00</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>4101739956219</ID>
+    <Explanation>FFo (Freq of Convertor LO)</Explanation>
+    <InstructionBytes>02 64 46 46 6F 3F 03</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>1017399568219</ID>
+    <Explanation>Temperature</Explanation>
+    <InstructionBytes>02 64 08 03 00</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>85884101738</ID>
+    <Explanation>Get SNMP Version</Explanation>
+    <InstructionBytes>02 64 53 44 76 3F 03 3B</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>85884738621</ID>
+    <Explanation>get read only community</Explanation>
+    <InstructionBytes>02 64 53 52 6F 3F 03 34</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>8581738629</ID>
+    <Explanation>get read-write community</Explanation>
+    <InstructionBytes>02 64 53 52 77 3F 03 2C</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587810781278136418</ID>
+    <Explanation>serial number of device</Explanation>
+    <InstructionBytes>02 64 53 4C 73 3F 03 36</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+</DeviceInstructions>

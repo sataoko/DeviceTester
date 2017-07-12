@@ -25,7 +25,7 @@
   <Instruction>
     <ID>-8588771255008682058</ID>
     <Explanation>c</Explanation>
-    <InstructionBytes>123,80,1,64> </InstructionBytes>
+    <InstructionBytes>123,80,1,64</InstructionBytes>
     <CheckSum>5</CheckSum>
     <Order>3</Order>
   </Instruction>

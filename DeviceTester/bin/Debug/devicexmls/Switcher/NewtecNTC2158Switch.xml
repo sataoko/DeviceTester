@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>NTC 2185 Switch</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.254.3.252</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 69 47 53 70 3F 03 33</InstructionBytes>
+    <Explanation>iGSp?</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587865752430247385</ID>
+    <Explanation>iGPo? Position</Explanation>
+    <InstructionBytes>02 69 47 50 6F 3F 03 2F</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587865752426503378</ID>
+    <Explanation>Alarms</Explanation>
+    <InstructionBytes>02 69 43 41 73 21 03 38</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DeviceInstructions>
   <DeviceInfo>
-    <DeviceName>SWC 100</DeviceName>
+    <DeviceName>SWC 210</DeviceName>
     <Explanation>Switch</Explanation>
-    <IP>192.168.1.31</IP>
+    <IP>192.168.1.35</IP>
     <Port>4001</Port>
     <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
-    <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
+    <InstructionStructure>SOH=0x02 (Start)
+Device ID
+Device Address
+Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
   </DeviceInfo>
   <Instruction>
     <ID>1</ID>

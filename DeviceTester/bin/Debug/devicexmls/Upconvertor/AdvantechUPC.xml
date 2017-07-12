@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Advantech UPC</DeviceName>
+    <Explanation>Upconvertor</Explanation>
+    <IP>192.168.1.111</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Byte1: 0 Addres, Byte 2:Command, Byte3,4,5,6=AA,checksum (sum of all bytes)</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>4,1,170,170,170,170,173</InstructionBytes>
+    <Explanation>Request Status (01)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>3,2,165,170,170,170,168</InstructionBytes>
+    <Explanation>Set Mute Unmute (02)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>4,5,90, 0,220,170,233</InstructionBytes>
+    <Explanation>Set Att</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>4,10,90,170,170,170,102</InstructionBytes>
+    <Explanation>Read Att</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Read Temperature Block A</Explanation>
+    <InstructionBytes>4,18,165,170,170,170,185</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071497725833603</ID>
+    <Explanation>Read Temperature Block B</Explanation>
+    <InstructionBytes>2,18,90,170,170,170,108</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071492315394143</ID>
+    <Explanation>Read Serial Number</Explanation>
+    <InstructionBytes>4,8,170,170,170,170,180</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071490534772298</ID>
+    <Explanation>Reference Status</Explanation>
+    <InstructionBytes>1,40,170,170,170,170,209</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071490464778294</ID>
+    <Explanation>Read Gain</Explanation>
+    <InstructionBytes>3,10,165,170,170,170,176</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071490437416729</ID>
+    <Explanation>Switch To Unit A</Explanation>
+    <InstructionBytes>4,48,90,170,170,170,140</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588069882648032281</ID>
+    <Explanation>Switch To Unit B</Explanation>
+    <InstructionBytes>4,48,165,170,170,170,215</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588069882631632258</ID>
+    <Explanation>unmute</Explanation>
+    <InstructionBytes>4,2,165,170,170,170,169</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588069882618732240</ID>
+    <Explanation>mute</Explanation>
+    <InstructionBytes>4,2,90,170,170,170,94</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588062662268615742</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>4,2,15,170,170,170,94</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+</DeviceInstructions>

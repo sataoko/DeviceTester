@@ -20,18 +20,7 @@ namespace TCPDeviceTester
             return bytesToSend;
         }
 
-        public static byte[] GetCheckSumInBytes(byte[] dataArray, int size)
-        {
-            int data = CheckSum.CalculateCheckSum2(dataArray, size);
-
-            byte[] ayrilmisData = new byte[2];
-
-            ayrilmisData[1] = (byte)(data & ('\x00FF'));
-            ayrilmisData[0] = (byte)(data >> 8);
-            return ayrilmisData; //data=byte_ayrilmis_data[0] + byte_ayrilmis_data[1] * 256
-
-        }
-
+        //frmMainCommandTools uses this method. Maybe deleted later.
         public static int GetByteCount(string text)
         {
             string[] bytes = System.Text.RegularExpressions.Regex.Split(text, ",");
@@ -54,18 +43,14 @@ namespace TCPDeviceTester
             return bytesToSend;
         }
 
-        public static byte[] GetBytes(string byteStringWithComma, char splitChar)
+        public static byte[] GetBytes(string byteString, char splitChar)
         {
-
-            if (string.IsNullOrEmpty(byteStringWithComma)) return null;
-            string[] bytes = byteStringWithComma.Split(splitChar);
+            if (string.IsNullOrEmpty(byteString)) return null;
+            string[] bytes = byteString.Split(splitChar);
 
             byte[] bytesToSend = new byte[bytes.Length];
             for (int i = 0; i < bytes.Length; i++)
-            {
-                int k = Convert.ToInt16(bytes[i]);
-                bytesToSend[i] = (byte)k;
-            }
+            bytesToSend[i] =Convert.ToByte(bytes[i],10);//Convert.ToInt16(bytes[i]); (byte)k;
 
             return bytesToSend;
         }
@@ -89,6 +74,73 @@ namespace TCPDeviceTester
             return bits;
         }
 
+        public static byte[] ConvertHexStringToByteArray(string hexString)
+        {
+            if (hexString.Length % 2 != 0)
+            {
+                throw new ArgumentException(String.Format(System.Globalization.CultureInfo.InvariantCulture, "The binary key cannot have an odd number of digits: {0}", hexString));
+            }
+
+            byte[] HexAsBytes = new byte[hexString.Length / 2];
+            for (int index = 0; index < HexAsBytes.Length; index++)
+            {
+                string byteValue = hexString.Substring(index * 2, 2);
+                HexAsBytes[index] = byte.Parse(byteValue, System.Globalization.NumberStyles.HexNumber, System.Globalization.CultureInfo.InvariantCulture);
+            }
+
+            return HexAsBytes;
+        }
+
+        public static bool CheckNetworkConnection(string IP)
+        {
+            if (string.IsNullOrEmpty(IP)) return false;
+            try
+            {
+                System.Net.IPAddress ipAddress = System.Net.IPAddress.Parse(IP);
+                System.Net.NetworkInformation.Ping pinger = new System.Net.NetworkInformation.Ping();
+
+                System.Net.NetworkInformation.PingReply reply;
+                reply = pinger.Send(ipAddress, 5);
+                if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)
+                {
+                    return true;
+                }
+                else return false;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
+        }
+
+        public static byte[] SendBytes(string IP,string port,byte[] command)
+        {
+            TCPConnection t = new TCPConnection(IP, Convert.ToUInt16(port));
+
+            byte[] receivedBytes = new byte[t.ReadBufferSize];
+
+            return  t.RequestData(command);
+        }
+
+        public static byte[] GetHexBytes(string byteString)
+        {
+            try
+            {
+                string[] bytes = byteString.Split(' ');
+                byte[] bytesToSend = new byte[bytes.Length];
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    //int k = splitChar == ',' ? Convert.ToInt16(bytes[i]) : Convert.ToInt32(bytes[i], 16);
+                    bytesToSend[i] = byte.Parse(bytes[i], System.Globalization.NumberStyles.HexNumber);
+                }
+                return bytesToSend;
+            }
+            catch (Exception exp)
+            {
+                return null;
+            }
+        }
 
         public static DateTime RetrieveLinkerTimestamp()
         {

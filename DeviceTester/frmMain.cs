@@ -9,24 +9,25 @@ using System.Net.Sockets;
 using System.IO;
 using SnmpSharpNet;
 using System.Net;
+using Be.Windows.Forms;
 
 namespace TCPDeviceTester
 {
     public partial class frmMain : Form
     {
-        enum ConsoleMode { Device, DOS }
+        enum ConsoleMode { HEX, DOS, ASCII, Python }
         enum ConnectionType { TCPIPStandard, TCPIPConnected, UDP, ComPort }
 
         // TCPConnection t = new TCPConnection("10.0.0.242", 4001);
-
+        string _consoleHelpText = string.Empty;
         string _currentXMLPath = string.Empty;
         string _currentCellValue = string.Empty;
-
+        int _tmrRequestTickCount = 0;
         string _promptText = ">";
 
         public string _delimiter = " ";
 
-        ConsoleMode _consoleMode = ConsoleMode.Device;
+        ConsoleMode _consoleMode = ConsoleMode.DOS;
         ConnectionType _currentConnectionType = ConnectionType.TCPIPStandard;
         TcpClient _tcpClient = new TcpClient();
         NetworkStream _stream;
@@ -71,14 +72,25 @@ namespace TCPDeviceTester
             }
         }
 
-
         public byte[] GetBytesToSend(string byteString)
         {
             byte[] bytes;
             if (chkCommandIsASCII.Checked) bytes = ASCIIEncoding.ASCII.GetBytes(byteString);
             else
             {
-                int i = byteString.IndexOf(' ');
+                byteString = byteString.Replace(" ", string.Empty);
+                byteString = byteString.Replace("  ", string.Empty);
+                byteString = byteString.Replace("   ", string.Empty);
+
+                if ((byteString.Length) % 2 != 0)
+                {
+                    txtReceivedBytesASCII.Text = "Check hex bytes. The length is not correct.";
+                    return null;
+                }
+
+                bytes = GetBytesFromByteString(byteString);
+
+                /*int i = byteString.IndexOf(' ');
                 if (i > 0)
                     bytes = GetHexBytes(byteString, ' ');
                 else
@@ -89,8 +101,8 @@ namespace TCPDeviceTester
                         return null;
                     }
 
-                    bytes = GetHexBytes(byteString);
-                }
+                    bytes = GetBytesFromByteString(byteString);
+                }*/
             }
             return bytes;
         }
@@ -98,8 +110,25 @@ namespace TCPDeviceTester
         public frmMain()
         {
             InitializeComponent();
-        }
 
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("ShellControl Demo");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("*******************************************");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("Commands Available");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("(1) All DOS commands that operate on a single line");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("(2) prompt - Changes prompt. Usage (prompt=<desired_prompt>");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("(3) history - prints history of entered commands");
+            stringBuilder.Append(System.Environment.NewLine);
+            stringBuilder.Append("(4) cls - Clears the screen");
+            stringBuilder.Append(System.Environment.NewLine);
+
+            _consoleHelpText = stringBuilder.ToString();
+        }
 
         private void FormatInstructionsGrid()
         {
@@ -112,25 +141,6 @@ namespace TCPDeviceTester
             dgvInstructions.Columns["Explanation"].Width = 230;
 
         }
-
-
-        //private void LoadDeviceXML()
-        //{
-        //    string xmlPath = Application.StartupPath + "\\SWC100.xml";
-        //    XMLOperations x = new XMLOperations(xmlPath);
-
-
-        //    DeviceInfo di = x.GetDeviceInfo();
-        //    txtCurrentIP.Text = di.DeviceIP;
-        //    txtCurrentPort.Text = di.DevicePort;
-        //    txtDeviceName.Text = di.DeviceName;
-        //    txtDeviceExplanation.Text = di.DeviceExplanation;
-
-        //    tpDeviceCommands.Text = di.DeviceName + " Commands";
-
-        //    dgvInstructions.DataSource = x.GetXMLNodes("DeviceInstructions/Instruction");
-        //    FormatInstructionsGrid();
-        //}
 
         private void LoadDeviceXML(string xmlFilename)
         {
@@ -168,7 +178,6 @@ namespace TCPDeviceTester
             }
             else MessageBox.Show(xmlPath + " file does not exist.");
         }
-
 
         #region MAIN COMMUNICATION METHODS
         byte[] GetBytes(string byteStringWithComma)
@@ -218,8 +227,9 @@ namespace TCPDeviceTester
         }
 
 
-        byte[] GetHexBytes(string byteString)
+        byte[] GetBytesFromByteString(string byteString)
         {
+            byteString = byteString.Replace(" ", string.Empty);
             try
             {
                 string[] bytes = new string[byteString.Length / 2];
@@ -236,7 +246,6 @@ namespace TCPDeviceTester
                         s = string.Empty;
                     }
                 }
-
 
                 byte[] bytesToSend = new byte[bytes.Length];
                 for (int i = 0; i < bytes.Length; i++)
@@ -273,9 +282,56 @@ namespace TCPDeviceTester
             }
         }
 
-        private string CalculateCheckSumInBSV(string blankSeperatedValue)
+        private string CalculateCheckSumInBSV(string blankSeparatedValue)
         {
-            byte[] byteArray = Common.GetBytes(blankSeperatedValue, ' ');
+            //byte[] byteArray = Common.GetBytes(blankSeparatedValue, ' ');
+            byte[] byteArray = Common.ConvertHexStringToByteArray(blankSeparatedValue);
+
+            CRCType ctype = new CRCType();
+            switch (cbCheckSumTypes.SelectedIndex)
+            {
+                case 0: ctype = CRCType.SUM; break;
+                case 1: ctype = CRCType.XOR; break;
+                case 2: ctype = CRCType.Mod95; break;
+                case 3: ctype = CRCType.CRC16; break;
+                case 4: ctype = CRCType.CRC_CCITT_Kermit; break;
+                case 5: ctype = CRCType.CRC32; break;
+                case 6: ctype = CRCType.MODBUS; break;
+                default: break;
+            }
+
+            //ctype = (CRCType)Enum.Parse(typeof(CRCType), cbCheckSumTypes.Text, true);
+
+            return GetCRC.CalculateCheckSum(byteArray, ctype).HexString;
+        }
+
+        private string CalculateCheckSum(string hexValue)
+        {
+            byte[] byteArray = GetBytesFromByteString(hexValue);
+
+            CRCType ctype = new CRCType();
+            switch (cbCheckSumTypes.SelectedIndex)
+            {
+                case 0: ctype = CRCType.SUM; break;
+                case 1: ctype = CRCType.XOR; break;
+                case 2: ctype = CRCType.Mod95; break;
+                case 3: ctype = CRCType.CRC16; break;
+                case 4: ctype = CRCType.CRC_CCITT_Kermit; break;
+                case 5: ctype = CRCType.CRC32; break;
+                case 6: ctype = CRCType.MODBUS; break;
+                default: break;
+            }
+
+            CheckSumRV c = GetCRC.CalculateCheckSum(byteArray, ctype);
+
+            //ctype = (CRCType)Enum.Parse(typeof(CRCType), cbCheckSumTypes.Text, true);
+
+            return c.HexString;
+        }
+
+        private string CalculateCheckSumInByteString(string byteString)
+        {
+            byte[] byteArray = GetBytesFromByteString(byteString);
             CRCType ctype = new CRCType();
             switch (cbCheckSumTypes.SelectedIndex)
             {
@@ -285,191 +341,17 @@ namespace TCPDeviceTester
                 case 3: ctype = CRCType.CRC_CCITT_Kermit; break;
                 case 4: ctype = CRCType.CRC32; break;
                 case 5: ctype = CRCType.SUM; break;
+                case 6: ctype = CRCType.MODBUS; break;
                 default: break;
             }
-            return CRC.CalculateCheckSum(byteArray, ctype);
-        }
 
-        private string SendBytesToDevice(byte[] bytesToSend)
-        {
-            if (bytesToSend == null) return "Error:bytesToSend is null.";
+            //ctype = (CRCType)Enum.Parse(typeof(CRCType), cbCheckSumTypes.Text, true);
 
-            if (tsbClearBeforeSend.Checked)
-            {
-                txtReceivedBytes.Clear();
-                txtReceivedBytesASCII.Clear();
-                txtReceivedBytesHex.Clear();
-            }
-
-            var stopWatch = new System.Diagnostics.Stopwatch();
-
-            switch (_currentConnectionType)
-            {
-                case ConnectionType.TCPIPStandard:
-
-                    if (CheckNetworkConnection(txtCurrentIP.Text))
-                    {
-                        stopWatch.Start();
-
-                        TCPConnection t = new TCPConnection(txtCurrentIP.Text, Convert.ToUInt16(txtCurrentPort.Text));
-
-                        t.ConditionalReading = chkConditionalReading.Checked;
-                        t.EndByte = Convert.ToByte(txtEndByte.Text);
-                        t.Delay = Convert.ToInt16(txtDelayTime.Text == string.Empty ? "0" : txtDelayTime.Text);
-
-                        t.CommunicationTimeOut = Convert.ToInt16(txtTCPClientCommunicationTimeOut.Text);
-                        t.ReadBufferSize = Convert.ToInt16(txtReadBufferSize.Text);
-
-                        byte[] receivedBytes = new byte[t.ReadBufferSize];
-                        receivedBytes = t.RequestData(bytesToSend);
-
-                        stopWatch.Stop();
-                        lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";
-
-                        if (receivedBytes == null)
-                        {
-                            txtReceivedBytes.Text = "error";
-                            txtReceivedBytesASCII.Clear();
-                            txtReceivedBytesHex.Clear();
-                            return "error";
-                        }
-                        else return ShowBytesInTextBoxes(receivedBytes);
-                    }
-                    else
-                    {
-                        txtReceivedBytes.Text = "IP problem.Check IP address.";
-                        return "IP problem";
-                    }
-
-                case ConnectionType.TCPIPConnected:
-
-                    if (CheckNetworkConnection(txtCurrentIP.Text))
-                    {
-
-                        try
-                        {
-                            stopWatch.Start();
-
-                            byte[] incomingByteArray = new byte[_tcpClient.ReceiveBufferSize];
-
-                            if (_stream.CanWrite)
-                            {
-                                _stream.Write(bytesToSend, 0, bytesToSend.Length);
-                            }
-
-                            if (_stream.CanRead)
-                            {
-                                _stream.Read(incomingByteArray, 0, (int)_tcpClient.ReceiveBufferSize);
-                            }
-
-                            stopWatch.Stop();
-                            lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";
-
-
-                            if (incomingByteArray == null)
-                            {
-                                txtReceivedBytes.Text = "error";
-                                txtReceivedBytesASCII.Clear();
-                                txtReceivedBytesHex.Clear();
-                                return "error";
-                            }
-                            else return ShowBytesInTextBoxes(incomingByteArray);
-
-                        }
-                        catch (Exception exp)
-                        {
-                            //System.Windows.Forms.MessageBox.Show(exp.ToString());
-                            return null;
-                        }
-                    }
-                    else
-                    {
-                        txtReceivedBytes.Text = "IP problem.Check IP address.";
-                        return "IP problem";
-                    }; break;
-
-                case ConnectionType.ComPort:
-
-                    if (!serialPort1.IsOpen) serialPort1.Open();
-                    serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
-
-
-                    //byte[] buffer = new byte[256];
-                    //using (SerialPort sp = new SerialPort("COM1", 19200))
-                    //{
-                    //    sp.Open();
-                    //    //read directly
-                    //    sp.Read(buffer, 0, (int)buffer.Length);
-                    //    //read using a Stream
-                    //    sp.BaseStream.Read(buffer, 0, (int)buffer.Length);
-                    //}
-
-                    return "nothing."; break;
-                case ConnectionType.UDP:
-                    if (CheckNetworkConnection(txtCurrentIP.Text))
-                    {
-
-                        try
-                        {
-                            stopWatch.Start();
-                            var client = new UdpClient();
-                            IPEndPoint ep = new IPEndPoint(IPAddress.Parse(txtCurrentIP.Text), Convert.ToInt16(txtCurrentPort.Text)); // endpoint where server is listening
-                            client.Connect(ep);
-
-                            // send data
-                            client.Send(bytesToSend, bytesToSend.Length);
-                            System.Threading.Thread.Sleep(Convert.ToInt16(txtDelayTime.Text));
-                            // then receive data
-                            byte[] receivedData = client.Receive(ref ep);
-
-                            stopWatch.Stop();
-                            lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";
-
-                            if (receivedData == null)
-                            {
-                                txtReceivedBytes.Text = "error";
-                                txtReceivedBytesASCII.Clear();
-                                txtReceivedBytesHex.Clear();
-                                return "error";
-                            }
-                            else
-                            {
-                                Convertor c = new Convertor();
-                                for (int i = 0; i < receivedData.Length; i++)
-                                {
-                                    txtReceivedBytes.Text += receivedData[i].ToString() + _delimiter;
-                                    dgvIncomingBytes.Rows.Add(i.ToString(), receivedData[i].ToString(), "", c.DecimalToHex(receivedData[i].ToString()));
-                                }
-
-                                txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(receivedData);
-                                c.DecimalToHexIntoTextBox(txtReceivedBytes, txtReceivedBytesHex);
-                                return txtReceivedBytes.Text;
-                            }
-
-                        }
-                        catch (Exception exp)
-                        {
-                            //System.Windows.Forms.MessageBox.Show(exp.ToString());
-                            return null;
-                        }
-                    }
-                    else
-                    {
-                        txtReceivedBytes.Text = "IP problem.Check IP address.";
-                        return "IP problem";
-                    }
-
-                    break;
-                default: return "Connection type not specified."; break;
-            }
-
-
-
+            return GetCRC.CalculateCheckSum(byteArray, ctype).HexString;
         }
 
         private string ShowBytesInTextBoxes(byte[] bytesToShow)
         {
-
             dgvIncomingBytes.Rows.Clear();
 
             Convertor c = new Convertor();
@@ -478,37 +360,41 @@ namespace TCPDeviceTester
             if (!string.IsNullOrEmpty(txtReadBufferSize.Text))
                 readSize = Convert.ToInt16(txtReadBufferSize.Text);
 
-
+            string bytesInHex = string.Empty;
             for (int i = 0; i < readSize; i++)
             {
-                txtReceivedBytes.Text += bytesToShow[i].ToString() + _delimiter;
+                //  txtReceivedBytesASCII.Text += bytesToShow[i].ToString() + _delimiter;
+                bytesInHex += bytesToShow[i].ToString() + " ";
                 dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), "", c.DecimalToHex(bytesToShow[i].ToString()));
             }
 
             txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(bytesToShow);
+            //c.DecimalToHexIntoTextBox(txtReceivedBytes, txtReceivedBytesHex);
 
-            if (chkSaveLog.Checked)
-            {
-                using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\" + txtDeviceName.Text + ".txt"))
-                {
-                    sw.WriteLine(ASCIIEncoding.ASCII.GetString(bytesToShow));
-                }
-               
-                //System.IO.FileInfo t = new System.IO.FileInfo(Application.StartupPath + "\\" + txtDeviceName.Text + ".txt");
-                //System.IO.StreamWriter text = t.CreateText(true);
-                //text.WriteLine(ASCIIEncoding.ASCII.GetString(bytesToShow));
-                //text.Close();
-            }
-            c.DecimalToHexIntoTextBox(txtReceivedBytes, txtReceivedBytesHex);
+            DynamicByteProvider b = new DynamicByteProvider(bytesToShow);
+            hexReceivedBytes.ByteProvider = b;
 
-            /*
-            XMLHelper x = new XMLHelper();
+            if (chkSaveLog.Checked) SaveLog(txtSentCommand.Text + "," + bytesInHex + "," + txtReceivedBytesASCII.Text);
 
-             * save log
-             * 
-            */
-            return txtReceivedBytes.Text;
+            return txtReceivedBytesASCII.Text;
         }
+
+        private void SaveLog(string data)
+        {
+            string logsFolder = Application.StartupPath + "\\Logs\\";
+            if (!Directory.Exists(logsFolder)) Directory.CreateDirectory(logsFolder);
+
+            using (StreamWriter sw = File.AppendText(logsFolder + txtDeviceName.Text + "Logs.txt"))
+            {
+                sw.WriteLine(DateTime.Today.ToShortDateString() + " " + DateTime.Now.ToLongTimeString() + "," + data);
+            }
+
+            //System.IO.FileInfo t = new System.IO.FileInfo(Application.StartupPath + "\\" + txtDeviceName.Text + ".txt");
+            //System.IO.StreamWriter text = t.CreateText(true);
+            //text.WriteLine(RxString);
+            //text.Close();
+        }
+
         #endregion MAIN COMMUNICATION METHODS
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -516,15 +402,11 @@ namespace TCPDeviceTester
             DateTime d = Common.RetrieveLinkerTimestamp();
             lblBuildDate.Text += d.ToShortDateString() + "," + d.ToShortTimeString();
 
-
             Image b = imageList1.Images[0];
 
             //Bitmap bm = new Bitmap("Picture.jpg");
             Bitmap bm = new Bitmap(b);
             IntPtr hBitmap = bm.GetHbitmap();
-
-            CreateCaret(txtConsole.Handle, hBitmap, 5, txtConsole.Height);
-            ShowCaret(txtConsole.Handle);
 
             tbcDevice.SelectedIndex = 0;
 
@@ -539,11 +421,19 @@ namespace TCPDeviceTester
                 txtCurrentIP.Text = Ini.IniFile.GetValue("TCPSettings", "IP");
                 txtCurrentPort.Text = Ini.IniFile.GetValue("TCPSettings", "Port");
 
-                SetSerialPortParameters(Ini.IniFile.GetValue("ComportSettings", "Comport"),
+                try
+                {
+                    SetSerialPortParameters(Ini.IniFile.GetValue("ComportSettings", "Comport"),
                     Convert.ToInt32(Ini.IniFile.GetValue("ComportSettings", "BaudRate")),
                     Ini.IniFile.GetValue("ComportSettings", "Parity"),
                     Convert.ToByte(Ini.IniFile.GetValue("ComportSettings", "DataBits")),
                     Ini.IniFile.GetValue("ComportSettings", "StopBits"));
+                }
+                catch (Exception)
+                {
+                    lblComPortInfo.Text = "Error in com port parameters at Start.ini";
+                }
+
             }
 
             dgvInstructions.DefaultCellStyle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -562,7 +452,6 @@ namespace TCPDeviceTester
         {
             if (row != null)
             {
-
                 byte[] bytesToSend;
 
                 if (chkCommandIsASCII.Checked) bytesToSend = ASCIIEncoding.ASCII.GetBytes(row.Cells["InstructionBytes"].Value.ToString() + "\r");
@@ -573,186 +462,10 @@ namespace TCPDeviceTester
             else return null;
         }
 
-        private void tsbSendBytesToDevice_Click(object sender, EventArgs e)
-        {
-            ///SEND BYTES TO DEVICE !!!!!
-            byte[] bytesToSend = GetBytesFromRow(dgvInstructions.CurrentRow);
-            if (bytesToSend == null) MessageBox.Show("Select row.");
-            else SendBytesToDevice(bytesToSend);
-
-            if ((chkTimerActive.Checked) && (dgvInstructions.SelectedRows.Count > 0))
-            {
-                foreach (DataGridViewRow dr in dgvInstructions.SelectedRows)
-                {
-                    timerCommandList.Add(GetBytesFromRow(dr));
-                }
-                timerCommandNo = 0;
-                tmrRequest.Enabled = true;
-            }
-        }
-
-        private void miPrepareCommand_Click(object sender, EventArgs e)
-        {
-            frmPrepareCommand x = new frmPrepareCommand();
-            x.ShowDialog();
-        }
-
-        private void dgvInstructions_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void miGenerateCommandList_Click(object sender, EventArgs e)
-        {
-            frmTryCommands x = new frmTryCommands();
-            x.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //byte[] byteArray = Common.GetBytes(txtDecimalBytes.Text);
-
-            if (string.IsNullOrEmpty(txtDecimalBytes.Text))
-            { MessageBox.Show("Enter bytes."); }
-            else
-            {
-
-                string checkSum = CalculateCheckSumInBSV(txtDecimalBytes.Text);
-                txtDecimalBytes.Text += " " + checkSum;
-            }
-
-            Convertor c = new Convertor();
-            c.DecimalToHexIntoTextBox(txtDecimalBytes, txtHEXBytes);
-
-            //CRCType ctype = new CRCType();
-
-            //if (rbXOR.Checked) ctype = CRCType.XOR;
-            //else
-            //    if (rbMod95.Checked) ctype = CRCType.Mod95;
-            //    else
-            //        if (rbCRC16.Checked) ctype = CRCType.CRC16;
-            //        else
-            //            if (rbCRC16Kermit.Checked) ctype = CRCType.CRC_CCITT_Kermit; else return;
-
-            //switch (ctype)
-            //{
-            //    case CRCType.Mod95:
-            //        int c = CRC.Mod95(byteArray);
-            //        txtDecimalBytes.Text += _delimiter + c.ToString();
-            //        break;
-            //    case CRCType.XOR:
-            //        int d = CRC.XOR(byteArray);
-            //        txtDecimalBytes.Text += _delimiter + d.ToString();
-            //        break;
-            //    case CRCType.CRC16:
-            //        int data = CRC.crc_mcl(byteArray);
-            //        byte[] chk = new byte[2];
-            //        chk[0] = (byte)(data & ('\x00FF'));
-            //        chk[1] = (byte)(data >> 8);
-            //        txtDecimalBytes.Text += _delimiter + chk[0].ToString() + _delimiter;
-            //        txtDecimalBytes.Text += chk[1].ToString();
-            //        break;
-            //    case CRCType.CRC_CCITT_Kermit:
-
-            //        int da = CRC.CRC_CCITTKermit(byteArray);
-            //        byte[] a = new byte[2];
-            //        a[1] = (byte)(da & ('\x00FF'));
-            //        a[0] = (byte)(da >> 8);
-            //        txtDecimalBytes.Text += _delimiter + a[0].ToString() + _delimiter;
-            //        txtDecimalBytes.Text += a[1].ToString();
-
-            //        break;
-            //    default:
-            //        break;
-            //}
-
-        }
-
-        private void btnSendToGrid_Click(object sender, EventArgs e)
-        {
-            if (dgvInstructions.CurrentRow != null)
-            {
-                if (rbSendToGridDecimal.Checked)
-                {
-                    if (!string.IsNullOrEmpty(txtDecimalBytes.Text))
-                    {
-                        dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value = txtDecimalBytes.Text;
-                    }
-                }
-
-                if (rbSendToGridHex.Checked)
-                {
-                    if (!string.IsNullOrEmpty(txtHEXBytes.Text))
-                    {
-                        dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value = txtHEXBytes.Text;
-                        UpdateGridNode(dgvInstructions, "InstructionBytes", txtHEXBytes.Text);
-                    }
-                }
-            }
-        }
 
         private void tsbBulkRequest_Click(object sender, EventArgs e)
         {
-            byte[] a = new byte[] { 1, 2, 3, 4 };
 
-            MessageBox.Show(CRC.crc_mcl(a).ToString());
-
-
-
-            return;
-            /*
-            TcpClient _tcpClient= new TcpClient("10.0.0.81",23);
-            NetworkStream _stream=_tcpClient.GetStream();
-
-            try
-            {
-                byte[] incomingByteArray = new byte[_tcpClient.ReceiveBufferSize];
-
-                byte[] byteArrayToSend = new byte[10];
-                byteArrayToSend[0] = 123; byteArrayToSend[1] = 123;
-                byteArrayToSend[2] = 49; byteArrayToSend[3] = 49;
-                byteArrayToSend[4] = 49; byteArrayToSend[5] = 49;
-                byteArrayToSend[6] = 49; byteArrayToSend[7] = 125;
-                byteArrayToSend[8] = 125;
-
-                if (_stream.CanWrite)
-                {
-                    _stream.Write(byteArrayToSend, 0, byteArrayToSend.Length);
-                }
-
-                if (_stream.CanRead)
-                {
-                    _stream.Read(incomingByteArray, 0, (int)_tcpClient.ReceiveBufferSize);
-
-                    if (_stream.CanWrite)
-                         _stream.Write(byteArrayToSend, 0, byteArrayToSend.Length);
-                    
-                    if (_stream.CanRead)               
-                    _stream.Read(incomingByteArray, 0, (int)_tcpClient.ReceiveBufferSize);
-
-                }
-
-
-                txtReceivedBytes.Clear();
-                for (int i = 0; i < 100; i++)
-                {
-                    txtReceivedBytes.Text += incomingByteArray[i].ToString() + _delimiter;
-                }
-
-                txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(incomingByteArray);
-                
-            }
-            catch (Exception exp)
-            {
-                System.Windows.Forms.MessageBox.Show(exp.ToString());
-                throw;
-            }
-
-            finally
-            {
-                _tcpClient.Close();
-                _stream.Close();
-            }*/
         }
 
         private void UpdateGridNode(DataGridView sender, string targetFieldName, string targetFieldValue)
@@ -800,11 +513,11 @@ namespace TCPDeviceTester
         {
             if (dgvInstructions.CurrentRow != null)
             {
-                txtHEXBytes.Text = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
+                txtHEXBytesInCHKCalculator.Text = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
 
                 Convertor c = new Convertor();
-                c.HexToAsciiIntoTextBox(txtHEXBytes, txtASCIIBytes);
-                c.AsciiToDecimalIntoTextBox(txtASCIIBytes, txtDecimalBytes);
+                c.HexToAsciiIntoTextBox(txtHEXBytesInCHKCalculator, txtASCIIBytesInCHKCalculator);
+                c.AsciiToDecimalIntoTextBox(txtASCIIBytesInCHKCalculator, txtDecimalBytesInCHKCalculator);
 
                 tbcTools.SelectedIndex = 1;
             }
@@ -816,27 +529,22 @@ namespace TCPDeviceTester
             SendToTools();
         }
 
-        #region ASCII HEX DECIMAL CONVERTIONS
+        #region ASCII HEX DECIMAL CONVERSIONS
         private void txtASCIIBytes_TextChanged(object sender, EventArgs e)
         {
-            if (txtASCIIBytes.Focused)
+            if (txtASCIIBytesInCHKCalculator.Focused)
             {
                 // if (rbASCII.Checked)
                 {
+
                     Convertor c = new Convertor();
-                    c.AsciiToDecimalIntoTextBox((sender as TextBox), txtDecimalBytes);
-                    c.DecimalToHexIntoTextBox(txtDecimalBytes, txtHEXBytes);
+                    c.AsciiToDecimalIntoTextBox((sender as TextBox), txtDecimalBytesInCHKCalculator);
+                    c.DecimalToHexIntoTextBox(txtDecimalBytesInCHKCalculator, txtHEXBytesInCHKCalculator);
+                    btnCalculateCRCInHex_Click(null, null);
                     //c.ConvertBytesIntoTextBox((sender as TextBox), txtDecimalBytes, "Decimal"); 
                     //c.ApplyConvertionsToTextBoxes( txtHEXBytes, "HEX");
                 }
             }
-        }
-
-        private void txtDecimalBytes_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back &&
-                e.KeyChar != (char)Keys.Delete && e.KeyChar != (char)Keys.Left && e.KeyChar != (char)Keys.Right)
-                e.Handled = true;
         }
 
         private void txtDecimalBytes_TextChanged(object sender, EventArgs e)
@@ -861,11 +569,12 @@ namespace TCPDeviceTester
             //        return;
             //}
 
-            if (txtDecimalBytes.Focused)
+            if (txtDecimalBytesInCHKCalculator.Focused)
             {
                 Convertor c = new Convertor();
-                c.DecimalToHexIntoTextBox((sender as TextBox), txtHEXBytes);
-                c.HexToAsciiIntoTextBox(txtHEXBytes, txtASCIIBytes);
+                c.DecimalToHexIntoTextBox((sender as TextBox), txtHEXBytesInCHKCalculator);
+                c.HexToAsciiIntoTextBox(txtHEXBytesInCHKCalculator, txtASCIIBytesInCHKCalculator);
+                btnCalculateCRCInHex_Click(null, null);
                 //c.ConvertBytesIntoTextBox((sender as TextBox), txtHEXBytes, "HEX"); 
                 //c.ApplyConvertionsToTextBoxes((sender as TextBox), txtASCIIBytes, "ASCII", txtHEXBytes, "HEX");   
             }
@@ -874,26 +583,30 @@ namespace TCPDeviceTester
 
         private void txtHEXBytes_TextChanged(object sender, EventArgs e)
         {
-            if (txtHEXBytes.Focused)
+            if (txtHEXBytesInCHKCalculator.Focused)
             //if (rbHEX.Checked)
             {
+                btnCalculateCRCInHex_Click(null, null);
+
                 Convertor c = new Convertor();
-                c.HexToAsciiIntoTextBox((sender as TextBox), txtASCIIBytes);
-                c.AsciiToDecimalIntoTextBox(txtASCIIBytes, txtDecimalBytes);
+                c.HexToAsciiIntoTextBox((sender as TextBox), txtASCIIBytesInCHKCalculator);
+                c.AsciiToDecimalIntoTextBox(txtASCIIBytesInCHKCalculator, txtDecimalBytesInCHKCalculator);
                 //c.ConvertBytesIntoTextBox((sender as TextBox), txtASCIIBytes, "ASCII"); 
             }
 
+        }
+
+        private void txtDecimalBytes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back &&
+                e.KeyChar != (char)Keys.Delete && e.KeyChar != (char)Keys.Left && e.KeyChar != (char)Keys.Right)
+                e.Handled = true;
         }
         #endregion
 
         private void dgvIncomingBytes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            byte b = Convert.ToByte(dgvIncomingBytes.CurrentRow.Cells["Decimal"].Value);
-            txtBits.Text = Common.GetBits(b);
-            for (int i = 0; i < 8; i++)
-            {
-                dgvBits.Rows[0].Cells["Bit" + i.ToString()].Value = txtBits.Text[(7 - i)];
-            }
+
         }
 
         private void SelectLastRow(DataGridView dataGridView)
@@ -966,128 +679,6 @@ namespace TCPDeviceTester
 
         #endregion
 
-        #region CONSOLE OPERATIONS
-
-        private void SetConsoleMode()
-        {
-            if (rbDeviceMode.Checked) _consoleMode = ConsoleMode.Device;
-            if (rbDosMode.Checked) _consoleMode = ConsoleMode.DOS;
-        }
-
-        private void tsbCalculateConsoleCheckSum_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(cbCheckSumTypes.Text))
-            {
-                MessageBox.Show("Select a checksum type.");
-            }
-            else
-            {
-                string s = GetLastLineText(txtConsole);
-                s = s.Substring(1, s.Length - 1);
-                string chk = CalculateCheckSumInBSV(s);
-                //txtConsole.Lines[txtConsole.Lines.Length - 1] += chk;
-
-                AddToLastLine(txtConsole, _delimiter + chk);
-                //string s =  CalculateCheckSumInCSV(richTextBox1.Lines[richTextBox1.Lines.Length - 1]);
-                //richTextBox1.Lines[richTextBox1.Lines.Length - 1] += s;
-                //txtConsole.Lines[txtConsole.Lines.Length - 1] = 
-            }
-        }
-
-        private void txtConsole_TextChanged(object sender, EventArgs e)
-        {
-            /*  int index = txtConsole.SelectionStart;
-              Point p = txtConsole.GetPositionFromCharIndex(index);
-              p.X = 0;
-              //int col = index - txtConsole.GetCharIndexFromPosition(p);
-
-              int col =txtConsole.GetFirstCharIndexFromLine(GetCurrentLineNo(txtConsole));
-
-              int absoluteIndex = txtConsole.SelectionStart;
-              int lineStartIndex = GetFirstCharIndexOfCurrentLine(txtConsole);
-
-              lblCaretPosition.Text = absoluteIndex.ToString()+_delimiter+lineStartIndex.ToString();//"X:" + p.X.ToString()+", Y:"+p.Y.ToString()+ ",Col:"+col.ToString();*/
-
-
-            string s1 = GetCurrentLineText(txtConsole);
-
-            if (string.IsNullOrEmpty(s1))
-            {
-                // MessageBox.Show("empty line");
-                SetCurrentLineText(txtConsole, ">");
-                GoTo(txtConsole, txtConsole.Lines.Length, _promptText.Length + 1);
-            }
-            //return;
-
-            //if (txtConsole.Text == string.Empty)
-            //{
-            //    //txtConsole.Text = _promptText;
-            //    //GoTo(txtConsole, txtConsole.Lines.Length, _promptText.Length + 1);
-            //}
-            //else
-            //{
-            //    string s = GetCurrentLineText(txtConsole);
-
-            //    //if current line in blank, put prompt char and move caret in front of the prompt char
-            //    if (string.IsNullOrEmpty(s))
-            //    {
-            //        SetCurrentLineText(txtConsole, _promptText);
-            //        GoTo(txtConsole, txtConsole.Lines.Length, _promptText.Length + 1);
-            //    }
-            //}
-        }
-
-        private void txtConsole_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Up) e.SuppressKeyPress = true;
-            if (GetLastLineNo(txtConsole) > GetCurrentLineNo(txtConsole)) e.SuppressKeyPress = true;//to disable upper lines.
-            if (e.KeyCode == Keys.Return)
-            {
-                e.SuppressKeyPress = true;
-                //string s = GetLastLineText(txtConsole);
-                string s = GetCurrentLineText(txtConsole);
-                //s1 = s1.Substring(1, s1.Length - 1);
-                s = s.Substring(1, s.Length - 1);
-                // return;
-                if (!string.IsNullOrEmpty(s))
-                {
-                    switch (_consoleMode)
-                    {
-                        case ConsoleMode.Device:
-                            byte[] bytesToSend;
-                            if (chkCommandIsASCII.Checked) bytesToSend = ASCIIEncoding.ASCII.GetBytes(s + Environment.NewLine);
-                            else bytesToSend = GetHexBytes(s, ' ');
-
-                            SendBytesToDevice(bytesToSend);
-                            break;
-                        case ConsoleMode.DOS:
-                            DOSPrompt.CMDAutomate(s, txtReceivedBytes);
-                            break;
-                        default: break;
-                    }
-                }
-                txtConsole.Text += "\r\n" + _promptText;
-                GoTo(txtConsole, txtConsole.Lines.Length, _promptText.Length + 1);
-            }
-        }
-
-        private void txtConsole_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            int absoluteIndex = txtConsole.SelectionStart;
-            int lineStartIndex = GetFirstCharIndexOfCurrentLine(txtConsole);
-
-
-            if (e.KeyChar == (char)Keys.Back)
-            {
-                if ((absoluteIndex - 1) == lineStartIndex) e.Handled = true;
-                // int line = txtConsole.GetLineFromCharIndex(index);
-                //string s = GetLastLineText(txtConsole);
-                //if (s.Length == 0) e.KeyChar = (char)0;
-            }
-        }
-
-        #endregion
-
         #region GENERIC TEXTBOX METHODS
 
         public int GetFirstCharIndexOfCurrentLine(TextBox target)
@@ -1113,7 +704,6 @@ namespace TCPDeviceTester
             target.Lines = lines;
         }
 
-
         public void GoTo(TextBox target, int line, int column)
         {
             if (line < 1 || column < 1 || target.Lines.Length < line)
@@ -1121,44 +711,6 @@ namespace TCPDeviceTester
 
             target.SelectionStart = target.GetFirstCharIndexFromLine(line - 1) + column - 1;
             target.SelectionLength = 0;
-        }
-
-
-        string GetLastLineText(TextBox target)
-        {
-            int lastLineNo = GetLastLineNo(txtConsole);
-            if (lastLineNo > -1)
-            {
-                //string s = target.Lines[lastLineNo].Substring(1, target.Lines[lastLineNo].Length - _promptText.Length);
-                string s = target.Lines[lastLineNo];
-                return s;
-            }
-            else return string.Empty;
-        }
-
-
-        //Current line text is returned without prompt character
-        string GetCurrentLineText(TextBox target)
-        {
-            int currentLineNo = GetCurrentLineNo(target);
-
-            //if (currentLineNo == 0) return string.Empty;
-            //{
-            //    MessageBox.Show(target.Lines[currentLineNo]);
-            //}
-
-            if (currentLineNo > -1)
-            {
-                //remove prompt out of current line text
-                if (target.Lines[currentLineNo].Length > 0)
-                {
-                    //string s = target.Lines[currentLineNo].Substring(1, target.Lines[currentLineNo].Length - _promptText.Length);
-                    string s = target.Lines[currentLineNo];
-                    return s;
-                }
-                else return string.Empty;
-            }
-            else return string.Empty;
         }
 
         private void SetCurrentLineText(TextBox target, string value)
@@ -1239,7 +791,16 @@ namespace TCPDeviceTester
 
         private void btnActiveTCPConnections_Click(object sender, EventArgs e)
         {
-            GetActiveTCPConnections();
+            string a = "ABCÇ";
+            for (int i = 0; i < a.Length; i++)
+            {
+                txtIntNumberToConvert.Text += Convert.ToByte(a[i]) + ",";
+                txtConvertedBytes.Text += a[i].ToString() + ",";
+            }
+
+            this.Text = ASCIIEncoding.ASCII.GetString(new byte[] { 65, 56, 65 });
+
+            //GetActiveTCPConnections();
         }
 
         private void tsbConnectToIP_Click(object sender, EventArgs e)
@@ -1312,9 +873,12 @@ namespace TCPDeviceTester
                 }
                 else
                 {
-                    string chk = CalculateCheckSumInBSV(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString());
-                    dgvInstructions.CurrentRow.Cells["CheckSum"].Value = chk;
-                    UpdateGridNode(dgvInstructions, "CheckSum", chk);
+                    string bytes = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
+                    string checksumBytes = CalculateCheckSum(bytes);
+                    /*dgvInstructions.CurrentRow.Cells["CheckSum"].Value = checksumBytes;
+                    UpdateGridNode(dgvInstructions, "CheckSum", checksumBytes);*/
+                    dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value = bytes.Trim() + " " + checksumBytes;
+                    UpdateGridNode(dgvInstructions, "InstructionBytes", bytes.Trim() + " " + checksumBytes);
                 }
             }
 
@@ -1336,12 +900,23 @@ namespace TCPDeviceTester
 
         private void SetSerialPortParameters(string comPort, int baudRate, string parity, byte dataBits, string stopBits)
         {
-            serialPort1.PortName = comPort;
-            serialPort1.BaudRate = baudRate;
-            serialPort1.DataBits = dataBits;
+            try
+            {
+                serialPort1.PortName = comPort;
+                serialPort1.BaudRate = baudRate;
+                serialPort1.DataBits = dataBits;
 
-            serialPort1.Parity = (System.IO.Ports.Parity)Enum.Parse(typeof(System.IO.Ports.Parity), parity, true);
-            serialPort1.StopBits = (System.IO.Ports.StopBits)Enum.Parse(typeof(System.IO.Ports.StopBits), stopBits, true);
+                serialPort1.Parity = (System.IO.Ports.Parity)Enum.Parse(typeof(System.IO.Ports.Parity), parity, true);
+                serialPort1.StopBits = (System.IO.Ports.StopBits)Enum.Parse(typeof(System.IO.Ports.StopBits), stopBits, true);
+
+                lblComPortInfo.Text = serialPort1.PortName + "," + serialPort1.BaudRate + "," + serialPort1.Parity + "," + serialPort1.DataBits + "," + serialPort1.StopBits;
+            }
+            catch (Exception)
+            {
+                lblComPortInfo.Text = "Error in com port parameters.";
+            }
+
+
             //if (parity == "None") serialPort1.Parity = System.IO.Ports.Parity.None;
             //if (parity == "Odd") serialPort1.Parity = System.IO.Ports.Parity.Odd;
             //if (parity == "Even") serialPort1.Parity = System.IO.Ports.Parity.Even;
@@ -1353,7 +928,7 @@ namespace TCPDeviceTester
             //if (stopBits == "Two") serialPort1.StopBits = System.IO.Ports.StopBits.Two;
             //if (stopBits == "OnePointFive") serialPort1.StopBits = System.IO.Ports.StopBits.OnePointFive;
 
-            lblComPortInfo.Text = serialPort1.PortName + "," + serialPort1.BaudRate + "," + serialPort1.Parity + "," + serialPort1.DataBits + "," + serialPort1.StopBits;
+
         }
 
 
@@ -1368,33 +943,33 @@ namespace TCPDeviceTester
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             RxString = serialPort1.ReadExisting();
-            this.Invoke(new EventHandler(DisplayText));
-            if(txtReceivedBytesASCII.Text.Length>17)
+            //System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(DisplayText));
+            //this.Invoke(new EventHandler(DisplayText));
+            //x.Start();
+            DisplayText();
+
             if (chkSaveLog.Checked)
             {
                 //System.Threading.Thread.Sleep(1000);
-                using (StreamWriter sw = File.AppendText(Application.StartupPath + "\\" + txtDeviceName.Text + ".txt"))
-                {
-                    sw.WriteLine(txtReceivedBytesASCII.Text.Trim());                   
-                }	
+                SaveLog(txtReceivedBytesASCII.Text.Trim());
 
-                //System.IO.FileInfo t = new System.IO.FileInfo(Application.StartupPath + "\\" + txtDeviceName.Text + ".txt");
-                //System.IO.StreamWriter text = t.CreateText(true);
-                //text.WriteLine(RxString);
-                //text.Close();
             }
         }
 
-        private void DisplayText(object sender, EventArgs e)
+        private delegate void DisplayTextDelegate();
+        private void DisplayText()
         {
-
-            txtReceivedBytesASCII.Text += RxString;
-
-            
-
-            Convertor c = new Convertor();
-            c.AsciiToDecimalIntoTextBox(txtReceivedBytesASCII, txtReceivedBytes);
-            c.DecimalToHexIntoTextBox(txtDecimalBytes, txtHEXBytes);
+            if (this.InvokeRequired)
+            {
+                DisplayTextDelegate d = new DisplayTextDelegate(DisplayText);
+                this.Invoke(d);
+            }
+            else
+            {
+                txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, RxString);
+                DynamicByteProvider b = new DynamicByteProvider(Encoding.ASCII.GetBytes(RxString));
+                hexReceivedBytes.ByteProvider = b;
+            }
         }
 
         private void tsbSendToComPort_Click(object sender, EventArgs e)
@@ -1455,16 +1030,11 @@ namespace TCPDeviceTester
 
         private void tsbClearIncomingBytes_Click(object sender, EventArgs e)
         {
+            txtSentCommand.Clear();
             txtReceivedBytesASCII.Clear();
-            txtReceivedBytes.Clear();
-            txtReceivedBytesHex.Clear();
-
+            hexReceivedBytes.ByteProvider = new DynamicByteProvider(new byte[] { });
             dgvIncomingBytes.Rows.Clear();
-
-            for (int i = 0; i < dgvBits.Columns.Count; i++)
-            {
-                dgvBits.Rows[0].Cells[i].Value = string.Empty;
-            }
+            bitDisplay1.Clear();
 
 
         }
@@ -1474,30 +1044,13 @@ namespace TCPDeviceTester
             //if (tbcDevice.SelectedIndex == 2) { }//txtConsole.Focus(); GoTo(txtConsole, 0,2); 
         }
 
-        private void tsbClearConsole_Click(object sender, EventArgs e)
-        {
-            txtConsole.Text = ">";
-            GoTo(txtConsole, 1, 2);
-        }
-
-        private void tsbChangeConsoleStyle_Click(object sender, EventArgs e)
-        {
-            txtConsole.BackColor = Color.White;
-            txtConsole.ForeColor = Color.Black;
-        }
-
-        private void btnSendToConsole_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cmiSendBytesToConsole_Click(object sender, EventArgs e)
         {
             if (dgvInstructions.CurrentRow == null)
                 MessageBox.Show("Select a row");
             else
             {
-                txtConsole.Text += "\r\n>" + dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
+                shellControl1.SetCommand(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString());
                 tbcDevice.SelectedIndex = 2;
             }
         }
@@ -1507,18 +1060,23 @@ namespace TCPDeviceTester
             AddNewRow();
         }
 
+        #region WORKBENCH METHODS
         private string GetWorkbenchCurrentLineBytes()
         {
             int currentLineIndex = txtWorkbench.GetLineFromCharIndex(txtWorkbench.GetFirstCharIndexOfCurrentLine());
-            string s = txtWorkbench.Lines[currentLineIndex];
-            string[] c = s.Split(',');
-            return c[0];
+            if (currentLineIndex < txtWorkbench.Lines.Length)
+            {
+                string s = txtWorkbench.Lines[currentLineIndex];
+                txtSentCommand.Text = s;
+                string[] c = s.Split(',');
+                return c[0];
+            }
+            else return string.Empty;
         }
 
-        private void tsbSendFromWorkbench_Click(object sender, EventArgs e)
+        private void txtWorkbench_MouseClick(object sender, MouseEventArgs e)
         {
-            byte[] bytesToSend = GetBytesToSend(GetWorkbenchCurrentLineBytes());
-            if (bytesToSend != null) SendBytesToDevice(bytesToSend);
+            txtWorkbenchCurrentCommand.Text = GetWorkbenchCurrentLineBytes();
         }
 
         private void tsbSaveWorkbenchText_Click(object sender, EventArgs e)
@@ -1529,14 +1087,50 @@ namespace TCPDeviceTester
             MessageBox.Show("Saved text.");
         }
 
+        #endregion
+
+        private void StartTimers()
+        {
+            _tmrRequestTickCount = 0;
+            timerCommandNo = 0;
+            tmrRequest.Enabled = true;
+            tmrCounter.Enabled = true;
+            tmrRequest.Interval = Convert.ToInt32(txtTimerInterval.Text);
+            tmrCounter.Interval = 1000;
+            dgvTimerInstructions.Rows[timerCommandNo].Selected = true;
+            chronometer1.Start();
+        }
+
         private void tmrRequest_Tick(object sender, EventArgs e)
         {
-            if (timerCommandList.Count > 0)
+            _tmrRequestTickCount = 0;
+            chronometer1.Reset();
+
+            if (dgvTimerInstructions.Rows.Count > 0)
             {
-                SendBytesToDevice(timerCommandList[timerCommandNo]);
+                sevenSegmentArray2.Value = (timerCommandNo + 1).ToString();
+
+                foreach (DataGridViewRow dr in dgvTimerInstructions.SelectedRows) dr.Selected = false;
+
+                dgvTimerInstructions.Rows[timerCommandNo].Selected = true;
+
+                byte[] bytesToSend = GetBytesFromRow(dgvTimerInstructions.Rows[timerCommandNo]);
+                txtSentCommand.Text = dgvTimerInstructions.Rows[timerCommandNo].Cells["InstructionBytes"].Value.ToString();
+                if (bytesToSend == null) txtSentCommand.Text = "bytes to send > null.";
+                else SendBytesToDevice(bytesToSend);
+
                 timerCommandNo++;
-                if (timerCommandNo >= timerCommandList.Count) timerCommandNo = 0;
+                if (timerCommandNo == dgvTimerInstructions.Rows.Count - 1) timerCommandNo = 0;
             }
+
+            //if (timerCommandList.Count > 0)
+            //{
+            //    txtSentCommand.Text = dgvTimerInstructions.Rows[timerCommandNo].Cells["Instruction"].Value.ToString();
+
+            //    SendBytesToDevice(timerCommandList[timerCommandNo]);
+            //    
+            //    if (timerCommandNo >= timerCommandList.Count) timerCommandNo = 0;
+            //}
         }
 
         private void tsbStopTimer_Click(object sender, EventArgs e)
@@ -1549,11 +1143,22 @@ namespace TCPDeviceTester
         private void tsbCalculateWorkbenchChk_Click(object sender, EventArgs e)
         {
             string bytes = GetWorkbenchCurrentLineBytes();
-            string checkSum = CalculateCheckSumInBSV(bytes);
-            bytes += " " + checkSum;
+            if (!string.IsNullOrEmpty(bytes))
+            {
+                // string checkSum = CalculateCheckSumInBSV(bytes);
 
-            int i = txtWorkbench.GetFirstCharIndexOfCurrentLine();
+                string checkSum = CalculateCheckSum(bytes);
+                bytes += " " + checkSum;
 
+                int charIndex = txtWorkbench.GetFirstCharIndexOfCurrentLine();
+                string s = txtWorkbench.Lines[txtWorkbench.GetLineFromCharIndex(charIndex)];
+                int commaIndex = s.IndexOf(',');
+                if (commaIndex > 0)
+                {
+                    txtWorkbench.Text = txtWorkbench.Text.Remove(charIndex, commaIndex);
+                    txtWorkbench.Text = txtWorkbench.Text.Insert(charIndex, bytes);
+                }
+            }
         }
 
         private void tsbSendToGrid_Click(object sender, EventArgs e)
@@ -1602,35 +1207,9 @@ namespace TCPDeviceTester
             frmNewFilename x = new frmNewFilename();
             if (x.ShowDialog() == DialogResult.OK)
             {
-                string s = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
-                s += @"
-                <DeviceInstructions>
-                  <DeviceInfo>
-                    <DeviceName>Device Name</DeviceName>
-                    <Explanation></Explanation>
-                    <IP>192.168.1.161</IP>
-                    <Port>4001</Port>
-                    <CheckSumType>CheckSum,1 Byte</CheckSumType>
-                    <InstructionStructure>xxx</InstructionStructure>
-                  </DeviceInfo>
-                  <Instruction>
-                    <ID>1</ID>
-                    <Order>2</Order>
-                    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
-                    <Explanation>Read Serial Number</Explanation>
-                    <CheckSum>1</CheckSum>
-                  </Instruction>
-                  <WorkbenchData>
-                    <ID>1</ID>
-                    <Instructions>
-	                </Instructions>
-                  </WorkbenchData>
-                </DeviceInstructions>";
-
-                TextWriter tw = File.CreateText(Application.StartupPath + "\\DeviceXMLs\\" + x.Filename + ".xml");
-                tw.WriteLine(s);
-                tw.Close();
-                LoadDeviceXML(Application.StartupPath + "\\DeviceXMLs\\" + x.Filename + ".xml");
+                string fileName = Application.StartupPath + "\\DeviceXMLs\\" + x.Filename + ".xml";
+                XMLOperations xo = new XMLOperations(fileName);
+                if (xo.CreateNewDeviceXML(fileName)) LoadDeviceXML(fileName);
             }
         }
 
@@ -1655,7 +1234,7 @@ namespace TCPDeviceTester
             catch (Exception ex)
             {
                 // If exception happens, it will be returned here
-                txtConsole.Text = String.Format("Request failed with exception: {0}", ex.Message);
+                //txtConsole.Text = String.Format("Request failed with exception: {0}", ex.Message);
                 target.Close();
                 return;
             }
@@ -1663,15 +1242,10 @@ namespace TCPDeviceTester
             //tmrRequest.Enabled = true;
         }
 
-
-
-
         private void btnSNMPSend_Click(object sender, EventArgs e)
         {
             try
             {
-
-
                 OctetString community = new OctetString("public");
                 AgentParameters param = new AgentParameters(community);
                 param.Version = SnmpVersion.Ver2;
@@ -1699,7 +1273,7 @@ namespace TCPDeviceTester
                     if (result.Pdu.ErrorStatus != 0)
                     {
                         // agent reported an error with the request
-                        txtReceivedBytes.Text = String.Format("Error in SNMP reply. Error {0} index {1}",
+                        txtReceivedBytesASCII.Text = String.Format("Error in SNMP reply. Error {0} index {1}",
                             result.Pdu.ErrorStatus,
                             result.Pdu.ErrorIndex);
                     }
@@ -1709,7 +1283,7 @@ namespace TCPDeviceTester
                         //  to the VbList
                         for (int i = 0; i < result.Pdu.VbList.Count; i++)
                         {
-                            txtReceivedBytes.Text += result.Pdu.VbList[i].Oid.ToString() + ", " + SnmpConstants.GetTypeName(result.Pdu.VbList[i].Value.Type) + ", " +
+                            txtReceivedBytesASCII.Text += result.Pdu.VbList[i].Oid.ToString() + ", " + SnmpConstants.GetTypeName(result.Pdu.VbList[i].Value.Type) + ", " +
                                 result.Pdu.VbList[i].Value.ToString() + ", " + dgvInstructions.SelectedRows[i].Cells["Explanation"].Value.ToString() + Environment.NewLine;
                         }
 
@@ -1717,14 +1291,14 @@ namespace TCPDeviceTester
                 }
                 else
                 {
-                    txtConsole.Text = String.Format("No response received from SNMP agent.");
+                    //txtConsole.Text = String.Format("No response received from SNMP agent.");
                 }
                 target.Close();
 
             }
             catch (Exception exp)
             {
-                txtReceivedBytes.Text = exp.ToString();
+                txtReceivedBytesASCII.Text = exp.ToString();
 
             }
         }
@@ -1734,14 +1308,15 @@ namespace TCPDeviceTester
             frmNetworkCommands x = new frmNetworkCommands();
             if (x.ShowDialog() == DialogResult.OK)
             {
-                txtConsole.Text += x.DOSCommand;
+                shellControl1.SetCommand(x.DOSCommand);
+                shellControl1.Focus();
             }
         }
 
         private void tsbChangeMainConsoleStyle_Click(object sender, EventArgs e)
         {
-            txtReceivedBytes.ForeColor = Color.White;
-            txtReceivedBytes.BackColor = Color.Black;
+            txtReceivedBytesASCII.ForeColor = Color.White;
+            txtReceivedBytesASCII.BackColor = Color.Black;
 
         }
 
@@ -1752,11 +1327,6 @@ namespace TCPDeviceTester
             {
                 sendSetCommand(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString(), x.Value);
             }
-        }
-
-        private void lnkSetTimerInterval_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            tmrRequest.Interval = Convert.ToInt32(txtTimerInterval.Text);
         }
 
         private void tsbPing_Click(object sender, EventArgs e)
@@ -1772,17 +1342,6 @@ namespace TCPDeviceTester
 
         }
 
-        private void btnNetworkTools_Click(object sender, EventArgs e)
-        {
-            frmNetworkTools x = new frmNetworkTools();
-            x.ShowDialog();
-        }
-
-        private void chkTimerActive_CheckedChanged(object sender, EventArgs e)
-        {
-            tmrRequest.Enabled = chkTimerActive.Checked;
-        }
-
         private void cbCommunicationType_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbCommunicationType.Text)
@@ -1793,5 +1352,357 @@ namespace TCPDeviceTester
                 case "UDP": SetCurrentConnectionType(ConnectionType.UDP); break;
             }
         }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            string start = chkAddZeroToHexKeyboard.Checked ? "0" : string.Empty;
+            txtHEXBytesInCHKCalculator.Text += start + (sender as Button).Text + " ";
+        }
+
+        private void btnCalculateCRCInHex_Click(object sender, EventArgs e)
+        {
+            byte[] byteArray = GetBytesFromByteString(txtHEXBytesInCHKCalculator.Text);
+
+            dgvCheckSums.Rows.Clear();
+
+            dgvCheckSums.Rows.Add("SUM", GetCRC.Sum(byteArray).HexString);
+            dgvCheckSums.Rows.Add("MOD95", GetCRC.Mod95(byteArray).HexString);
+            dgvCheckSums.Rows.Add("XOR", GetCRC.XOR(byteArray).HexString);
+            dgvCheckSums.Rows.Add("CRC CCITT Kermit", GetCRC.CRC_CCITT_Kermit(byteArray).HexString);
+            dgvCheckSums.Rows.Add("CRC CCITT XModem", GetCRC.CRC_CCITT_XModem(byteArray).HexString);
+            dgvCheckSums.Rows.Add("CRC 16", GetCRC.CRC16(byteArray).HexString);
+            dgvCheckSums.Rows.Add("MODBUS", GetCRC.ModBus(byteArray).HexString);
+            dgvCheckSums.Rows.Add("Sum C.", GetCRC.SumComplement(byteArray).HexString);
+
+            //CRC16 x = new CRC16();
+            //dgvCheckSums.Rows.Add("CRC 16", BitConverter.ToString(x.ComputeChecksumBytes(byteArray)));
+
+            Crc16Ccitt y = new Crc16Ccitt(InitialCrcValue.NonZero1);
+            dgvCheckSums.Rows.Add("CRC CCITT(0xFFFF)", BitConverter.ToString(y.ComputeChecksumBytes(byteArray)));
+            y = new Crc16Ccitt(InitialCrcValue.NonZero2);
+            dgvCheckSums.Rows.Add("CRC CCITT(0x1DFF)", BitConverter.ToString(y.ComputeChecksumBytes(byteArray)));
+            y = new Crc16Ccitt(InitialCrcValue.Zeros);
+            dgvCheckSums.Rows.Add("CRC CCITT(XModem)", BitConverter.ToString(y.ComputeChecksumBytes(byteArray)));
+            //Crc32 z = new Crc32();
+            //dgvCheckSums.Rows.Add("CRC 32", BitConverter.ToString(z.ComputeChecksumBytes(byteArray)));
+            dgvCheckSums.Rows.Add("CRC 32", GetCRC.GetCRC32CheckSum(byteArray).HexString);
+
+            // txtHEXBytes.Text +=GetCRC.CalculateCheckSum(byteArray,  (CRCType)Enum.Parse(typeof(CRCType), cbCheckSumTypes.Text, true));
+        }
+
+        private void lnkClearHexBytes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtHEXBytesInCHKCalculator.Clear();
+        }
+
+        private void lnkDelOneHexByte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtHEXBytesInCHKCalculator.Text))
+            {
+                string s = txtHEXBytesInCHKCalculator.Text.Trim();
+                if (s.Length % 2 == 0)
+                    txtHEXBytesInCHKCalculator.Text = s.Substring(0, s.Length - 2);
+                else
+                    txtHEXBytesInCHKCalculator.Text = s.Substring(0, s.Length - 3);
+            }
+        }
+
+        private void lnkSendToGrid_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (dgvInstructions.CurrentRow != null)
+            {
+                if (!string.IsNullOrEmpty(txtHEXBytesInCHKCalculator.Text))
+                {
+                    dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value = txtHEXBytesInCHKCalculator.Text;
+                    UpdateGridNode(dgvInstructions, "InstructionBytes", txtHEXBytesInCHKCalculator.Text);
+                }
+            }
+        }
+
+        private void txtIntNumberToConvert_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtIntNumberToConvert.Text))
+            {
+                try
+                {
+                    UInt16 value = Convert.ToUInt16(txtIntNumberToConvert.Text);
+                    byte[] array = BitConverter.GetBytes(value);
+                    txtConvertedBytes.Text = BitConverter.ToString(array).Replace("-", " ");
+                }
+                catch (Exception)
+                {
+                }
+            }
+        }
+
+        private void txtConvertedBytes_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtConvertedBytes.Text))
+            {
+                try
+                {
+                    Int16 i = BitConverter.ToInt16(GetBytesToSend(txtConvertedBytes.Text), 0);
+                    txtIntNumberToConvert.Text = i.ToString();
+                }
+                catch (Exception)
+                {
+                }
+            }
+        }
+
+        private void tsbSendFromWorkbenchToTools_Click(object sender, EventArgs e)
+        {
+            txtHEXBytesInCHKCalculator.Text = txtWorkbenchCurrentCommand.Text;
+            tbcTools.SelectedIndex = 1;
+        }
+
+        #region TIMER METHODS
+
+        private void tsbStartTimer_Click(object sender, EventArgs e)
+        {
+            StartTimers();
+
+            /*
+            if (dgvTimerInstructions.Rows.Count > 0)
+            {
+                timerCommandList.Clear();
+                foreach (DataGridViewRow dr in dgvTimerInstructions.Rows)
+                {
+                    if(dr!=null)
+                    timerCommandList.Add(GetBytesFromRow(dr));
+                }
+                timerCommandNo = 0;
+                tmrRequest.Interval = Convert.ToInt32(txtTimerInterval.Text);
+                tmrRequest.Enabled = true;
+            }*/
+        }
+
+        private void tsbAddToTimerList_Click(object sender, EventArgs e)
+        {
+            if (dgvInstructions.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow r in dgvInstructions.SelectedRows)
+                {
+                    dgvTimerInstructions.Rows.Add(r.Cells["InstructionBytes"].Value.ToString(), r.Cells["Explanation"].Value.ToString());
+                }
+            }
+        }
+
+        private void tsbRemoveTimerCommand_Click(object sender, EventArgs e)
+        {
+            if (dgvTimerInstructions.CurrentRow != null)
+            {
+                dgvTimerInstructions.Rows.Remove(dgvTimerInstructions.CurrentRow);
+            }
+        }
+
+        private void tsbStopTimer2_Click(object sender, EventArgs e)
+        {
+            tmrCounter.Enabled = tmrRequest.Enabled = false;
+            chronometer1.Stop();
+        }
+
+        private void tsbSetTimerInterval_Click(object sender, EventArgs e)
+        {
+            tmrRequest.Interval = Convert.ToInt32(txtTimerInterval.Text);
+            chronometer1.Reset();
+        }
+
+        private void tmrCounter_Tick(object sender, EventArgs e)
+        {
+            _tmrRequestTickCount++;
+            //   sevenSegmentArray1.Value = _tmrRequestTickCount.ToString();
+        }
+
+        private void tsbToogleCounterTimerInterval_Click(object sender, EventArgs e)
+        {
+            if (tmrCounter.Interval == 1000) tmrCounter.Interval = 1; else tmrCounter.Interval = 1000;
+        }
+
+        #endregion
+
+        private void GetBitsInHexBoxByte()
+        {
+            if (hexReceivedBytes.CurrentPositionInLine >= 0)
+            {
+                long position = (hexReceivedBytes.CurrentLine - 1) * 16 + hexReceivedBytes.CurrentPositionInLine - 1;
+                byte b = hexReceivedBytes.ByteProvider.ReadByte(position);
+
+                lblByteNo.Text = "Byte No " + position.ToString() + "> " + b.ToString();
+
+                bitDisplay1.ShowBitsOfByte(b);
+            }
+        }
+
+        private void hexBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            GetBitsInHexBoxByte();
+        }
+
+
+
+        private void lnkToggleSelectedBit_LinkClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvIncomingBytes_SelectionChanged(object sender, EventArgs e)
+        {
+            byte b = Convert.ToByte(dgvIncomingBytes.CurrentRow.Cells["Decimal"].Value);
+            bitDisplay2.ShowBitsOfByte(b);
+        }
+
+        private void dgvCheckSums_DoubleClick(object sender, EventArgs e)
+        {
+            txtHEXBytesInCHKCalculator.Text += " " + dgvCheckSums.CurrentRow.Cells["ChecksumValue"].Value.ToString();
+        }
+
+        private void miHTTPTester_Click(object sender, EventArgs e)
+        {
+            frmHTTPTester x = new frmHTTPTester();
+            x.ShowDialog();
+        }
+
+        private void miNetworkTools_Click(object sender, EventArgs e)
+        {
+            frmNetworkTools x = new frmNetworkTools();
+            x.ShowDialog();
+        }
+
+        private void miSSHTester_Click(object sender, EventArgs e)
+        {
+            frmSSH x = new frmSSH();
+            x.ShowDialog();
+        }
+
+        private void miSuperConsole_Click(object sender, EventArgs e)
+        {
+            frmSuperConsole x = new frmSuperConsole();
+            x.ShowDialog();
+
+        }
+
+        private void lnkGetComplement_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Convertor c = new Convertor();
+            byte[] byteArray = GetBytesFromByteString(txtHEXBytesInCHKCalculator.Text);
+            txtHEXBytesInCHKCalculator.Clear();
+            for (int i = 0; i < byteArray.Length; i++)
+            {
+                byteArray[i] = (byte)(0xFF ^ byteArray[i]);
+                string decimalByteValue = Convert.ToInt32(byteArray[i]).ToString();
+                txtHEXBytesInCHKCalculator.Text += c.DecimalToHex(decimalByteValue);
+            }
+        }
+
+        private void lnkCalculateCRC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDecimalBytesInCHKCalculator.Text))
+            { MessageBox.Show("Enter bytes."); }
+            else
+            {
+                string checkSum = CalculateCheckSum(txtHEXBytesInCHKCalculator.Text.Trim());
+                txtHEXBytesInCHKCalculator.Text += " " + checkSum;
+            }
+
+            Convertor c = new Convertor();
+            c.HexToAsciiIntoTextBox(txtHEXBytesInCHKCalculator, txtDecimalBytesInCHKCalculator);
+        }
+
+        private void lnkApplyBCIP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtHEXBytesInCHKCalculator.Text = txtHEXBytesInCHKCalculator.Text.Replace("10", "10 EF");
+            txtHEXBytesInCHKCalculator.Text = txtHEXBytesInCHKCalculator.Text.Replace("02", "10 FD");
+            txtHEXBytesInCHKCalculator.Text = txtHEXBytesInCHKCalculator.Text.Replace("03", "10 FC");
+            txtHEXBytesInCHKCalculator.Text = "02 " + txtHEXBytesInCHKCalculator.Text + " " + dgvCheckSums.Rows[2].Cells[1].Value.ToString() + " 03";
+        }
+
+        #region SENDER METHODS
+
+        private void tsbSendFromWorkbench_Click(object sender, EventArgs e)
+        {
+            byte[] bytesToSend = GetBytesToSend(GetWorkbenchCurrentLineBytes());
+            if (bytesToSend != null) SendBytesToDevice(bytesToSend);
+        }
+
+        private void tsbSendBytesToDevice_Click(object sender, EventArgs e)
+        {
+            ///SEND BYTES TO DEVICE !!!!!
+
+            byte[] bytesToSend = GetBytesFromRow(dgvInstructions.CurrentRow);
+            if (bytesToSend == null) MessageBox.Show("Select row.");
+            else SendBytesToDevice(bytesToSend);
+        }
+
+        #endregion
+
+        private void dgvInstructions_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvInstructions.CurrentRow != null)
+                txtSentCommand.Text = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString() + "," +
+                     dgvInstructions.CurrentRow.Cells["Explanation"].Value.ToString();
+        }
+
+        private void shellControl1_CommandEntered(object sender, CommandEnteredEventArgs e)
+        {
+            if (!ProcessInternalCommand(e.Command))
+            {
+                if (_consoleMode == ConsoleMode.DOS)
+                {
+                    string s = DOSPrompt.CMDAutomate(e.Command);
+                    shellControl1.WriteText(s);
+                    //txtLastOutput.Text = s;
+
+                }
+
+                if (_consoleMode == ConsoleMode.ASCII)
+                {
+                    byte[] r = Common.SendBytes(txtCurrentIP.Text, txtCurrentPort.Text, ASCIIEncoding.ASCII.GetBytes(e.Command));
+                    shellControl1.WriteText(ASCIIEncoding.ASCII.GetString(r));
+                }
+
+                if (_consoleMode == ConsoleMode.HEX)
+                {
+                    byte[] r = Common.SendBytes(txtCurrentIP.Text, txtCurrentPort.Text, Common.GetHexBytes(e.Command));
+                    shellControl1.WriteText(ASCIIEncoding.ASCII.GetString(r));
+                }
+
+                if (_consoleMode == ConsoleMode.Python)
+                {
+                    string s = DOSPrompt.CMDAutomate("C:\\python3.5\\test.py", "C:\\python3.5\\python.exe");
+                    shellControl1.WriteText(s);
+                }
+            }
+
+            //}
+        }
+
+        private void tsbCalculateConsoleCheckSum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkToggleSelectedBit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void miPythonConsole_Click(object sender, EventArgs e)
+        {
+            frmPython x = new frmPython();
+            x.Show();
+        }
+
+        private void lnkApplyPython_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           txtHEXBytesInCHKCalculator.Text= DOSPrompt.RunPythonFile(lbPyFiles.Text, "\""+ txtHEXBytesInCHKCalculator.Text+"\"");
+        }
+
+
+        //private void tsbCalculateConsoleCheckSum_Click(object sender, EventArgs e)
+        //{
+
+        //}
+
     }
 }

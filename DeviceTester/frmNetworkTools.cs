@@ -12,64 +12,20 @@ namespace TCPDeviceTester
 {
     public partial class frmNetworkTools : Form
     {
-
-        public bool CheckNetworkConnection(string IP)
-        {
-            if (string.IsNullOrEmpty(IP)) return false;
-            try
-            {
-                System.Net.IPAddress ipAddress = System.Net.IPAddress.Parse(IP);
-                System.Net.NetworkInformation.Ping pinger = new System.Net.NetworkInformation.Ping();
-
-                System.Net.NetworkInformation.PingReply reply;
-                reply = pinger.Send(ipAddress, 5);
-                if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)
-                {
-                    return true;
-                }
-                else return false;
-            }
-            catch (Exception)
-            {
-                return false;
-
-            }
-        }
+        StringBuilder checkedIPList= new StringBuilder();
 
         public frmNetworkTools()
         {
             InitializeComponent();
         }
 
-        public delegate void Callback();
-
-        private void ListIPs()
-        {
-            if (this.InvokeRequired)
-            {
-                Callback cb = ListIPs;
-                this.Invoke(cb);
-            }
-            else
-            {
-                //string[] octets1 = txtIP1.Text.Split('.');
-                //string[] octets2 = txtIP1.Text.Split('.');
-
-                int c = 0;
-                for (int i = Convert.ToInt16(txtIP1LastOctet.Text); i < Convert.ToInt16(txtIP2LastOctet.Text); i++)
-                {
-                    string ip = txtIP1.Text+ i.ToString();
-
-                    txtConsole.Text += c++.ToString() + "> " + ip +","+CheckNetworkConnection(ip).ToString()+ Environment.NewLine;
-                    
-                }
-            }
-        }
-
         private void btnListIPs_Click(object sender, EventArgs e)
         {
-            Thread x = new Thread(new ThreadStart(ListIPs));
-            x.Start();
+            backgroundWorker1.RunWorkerAsync();
+            //ListIPs();
+
+            //Thread x = new Thread(new ThreadStart(ListIPs));
+            //x.Start();
         }
 
         private void btnGetIP_Click(object sender, EventArgs e)
@@ -82,13 +38,56 @@ namespace TCPDeviceTester
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                txtConsole.Text+=ex.ToString()+Environment.NewLine;
             }
         }
 
         private void lnkClear_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             txtConsole.Clear();
+        }
+
+        private void btnGetAllDevicesOnLAN_Click(object sender, EventArgs e)
+        {
+            txtConsole.Text = string.Format("My IP : {0}", GetIPViaMAC.GetIPAddress()) + Environment.NewLine;
+            // Get My PC MAC address
+            txtConsole.Text += string.Format("My MAC: {0}", GetIPViaMAC.GetMacAddress()) + Environment.NewLine;
+            // Get all devices on network
+            Dictionary<IPAddress, System.Net.NetworkInformation.PhysicalAddress> all = GetIPViaMAC.GetAllDevicesOnLAN();
+            foreach (KeyValuePair<IPAddress, System.Net.NetworkInformation.PhysicalAddress> kvp in all)
+            {
+                txtConsole.Text += string.Format("IP : {0}\n MAC {1}", kvp.Key, kvp.Value)+Environment.NewLine;
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            int c = 1;
+
+            int ip1LastOctet = Convert.ToInt16(txtIP1LastOctet.Text);
+            int ip2LastOctet = Convert.ToInt16(txtIP2LastOctet.Text);
+            int percentageRef = (ip2LastOctet - ip1LastOctet);
+
+            for (int i =ip1LastOctet ; i <= ip2LastOctet ; i++)
+            {
+                backgroundWorker1.ReportProgress(100*(c / percentageRef));
+                string ip = txtIP1.Text + i.ToString();
+                checkedIPList.Append(c++.ToString() + " > " + ip + " , " + Common.CheckNetworkConnection(ip).ToString()+ Environment.NewLine);
+                //txtConsole.Text += c++.ToString() + " > " + ip + " , " + Common.CheckNetworkConnection(ip).ToString() + Environment.NewLine;
+                //txtConsole.Text = checkedIPList;
+                
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            txtConsole.Text = "Pinging IPs. Wait...";
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            txtConsole.Text = checkedIPList.ToString();
         }
     }
 }

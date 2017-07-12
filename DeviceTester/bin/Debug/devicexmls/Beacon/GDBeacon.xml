@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>GD Beacon Receiver</DeviceName>
+    <Explanation>Beacon Receiver</Explanation>
+    <IP>192.168.1.200</IP>
+    <Port>8080</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>46 0D</InstructionBytes>
+    <Explanation>Get Status: FREQ=1555.50,REF=-65.0dB</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>1</Order>
+    <InstructionBytes>46 52 45 51 20 31 35 35 35 2E 32 30 20 2D 36 30 2E 30 0D</InstructionBytes>
+    <Explanation>FREQ 1555.20 -60.0</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>3</ID>
+    <Order>1</Order>
+    <InstructionBytes>46 0D</InstructionBytes>
+    <Explanation>Hex address</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>4</ID>
+    <Order>1</Order>
+    <InstructionBytes>5E 41 20 31 35 35 35 2E 35 30 20 2D 36 35 2E 30 0D</InstructionBytes>
+    <Explanation>Set Freq (RS-485 mode)</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075668832196595</ID>
+    <Explanation>Set Freq (ethernet mode)</Explanation>
+    <InstructionBytes>46 20 31 35 35 35 2E 35 30 20 2D 36 35 2E 30 0D</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588071628568794429</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>77,13</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

@@ -90,7 +90,6 @@ namespace TCPDeviceTester
             return returnValue;
         }
 
-
         /* Method :EnumerateDirectory
          * Author : Chandana Subasinghe
          * Date   : 10/03/2006

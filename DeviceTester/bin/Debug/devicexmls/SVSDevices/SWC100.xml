@@ -3,7 +3,7 @@
   <DeviceInfo>
     <DeviceName>SWC 100</DeviceName>
     <Explanation>Switch</Explanation>
-    <IP>192.168.10.143</IP>
+    <IP>192.168.1.37</IP>
     <Port>4001</Port>
     <CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
     <InstructionStructure>SOH=0x01 (Start),Byte Count=0x03, Command (1 Byte), CRC Low,CRC-High (Total:5 bytes) </InstructionStructure>
@@ -60,10 +60,36 @@
   <Instruction>
     <ID>8</ID>
     <Order>1</Order>
-    <InstructionBytes>
-    </InstructionBytes>
+    <InstructionBytes>02 05 0A 00 01 50 B9 F1</InstructionBytes>
     <CheckSum>
     </CheckSum>
-    <Explanation>Is Remote Control Enable</Explanation>
+    <Explanation>Address 10 select A</Explanation>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>02050A000155EE5C, get status adress 10
+02050B000155F2E7, get status adress 10
+02 05 0A 00 01 50 B9 F1, system a
+02 05 0A 00 01 51 A8 78, system a</Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587690682660377988</ID>
+    <Explanation>Address 10 select B</Explanation>
+    <InstructionBytes>02 05 0A 00 01 51 A8 78</InstructionBytes>
+    <Order>2</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587690681732804934</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 05 0B 00 01 50 A54A</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587690681704403310</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 050B 0001  51  B4C3</InstructionBytes>
+    <Order>4</Order>
   </Instruction>
 </DeviceInstructions>

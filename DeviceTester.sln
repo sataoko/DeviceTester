@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 14.00
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceTester", "DeviceTester\DeviceTester.csproj", "{08E0D5AE-315D-40AC-9D16-B3F5BCDFD612}"
 EndProject
 Global

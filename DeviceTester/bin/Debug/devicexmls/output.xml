@@ -25,8 +25,7 @@
     <ID>-8588040267889190143</ID>
     <Explanation>
     </Explanation>
-    <InstructionBytes>
-    </InstructionBytes>
+    <InstructionBytes>02 02 34 34</InstructionBytes>
     <Order>3</Order>
   </Instruction>
   <Instruction>

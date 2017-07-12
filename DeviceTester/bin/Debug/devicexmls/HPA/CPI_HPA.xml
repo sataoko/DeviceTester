@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>CPI Switch</DeviceName>
+    <Explanation>HPA Switch Controller</Explanation>
+    <IP>10.20.2.163</IP>
+    <Port>50000</Port>
+    <CheckSumType>Chekcsum</CheckSumType>
+    <InstructionStructure>STX=123,address,command,ETX=125,checksum </InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>7B 41 31 7D 4C</InstructionBytes>
+    <Explanation>Summary Status ASCII</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 42 31 03 79</InstructionBytes>
+    <Explanation>Set switch controller mode BCIP</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>7B 41 31 7D 4C</InstructionBytes>
+    <Explanation>Summary Status ASCII</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>2</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 42 31 03 79</InstructionBytes>
+    <Explanation>Set switch controller mode BCIP</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8587466690581754675</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 34 39 41 42 03 F</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

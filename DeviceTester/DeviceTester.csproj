@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TCPDeviceTester</RootNamespace>
     <AssemblyName>DeviceTester</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Graph.ico</ApplicationIcon>
     <PublishUrl>http://localhost/TCPDeviceTester/</PublishUrl>
@@ -28,6 +29,9 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -38,6 +42,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -47,8 +53,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DiffieHellman">
+      <HintPath>..\..\..\..\..\..\__Software\__C#.NET Folders\C#.Net Projects\MySSH\MySSH\bin\Debug\DiffieHellman.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Mentalis.Security">
+      <HintPath>..\..\..\..\..\..\__Software\__C#.NET Folders\C#.Net Projects\MySSH\MySSH\bin\Debug\Org.Mentalis.Security.dll</HintPath>
+    </Reference>
     <Reference Include="SnmpSharpNet, Version=0.9.4.0, Culture=neutral, PublicKeyToken=b2181aa3b9571feb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\SnmpSharpNet.dll</HintPath>
@@ -60,24 +77,58 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tamir.sharpSsh">
+      <HintPath>..\..\..\..\..\..\__Software\__C#.NET Folders\C#.Net Projects\MySSH\MySSH\bin\Debug\Tamir.sharpSsh.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\CheckSum.cs" />
+    <Compile Include="App_CodeUnitTests\GetCRCTests.cs" />
+    <Compile Include="App_Code\SerialReaderThread.cs" />
+    <Compile Include="App_Code\Structures\CheckSumRV.cs" />
     <Compile Include="App_Code\CL.cs" />
+    <Compile Include="App_CodeUnitTests\CLTests.cs" />
     <Compile Include="App_Code\Common.cs" />
     <Compile Include="App_Code\Convertor.cs" />
+    <Compile Include="App_Code\CRCFolders\CRCClasses.cs" />
     <Compile Include="App_Code\TCPClientWithTimeout.cs" />
-    <Compile Include="App_Code\WorkbenchData.cs" />
+    <Compile Include="App_Code\Structures\WorkbenchData.cs" />
     <Compile Include="App_Code\CRCTool.cs" />
-    <Compile Include="App_Code\DataTreeNode.cs" />
-    <Compile Include="App_Code\DeviceInfo.cs" />
+    <Compile Include="App_Code\Structures\DataTreeNode.cs" />
+    <Compile Include="App_Code\Structures\DeviceInfo.cs" />
     <Compile Include="App_Code\Ini.cs" />
-    <Compile Include="App_Code\Instruction.cs" />
+    <Compile Include="App_Code\Structures\Instruction.cs" />
     <Compile Include="App_Code\TCPConnection.cs" />
     <Compile Include="App_Code\XMLHelper.cs" />
-    <Compile Include="App_Code\CRC.cs" />
     <Compile Include="App_Code\DOSPrompt.cs" />
     <Compile Include="App_Code\FileExplorer.cs" />
+    <Compile Include="App_Code\BitDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App_Code\BitDisplay.Designer.cs">
+      <DependentUpon>BitDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chronometer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chronometer.Designer.cs">
+      <DependentUpon>Chronometer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmComPortSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +147,12 @@
     <Compile Include="frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHTTPTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHTTPTester.Designer.cs">
+      <DependentUpon>frmHTTPTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInputBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +165,10 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainCommandTools.cs">
+    <Compile Include="frmMainConsoleMethods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainSenderMethods.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNetworkCommands.cs">
@@ -129,11 +189,29 @@
     <Compile Include="frmNewFilename.Designer.cs">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrepareCommand.cs">
+    <Compile Include="frmPython.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrepareCommand.Designer.cs">
-      <DependentUpon>frmPrepareCommand.cs</DependentUpon>
+    <Compile Include="frmPython.Designer.cs">
+      <DependentUpon>frmPython.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSerialPortTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSerialPortTerminal.Designer.cs">
+      <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSSH.Designer.cs">
+      <DependentUpon>frmSSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuperConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuperConsole.Designer.cs">
+      <DependentUpon>frmSuperConsole.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTryCommands.cs">
       <SubType>Form</SubType>
@@ -141,9 +219,30 @@
     <Compile Include="frmTryCommands.Designer.cs">
       <DependentUpon>frmTryCommands.cs</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\GetCRC.cs" />
+    <Compile Include="App_Code\GetIPViaMAC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\XMLOperations.cs" />
+    <Compile Include="App_Code\SevenSegment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App_Code\SevenSegmentArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shell\CommandHistory.cs" />
+    <Compile Include="Shell\ShellControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="App_Code\BitDisplay.resx">
+      <DependentUpon>BitDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chronometer.resx">
+      <DependentUpon>Chronometer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmComPortSettings.resx">
       <DependentUpon>frmComPortSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +252,7 @@
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHTTPTester.resx" />
     <EmbeddedResource Include="frmInputBox.resx">
       <DependentUpon>frmInputBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +268,17 @@
     <EmbeddedResource Include="frmNewFilename.resx">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrepareCommand.resx">
-      <DependentUpon>frmPrepareCommand.cs</DependentUpon>
+    <EmbeddedResource Include="frmPython.resx">
+      <DependentUpon>frmPython.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSerialPortTerminal.resx">
+      <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSSH.resx">
+      <DependentUpon>frmSSH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuperConsole.resx">
+      <DependentUpon>frmSuperConsole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTryCommands.resx">
       <DependentUpon>frmTryCommands.cs</DependentUpon>
@@ -185,6 +294,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Shell\ShellControl.resx" />
+    <EmbeddedResource Include="Shell\ShellTextBox.resx" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -214,12 +327,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Graph.ico" />
+    <None Include="Resources\rightArrow.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\green_light.png" />
     <None Include="Resources\red_light.png" />
     <None Include="Resources\port-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

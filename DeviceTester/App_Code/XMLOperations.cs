@@ -58,16 +58,17 @@ namespace TCPDeviceTester
             xmlDoc.Load(strFilename);
             XmlNodeList newXMLNodes = xmlDoc.SelectNodes(startNode);
 
-            List<Instruction> instructions =new List<Instruction>();
+            List<Instruction> instructions = new List<Instruction>();
 
             foreach (XmlNode newXMLNode in newXMLNodes)
             {
                 Instruction i = new Instruction(newXMLNode["InstructionBytes"].InnerText, newXMLNode["Explanation"].InnerText);
-                i.ID= newXMLNode["ID"].InnerText;
+                i.ID = newXMLNode["ID"].InnerText;
                 i.OrderNo = newXMLNode["Order"].InnerText;
-                if (newXMLNode["CheckSum"] == null) i.CheckSum = "0";else
-                i.CheckSum = newXMLNode["CheckSum"].InnerText;
-                
+                if (newXMLNode["CheckSum"] == null) i.CheckSum = "0";
+                else
+                    i.CheckSum = newXMLNode["CheckSum"].InnerText;
+
                 instructions.Add(i);
             }
 
@@ -81,7 +82,7 @@ namespace TCPDeviceTester
             xmlDoc.Load(strFilename);
             XmlNodeList newXMLNodes = xmlDoc.SelectNodes("DeviceInstructions/DeviceInfo");
 
-            DeviceInfo di = new DeviceInfo(); 
+            DeviceInfo di = new DeviceInfo();
 
             foreach (XmlNode newXMLNode in newXMLNodes)
             {
@@ -112,6 +113,49 @@ namespace TCPDeviceTester
             }
 
             return wbd;
+        }
+
+        public bool CreateNewDeviceXML(string fileName)
+        {
+            try
+            {
+                string s = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+                s += @"
+                <DeviceInstructions>
+                  <DeviceInfo>
+                    <DeviceName>Device Name</DeviceName>
+                    <Explanation></Explanation>
+                    <IP>192.168.1.161</IP>
+                    <Port>4001</Port>
+                    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+                    <InstructionStructure>xxx</InstructionStructure>
+                  </DeviceInfo>
+                  <Instruction>
+                    <ID>1</ID>
+                    <Order>2</Order>
+                    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
+                    <Explanation>Read Serial Number</Explanation>
+                    <CheckSum>1</CheckSum>
+                  </Instruction>
+                  <WorkbenchData>
+                    <ID>1</ID>
+                    <Instructions>
+	                </Instructions>
+                  </WorkbenchData>
+                </DeviceInstructions>";
+
+                System.IO.TextWriter tw = System.IO.File.CreateText(fileName);
+                tw.WriteLine(s);
+                tw.Close();
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
     }
 }

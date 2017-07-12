@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
+
 
 namespace TCPDeviceTester
 {
-    class CL
+    public class CL
     {
         public static bool IsNumberKey(Keys inKey)
         {
@@ -29,7 +28,7 @@ namespace TCPDeviceTester
             String tmp = inString;
             foreach (char c in inString.ToCharArray())
             {
-                if (!(IsDigit(c) || c == ','))
+                if (!(char.IsNumber(c)))
                 {
                     tmp = tmp.Replace(c.ToString(), "");
                 }
@@ -41,5 +40,12 @@ namespace TCPDeviceTester
         {
             return (c >= '0' || c <= '9');
         }
+
+       
+        public static int Sum(int a, int b)
+        {
+            return a+b;
+        }
+
     }
 }

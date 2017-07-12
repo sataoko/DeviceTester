@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using System.Text;
 using System.Net.Sockets;
+using Xunit;
 
 namespace TCPDeviceTester
 {
@@ -35,13 +36,29 @@ namespace TCPDeviceTester
 
         public TCPConnection(string IP, int port)
         {
-            _tcpClient = new TcpClient(IP, port);
-            _stream = _tcpClient.GetStream();
+            try
+            {
+                _tcpClient = new TcpClient(IP, port);
+                _stream = _tcpClient.GetStream();
 
+            }
+            catch (Exception )
+            {
+                
+            }
+            
             //_tcpClient.ReceiveTimeout = _communicationTimeOut;
             //_tcpClient.SendTimeout = _communicationTimeOut;
             //_stream.ReadTimeout = _communicationTimeOut;
             //_stream.WriteTimeout = _communicationTimeOut;
+        }
+
+        [Theory]
+        public void TestRequestData()
+        {
+            byte[] byteArrayToSend = new byte[] { 10, 20, 30 };
+            byte[] incomingBytes = RequestData(byteArrayToSend);
+            Assert.True(incomingBytes.Length > 0);
         }
 
         public byte[] RequestData(byte[] byteArrayToSend)
