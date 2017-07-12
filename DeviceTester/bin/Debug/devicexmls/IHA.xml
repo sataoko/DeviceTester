@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>127.0.0.1</IP>
+    <Port>4000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>35 0A A4 00 00 00 00 00 00 1D</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587101062938596508</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>35 0A 81 01 04 39 03 FF 00 00</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

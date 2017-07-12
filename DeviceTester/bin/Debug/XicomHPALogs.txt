@@ -1,0 +1,97 @@
+1/13/2016 2:11:07 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 2:11:10 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 4:01:51 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 4:01:53 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 4:02:04 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 4:02:07 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 4:08:24 PM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 362
+1/13/2016 5:00:41 PM,IP Problem
+1/13/2016 5:00:52 PM,IP Problem
+1/13/2016 5:09:20 PM,06 41 3F 30 30 33 37 30 30 2E 30 3C 30 2E 35 3C 20 32 37 3C 20 33 30 30 30 2E 30 44 20 20 30 30 44 20 20 30 30 44 20 20 30 30 48 50 40 40 03 32 0D 0A
+1/13/2016 5:12:56 PM,IP Problem
+1/13/2016 5:36:06 PM,15 41 58 63 03 6C 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:36:31 PM,15 41 3F 62 58 03 52 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:36:34 PM,15 41 3F 62 58 03 52 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:37:49 PM,06 41 58 31 30 30 39 36 30 30 4E 38 31 03 65 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:39:12 PM,06 41 30 30 33 39 32 32 32 42 37 30 33 03 0A 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:43:06 PM,06 41 30 30 33 39 32 32 32 42 37 30 33 03 0A 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 5:56:17 PM,15 41 3A 63 03 0E 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:07:15 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:07:25 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:07:26 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:07:39 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:07:50 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:10:22 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:10:27 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:24:27 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:31:46 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+1/13/2016 6:39:05 PM,06 41 41 03 05 0D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+13.01.2016 20:12:50,IP Problem
+13.01.2016 23:19:32,IP Problem
+14.01.2016 09:37:11,IP Problem
+14.01.2016 09:37:13,IP Problem
+14.01.2016 09:37:15,IP Problem
+14.01.2016 09:37:19,IP Problem
+14.01.2016 09:37:23,IP Problem
+14.01.2016 10:26:20,IP Problem
+14.01.2016 10:26:21,IP Problem
+14.01.2016 10:26:23,IP Problem
+14.01.2016 10:26:24,IP Problem
+14.01.2016 10:28:19,IP Problem
+14.01.2016 10:28:20,IP Problem
+14.01.2016 10:28:35,IP Problem
+14.01.2016 10:38:00,IP Problem
+14.01.2016 10:38:04,IP Problem
+14.01.2016 10:38:11,IP Problem
+14.01.2016 10:38:37,IP Problem
+14.01.2016 10:38:38,IP Problem
+14.01.2016 10:38:46,IP Problem
+14.01.2016 10:38:54,received bytes null
+14.01.2016 10:39:01,IP Problem
+14.01.2016 12:31:44,IP Problem
+14.01.2016 12:31:59,IP Problem
+14.01.2016 13:34:02,IP Problem
+14.01.2016 13:34:07,IP Problem
+14.01.2016 13:34:08,IP Problem
+14.01.2016 13:34:13,IP Problem
+14.01.2016 13:34:15,IP Problem
+14.01.2016 13:34:17,IP Problem
+14.01.2016 13:34:24,received bytes null
+14.01.2016 13:35:00,IP Problem
+14.01.2016 13:35:02,IP Problem
+14.01.2016 13:38:33,IP Problem
+14.01.2016 13:38:34,IP Problem
+15.01.2016 11:03:20,received bytes null
+15.01.2016 11:03:22,IP Problem
+15.01.2016 11:03:27,IP Problem
+15.01.2016 11:03:30,IP Problem
+15.01.2016 11:04:18,IP Problem
+15.01.2016 11:18:15,IP Problem
+15.01.2016 11:18:16,IP Problem
+15.01.2016 11:18:17,IP Problem
+15.01.2016 11:18:27,IP Problem
+15.01.2016 11:18:29,IP Problem
+15.01.2016 11:18:35,IP Problem
+15.01.2016 11:18:49,IP Problem
+15.01.2016 11:21:29,IP Problem
+15.01.2016 15:51:40,IP Problem
+15.01.2016 15:51:53,IP Problem
+15.01.2016 15:51:55,IP Problem
+15.01.2016 15:52:00,IP Problem
+1/19/2016 3:56:24 PM,IP Problem
+1/19/2016 4:03:56 PM,IP Problem
+08.02.2016 21:42:04,IP Problem

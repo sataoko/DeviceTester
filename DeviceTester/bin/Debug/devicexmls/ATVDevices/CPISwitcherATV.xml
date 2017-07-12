@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>CPI Switch SRCU</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.20.2.165</IP>
+    <Port>50000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 30 78 03 49</InstructionBytes>
+    <Explanation>read switch status ACIP</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587057079059971111</ID>
+    <Explanation>select 1</Explanation>
+    <InstructionBytes>02 30 75 31 20 31 03 64</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057077415105927</ID>
+    <Explanation>select 2</Explanation>
+    <InstructionBytes>02 30 75 31 20 32 03 67</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054663615225128</ID>
+    <Explanation>get status addr 49</Explanation>
+    <InstructionBytes>02 31 31 03 01</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054663584829000</ID>
+    <Explanation>get status addr 48</Explanation>
+    <InstructionBytes>02 30 31 03 00</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054660542648795</ID>
+    <Explanation>standby</Explanation>
+    <InstructionBytes>02 30 41 03 70</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054647109290148</ID>
+    <Explanation>transmit</Explanation>
+    <InstructionBytes>02 30 40 03 71</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054646253975875</ID>
+    <Explanation>standby</Explanation>
+    <InstructionBytes>02 31 40 03 70</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054645784247879</ID>
+    <Explanation>transmit</Explanation>
+    <InstructionBytes>02 31 41 03 71</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054601725756450</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 30 67 32 34 2E 30 03 4E</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587054597972641357</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 31 67 32 34 2E 30 03 4F</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+</DeviceInstructions>

@@ -1,0 +1,6 @@
+14.03.2016 12:11:47,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 30
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in E:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs:line 45
+14.03.2016 12:41:50,02 05 01 00 01 55 2E 49,Get Status,06 05 01 00 03 55 39 A0 B2 1A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+14.03.2016 12:56:38,,06 05 01 00 03 55 3C A0 CC A2 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+14.03.2016 14:43:34,02 05 01 00 01 50 79 E4,Select System A,06 05 01 00 01 50 69 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00

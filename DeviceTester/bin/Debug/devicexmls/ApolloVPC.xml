@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.88</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>5B 30 31 52 31 5D 46 46</InstructionBytes>
+    <Explanation>read Device Info</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587575575218874339</ID>
+    <Explanation>read product status</Explanation>
+    <InstructionBytes>5B 30 31 52 32 5D 46 46</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573960277194269</ID>
+    <Explanation>set switch mode to auto</Explanation>
+    <InstructionBytes>5B 30 31 43 32 41 5D 46 46</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573777003854613</ID>
+    <Explanation>set switch mode to manual</Explanation>
+    <InstructionBytes>5B 30 31 43 32 4D 5D 46 46</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573766725844849</ID>
+    <Explanation>set to 1</Explanation>
+    <InstructionBytes>5B 30 31 43 34 31 5D 46 46</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573765110036753</ID>
+    <Explanation>set to 2</Explanation>
+    <InstructionBytes>5B 30 31 43 34 32 5D 46 46</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573764969047369</ID>
+    <Explanation>set to 3</Explanation>
+    <InstructionBytes>5B 30 31 43 34 33 5D 46 46</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573764810067730</ID>
+    <Explanation>set to 4</Explanation>
+    <InstructionBytes>5B 30 31 43 34 34 5D 46 46</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573034906644987</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>5B 30 31 43 32 52 5D 46 46</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587573034737980261</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>5B 30 31 43 32 4C 5D 46 46</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+</DeviceInstructions>

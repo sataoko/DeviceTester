@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.61</IP>
+    <Port>5001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>2 2 0 3 0 1 1</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587729201668747287</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 0 1 0</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201668647281</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 1 1 1</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201668547275</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 1 1 0</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201422983230</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 2 1 1</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201418752988</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 2 1 0</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201323757554</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 3 1 1</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587729201268754408</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>2 2 0 3 3 1 0</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+</DeviceInstructions>

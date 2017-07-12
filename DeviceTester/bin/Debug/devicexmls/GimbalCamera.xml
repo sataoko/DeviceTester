@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>169.254.188.4</IP>
+    <Port>2000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
+    <Explanation>Read Serial Number</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587100974077914619</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>12 08 5A AA AA AA 72</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587100974073383576</ID>
+    <Explanation>DV Shutter UP</Explanation>
+    <InstructionBytes>40 28 80 00 00 00 00 35  0A  81  01  04  0A  02  FF  00 48</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587100522369014319</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>40 28 80 00 00 00 00 35  0A  81  01  04  0A  02  FF  00</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+</DeviceInstructions>

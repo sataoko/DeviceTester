@@ -1,0 +1,4 @@
+5/30/2017 4:24:17 PM,asfasfasfasdfsadfas fsaf sadfsadasdfasddfasd,
+5/30/2017 4:24:20 PM,02 30 31 03 00,get status addr 48,
+5/30/2017 4:28:37 PM,02 30 31 03 00,get status addr 48,,01PB
+5/30/2017 4:32:56 PM,02 31 31 03 01,get status addr 49,6 49 49 80 66 3 23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,11PB

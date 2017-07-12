@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>CPI-HPA-BCIP</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.20.2.164</IP>
+    <Port>50000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 30 1C 04 01 29 03</InstructionBytes>
+    <Explanation>read status</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>02 31 01 00 30 03,get status
+02 30 01 00 31 03,
+02 31 1B 04 2E 03,amplifier name
+02 31 1C 04 01 28 03,switch position address 49
+02 30 1C 04 01 28 03,switch position address 48
+02 31 1E 04 2B 03,switch system mode
+02 31 1E 84 01 AA 03,set switch system mode to auto
+02 30 1E 04 2A 03,switch system mode address 48</Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587459941144249058</ID>
+    <Explanation>full status</Explanation>
+    <InstructionBytes>02 31 01 00 10 FD 00 05 00 06 00 07 00 08 00 09 00 0D 00 18 04 26 03</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587454592458456422</ID>
+    <Explanation>get switch position</Explanation>
+    <InstructionBytes>02 31 78 49 00 03</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057932572935406</ID>
+    <Explanation>attenuation</Explanation>
+    <InstructionBytes>02 31 18 04  2D 03</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057253082153764</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 31 10 FD 00 33 03</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057237599462070</ID>
+    <Explanation>heater voltage</Explanation>
+    <InstructionBytes>02 31 07 00 36 03</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057232098996484</ID>
+    <Explanation>attn status other params.</Explanation>
+    <InstructionBytes>02 31 18 04 01 00 10 FD 00 05 00 06 00 07 00 08 00 09 00 0D 00 26 03</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057211176730596</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02  31 06 00 07 00 08 00 09 00 31 03</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057188096044131</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 31 06 00 07 00 08 00 09 00 18 04 2D 03</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057181363529143</ID>
+    <Explanation>helix voltage</Explanation>
+    <InstructionBytes>02 31 05 00 34 03</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057179130629443</ID>
+    <Explanation>tube temperature</Explanation>
+    <InstructionBytes>02 31 0D 00  3C 03</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057122771334067</ID>
+    <Explanation>standby</Explanation>
+    <InstructionBytes>02 31 00 08 00 39 03</InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057120320039851</ID>
+    <Explanation>transmit</Explanation>
+    <InstructionBytes>02 31 00 08 01 38 03</InstructionBytes>
+    <Order>14</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587057118412170746</ID>
+    <Explanation>set low rf alarm trip point to 5 W</Explanation>
+    <InstructionBytes>02 31 80 04 32 00 87 03</InstructionBytes>
+    <Order>15</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587043112835686885</ID>
+    <Explanation>get low rf alarm trip point</Explanation>
+    <InstructionBytes>02 31 00 04 35 03</InstructionBytes>
+    <Order>16</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587043016738631375</ID>
+    <Explanation>set switch position A</Explanation>
+    <InstructionBytes>02 31 1C 84 01 01 A9 03</InstructionBytes>
+    <Order>17</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587042990751052371</ID>
+    <Explanation>set switch position B</Explanation>
+    <InstructionBytes>02 31 1C 84 01 10 FD AA 03</InstructionBytes>
+    <Order>18</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587042986279577410</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02  31 1C 04 01 01 29 03</InstructionBytes>
+    <Order>19</Order>
+  </Instruction>
+</DeviceInstructions>

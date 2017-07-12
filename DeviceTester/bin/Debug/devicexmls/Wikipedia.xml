@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>216.58.209.195</IP>
+    <Port>80</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>47 45 54 20 2F 20 48 54 54 50 2F 31 2E 31 0D 0A 68 6F 73 74 20 3A 20 77 77 77 2E 67 6F 6F 67 6C 65 2E 69 74 0D 0A 0D 0A 0D 0A</InstructionBytes>
+    <Explanation>www.google.it</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587518580739186848</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>50 4F 53 54 20 2F 61 75 74 68 6F 72 69 7A 65 20 48 54 54 50 2F 31 2E 31 0D 0A 48 6F 73 74 3A 20 31 39 32 2E 31 36 38 2E 30 2E 31 0D 0A 43 6F 6E 6E 65 63 74 69 6F 6E 3A 20 6B 65 65 70 2D 61 6C 69 76 65 0D 0A 43 6F 6E 74 65 6E 74 2D 4C 65 6E 67 74 68 3A 20 32 37 0D 0A 43 6F 6E 74 65 6E 74 2D 54 79 70 65 3A 20 61 70 70 6C 69 63 61 74 69 6F 6E 2F 78 2D 77 77 77 2D 66 6F 72 6D 2D 75 72 6C 65 6E 63 6F 64 65 64 0D 0A 43 6F 6F 6B 69 65 3A 20 75 73 65 72 3D 61 64 6D 69 6E 3B 20 73 65 73 73 69 6F 6E 3D 0D 0A 0D 0A 75 73 65 72 3D 61 64 6D 69 6E 26 70 61 73 73 77 6F 72 64 3D 69 44 69 72 65 63 74 0D 0A 0D 0A 0D 0A 0D 0A 75 73 65 72 6E 61 6D 65 3D 61 64 6D 69 6E 26 70 61 73 73 3D 69 44 69 72 65 63 74 0D 0A 0D 0A</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

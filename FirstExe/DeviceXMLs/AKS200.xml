@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<DeviceInstructions>
+
+
+<DeviceInfo>
+<DeviceName>AKS 200</DeviceName>
+<Explanation>Antenna Controller</Explanation>
+<IP>10.0.0.173</IP>
+<Port>4001</Port>
+<CheckSumType>CRC CCITT,2 Bytes</CheckSumType>
+<InstructionStructure> </InstructionStructure>
+</DeviceInfo>
+
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,1,0,4,1,0,200,1,117,214</InstructionBytes>
+<Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+</Instruction>
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,1,0,4,1,0,200,1,58,34</InstructionBytes>
+<Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+</Instruction>
+
+
+<Instruction>
+<ID>1</ID>
+<Order>1</Order>
+<InstructionBytes>1,1,11,0,4,1,0,200,1,158,136</InstructionBytes>
+<Explanation>Pole de Hareket 1,0,200,1 parametre</Explanation>
+</Instruction>
+
+
+
+</DeviceInstructions>
+
+
+

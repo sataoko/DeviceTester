@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.20.2.163</IP>
+    <Port>50000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 30 1C 04 01 29 03</InstructionBytes>
+    <Explanation>switch position</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587049384703236791</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>02 31 1C 04 29 03</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587049378891783886</ID>
+    <Explanation>switch system mode</Explanation>
+    <InstructionBytes>02 30 1E 04 2A 03</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587049376636249381</ID>
+    <Explanation>amp name</Explanation>
+    <InstructionBytes>02 30 04 1B 2F 03</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+</DeviceInstructions>

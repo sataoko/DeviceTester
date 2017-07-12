@@ -1,0 +1,21 @@
+9/3/2015 12:49:13 AM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 377
+9/3/2015 12:49:19 AM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 377
+9/3/2015 12:50:27 AM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 377
+9/3/2015 12:57:58 AM,System.NullReferenceException: Object reference not set to an instance of an object.
+   at TCPDeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 29
+   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in e:\__DropboxWorks\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 377
+9/3/2015 12:58:05 AM,received bytes null
+9/3/2015 12:58:11 AM,received bytes null
+9/3/2015 12:58:28 AM,received bytes null
+9/3/2015 12:58:45 AM,received bytes null
+9/3/2015 12:58:49 AM,received bytes null
+9/3/2015 12:58:56 AM,received bytes null
+9/3/2015 12:59:01 AM,received bytes null
+9/3/2015 12:59:28 AM,received bytes null
+9/3/2015 1:02:36 AM,received bytes null

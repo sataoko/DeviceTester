@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.208</IP>
+    <Port>5023</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>*IDB?</InstructionBytes>
+    <Explanation>device info</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587743184461881815</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>0A 0D 2A 45 53 52 3F 0A 0D</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+</DeviceInstructions>

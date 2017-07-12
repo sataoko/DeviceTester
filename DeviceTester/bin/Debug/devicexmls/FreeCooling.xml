@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>FreeCooling</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.38.101.36</IP>
+    <Port>1001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>01 9B 41 8B</InstructionBytes>
+    <Explanation>by pass mode - normal mode</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587475250423284162</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>01 04  01 E3</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587475229216900243</ID>
+    <Explanation>get registers</Explanation>
+    <InstructionBytes>01 03 00 00 00 20 44 12</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>
