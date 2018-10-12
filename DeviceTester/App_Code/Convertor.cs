@@ -60,20 +60,9 @@ namespace DeviceTester
         {
             if (sender.Text.Length > 0)
             {
-                //int l = sender.Text.Length;
-
-                //if (l % 2 != 0) return;
-
-                //int byteCount = sender.Text.Length / 2;
-
-                //for (int i = 0; i < byteCount; i+=2)
-                //{
-                    
-                //}
-
-                //string[] bytes = sender.Text.Split(',');
-
                 string[] bytes = sender.Text.Split(' ');
+                //string s = Common.VerifyHexFormat(sender.Text);
+                //string[] bytes = Common.GetBytesFromHex(s);
 
                 target.Clear();
 
@@ -122,6 +111,19 @@ namespace DeviceTester
                 }
             }
         }
+
+        public float ByteArrayToSingleFloat(byte[] byteArray)
+        {
+            try
+            {
+                string hexString = Encoding.ASCII.GetString(byteArray);
+                uint num = uint.Parse(hexString, System.Globalization.NumberStyles.AllowHexSpecifier);
+                byte[] floatVals = BitConverter.GetBytes(num);
+                return BitConverter.ToSingle(floatVals, 0);
+            }
+            catch { return 0; }
+        }
+
 
         //public void ApplyConvertionsToTextBoxes(TextBox sender, TextBox target1, string target1ConversionType, TextBox target2, string target2ConversionType)
         //{

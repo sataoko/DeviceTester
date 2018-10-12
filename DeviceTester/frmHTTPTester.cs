@@ -38,7 +38,7 @@ namespace DeviceTester
                 if (_stream.CanRead)
                 {
                     // MessageBox.Show("Reading");
-                    System.Threading.Thread.Sleep(350);
+                    //System.Threading.Thread.Sleep(350);
                     _stream.Read(incomingByteArray, 0, (int)_tcpClient.ReceiveBufferSize);
 
 
@@ -130,6 +130,11 @@ namespace DeviceTester
 
             IPAddress[] addresslist = Dns.GetHostAddresses(txtURL.Text);
             txtIP.Text = addresslist[0].ToString();
+        }
+
+        private void tbcHtml_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tbcHtml.SelectedIndex == 1) webBrowser1.DocumentText = txtReceivedBytesASCII.Text;
         }
     }
 }

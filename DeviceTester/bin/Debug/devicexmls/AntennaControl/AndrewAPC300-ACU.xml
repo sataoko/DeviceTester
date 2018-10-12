@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>AndrewAPC300</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>10.0.0.221</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>0A 52 50 0D</InstructionBytes>
+    <Explanation>
+RP request position</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8587793133679510895</ID>
+    <Explanation>RT request signal level</Explanation>
+    <InstructionBytes>0A 52 54 0D</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587792485857682326</ID>
+    <Explanation>F fault reset</Explanation>
+    <InstructionBytes>0A 46 0D</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587792485386333728</ID>
+    <Explanation>P go to position A21220E03740P0237</Explanation>
+    <InstructionBytes>0A 50 41 32 31 32 32 30 45 30 33 37 34 30 50 30 32 33 37 0D</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587792470922342409</ID>
+    <Explanation>X stop</Explanation>
+    <InstructionBytes>0A 58 0D</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587792296803123482</ID>
+    <Explanation>RL present sateliite position</Explanation>
+    <InstructionBytes>0A 52 4C 0D</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587792281059352561</ID>
+    <Explanation>RT</Explanation>
+    <InstructionBytes>0A 52 54</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+</DeviceInstructions>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DeviceTester
 {
-    class DOSPrompt
+    public class DOSPrompt
     {
         public static void CMDAutomate(string command, System.Windows.Forms.TextBox txtResults)
         {
@@ -93,13 +93,26 @@ namespace DeviceTester
 
         public string RunPython(string args)
         {
-            return DOSPrompt.CMDAutomate(args, "C:\\python3.5\\python.exe");
+            string pythonExePath = Ini.IniFile.GetValue("Python", "ExePath");
+            if (System.IO.File.Exists(pythonExePath))
+            {
+                return DOSPrompt.CMDAutomate(args, pythonExePath);
+            }
+            else return "error: " + pythonExePath + " not correct.";
         }
 
         public static string RunPythonFile(string fileName,string args)
         {
-            string path = "\"" + System.Windows.Forms.Application.StartupPath + "\\Py\\"+fileName+"\" ";
-            return DOSPrompt.CMDAutomate(path +args, "C:\\python3.5\\python.exe");
+            string pythonExePath = Ini.IniFile.GetValue("Python","ExePath");
+            if (System.IO.File.Exists(pythonExePath))
+            {
+                string pythonFilePath = "\"" + System.Windows.Forms.Application.StartupPath + "\\PythonFiles\\" + fileName + "\" ";
+                string pythonFilePath2 = System.Windows.Forms.Application.StartupPath + "\\PythonFiles\\" + fileName;
+                if (System.IO.File.Exists(pythonFilePath2))
+                    return DOSPrompt.CMDAutomate(pythonFilePath + args, pythonExePath);
+                else return "error : " + pythonExePath + " not found.";
+            }
+            else return "error : "+ pythonExePath + " not found.";
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DeviceTester
 {
-    public enum CRCType { SUM, XOR, Mod95, CRC16, CRC32, CRC_CCITT_Kermit, MODBUS,SumComplement }
+    public enum CRCType { SUM, XOR, Mod95, CRC16, CRC32, CRC_CCITT_Kermit, MODBUS, SumComplement }
 
     public class GetCRC
     {
@@ -45,9 +45,11 @@ namespace DeviceTester
         public static CheckSumRV Sum(byte[] byteArray)
         {
             int crc = 0;
+
             for (int i = 0; i < byteArray.Length; i++)
                 crc += byteArray[i];
-            return new CheckSumRV(crc,1);
+
+            return new CheckSumRV(crc, 1);
         }
 
         public static CheckSumRV Mod95(byte[] byteArray)
@@ -57,7 +59,7 @@ namespace DeviceTester
                 sum += byteArray[i];
 
             int result = 32 + ((sum - (32 * byteArray.Length)) % 95);
-            return new CheckSumRV(result,1);
+            return new CheckSumRV(result, 1);
         }
 
         public static CheckSumRV Mod256(byte[] byteArray)
@@ -182,7 +184,7 @@ namespace DeviceTester
                 }
             }
 
-            return new CheckSumRV(crc,2);
+            return new CheckSumRV(crc, 2);
         }
 
         public static CheckSumRV GetCRC32CheckSum(byte[] byteArray)
@@ -215,7 +217,7 @@ namespace DeviceTester
                 byte index = (byte)(((crc) & 0xff) ^ byteArray[i]);
                 crc = (uint)((crc >> 8) ^ table[index]);
             }
-             
+
 
             return new CheckSumRV(~crc, 4);
         }
@@ -235,7 +237,7 @@ namespace DeviceTester
             byte crc = 0;
             foreach (byte b in byteArray)
             {
-               crc -= b;
+                crc -= b;
             }
             return new CheckSumRV(crc, 1);
         }

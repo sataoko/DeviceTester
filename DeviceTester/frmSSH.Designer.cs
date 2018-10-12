@@ -226,7 +226,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtCommand;
         private System.Windows.Forms.TextBox txtIP;
-        private ShellTextBox shellTextBox1;
+        //private ShellTextBox shellTextBox1;
         private System.Windows.Forms.LinkLabel lnkClear;
     }
 }

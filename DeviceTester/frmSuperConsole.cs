@@ -91,7 +91,7 @@ namespace DeviceTester
 
                 if (rbHEX.Checked)
                 {
-                    byte[] r = Common.SendBytes(txtIP.Text, txtPort.Text, Common.GetHexBytes(e.Command));
+                    byte[] r = Common.SendBytes(txtIP.Text, txtPort.Text, Common.GetBytesFromHex(e.Command));
                     shellControl1.WriteText(ASCIIEncoding.ASCII.GetString(r));
                 }
             }

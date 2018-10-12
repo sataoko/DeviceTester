@@ -30,7 +30,7 @@ namespace DeviceTester
         public bool CreateTree(TreeView treeView)
         {
             bool returnValue = false;
-
+            string errorMessage = string.Empty;
             try
             {
                 // Create Desktop
@@ -64,6 +64,7 @@ namespace DeviceTester
             catch (Exception ex)
             {
                 returnValue = false;
+                errorMessage = ex.ToString();
             }
             return returnValue;
 
@@ -83,7 +84,7 @@ namespace DeviceTester
                 treeView.Nodes.Add(desktop);
                 returnValue = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 returnValue = false;
             }
@@ -104,7 +105,7 @@ namespace DeviceTester
                 // To fill Desktop
                 Char[] arr = { '\\' };
                 string[] nameList = parentNode.FullPath.Split(arr);
-                string path = "";
+                //string path = "";
                 
              //   if (nameList.GetValue(0).ToString() == "Desktop")
              //   {
@@ -156,8 +157,9 @@ namespace DeviceTester
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
+                
                 //TODO : 
             }
 

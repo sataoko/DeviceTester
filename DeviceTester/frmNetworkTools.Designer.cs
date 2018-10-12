@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNetworkTools));
             this.btnListIPs = new System.Windows.Forms.Button();
             this.btnGetIP = new System.Windows.Forms.Button();
             this.txtHostname = new System.Windows.Forms.TextBox();
@@ -74,7 +75,7 @@
             this.txtHostname.Name = "txtHostname";
             this.txtHostname.Size = new System.Drawing.Size(169, 21);
             this.txtHostname.TabIndex = 3;
-            this.txtHostname.Text = "www.unizayn.com";
+            this.txtHostname.Text = "www.marmara.edu.tr";
             // 
             // lblIP
             // 
@@ -88,11 +89,13 @@
             // 
             // txtConsole
             // 
-            this.txtConsole.Location = new System.Drawing.Point(12, 12);
+            this.txtConsole.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtConsole.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsole.Location = new System.Drawing.Point(0, 0);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(515, 347);
+            this.txtConsole.Size = new System.Drawing.Size(515, 401);
             this.txtConsole.TabIndex = 3;
             // 
             // txtIP1
@@ -155,7 +158,8 @@
             // lnkClear
             // 
             this.lnkClear.AutoSize = true;
-            this.lnkClear.Location = new System.Drawing.Point(12, 363);
+            this.lnkClear.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkClear.Location = new System.Drawing.Point(532, 379);
             this.lnkClear.Name = "lnkClear";
             this.lnkClear.Size = new System.Drawing.Size(31, 13);
             this.lnkClear.TabIndex = 7;
@@ -193,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 385);
+            this.ClientSize = new System.Drawing.Size(810, 401);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lnkClear);
             this.Controls.Add(this.label2);
@@ -208,6 +212,7 @@
             this.Controls.Add(this.btnGetIP);
             this.Controls.Add(this.btnGetAllDevicesOnLAN);
             this.Controls.Add(this.btnListIPs);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNetworkTools";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

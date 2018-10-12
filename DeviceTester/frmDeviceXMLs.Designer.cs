@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeviceXMLs));
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
@@ -39,7 +40,7 @@
             // 
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOK.Location = new System.Drawing.Point(461, 529);
+            this.btnOK.Location = new System.Drawing.Point(12, 483);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(130, 23);
             this.btnOK.TabIndex = 1;
@@ -51,7 +52,7 @@
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCancel.Location = new System.Drawing.Point(599, 529);
+            this.btnCancel.Location = new System.Drawing.Point(148, 483);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(130, 23);
             this.btnCancel.TabIndex = 2;
@@ -71,7 +72,7 @@
             this.trvFiles.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.trvFiles.Location = new System.Drawing.Point(0, 0);
             this.trvFiles.Name = "trvFiles";
-            this.trvFiles.Size = new System.Drawing.Size(742, 521);
+            this.trvFiles.Size = new System.Drawing.Size(452, 477);
             this.trvFiles.TabIndex = 4;
             this.trvFiles.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.trvFiles_BeforeExpand);
             this.trvFiles.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvFiles_AfterSelect);
@@ -92,11 +93,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(742, 562);
+            this.ClientSize = new System.Drawing.Size(452, 515);
             this.Controls.Add(this.lblSelectedFile);
             this.Controls.Add(this.trvFiles);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDeviceXMLs";

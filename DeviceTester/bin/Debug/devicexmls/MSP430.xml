@@ -17,37 +17,32 @@
   <Instruction>
     <ID>-8588771259775244558</ID>
     <Order>2</Order>
-    <InstructionBytes>61</InstructionBytes>
-    <Explanation>red led off</Explanation>
+    <InstructionBytes>97</InstructionBytes>
+    <Explanation>aa</Explanation>
   </Instruction>
   <Instruction>
     <ID>-8588771255008682058</ID>
-    <Explanation>red led on</Explanation>
-    <InstructionBytes>41</InstructionBytes>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>66</InstructionBytes>
     <Order>3</Order>
   </Instruction>
   <Instruction>
     <ID>-8588769615832588308</ID>
-    <Explanation>green led off</Explanation>
-    <InstructionBytes>62</InstructionBytes>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>41</InstructionBytes>
     <Order>4</Order>
   </Instruction>
   <Instruction>
     <ID>-8588075676437351585</ID>
-    <Explanation>green led on</Explanation>
-    <InstructionBytes>42</InstructionBytes>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>98</InstructionBytes>
     <Order>5</Order>
   </Instruction>
   <Instruction>
     <ID>-8588075673462031406</ID>
-    <Explanation>read led status</Explanation>
-    <InstructionBytes>73</InstructionBytes>
+    <Explanation>sfgdsfg</Explanation>
+    <InstructionBytes>fasdgd</InstructionBytes>
     <Order>6</Order>
-  </Instruction>
-  <Instruction>
-    <ID>-8587846880980060017</ID>
-    <Explanation>s2 button state</Explanation>
-    <InstructionBytes>63</InstructionBytes>
-    <Order>7</Order>
   </Instruction>
 </DeviceInstructions>

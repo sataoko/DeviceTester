@@ -30,17 +30,16 @@ namespace DeviceTester
 
         private void CalculateBits()
         {
-            /*if (dgvSelectedByteBits.CurrentCell != null)
-            {
-                if (dgvSelectedByteBits.CurrentCell.Value.ToString() == "1") dgvSelectedByteBits.CurrentCell.Value = "0";
-                else dgvSelectedByteBits.CurrentCell.Value = "1";
-
-                byte i = 7; double sum = 0;
-                foreach (DataGridViewCell c in dgvSelectedByteBits.Rows[0].Cells)
-                    sum += (c.Value.ToString() == "1" ? 1 : 0) * Math.Pow(2, i--);
-
-                txtSelectedBitsValue.Text = sum.ToString();
-            }*/
+            double sum = 0;
+            sum += (lblBit0.Text == "1" ? 1 : 0) * Math.Pow(2, 0);
+            sum += (lblBit1.Text == "1" ? 1 : 0) * Math.Pow(2, 1);
+            sum += (lblBit2.Text == "1" ? 1 : 0) * Math.Pow(2, 2);
+            sum += (lblBit3.Text == "1" ? 1 : 0) * Math.Pow(2, 3);
+            sum += (lblBit4.Text == "1" ? 1 : 0) * Math.Pow(2, 4);
+            sum += (lblBit5.Text == "1" ? 1 : 0) * Math.Pow(2, 5);
+            sum += (lblBit6.Text == "1" ? 1 : 0) * Math.Pow(2, 6);
+            sum += (lblBit7.Text == "1" ? 1 : 0) * Math.Pow(2, 7);
+            txtDecimalValue.Text = sum.ToString();
         }
 
         public BitDisplay()
@@ -51,6 +50,13 @@ namespace DeviceTester
         internal void Clear()
         {
             ShowBitsOfByte(0);
+        }
+
+        private void ToggleBit(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            if (label.Text == "0") label.Text = "1"; else label.Text = "0";
+            CalculateBits();
         }
     }
 }

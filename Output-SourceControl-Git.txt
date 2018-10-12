@@ -1,0 +1,16 @@
+﻿Opening repositories:
+C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester
+Commit b02860cc created locally in repository C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester
+Error: cannot spawn askpass: No such file or directory
+Error encountered while pushing to the remote repository: Git failed with a fatal error.
+could not read Username for 'https://github.com': terminal prompts disabled
+Pushing to https://github.com/sataoko/devicetester.git
+
+Error: failed to push some refs to 'https://github.com/sataoko/devicetester.git'
+Error: hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Error encountered while pushing to the remote repository: rejected Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes before pushing again.

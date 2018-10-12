@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>*IDN?</InstructionBytes>
+    <Explanation>device info</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>*IDN?,device info
+:TRACe[:DATA]?,query trace data
+:CALCulate:MARKer1:Y?, marker
+:CALCulate:MARKer1:START,marker start
+:CALCulate:MARKer1:STOP, marker stop
+:CALCulate:MARKer1:CENTer, marker center
+:FREQuency:STARt 1 GHz,start 1GHz
+:FREQuency:STOP 1.2 GHz,stop 1.2GHz</Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586732403764267144</ID>
+    <Explanation>lan type</Explanation>
+    <InstructionBytes>:SYSTem:COMMunicate:LAN:TYPE?</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732398258744420</ID>
+    <Explanation>system date</Explanation>
+    <InstructionBytes>:SYSTem:DATE?</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732397264347229</ID>
+    <Explanation>devıce ip</Explanation>
+    <InstructionBytes>:SYSTem:COMMunicate:LAN:IPADdress?</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732388215463692</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:SYSTem:COMMunicate:LAN:IPADdress?</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732388081851513</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:CALCulate:MARKer1:START</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732387710893858</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:CALCulate:MARKer1:STOP</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732290048313162</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:CALCulate:MARKer1:CENTer</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732290037438295</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:CALCulate:MARKer1:STOP</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732289734476895</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:FREQuency:STARt 1 GHz</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732289095278041</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:FREQuency:STOP 1.2 GHz</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732288846082041</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:FREQuency:STARt 1.5 GHz	</InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586732287988398639</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:FREQuency:STOP 2 GHz	</InstructionBytes>
+    <Order>14</Order>
+  </Instruction>
+</DeviceInstructions>

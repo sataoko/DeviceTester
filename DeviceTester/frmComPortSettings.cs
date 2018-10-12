@@ -23,7 +23,7 @@ namespace DeviceTester
 
         private void frmComPortSettings_Load(object sender, EventArgs e)
         {
-            cbComPorts.DataSource = System.IO.Ports.SerialPort.GetPortNames();
+            lbCurrentPorts.DataSource = System.IO.Ports.SerialPort.GetPortNames();
 
             Ini.IniFile ini = new Ini.IniFile();
             cbComPorts.Text = ini.IniReadValue("ComportSettings", "COMPort");
@@ -54,6 +54,12 @@ namespace DeviceTester
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void lnkRefreshPorts_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lbCurrentPorts.DataSource = System.IO.Ports.SerialPort.GetPortNames();
+            cbComPorts.DataSource = System.IO.Ports.SerialPort.GetPortNames();
         }
     }
 }

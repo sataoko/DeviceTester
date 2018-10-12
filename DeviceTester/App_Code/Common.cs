@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DeviceTester
 {
     class Common
     {
+        /*
+        //frmMainCommandTools uses this method. Maybe deleted later.
+        public static int GetByteCount(string text)
+        {
+            string[] bytes = System.Text.RegularExpressions.Regex.Split(text, ",");
+            return bytes.Length;
+        }
+
         public static byte[] GetBytesToSend(string byteStringWithComma)
         {
             string[] bytes = byteStringWithComma.Split(',');
@@ -19,12 +28,23 @@ namespace DeviceTester
 
             return bytesToSend;
         }
-
-        //frmMainCommandTools uses this method. Maybe deleted later.
-        public static int GetByteCount(string text)
+         public static byte[] GetHexBytes(string byteString)
         {
-            string[] bytes = System.Text.RegularExpressions.Regex.Split(text, ",");
-            return bytes.Length;
+            try
+            {
+                string[] bytes = byteString.Split(' ');
+                byte[] bytesToSend = new byte[bytes.Length];
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    //int k = splitChar == ',' ? Convert.ToInt16(bytes[i]) : Convert.ToInt32(bytes[i], 16);
+                    bytesToSend[i] = byte.Parse(bytes[i], System.Globalization.NumberStyles.HexNumber);
+                }
+                return bytesToSend;
+            }
+            catch (Exception exp)
+            {
+                return null;
+            }
         }
 
         public static byte[] GetBytes(string byteStringWithComma)
@@ -42,7 +62,6 @@ namespace DeviceTester
 
             return bytesToSend;
         }
-
         public static byte[] GetBytes(string byteString, char splitChar)
         {
             if (string.IsNullOrEmpty(byteString)) return null;
@@ -54,6 +73,35 @@ namespace DeviceTester
 
             return bytesToSend;
         }
+
+    */
+
+        public static byte[] GetBytesFromHex(string hexString)
+        {
+            string[] bytes = new string[hexString.Length / 2];
+
+            string s = string.Empty;
+            int c = 0;
+            for (int i = 0; i < hexString.Length; i++)
+            {
+                s += hexString[i];
+
+                if (i % 2 != 0)
+                {
+                    bytes[c++] = s;
+                    s = string.Empty;
+                }
+            }
+
+            byte[] bytesToSend = new byte[bytes.Length];
+            for (int i = 0; i < bytes.Length; i++)
+                bytesToSend[i] = byte.Parse(bytes[i], System.Globalization.NumberStyles.HexNumber);
+            
+            return bytesToSend;
+
+        }
+
+
 
         public static string GetBits(byte b)
         {
@@ -123,24 +171,7 @@ namespace DeviceTester
             return  t.RequestData(command);
         }
 
-        public static byte[] GetHexBytes(string byteString)
-        {
-            try
-            {
-                string[] bytes = byteString.Split(' ');
-                byte[] bytesToSend = new byte[bytes.Length];
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    //int k = splitChar == ',' ? Convert.ToInt16(bytes[i]) : Convert.ToInt32(bytes[i], 16);
-                    bytesToSend[i] = byte.Parse(bytes[i], System.Globalization.NumberStyles.HexNumber);
-                }
-                return bytesToSend;
-            }
-            catch (Exception exp)
-            {
-                return null;
-            }
-        }
+       
 
         public static DateTime RetrieveLinkerTimestamp()
         {
@@ -169,6 +200,28 @@ namespace DeviceTester
             dt = dt.AddSeconds(secondsSince1970);
             dt = dt.AddHours(TimeZone.CurrentTimeZone.GetUtcOffset(dt).Hours);
             return dt;
+        }
+
+        public static string RemoveNonHexChars(string hexCharsInput)
+        {
+            Char replacementChar = ' ';
+            IEnumerable<Char> allowedChars = new[] {
+                'a', 'b', 'c', 'd', 'e','f', 'A', 'B', 'C', 'D', 'E', 'F',
+                '0','1','2','3','4','5','6','7','8','9'
+            };
+
+            string result = new string(
+              hexCharsInput.Select(x => !allowedChars.Contains(x) ? replacementChar : x).ToArray()
+            );
+
+            return result;
+        }
+
+        public static string VerifyHexFormat(string hexBytePacket)
+        {
+            hexBytePacket = RemoveNonHexChars(hexBytePacket).Replace(" ",string.Empty);
+            if ((hexBytePacket.Length) % 2 != 0) return "error";
+            else return hexBytePacket;
         }
     }
 }

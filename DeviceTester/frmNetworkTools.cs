@@ -82,12 +82,15 @@ namespace DeviceTester
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             txtConsole.Text = "Pinging IPs. Wait...";
+            txtConsole.Text = checkedIPList.ToString();
             progressBar1.Value = e.ProgressPercentage;
+
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            txtConsole.Text = checkedIPList.ToString();
+            // txtConsole.Text = checkedIPList.ToString();
+            checkedIPList.Clear();
         }
     }
 }

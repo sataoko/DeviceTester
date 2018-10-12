@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Rigor DS 1000Z OSC</DeviceName>
+    <Explanation>Osilloscope</Explanation>
+    <IP>192.168.1.102</IP>
+    <Port>5555</Port>
+    <CheckSumType>no checksum</CheckSumType>
+    <InstructionStructure>SCPI</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>*IDN?</InstructionBytes>
+    <Explanation>Device Info</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586815051016326136</ID>
+    <Explanation>data çalışmıyor</Explanation>
+    <InstructionBytes>:DISPLAY:DATA?</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586813636901735149</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>:DISPlay:TYPE?</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+</DeviceInstructions>

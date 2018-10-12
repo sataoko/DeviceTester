@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCurrentXML = new System.Windows.Forms.ToolStripStatusLabel();
@@ -97,6 +97,19 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.lblCurrentChecksumType = new System.Windows.Forms.ToolStripLabel();
             this.cbCheckSumTypes = new System.Windows.Forms.ToolStripComboBox();
+            this.tlsSend = new System.Windows.Forms.ToolStrip();
+            this.tsbSendBytesToDevice = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbSendViaPython = new System.Windows.Forms.ToolStripButton();
+            this.cbPythonSenders = new System.Windows.Forms.ToolStripComboBox();
+            this.btnSNMPSend = new System.Windows.Forms.ToolStripButton();
+            this.tsbSNMPSet = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.tslConnectionType = new System.Windows.Forms.ToolStripLabel();
+            this.cbConnectionType = new System.Windows.Forms.ToolStripComboBox();
+            this.tsbErrorMessageClear = new System.Windows.Forms.ToolStripButton();
+            this.tsbSendToComPort = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.pnlInstructions = new System.Windows.Forms.Panel();
             this.tbcDevice = new System.Windows.Forms.TabControl();
@@ -115,15 +128,6 @@
             this.tsbConvertToHex = new System.Windows.Forms.ToolStripButton();
             this.pnlInstructionsBottom = new System.Windows.Forms.Panel();
             this.chkUseCheckSum = new System.Windows.Forms.CheckBox();
-            this.tlsSend = new System.Windows.Forms.ToolStrip();
-            this.tsbSendBytesToDevice = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSNMPSend = new System.Windows.Forms.ToolStripButton();
-            this.tsbSNMPSet = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.tslConnectionType = new System.Windows.Forms.ToolStripLabel();
-            this.cbCommunicationType = new System.Windows.Forms.ToolStripComboBox();
-            this.tsbSendToComPort = new System.Windows.Forms.ToolStripButton();
             this.chkConditionalReading = new System.Windows.Forms.CheckBox();
             this.chkCommandIsASCII = new System.Windows.Forms.CheckBox();
             this.lblReadBufferSize = new System.Windows.Forms.Label();
@@ -138,7 +142,7 @@
             this.lblBuildDate = new System.Windows.Forms.Label();
             this.lnkUpdateDeviceInfo = new System.Windows.Forms.LinkLabel();
             this.pnlDeviceInformation = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDeviceInformationTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -167,7 +171,11 @@
             this.Explanation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlsTimerCommandList = new System.Windows.Forms.ToolStrip();
             this.tsbRemoveTimerCommand = new System.Windows.Forms.ToolStripButton();
+            this.tsbMoveTimerRowUp = new System.Windows.Forms.ToolStripButton();
+            this.tsbMoveTimerRowDown = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chronometer1 = new DeviceTester.Chronometer();
+            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
             this.tlsTimerCommandsControl = new System.Windows.Forms.ToolStrip();
             this.tsbStartTimer = new System.Windows.Forms.ToolStripButton();
             this.tsbStopTimer2 = new System.Windows.Forms.ToolStripButton();
@@ -176,6 +184,7 @@
             this.tsbSetTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tsbToogleCounterTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tpConsole = new System.Windows.Forms.TabPage();
+            this.shellControl1 = new DeviceTester.ShellControl();
             this.pnlConsoleBottom = new System.Windows.Forms.Panel();
             this.lnkSelectDOSCommand = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -191,6 +200,7 @@
             this.tpTextView = new System.Windows.Forms.TabPage();
             this.hexReceivedBytes = new Be.Windows.Forms.HexBox();
             this.pnlBitsHolder = new System.Windows.Forms.Panel();
+            this.bitDisplay1 = new DeviceTester.BitDisplay();
             this.lblByteNo = new System.Windows.Forms.Label();
             this.txtSentCommand = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -202,36 +212,24 @@
             this.ASCII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBits = new System.Windows.Forms.Panel();
+            this.bitDisplay2 = new DeviceTester.BitDisplay();
             this.lblBits = new System.Windows.Forms.Label();
-            this.tpStatusBits = new System.Windows.Forms.TabPage();
             this.tlsIncomingBytes = new System.Windows.Forms.ToolStrip();
             this.tsbClearIncomingBytes = new System.Windows.Forms.ToolStripButton();
             this.tsbChangeMainConsoleStyle = new System.Windows.Forms.ToolStripButton();
             this.tsbClearBeforeSend = new System.Windows.Forms.ToolStripButton();
             this.tpTools = new System.Windows.Forms.TabPage();
+            this.pnlPythonTools = new System.Windows.Forms.Panel();
+            this.btnApplyPythonCode = new System.Windows.Forms.Button();
+            this.lbPyFiles = new System.Windows.Forms.ListBox();
+            this.lmkEditPythonCode = new System.Windows.Forms.LinkLabel();
+            this.lnkReloadPythonFiles = new System.Windows.Forms.LinkLabel();
             this.lnkClearHexBytes = new System.Windows.Forms.LinkLabel();
             this.lnkSendToGrid = new System.Windows.Forms.LinkLabel();
             this.lnkCalculateCRC = new System.Windows.Forms.LinkLabel();
             this.dgvCheckSums = new System.Windows.Forms.DataGridView();
             this.CheckSumType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChecksumValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkAddZeroToHexKeyboard = new System.Windows.Forms.CheckBox();
-            this.btnF = new System.Windows.Forms.Button();
-            this.btnB = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btnA = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btnD = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btnC = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
             this.btnCalculateCRCInHex = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -239,7 +237,10 @@
             this.txtASCIIBytesInCHKCalculator = new System.Windows.Forms.TextBox();
             this.txtHEXBytesInCHKCalculator = new System.Windows.Forms.TextBox();
             this.txtDecimalBytesInCHKCalculator = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tpConvertor = new System.Windows.Forms.TabPage();
+            this.rbDouble = new System.Windows.Forms.RadioButton();
+            this.rbInt32 = new System.Windows.Forms.RadioButton();
+            this.rbInt16 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.txtConvertedBytes = new System.Windows.Forms.TextBox();
             this.txtIntNumberToConvert = new System.Windows.Forms.TextBox();
@@ -248,24 +249,23 @@
             this.rbMod95 = new System.Windows.Forms.RadioButton();
             this.rbXOR = new System.Windows.Forms.RadioButton();
             this.lblActiveTCPConnections = new System.Windows.Forms.ListBox();
-            this.btnActiveTCPConnections = new System.Windows.Forms.Button();
             this.btnSendToConsole = new System.Windows.Forms.Button();
             this.cbCheckSumTypes2 = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.tpErrorMessages = new System.Windows.Forms.TabPage();
+            this.txtConsole = new System.Windows.Forms.TextBox();
+            this.toolStripErrorMessages = new System.Windows.Forms.ToolStrip();
+            this.tsbClearErrorMessages = new System.Windows.Forms.ToolStripButton();
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
-            this.chronometer1 = new DeviceTester.Chronometer();
-            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
-            this.shellControl1 = new DeviceTester.ShellControl();
-            this.bitDisplay1 = new DeviceTester.BitDisplay();
-            this.bitDisplay2 = new DeviceTester.BitDisplay();
-            this.lbPyFiles = new System.Windows.Forms.ListBox();
-            this.lnkApplyPython = new System.Windows.Forms.LinkLabel();
+            this.tsbShowLogs = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.cmsInstructionsGrid.SuspendLayout();
             this.tlsMain.SuspendLayout();
+            this.tlsSend.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -277,7 +277,6 @@
             this.pnlDeviceInfo.SuspendLayout();
             this.tlsInstructionsGrid.SuspendLayout();
             this.pnlInstructionsBottom.SuspendLayout();
-            this.tlsSend.SuspendLayout();
             this.tpDeviceInfo.SuspendLayout();
             this.pnlDeviceInformation.SuspendLayout();
             this.tpCommandWorkbench.SuspendLayout();
@@ -303,8 +302,11 @@
             this.pnlBits.SuspendLayout();
             this.tlsIncomingBytes.SuspendLayout();
             this.tpTools.SuspendLayout();
+            this.pnlPythonTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckSums)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tpConvertor.SuspendLayout();
+            this.tpErrorMessages.SuspendLayout();
+            this.toolStripErrorMessages.SuspendLayout();
             this.tlsMain2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -316,9 +318,9 @@
             this.lblConnectionType,
             this.lblComPortInfo,
             this.lblCommandExecutionTime});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 668);
+            this.statusStripMain.Location = new System.Drawing.Point(0, 697);
             this.statusStripMain.Name = "statusStripMain";
-            this.statusStripMain.Size = new System.Drawing.Size(1053, 22);
+            this.statusStripMain.Size = new System.Drawing.Size(1134, 22);
             this.statusStripMain.TabIndex = 0;
             this.statusStripMain.Text = "statusStrip1";
             // 
@@ -360,7 +362,7 @@
             this.aboutToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1053, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(1134, 24);
             this.menuStripMain.TabIndex = 1;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -563,6 +565,7 @@
             this.imageList1.Images.SetKeyName(0, "cmd_icon.jpg");
             this.imageList1.Images.SetKeyName(1, "green_light.png");
             this.imageList1.Images.SetKeyName(2, "red_light.png");
+            this.imageList1.Images.SetKeyName(3, "grey_dot.png");
             // 
             // tmrCounter
             // 
@@ -573,7 +576,7 @@
             // 
             this.lnkApplyBCIP.AutoSize = true;
             this.lnkApplyBCIP.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkApplyBCIP.Location = new System.Drawing.Point(444, 26);
+            this.lnkApplyBCIP.Location = new System.Drawing.Point(417, 412);
             this.lnkApplyBCIP.Name = "lnkApplyBCIP";
             this.lnkApplyBCIP.Size = new System.Drawing.Size(60, 13);
             this.lnkApplyBCIP.TabIndex = 53;
@@ -581,26 +584,28 @@
             this.lnkApplyBCIP.Text = "Apply BCIP";
             this.toolTip1.SetToolTip(this.lnkApplyBCIP, "1- Converts 10 to 10 EF, 02 to 10 FD, 03 to 10 FC.\r\nThose are special characters " +
         "in BCIP protocol. \r\n2- Adds XOR check sum.\r\n3- Wraps array with 02 and 03.");
+            this.lnkApplyBCIP.Visible = false;
             this.lnkApplyBCIP.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkApplyBCIP_LinkClicked);
             // 
             // lnkGetComplement
             // 
             this.lnkGetComplement.AutoSize = true;
             this.lnkGetComplement.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkGetComplement.Location = new System.Drawing.Point(444, 51);
+            this.lnkGetComplement.Location = new System.Drawing.Point(417, 395);
             this.lnkGetComplement.Name = "lnkGetComplement";
             this.lnkGetComplement.Size = new System.Drawing.Size(91, 13);
             this.lnkGetComplement.TabIndex = 53;
             this.lnkGetComplement.TabStop = true;
             this.lnkGetComplement.Text = "Complement of All";
             this.toolTip1.SetToolTip(this.lnkGetComplement, "It subtracts all bytes from FF.");
+            this.lnkGetComplement.Visible = false;
             this.lnkGetComplement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGetComplement_LinkClicked);
             // 
             // lnkDelOneHexByte
             // 
             this.lnkDelOneHexByte.AutoSize = true;
             this.lnkDelOneHexByte.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkDelOneHexByte.Location = new System.Drawing.Point(380, 93);
+            this.lnkDelOneHexByte.Location = new System.Drawing.Point(406, 98);
             this.lnkDelOneHexByte.Name = "lnkDelOneHexByte";
             this.lnkDelOneHexByte.Size = new System.Drawing.Size(62, 13);
             this.lnkDelOneHexByte.TabIndex = 53;
@@ -640,7 +645,7 @@
             this.tlsMain.Location = new System.Drawing.Point(0, 24);
             this.tlsMain.Name = "tlsMain";
             this.tlsMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.tlsMain.Size = new System.Drawing.Size(1053, 25);
+            this.tlsMain.Size = new System.Drawing.Size(1134, 25);
             this.tlsMain.TabIndex = 7;
             this.tlsMain.Text = "toolStripIPPort";
             // 
@@ -743,6 +748,138 @@
             this.cbCheckSumTypes.Name = "cbCheckSumTypes";
             this.cbCheckSumTypes.Size = new System.Drawing.Size(80, 25);
             // 
+            // tlsSend
+            // 
+            this.tlsSend.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tlsSend.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbSendBytesToDevice,
+            this.toolStripSeparator13,
+            this.tsbSendViaPython,
+            this.cbPythonSenders,
+            this.btnSNMPSend,
+            this.tsbSNMPSet,
+            this.toolStripSeparator12,
+            this.tslConnectionType,
+            this.cbConnectionType,
+            this.tsbErrorMessageClear,
+            this.tsbSendToComPort,
+            this.toolStripSeparator6});
+            this.tlsSend.Location = new System.Drawing.Point(0, 659);
+            this.tlsSend.Name = "tlsSend";
+            this.tlsSend.Size = new System.Drawing.Size(1134, 38);
+            this.tlsSend.TabIndex = 4;
+            this.tlsSend.Text = "toolStrip2";
+            // 
+            // tsbSendBytesToDevice
+            // 
+            this.tsbSendBytesToDevice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tsbSendBytesToDevice.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tsbSendBytesToDevice.Image = global::DeviceTester.Properties.Resources.rightArrow;
+            this.tsbSendBytesToDevice.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSendBytesToDevice.Name = "tsbSendBytesToDevice";
+            this.tsbSendBytesToDevice.Size = new System.Drawing.Size(99, 35);
+            this.tsbSendBytesToDevice.Text = "SEND TO DEVICE";
+            this.tsbSendBytesToDevice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSendBytesToDevice.ToolTipText = "Send selected packet to target";
+            this.tsbSendBytesToDevice.Click += new System.EventHandler(this.tsbSendBytesToDevice_Click);
+            // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 38);
+            // 
+            // tsbSendViaPython
+            // 
+            this.tsbSendViaPython.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tsbSendViaPython.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tsbSendViaPython.Image = global::DeviceTester.Properties.Resources.python_icon;
+            this.tsbSendViaPython.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSendViaPython.Name = "tsbSendViaPython";
+            this.tsbSendViaPython.Size = new System.Drawing.Size(109, 35);
+            this.tsbSendViaPython.Text = "SEND VIA PYTHON";
+            this.tsbSendViaPython.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSendViaPython.ToolTipText = "Send selected packet to target";
+            this.tsbSendViaPython.Click += new System.EventHandler(this.tsbSendViaPython_Click);
+            // 
+            // cbPythonSenders
+            // 
+            this.cbPythonSenders.Items.AddRange(new object[] {
+            "python_socket.py",
+            "python_visa.py",
+            "python_serial.py",
+            "python_snmp.py"});
+            this.cbPythonSenders.Name = "cbPythonSenders";
+            this.cbPythonSenders.Size = new System.Drawing.Size(121, 38);
+            this.cbPythonSenders.Text = "python_socket.py";
+            this.cbPythonSenders.SelectedIndexChanged += new System.EventHandler(this.cbPythonSenders_SelectedIndexChanged);
+            // 
+            // btnSNMPSend
+            // 
+            this.btnSNMPSend.Image = global::DeviceTester.Properties.Resources.snmp_icon;
+            this.btnSNMPSend.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSNMPSend.Name = "btnSNMPSend";
+            this.btnSNMPSend.Size = new System.Drawing.Size(65, 35);
+            this.btnSNMPSend.Text = "SNMP Get";
+            this.btnSNMPSend.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSNMPSend.Click += new System.EventHandler(this.btnSNMPSend_Click);
+            // 
+            // tsbSNMPSet
+            // 
+            this.tsbSNMPSet.Image = ((System.Drawing.Image)(resources.GetObject("tsbSNMPSet.Image")));
+            this.tsbSNMPSet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSNMPSet.Name = "tsbSNMPSet";
+            this.tsbSNMPSet.Size = new System.Drawing.Size(63, 35);
+            this.tsbSNMPSet.Text = "SNMP Set";
+            this.tsbSNMPSet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSNMPSet.Click += new System.EventHandler(this.tsbSNMPSet_Click);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 38);
+            // 
+            // tslConnectionType
+            // 
+            this.tslConnectionType.Name = "tslConnectionType";
+            this.tslConnectionType.Size = new System.Drawing.Size(97, 35);
+            this.tslConnectionType.Text = "Connection Type";
+            // 
+            // cbConnectionType
+            // 
+            this.cbConnectionType.Items.AddRange(new object[] {
+            "TCPIPStandard",
+            "TCPIPConnected",
+            "UDP",
+            "ComPort"});
+            this.cbConnectionType.Name = "cbConnectionType";
+            this.cbConnectionType.Size = new System.Drawing.Size(100, 38);
+            this.cbConnectionType.SelectedIndexChanged += new System.EventHandler(this.cbConnectionType_SelectedIndexChanged);
+            // 
+            // tsbErrorMessageClear
+            // 
+            this.tsbErrorMessageClear.Image = global::DeviceTester.Properties.Resources.grey_dot;
+            this.tsbErrorMessageClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbErrorMessageClear.Name = "tsbErrorMessageClear";
+            this.tsbErrorMessageClear.Size = new System.Drawing.Size(101, 35);
+            this.tsbErrorMessageClear.Text = "Error Message";
+            this.tsbErrorMessageClear.Click += new System.EventHandler(this.tsbErrorMessageClear_Click);
+            // 
+            // tsbSendToComPort
+            // 
+            this.tsbSendToComPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbSendToComPort.Image = ((System.Drawing.Image)(resources.GetObject("tsbSendToComPort.Image")));
+            this.tsbSendToComPort.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSendToComPort.Name = "tsbSendToComPort";
+            this.tsbSendToComPort.Size = new System.Drawing.Size(105, 35);
+            this.tsbSendToComPort.Text = "Send to Com Port";
+            this.tsbSendToComPort.Visible = false;
+            this.tsbSendToComPort.Click += new System.EventHandler(this.tsbSendToComPort_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
+            // 
             // splitContainerMain
             // 
             this.splitContainerMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -757,8 +894,8 @@
             // 
             this.splitContainerMain.Panel2.Controls.Add(this.tbcTools);
             this.splitContainerMain.Panel2.Controls.Add(this.tlsMain2);
-            this.splitContainerMain.Size = new System.Drawing.Size(1053, 619);
-            this.splitContainerMain.SplitterDistance = 501;
+            this.splitContainerMain.Size = new System.Drawing.Size(1134, 610);
+            this.splitContainerMain.SplitterDistance = 539;
             this.splitContainerMain.TabIndex = 2;
             // 
             // pnlInstructions
@@ -768,7 +905,7 @@
             this.pnlInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInstructions.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructions.Name = "pnlInstructions";
-            this.pnlInstructions.Size = new System.Drawing.Size(501, 619);
+            this.pnlInstructions.Size = new System.Drawing.Size(539, 610);
             this.pnlInstructions.TabIndex = 2;
             // 
             // tbcDevice
@@ -784,9 +921,8 @@
             this.tbcDevice.Location = new System.Drawing.Point(0, 5);
             this.tbcDevice.Name = "tbcDevice";
             this.tbcDevice.SelectedIndex = 0;
-            this.tbcDevice.Size = new System.Drawing.Size(501, 614);
+            this.tbcDevice.Size = new System.Drawing.Size(539, 605);
             this.tbcDevice.TabIndex = 0;
-            this.tbcDevice.SelectedIndexChanged += new System.EventHandler(this.tbcDevice_SelectedIndexChanged);
             // 
             // tpDeviceCommands
             // 
@@ -797,34 +933,34 @@
             this.tpDeviceCommands.Location = new System.Drawing.Point(4, 29);
             this.tpDeviceCommands.Name = "tpDeviceCommands";
             this.tpDeviceCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeviceCommands.Size = new System.Drawing.Size(493, 581);
+            this.tpDeviceCommands.Size = new System.Drawing.Size(531, 572);
             this.tpDeviceCommands.TabIndex = 0;
             this.tpDeviceCommands.Text = "Device Commands";
             this.tpDeviceCommands.UseVisualStyleBackColor = true;
             // 
             // dgvInstructions
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgvInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgvInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvInstructions.BackgroundColor = System.Drawing.Color.White;
             this.dgvInstructions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInstructions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvInstructions.ColumnHeadersHeight = 30;
             this.dgvInstructions.ContextMenuStrip = this.cmsInstructionsGrid;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInstructions.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInstructions.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInstructions.Location = new System.Drawing.Point(3, 32);
             this.dgvInstructions.Name = "dgvInstructions";
             this.dgvInstructions.RowHeadersVisible = false;
             this.dgvInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInstructions.Size = new System.Drawing.Size(487, 421);
+            this.dgvInstructions.Size = new System.Drawing.Size(525, 462);
             this.dgvInstructions.TabIndex = 3;
             this.dgvInstructions.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvInstructions_CellBeginEdit);
             this.dgvInstructions.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstructions_CellEndEdit);
@@ -836,7 +972,7 @@
             this.pnlDeviceInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDeviceInfo.Location = new System.Drawing.Point(3, 3);
             this.pnlDeviceInfo.Name = "pnlDeviceInfo";
-            this.pnlDeviceInfo.Size = new System.Drawing.Size(487, 29);
+            this.pnlDeviceInfo.Size = new System.Drawing.Size(525, 29);
             this.pnlDeviceInfo.TabIndex = 5;
             // 
             // tlsInstructionsGrid
@@ -854,7 +990,7 @@
             this.tsbConvertToHex});
             this.tlsInstructionsGrid.Location = new System.Drawing.Point(0, 4);
             this.tlsInstructionsGrid.Name = "tlsInstructionsGrid";
-            this.tlsInstructionsGrid.Size = new System.Drawing.Size(487, 25);
+            this.tlsInstructionsGrid.Size = new System.Drawing.Size(525, 25);
             this.tlsInstructionsGrid.TabIndex = 15;
             this.tlsInstructionsGrid.Text = "toolStrip3";
             // 
@@ -932,15 +1068,14 @@
             this.tsbConvertToHex.Image = ((System.Drawing.Image)(resources.GetObject("tsbConvertToHex.Image")));
             this.tsbConvertToHex.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConvertToHex.Name = "tsbConvertToHex";
-            this.tsbConvertToHex.Size = new System.Drawing.Size(92, 19);
+            this.tsbConvertToHex.Size = new System.Drawing.Size(92, 22);
             this.tsbConvertToHex.Text = "Convert To Hex";
             this.tsbConvertToHex.Click += new System.EventHandler(this.tsbConvertToHex_Click);
             // 
             // pnlInstructionsBottom
             // 
-            this.pnlInstructionsBottom.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlInstructionsBottom.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlInstructionsBottom.Controls.Add(this.chkUseCheckSum);
-            this.pnlInstructionsBottom.Controls.Add(this.tlsSend);
             this.pnlInstructionsBottom.Controls.Add(this.chkConditionalReading);
             this.pnlInstructionsBottom.Controls.Add(this.chkCommandIsASCII);
             this.pnlInstructionsBottom.Controls.Add(this.lblReadBufferSize);
@@ -952,16 +1087,16 @@
             this.pnlInstructionsBottom.Controls.Add(this.label9);
             this.pnlInstructionsBottom.Controls.Add(this.txtEndByte);
             this.pnlInstructionsBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInstructionsBottom.Location = new System.Drawing.Point(3, 453);
+            this.pnlInstructionsBottom.Location = new System.Drawing.Point(3, 494);
             this.pnlInstructionsBottom.Name = "pnlInstructionsBottom";
-            this.pnlInstructionsBottom.Size = new System.Drawing.Size(487, 125);
+            this.pnlInstructionsBottom.Size = new System.Drawing.Size(525, 75);
             this.pnlInstructionsBottom.TabIndex = 6;
             // 
             // chkUseCheckSum
             // 
             this.chkUseCheckSum.AutoSize = true;
             this.chkUseCheckSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkUseCheckSum.Location = new System.Drawing.Point(385, 28);
+            this.chkUseCheckSum.Location = new System.Drawing.Point(410, 12);
             this.chkUseCheckSum.Name = "chkUseCheckSum";
             this.chkUseCheckSum.Size = new System.Drawing.Size(99, 17);
             this.chkUseCheckSum.TabIndex = 2;
@@ -969,98 +1104,12 @@
             this.chkUseCheckSum.UseVisualStyleBackColor = true;
             this.chkUseCheckSum.Visible = false;
             // 
-            // tlsSend
-            // 
-            this.tlsSend.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSendBytesToDevice,
-            this.toolStripSeparator13,
-            this.btnSNMPSend,
-            this.tsbSNMPSet,
-            this.toolStripSeparator12,
-            this.tslConnectionType,
-            this.cbCommunicationType,
-            this.tsbSendToComPort});
-            this.tlsSend.Location = new System.Drawing.Point(0, 0);
-            this.tlsSend.Name = "tlsSend";
-            this.tlsSend.Size = new System.Drawing.Size(487, 25);
-            this.tlsSend.TabIndex = 4;
-            this.tlsSend.Text = "toolStrip2";
-            // 
-            // tsbSendBytesToDevice
-            // 
-            this.tsbSendBytesToDevice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tsbSendBytesToDevice.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tsbSendBytesToDevice.Image = global::DeviceTester.Properties.Resources.rightArrow;
-            this.tsbSendBytesToDevice.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSendBytesToDevice.Name = "tsbSendBytesToDevice";
-            this.tsbSendBytesToDevice.Size = new System.Drawing.Size(115, 22);
-            this.tsbSendBytesToDevice.Text = "SEND TO DEVICE";
-            this.tsbSendBytesToDevice.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tsbSendBytesToDevice.Click += new System.EventHandler(this.tsbSendBytesToDevice_Click);
-            // 
-            // toolStripSeparator13
-            // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnSNMPSend
-            // 
-            this.btnSNMPSend.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnSNMPSend.Image = ((System.Drawing.Image)(resources.GetObject("btnSNMPSend.Image")));
-            this.btnSNMPSend.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSNMPSend.Name = "btnSNMPSend";
-            this.btnSNMPSend.Size = new System.Drawing.Size(65, 22);
-            this.btnSNMPSend.Text = "SNMP Get";
-            this.btnSNMPSend.Click += new System.EventHandler(this.btnSNMPSend_Click);
-            // 
-            // tsbSNMPSet
-            // 
-            this.tsbSNMPSet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbSNMPSet.Image = ((System.Drawing.Image)(resources.GetObject("tsbSNMPSet.Image")));
-            this.tsbSNMPSet.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSNMPSet.Name = "tsbSNMPSet";
-            this.tsbSNMPSet.Size = new System.Drawing.Size(63, 22);
-            this.tsbSNMPSet.Text = "SNMP Set";
-            this.tsbSNMPSet.Click += new System.EventHandler(this.tsbSNMPSet_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tslConnectionType
-            // 
-            this.tslConnectionType.Name = "tslConnectionType";
-            this.tslConnectionType.Size = new System.Drawing.Size(97, 22);
-            this.tslConnectionType.Text = "Connection Type";
-            // 
-            // cbCommunicationType
-            // 
-            this.cbCommunicationType.Items.AddRange(new object[] {
-            "TCPIPStandard",
-            "TCPIPConnected",
-            "UDP",
-            "ComPort"});
-            this.cbCommunicationType.Name = "cbCommunicationType";
-            this.cbCommunicationType.Size = new System.Drawing.Size(100, 25);
-            // 
-            // tsbSendToComPort
-            // 
-            this.tsbSendToComPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbSendToComPort.Image = ((System.Drawing.Image)(resources.GetObject("tsbSendToComPort.Image")));
-            this.tsbSendToComPort.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSendToComPort.Name = "tsbSendToComPort";
-            this.tsbSendToComPort.Size = new System.Drawing.Size(105, 19);
-            this.tsbSendToComPort.Text = "Send to Com Port";
-            this.tsbSendToComPort.Visible = false;
-            this.tsbSendToComPort.Click += new System.EventHandler(this.tsbSendToComPort_Click);
-            // 
             // chkConditionalReading
             // 
             this.chkConditionalReading.AutoSize = true;
             this.chkConditionalReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkConditionalReading.ForeColor = System.Drawing.Color.Black;
-            this.chkConditionalReading.Location = new System.Drawing.Point(257, 64);
+            this.chkConditionalReading.Location = new System.Drawing.Point(252, 33);
             this.chkConditionalReading.Name = "chkConditionalReading";
             this.chkConditionalReading.Size = new System.Drawing.Size(121, 17);
             this.chkConditionalReading.TabIndex = 33;
@@ -1072,7 +1121,7 @@
             this.chkCommandIsASCII.AutoSize = true;
             this.chkCommandIsASCII.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.chkCommandIsASCII.ForeColor = System.Drawing.Color.Black;
-            this.chkCommandIsASCII.Location = new System.Drawing.Point(257, 44);
+            this.chkCommandIsASCII.Location = new System.Drawing.Point(252, 13);
             this.chkCommandIsASCII.Name = "chkCommandIsASCII";
             this.chkCommandIsASCII.Size = new System.Drawing.Size(113, 17);
             this.chkCommandIsASCII.TabIndex = 33;
@@ -1083,7 +1132,7 @@
             // 
             this.lblReadBufferSize.AutoSize = true;
             this.lblReadBufferSize.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblReadBufferSize.Location = new System.Drawing.Point(23, 79);
+            this.lblReadBufferSize.Location = new System.Drawing.Point(18, 48);
             this.lblReadBufferSize.Name = "lblReadBufferSize";
             this.lblReadBufferSize.Size = new System.Drawing.Size(74, 11);
             this.lblReadBufferSize.TabIndex = 32;
@@ -1093,7 +1142,7 @@
             // 
             this.lblTCPClientCommunicationTimeOut.AutoSize = true;
             this.lblTCPClientCommunicationTimeOut.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTCPClientCommunicationTimeOut.Location = new System.Drawing.Point(23, 63);
+            this.lblTCPClientCommunicationTimeOut.Location = new System.Drawing.Point(18, 32);
             this.lblTCPClientCommunicationTimeOut.Name = "lblTCPClientCommunicationTimeOut";
             this.lblTCPClientCommunicationTimeOut.Size = new System.Drawing.Size(149, 11);
             this.lblTCPClientCommunicationTimeOut.TabIndex = 32;
@@ -1103,7 +1152,7 @@
             // 
             this.lblSendDelayTime.AutoSize = true;
             this.lblSendDelayTime.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSendDelayTime.Location = new System.Drawing.Point(23, 47);
+            this.lblSendDelayTime.Location = new System.Drawing.Point(18, 16);
             this.lblSendDelayTime.Name = "lblSendDelayTime";
             this.lblSendDelayTime.Size = new System.Drawing.Size(78, 11);
             this.lblSendDelayTime.TabIndex = 31;
@@ -1113,7 +1162,7 @@
             // 
             this.txtReadBufferSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReadBufferSize.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtReadBufferSize.Location = new System.Drawing.Point(190, 75);
+            this.txtReadBufferSize.Location = new System.Drawing.Point(185, 44);
             this.txtReadBufferSize.Name = "txtReadBufferSize";
             this.txtReadBufferSize.Size = new System.Drawing.Size(50, 14);
             this.txtReadBufferSize.TabIndex = 29;
@@ -1123,7 +1172,7 @@
             // 
             this.txtTCPClientCommunicationTimeOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTCPClientCommunicationTimeOut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTCPClientCommunicationTimeOut.Location = new System.Drawing.Point(190, 59);
+            this.txtTCPClientCommunicationTimeOut.Location = new System.Drawing.Point(185, 28);
             this.txtTCPClientCommunicationTimeOut.Name = "txtTCPClientCommunicationTimeOut";
             this.txtTCPClientCommunicationTimeOut.Size = new System.Drawing.Size(50, 14);
             this.txtTCPClientCommunicationTimeOut.TabIndex = 29;
@@ -1133,7 +1182,7 @@
             // 
             this.txtDelayTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDelayTime.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDelayTime.Location = new System.Drawing.Point(190, 43);
+            this.txtDelayTime.Location = new System.Drawing.Point(185, 12);
             this.txtDelayTime.Name = "txtDelayTime";
             this.txtDelayTime.Size = new System.Drawing.Size(50, 14);
             this.txtDelayTime.TabIndex = 30;
@@ -1143,7 +1192,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(254, 85);
+            this.label9.Location = new System.Drawing.Point(407, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 28;
@@ -1153,7 +1202,7 @@
             // 
             this.txtEndByte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEndByte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndByte.Location = new System.Drawing.Point(307, 85);
+            this.txtEndByte.Location = new System.Drawing.Point(460, 34);
             this.txtEndByte.Name = "txtEndByte";
             this.txtEndByte.Size = new System.Drawing.Size(28, 13);
             this.txtEndByte.TabIndex = 27;
@@ -1176,7 +1225,7 @@
             this.tpDeviceInfo.Location = new System.Drawing.Point(4, 29);
             this.tpDeviceInfo.Name = "tpDeviceInfo";
             this.tpDeviceInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeviceInfo.Size = new System.Drawing.Size(493, 581);
+            this.tpDeviceInfo.Size = new System.Drawing.Size(531, 572);
             this.tpDeviceInfo.TabIndex = 1;
             this.tpDeviceInfo.Text = "Device Info";
             this.tpDeviceInfo.UseVisualStyleBackColor = true;
@@ -1185,7 +1234,7 @@
             // 
             this.lblBuildDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblBuildDate.AutoSize = true;
-            this.lblBuildDate.Location = new System.Drawing.Point(8, 553);
+            this.lblBuildDate.Location = new System.Drawing.Point(8, 544);
             this.lblBuildDate.Name = "lblBuildDate";
             this.lblBuildDate.Size = new System.Drawing.Size(85, 13);
             this.lblBuildDate.TabIndex = 24;
@@ -1195,7 +1244,8 @@
             // lnkUpdateDeviceInfo
             // 
             this.lnkUpdateDeviceInfo.AutoSize = true;
-            this.lnkUpdateDeviceInfo.Location = new System.Drawing.Point(121, 206);
+            this.lnkUpdateDeviceInfo.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkUpdateDeviceInfo.Location = new System.Drawing.Point(129, 206);
             this.lnkUpdateDeviceInfo.Name = "lnkUpdateDeviceInfo";
             this.lnkUpdateDeviceInfo.Size = new System.Drawing.Size(53, 13);
             this.lnkUpdateDeviceInfo.TabIndex = 23;
@@ -1206,31 +1256,31 @@
             // pnlDeviceInformation
             // 
             this.pnlDeviceInformation.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDeviceInformation.Controls.Add(this.label3);
+            this.pnlDeviceInformation.Controls.Add(this.lblDeviceInformationTitle);
             this.pnlDeviceInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDeviceInformation.Location = new System.Drawing.Point(3, 3);
             this.pnlDeviceInformation.Name = "pnlDeviceInformation";
-            this.pnlDeviceInformation.Size = new System.Drawing.Size(487, 24);
+            this.pnlDeviceInformation.Size = new System.Drawing.Size(525, 24);
             this.pnlDeviceInformation.TabIndex = 22;
             // 
-            // label3
+            // lblDeviceInformationTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 23);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Device Information";
+            this.lblDeviceInformationTitle.AutoSize = true;
+            this.lblDeviceInformationTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeviceInformationTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDeviceInformationTitle.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeviceInformationTitle.ForeColor = System.Drawing.Color.Blue;
+            this.lblDeviceInformationTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblDeviceInformationTitle.Name = "lblDeviceInformationTitle";
+            this.lblDeviceInformationTitle.Size = new System.Drawing.Size(194, 23);
+            this.lblDeviceInformationTitle.TabIndex = 14;
+            this.lblDeviceInformationTitle.Text = "Device Information";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 121);
+            this.label7.Location = new System.Drawing.Point(14, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 19;
@@ -1240,7 +1290,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 95);
+            this.label6.Location = new System.Drawing.Point(14, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 20;
@@ -1250,7 +1300,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 69);
+            this.label5.Location = new System.Drawing.Point(14, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 21;
@@ -1260,7 +1310,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 44);
+            this.label4.Location = new System.Drawing.Point(14, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 18;
@@ -1270,7 +1320,7 @@
             // 
             this.txtDeviceName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDeviceName.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDeviceName.Location = new System.Drawing.Point(124, 41);
+            this.txtDeviceName.Location = new System.Drawing.Point(132, 41);
             this.txtDeviceName.Name = "txtDeviceName";
             this.txtDeviceName.Size = new System.Drawing.Size(145, 21);
             this.txtDeviceName.TabIndex = 14;
@@ -1279,7 +1329,7 @@
             // 
             this.txtInstructionStructure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInstructionStructure.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstructionStructure.Location = new System.Drawing.Point(124, 119);
+            this.txtInstructionStructure.Location = new System.Drawing.Point(132, 119);
             this.txtInstructionStructure.Multiline = true;
             this.txtInstructionStructure.Name = "txtInstructionStructure";
             this.txtInstructionStructure.Size = new System.Drawing.Size(348, 84);
@@ -1289,7 +1339,7 @@
             // 
             this.txtCheckSumType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCheckSumType.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckSumType.Location = new System.Drawing.Point(124, 93);
+            this.txtCheckSumType.Location = new System.Drawing.Point(132, 93);
             this.txtCheckSumType.Name = "txtCheckSumType";
             this.txtCheckSumType.Size = new System.Drawing.Size(145, 21);
             this.txtCheckSumType.TabIndex = 17;
@@ -1298,7 +1348,7 @@
             // 
             this.txtDeviceExplanation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDeviceExplanation.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDeviceExplanation.Location = new System.Drawing.Point(124, 67);
+            this.txtDeviceExplanation.Location = new System.Drawing.Point(132, 67);
             this.txtDeviceExplanation.Name = "txtDeviceExplanation";
             this.txtDeviceExplanation.Size = new System.Drawing.Size(145, 21);
             this.txtDeviceExplanation.TabIndex = 15;
@@ -1310,7 +1360,7 @@
             this.tpCommandWorkbench.Controls.Add(this.tlsCommandWorkbench);
             this.tpCommandWorkbench.Location = new System.Drawing.Point(4, 29);
             this.tpCommandWorkbench.Name = "tpCommandWorkbench";
-            this.tpCommandWorkbench.Size = new System.Drawing.Size(493, 581);
+            this.tpCommandWorkbench.Size = new System.Drawing.Size(531, 572);
             this.tpCommandWorkbench.TabIndex = 4;
             this.tpCommandWorkbench.Text = "Command Workbench";
             this.tpCommandWorkbench.UseVisualStyleBackColor = true;
@@ -1320,12 +1370,12 @@
             this.txtWorkbench.BackColor = System.Drawing.Color.White;
             this.txtWorkbench.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtWorkbench.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtWorkbench.ForeColor = System.Drawing.Color.Black;
+            this.txtWorkbench.ForeColor = System.Drawing.Color.Blue;
             this.txtWorkbench.Location = new System.Drawing.Point(0, 92);
             this.txtWorkbench.Multiline = true;
             this.txtWorkbench.Name = "txtWorkbench";
             this.txtWorkbench.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkbench.Size = new System.Drawing.Size(493, 489);
+            this.txtWorkbench.Size = new System.Drawing.Size(531, 480);
             this.txtWorkbench.TabIndex = 18;
             this.txtWorkbench.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtWorkbench_MouseClick);
             // 
@@ -1336,7 +1386,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(493, 67);
+            this.panel5.Size = new System.Drawing.Size(531, 67);
             this.panel5.TabIndex = 17;
             // 
             // txtWorkbenchCurrentCommand
@@ -1355,7 +1405,7 @@
             this.tsbSendFromWorkbench});
             this.tlsCommandWorkbenchSend.Location = new System.Drawing.Point(0, 42);
             this.tlsCommandWorkbenchSend.Name = "tlsCommandWorkbenchSend";
-            this.tlsCommandWorkbenchSend.Size = new System.Drawing.Size(493, 25);
+            this.tlsCommandWorkbenchSend.Size = new System.Drawing.Size(531, 25);
             this.tlsCommandWorkbenchSend.TabIndex = 5;
             this.tlsCommandWorkbenchSend.Text = "toolStrip7";
             // 
@@ -1385,7 +1435,7 @@
             this.toolStripSeparator7});
             this.tlsCommandWorkbench.Location = new System.Drawing.Point(0, 0);
             this.tlsCommandWorkbench.Name = "tlsCommandWorkbench";
-            this.tlsCommandWorkbench.Size = new System.Drawing.Size(493, 25);
+            this.tlsCommandWorkbench.Size = new System.Drawing.Size(531, 25);
             this.tlsCommandWorkbench.TabIndex = 16;
             this.tlsCommandWorkbench.Text = "toolStrip6";
             // 
@@ -1453,7 +1503,7 @@
             this.tpTimerCommandList.Location = new System.Drawing.Point(4, 29);
             this.tpTimerCommandList.Name = "tpTimerCommandList";
             this.tpTimerCommandList.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTimerCommandList.Size = new System.Drawing.Size(493, 581);
+            this.tpTimerCommandList.Size = new System.Drawing.Size(531, 572);
             this.tpTimerCommandList.TabIndex = 5;
             this.tpTimerCommandList.Text = "Timer Command List";
             this.tpTimerCommandList.UseVisualStyleBackColor = true;
@@ -1484,7 +1534,7 @@
             this.dgvTimerInstructions.Name = "dgvTimerInstructions";
             this.dgvTimerInstructions.RowHeadersVisible = false;
             this.dgvTimerInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTimerInstructions.Size = new System.Drawing.Size(487, 450);
+            this.dgvTimerInstructions.Size = new System.Drawing.Size(525, 441);
             this.dgvTimerInstructions.TabIndex = 9;
             // 
             // InstructionBytes
@@ -1502,10 +1552,12 @@
             // tlsTimerCommandList
             // 
             this.tlsTimerCommandList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbRemoveTimerCommand});
+            this.tsbRemoveTimerCommand,
+            this.tsbMoveTimerRowUp,
+            this.tsbMoveTimerRowDown});
             this.tlsTimerCommandList.Location = new System.Drawing.Point(3, 3);
             this.tlsTimerCommandList.Name = "tlsTimerCommandList";
-            this.tlsTimerCommandList.Size = new System.Drawing.Size(487, 25);
+            this.tlsTimerCommandList.Size = new System.Drawing.Size(525, 25);
             this.tlsTimerCommandList.TabIndex = 8;
             this.tlsTimerCommandList.Text = "toolStrip8";
             // 
@@ -1519,6 +1571,26 @@
             this.tsbRemoveTimerCommand.Text = "Delete Row";
             this.tsbRemoveTimerCommand.Click += new System.EventHandler(this.tsbRemoveTimerCommand_Click);
             // 
+            // tsbMoveTimerRowUp
+            // 
+            this.tsbMoveTimerRowUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbMoveTimerRowUp.Image = ((System.Drawing.Image)(resources.GetObject("tsbMoveTimerRowUp.Image")));
+            this.tsbMoveTimerRowUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbMoveTimerRowUp.Name = "tsbMoveTimerRowUp";
+            this.tsbMoveTimerRowUp.Size = new System.Drawing.Size(59, 22);
+            this.tsbMoveTimerRowUp.Text = "Move Up";
+            this.tsbMoveTimerRowUp.Click += new System.EventHandler(this.tsbMoveTimerRowUp_Click);
+            // 
+            // tsbMoveTimerRowDown
+            // 
+            this.tsbMoveTimerRowDown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbMoveTimerRowDown.Image = ((System.Drawing.Image)(resources.GetObject("tsbMoveTimerRowDown.Image")));
+            this.tsbMoveTimerRowDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbMoveTimerRowDown.Name = "tsbMoveTimerRowDown";
+            this.tsbMoveTimerRowDown.Size = new System.Drawing.Size(75, 22);
+            this.tsbMoveTimerRowDown.Text = "Move Down";
+            this.tsbMoveTimerRowDown.Click += new System.EventHandler(this.tsbMoveTimerRowDown_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
@@ -1526,10 +1598,34 @@
             this.panel1.Controls.Add(this.sevenSegmentArray2);
             this.panel1.Controls.Add(this.tlsTimerCommandsControl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 478);
+            this.panel1.Location = new System.Drawing.Point(3, 469);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 100);
+            this.panel1.Size = new System.Drawing.Size(525, 100);
             this.panel1.TabIndex = 7;
+            // 
+            // chronometer1
+            // 
+            this.chronometer1.Location = new System.Drawing.Point(164, 27);
+            this.chronometer1.Name = "chronometer1";
+            this.chronometer1.Size = new System.Drawing.Size(294, 64);
+            this.chronometer1.TabIndex = 30;
+            // 
+            // sevenSegmentArray2
+            // 
+            this.sevenSegmentArray2.ArrayCount = 2;
+            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
+            this.sevenSegmentArray2.DecimalShow = false;
+            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
+            this.sevenSegmentArray2.ElementWidth = 10;
+            this.sevenSegmentArray2.ItalicFactor = 0F;
+            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
+            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
+            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
+            this.sevenSegmentArray2.TabIndex = 29;
+            this.sevenSegmentArray2.TabStop = false;
+            this.sevenSegmentArray2.Value = null;
             // 
             // tlsTimerCommandsControl
             // 
@@ -1542,7 +1638,7 @@
             this.tsbToogleCounterTimerInterval});
             this.tlsTimerCommandsControl.Location = new System.Drawing.Point(0, 0);
             this.tlsTimerCommandsControl.Name = "tlsTimerCommandsControl";
-            this.tlsTimerCommandsControl.Size = new System.Drawing.Size(487, 25);
+            this.tlsTimerCommandsControl.Size = new System.Drawing.Size(525, 25);
             this.tlsTimerCommandsControl.TabIndex = 4;
             this.tlsTimerCommandsControl.Text = "toolStrip8";
             // 
@@ -1584,8 +1680,8 @@
             this.tsbSetTimerInterval.Image = ((System.Drawing.Image)(resources.GetObject("tsbSetTimerInterval.Image")));
             this.tsbSetTimerInterval.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSetTimerInterval.Name = "tsbSetTimerInterval";
-            this.tsbSetTimerInterval.Size = new System.Drawing.Size(27, 22);
-            this.tsbSetTimerInterval.Text = "Set";
+            this.tsbSetTimerInterval.Size = new System.Drawing.Size(69, 22);
+            this.tsbSetTimerInterval.Text = "Set Interval";
             this.tsbSetTimerInterval.Click += new System.EventHandler(this.tsbSetTimerInterval_Click);
             // 
             // tsbToogleCounterTimerInterval
@@ -1605,23 +1701,38 @@
             this.tpConsole.Controls.Add(this.panel4);
             this.tpConsole.Location = new System.Drawing.Point(4, 29);
             this.tpConsole.Name = "tpConsole";
-            this.tpConsole.Size = new System.Drawing.Size(493, 581);
+            this.tpConsole.Size = new System.Drawing.Size(531, 572);
             this.tpConsole.TabIndex = 3;
             this.tpConsole.Text = "Console";
             this.tpConsole.UseVisualStyleBackColor = true;
+            // 
+            // shellControl1
+            // 
+            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.Location = new System.Drawing.Point(0, 24);
+            this.shellControl1.Name = "shellControl1";
+            this.shellControl1.Prompt = ">";
+            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
+            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
+            this.shellControl1.Size = new System.Drawing.Size(531, 520);
+            this.shellControl1.TabIndex = 26;
+            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
             // 
             // pnlConsoleBottom
             // 
             this.pnlConsoleBottom.Controls.Add(this.lnkSelectDOSCommand);
             this.pnlConsoleBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlConsoleBottom.Location = new System.Drawing.Point(0, 553);
+            this.pnlConsoleBottom.Location = new System.Drawing.Point(0, 544);
             this.pnlConsoleBottom.Name = "pnlConsoleBottom";
-            this.pnlConsoleBottom.Size = new System.Drawing.Size(493, 28);
+            this.pnlConsoleBottom.Size = new System.Drawing.Size(531, 28);
             this.pnlConsoleBottom.TabIndex = 25;
             // 
             // lnkSelectDOSCommand
             // 
             this.lnkSelectDOSCommand.AutoSize = true;
+            this.lnkSelectDOSCommand.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnkSelectDOSCommand.Location = new System.Drawing.Point(8, 6);
             this.lnkSelectDOSCommand.Name = "lnkSelectDOSCommand";
             this.lnkSelectDOSCommand.Size = new System.Drawing.Size(113, 13);
@@ -1640,7 +1751,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(493, 24);
+            this.panel4.Size = new System.Drawing.Size(531, 24);
             this.panel4.TabIndex = 23;
             // 
             // rbConsoleIsInASCIIMode
@@ -1668,10 +1779,12 @@
             // rbConsoleIsInDosMode
             // 
             this.rbConsoleIsInDosMode.AutoSize = true;
+            this.rbConsoleIsInDosMode.Checked = true;
             this.rbConsoleIsInDosMode.Location = new System.Drawing.Point(128, 4);
             this.rbConsoleIsInDosMode.Name = "rbConsoleIsInDosMode";
             this.rbConsoleIsInDosMode.Size = new System.Drawing.Size(103, 17);
             this.rbConsoleIsInDosMode.TabIndex = 17;
+            this.rbConsoleIsInDosMode.TabStop = true;
             this.rbConsoleIsInDosMode.Text = "DOS Commands";
             this.rbConsoleIsInDosMode.UseVisualStyleBackColor = true;
             this.rbConsoleIsInDosMode.CheckedChanged += new System.EventHandler(this.rbDosMode_CheckedChanged);
@@ -1679,12 +1792,10 @@
             // rbConsoleIsInDeviceMode
             // 
             this.rbConsoleIsInDeviceMode.AutoSize = true;
-            this.rbConsoleIsInDeviceMode.Checked = true;
             this.rbConsoleIsInDeviceMode.Location = new System.Drawing.Point(8, 4);
             this.rbConsoleIsInDeviceMode.Name = "rbConsoleIsInDeviceMode";
             this.rbConsoleIsInDeviceMode.Size = new System.Drawing.Size(47, 17);
             this.rbConsoleIsInDeviceMode.TabIndex = 16;
-            this.rbConsoleIsInDeviceMode.TabStop = true;
             this.rbConsoleIsInDeviceMode.Text = "HEX";
             this.rbConsoleIsInDeviceMode.UseVisualStyleBackColor = true;
             this.rbConsoleIsInDeviceMode.CheckedChanged += new System.EventHandler(this.rbDeviceMode_CheckedChanged);
@@ -1695,19 +1806,20 @@
             this.pnlInstructionsTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInstructionsTop.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructionsTop.Name = "pnlInstructionsTop";
-            this.pnlInstructionsTop.Size = new System.Drawing.Size(501, 5);
+            this.pnlInstructionsTop.Size = new System.Drawing.Size(539, 5);
             this.pnlInstructionsTop.TabIndex = 1;
             // 
             // tbcTools
             // 
             this.tbcTools.Controls.Add(this.tpIncomingBytes);
             this.tbcTools.Controls.Add(this.tpTools);
-            this.tbcTools.Controls.Add(this.tabPage1);
+            this.tbcTools.Controls.Add(this.tpConvertor);
+            this.tbcTools.Controls.Add(this.tpErrorMessages);
             this.tbcTools.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcTools.Location = new System.Drawing.Point(0, 25);
             this.tbcTools.Name = "tbcTools";
             this.tbcTools.SelectedIndex = 0;
-            this.tbcTools.Size = new System.Drawing.Size(548, 594);
+            this.tbcTools.Size = new System.Drawing.Size(591, 585);
             this.tbcTools.TabIndex = 16;
             // 
             // tpIncomingBytes
@@ -1718,7 +1830,7 @@
             this.tpIncomingBytes.Location = new System.Drawing.Point(4, 22);
             this.tpIncomingBytes.Name = "tpIncomingBytes";
             this.tpIncomingBytes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIncomingBytes.Size = new System.Drawing.Size(540, 568);
+            this.tpIncomingBytes.Size = new System.Drawing.Size(583, 559);
             this.tpIncomingBytes.TabIndex = 0;
             this.tpIncomingBytes.Text = "Incoming Bytes";
             this.tpIncomingBytes.UseVisualStyleBackColor = true;
@@ -1729,7 +1841,7 @@
             this.chkSaveLog.AutoSize = true;
             this.chkSaveLog.Checked = true;
             this.chkSaveLog.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSaveLog.Location = new System.Drawing.Point(399, 545);
+            this.chkSaveLog.Location = new System.Drawing.Point(442, 536);
             this.chkSaveLog.Name = "chkSaveLog";
             this.chkSaveLog.Size = new System.Drawing.Size(131, 17);
             this.chkSaveLog.TabIndex = 33;
@@ -1740,12 +1852,11 @@
             // 
             this.tbcIncomingBytes.Controls.Add(this.tpTextView);
             this.tbcIncomingBytes.Controls.Add(this.tpGridView);
-            this.tbcIncomingBytes.Controls.Add(this.tpStatusBits);
             this.tbcIncomingBytes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcIncomingBytes.Location = new System.Drawing.Point(3, 3);
             this.tbcIncomingBytes.Name = "tbcIncomingBytes";
             this.tbcIncomingBytes.SelectedIndex = 0;
-            this.tbcIncomingBytes.Size = new System.Drawing.Size(534, 537);
+            this.tbcIncomingBytes.Size = new System.Drawing.Size(577, 528);
             this.tbcIncomingBytes.TabIndex = 0;
             // 
             // tpTextView
@@ -1757,7 +1868,7 @@
             this.tpTextView.Location = new System.Drawing.Point(4, 22);
             this.tpTextView.Name = "tpTextView";
             this.tpTextView.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTextView.Size = new System.Drawing.Size(526, 511);
+            this.tpTextView.Size = new System.Drawing.Size(569, 502);
             this.tpTextView.TabIndex = 0;
             this.tpTextView.Text = "Text View";
             this.tpTextView.UseVisualStyleBackColor = true;
@@ -1780,7 +1891,7 @@
             this.hexReceivedBytes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.hexReceivedBytes.Name = "hexReceivedBytes";
             this.hexReceivedBytes.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexReceivedBytes.Size = new System.Drawing.Size(520, 160);
+            this.hexReceivedBytes.Size = new System.Drawing.Size(563, 151);
             this.hexReceivedBytes.StringViewVisible = true;
             this.hexReceivedBytes.TabIndex = 33;
             this.hexReceivedBytes.UseFixedBytesPerLine = true;
@@ -1792,10 +1903,17 @@
             this.pnlBitsHolder.Controls.Add(this.bitDisplay1);
             this.pnlBitsHolder.Controls.Add(this.lblByteNo);
             this.pnlBitsHolder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBitsHolder.Location = new System.Drawing.Point(3, 188);
+            this.pnlBitsHolder.Location = new System.Drawing.Point(3, 179);
             this.pnlBitsHolder.Name = "pnlBitsHolder";
-            this.pnlBitsHolder.Size = new System.Drawing.Size(520, 64);
+            this.pnlBitsHolder.Size = new System.Drawing.Size(563, 64);
             this.pnlBitsHolder.TabIndex = 34;
+            // 
+            // bitDisplay1
+            // 
+            this.bitDisplay1.Location = new System.Drawing.Point(110, 6);
+            this.bitDisplay1.Name = "bitDisplay1";
+            this.bitDisplay1.Size = new System.Drawing.Size(334, 49);
+            this.bitDisplay1.TabIndex = 7;
             // 
             // lblByteNo
             // 
@@ -1813,16 +1931,16 @@
             this.txtSentCommand.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSentCommand.Location = new System.Drawing.Point(3, 3);
             this.txtSentCommand.Name = "txtSentCommand";
-            this.txtSentCommand.Size = new System.Drawing.Size(520, 25);
+            this.txtSentCommand.Size = new System.Drawing.Size(563, 25);
             this.txtSentCommand.TabIndex = 32;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtReceivedBytesASCII);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 252);
+            this.panel3.Location = new System.Drawing.Point(3, 243);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(520, 256);
+            this.panel3.Size = new System.Drawing.Size(563, 256);
             this.panel3.TabIndex = 30;
             // 
             // txtReceivedBytesASCII
@@ -1833,7 +1951,7 @@
             this.txtReceivedBytesASCII.Multiline = true;
             this.txtReceivedBytesASCII.Name = "txtReceivedBytesASCII";
             this.txtReceivedBytesASCII.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(520, 256);
+            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(563, 256);
             this.txtReceivedBytesASCII.TabIndex = 29;
             // 
             // tpGridView
@@ -1843,7 +1961,7 @@
             this.tpGridView.Location = new System.Drawing.Point(4, 22);
             this.tpGridView.Name = "tpGridView";
             this.tpGridView.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGridView.Size = new System.Drawing.Size(526, 511);
+            this.tpGridView.Size = new System.Drawing.Size(569, 502);
             this.tpGridView.TabIndex = 1;
             this.tpGridView.Text = "Grid View";
             this.tpGridView.UseVisualStyleBackColor = true;
@@ -1861,21 +1979,21 @@
             this.Decimal,
             this.ASCII,
             this.HEX});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIncomingBytes.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIncomingBytes.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvIncomingBytes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvIncomingBytes.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvIncomingBytes.Location = new System.Drawing.Point(3, 3);
             this.dgvIncomingBytes.Name = "dgvIncomingBytes";
             this.dgvIncomingBytes.RowHeadersVisible = false;
             this.dgvIncomingBytes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIncomingBytes.Size = new System.Drawing.Size(520, 423);
+            this.dgvIncomingBytes.Size = new System.Drawing.Size(563, 414);
             this.dgvIncomingBytes.TabIndex = 0;
             this.dgvIncomingBytes.SelectionChanged += new System.EventHandler(this.dgvIncomingBytes_SelectionChanged);
             // 
@@ -1890,24 +2008,24 @@
             // 
             // Decimal
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Decimal.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Decimal.DefaultCellStyle = dataGridViewCellStyle15;
             this.Decimal.HeaderText = "Decimal";
             this.Decimal.Name = "Decimal";
             this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ASCII
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ASCII.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ASCII.DefaultCellStyle = dataGridViewCellStyle16;
             this.ASCII.HeaderText = "ASCII";
             this.ASCII.Name = "ASCII";
             this.ASCII.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // HEX
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.HEX.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.HEX.DefaultCellStyle = dataGridViewCellStyle17;
             this.HEX.HeaderText = "HEX";
             this.HEX.Name = "HEX";
             this.HEX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -1917,10 +2035,17 @@
             this.pnlBits.Controls.Add(this.bitDisplay2);
             this.pnlBits.Controls.Add(this.lblBits);
             this.pnlBits.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBits.Location = new System.Drawing.Point(3, 426);
+            this.pnlBits.Location = new System.Drawing.Point(3, 417);
             this.pnlBits.Name = "pnlBits";
-            this.pnlBits.Size = new System.Drawing.Size(520, 82);
+            this.pnlBits.Size = new System.Drawing.Size(563, 82);
             this.pnlBits.TabIndex = 1;
+            // 
+            // bitDisplay2
+            // 
+            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
+            this.bitDisplay2.Name = "bitDisplay2";
+            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
+            this.bitDisplay2.TabIndex = 3;
             // 
             // lblBits
             // 
@@ -1932,26 +2057,18 @@
             this.lblBits.TabIndex = 1;
             this.lblBits.Text = "Bits";
             // 
-            // tpStatusBits
-            // 
-            this.tpStatusBits.Location = new System.Drawing.Point(4, 22);
-            this.tpStatusBits.Name = "tpStatusBits";
-            this.tpStatusBits.Padding = new System.Windows.Forms.Padding(3);
-            this.tpStatusBits.Size = new System.Drawing.Size(526, 511);
-            this.tpStatusBits.TabIndex = 2;
-            this.tpStatusBits.Text = "Status Bits Explanations";
-            this.tpStatusBits.UseVisualStyleBackColor = true;
-            // 
             // tlsIncomingBytes
             // 
             this.tlsIncomingBytes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tlsIncomingBytes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbClearIncomingBytes,
             this.tsbChangeMainConsoleStyle,
-            this.tsbClearBeforeSend});
-            this.tlsIncomingBytes.Location = new System.Drawing.Point(3, 540);
+            this.tsbClearBeforeSend,
+            this.toolStripSeparator14,
+            this.tsbShowLogs});
+            this.tlsIncomingBytes.Location = new System.Drawing.Point(3, 531);
             this.tlsIncomingBytes.Name = "tlsIncomingBytes";
-            this.tlsIncomingBytes.Size = new System.Drawing.Size(534, 25);
+            this.tlsIncomingBytes.Size = new System.Drawing.Size(577, 25);
             this.tlsIncomingBytes.TabIndex = 0;
             this.tlsIncomingBytes.Text = "toolStrip1";
             // 
@@ -1989,32 +2106,14 @@
             // 
             // tpTools
             // 
-            this.tpTools.Controls.Add(this.lbPyFiles);
+            this.tpTools.Controls.Add(this.pnlPythonTools);
             this.tpTools.Controls.Add(this.lnkClearHexBytes);
             this.tpTools.Controls.Add(this.lnkSendToGrid);
-            this.tpTools.Controls.Add(this.lnkApplyPython);
             this.tpTools.Controls.Add(this.lnkApplyBCIP);
             this.tpTools.Controls.Add(this.lnkCalculateCRC);
             this.tpTools.Controls.Add(this.lnkGetComplement);
             this.tpTools.Controls.Add(this.lnkDelOneHexByte);
             this.tpTools.Controls.Add(this.dgvCheckSums);
-            this.tpTools.Controls.Add(this.chkAddZeroToHexKeyboard);
-            this.tpTools.Controls.Add(this.btnF);
-            this.tpTools.Controls.Add(this.btnB);
-            this.tpTools.Controls.Add(this.btn7);
-            this.tpTools.Controls.Add(this.btnE);
-            this.tpTools.Controls.Add(this.btn3);
-            this.tpTools.Controls.Add(this.btnA);
-            this.tpTools.Controls.Add(this.btn6);
-            this.tpTools.Controls.Add(this.btnD);
-            this.tpTools.Controls.Add(this.btn2);
-            this.tpTools.Controls.Add(this.btn9);
-            this.tpTools.Controls.Add(this.btn5);
-            this.tpTools.Controls.Add(this.btnC);
-            this.tpTools.Controls.Add(this.btn1);
-            this.tpTools.Controls.Add(this.btn8);
-            this.tpTools.Controls.Add(this.btn);
-            this.tpTools.Controls.Add(this.btn0);
             this.tpTools.Controls.Add(this.btnCalculateCRCInHex);
             this.tpTools.Controls.Add(this.label14);
             this.tpTools.Controls.Add(this.label15);
@@ -2025,16 +2124,72 @@
             this.tpTools.Location = new System.Drawing.Point(4, 22);
             this.tpTools.Name = "tpTools";
             this.tpTools.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTools.Size = new System.Drawing.Size(540, 568);
+            this.tpTools.Size = new System.Drawing.Size(583, 559);
             this.tpTools.TabIndex = 1;
             this.tpTools.Text = "Checksum Calculator";
             this.tpTools.UseVisualStyleBackColor = true;
+            // 
+            // pnlPythonTools
+            // 
+            this.pnlPythonTools.BackColor = System.Drawing.Color.GhostWhite;
+            this.pnlPythonTools.Controls.Add(this.btnApplyPythonCode);
+            this.pnlPythonTools.Controls.Add(this.lbPyFiles);
+            this.pnlPythonTools.Controls.Add(this.lmkEditPythonCode);
+            this.pnlPythonTools.Controls.Add(this.lnkReloadPythonFiles);
+            this.pnlPythonTools.Location = new System.Drawing.Point(246, 141);
+            this.pnlPythonTools.Name = "pnlPythonTools";
+            this.pnlPythonTools.Size = new System.Drawing.Size(282, 251);
+            this.pnlPythonTools.TabIndex = 55;
+            // 
+            // btnApplyPythonCode
+            // 
+            this.btnApplyPythonCode.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnApplyPythonCode.Location = new System.Drawing.Point(12, 15);
+            this.btnApplyPythonCode.Name = "btnApplyPythonCode";
+            this.btnApplyPythonCode.Size = new System.Drawing.Size(191, 23);
+            this.btnApplyPythonCode.TabIndex = 55;
+            this.btnApplyPythonCode.Text = "Apply Python Code";
+            this.btnApplyPythonCode.UseVisualStyleBackColor = true;
+            this.btnApplyPythonCode.Click += new System.EventHandler(this.btnApplyPythonCode_Click);
+            // 
+            // lbPyFiles
+            // 
+            this.lbPyFiles.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbPyFiles.FormattingEnabled = true;
+            this.lbPyFiles.Location = new System.Drawing.Point(12, 44);
+            this.lbPyFiles.Name = "lbPyFiles";
+            this.lbPyFiles.Size = new System.Drawing.Size(191, 199);
+            this.lbPyFiles.TabIndex = 54;
+            // 
+            // lmkEditPythonCode
+            // 
+            this.lmkEditPythonCode.AutoSize = true;
+            this.lmkEditPythonCode.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lmkEditPythonCode.Location = new System.Drawing.Point(209, 44);
+            this.lmkEditPythonCode.Name = "lmkEditPythonCode";
+            this.lmkEditPythonCode.Size = new System.Drawing.Size(53, 13);
+            this.lmkEditPythonCode.TabIndex = 53;
+            this.lmkEditPythonCode.TabStop = true;
+            this.lmkEditPythonCode.Text = "Edit Code";
+            this.lmkEditPythonCode.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lmkEditPythonCode_LinkClicked);
+            // 
+            // lnkReloadPythonFiles
+            // 
+            this.lnkReloadPythonFiles.AutoSize = true;
+            this.lnkReloadPythonFiles.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkReloadPythonFiles.Location = new System.Drawing.Point(209, 67);
+            this.lnkReloadPythonFiles.Name = "lnkReloadPythonFiles";
+            this.lnkReloadPythonFiles.Size = new System.Drawing.Size(65, 13);
+            this.lnkReloadPythonFiles.TabIndex = 53;
+            this.lnkReloadPythonFiles.TabStop = true;
+            this.lnkReloadPythonFiles.Text = "Reload Files";
+            this.lnkReloadPythonFiles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReloadPythonFiles_LinkClicked);
             // 
             // lnkClearHexBytes
             // 
             this.lnkClearHexBytes.AutoSize = true;
             this.lnkClearHexBytes.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkClearHexBytes.Location = new System.Drawing.Point(444, 76);
+            this.lnkClearHexBytes.Location = new System.Drawing.Point(483, 98);
             this.lnkClearHexBytes.Name = "lnkClearHexBytes";
             this.lnkClearHexBytes.Size = new System.Drawing.Size(45, 13);
             this.lnkClearHexBytes.TabIndex = 53;
@@ -2058,18 +2213,19 @@
             // 
             this.lnkCalculateCRC.AutoSize = true;
             this.lnkCalculateCRC.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkCalculateCRC.Location = new System.Drawing.Point(108, 98);
+            this.lnkCalculateCRC.Location = new System.Drawing.Point(340, 98);
             this.lnkCalculateCRC.Name = "lnkCalculateCRC";
-            this.lnkCalculateCRC.Size = new System.Drawing.Size(104, 13);
+            this.lnkCalculateCRC.Size = new System.Drawing.Size(51, 13);
             this.lnkCalculateCRC.TabIndex = 53;
             this.lnkCalculateCRC.TabStop = true;
-            this.lnkCalculateCRC.Text = "Calculate Checksum";
+            this.lnkCalculateCRC.Text = "Add CHK";
+            this.lnkCalculateCRC.Visible = false;
             this.lnkCalculateCRC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCalculateCRC_LinkClicked);
             // 
             // dgvCheckSums
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvCheckSums.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCheckSums.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvCheckSums.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCheckSums.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCheckSums.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -2079,14 +2235,14 @@
             this.dgvCheckSums.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CheckSumType,
             this.ChecksumValue});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCheckSums.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCheckSums.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgvCheckSums.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvCheckSums.Location = new System.Drawing.Point(9, 118);
             this.dgvCheckSums.Name = "dgvCheckSums";
@@ -2111,183 +2267,13 @@
             this.ChecksumValue.ReadOnly = true;
             this.ChecksumValue.Width = 80;
             // 
-            // chkAddZeroToHexKeyboard
-            // 
-            this.chkAddZeroToHexKeyboard.AutoSize = true;
-            this.chkAddZeroToHexKeyboard.Checked = true;
-            this.chkAddZeroToHexKeyboard.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAddZeroToHexKeyboard.Location = new System.Drawing.Point(247, 272);
-            this.chkAddZeroToHexKeyboard.Name = "chkAddZeroToHexKeyboard";
-            this.chkAddZeroToHexKeyboard.Size = new System.Drawing.Size(32, 17);
-            this.chkAddZeroToHexKeyboard.TabIndex = 51;
-            this.chkAddZeroToHexKeyboard.Text = "0";
-            this.chkAddZeroToHexKeyboard.UseVisualStyleBackColor = true;
-            // 
-            // btnF
-            // 
-            this.btnF.Location = new System.Drawing.Point(358, 239);
-            this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(31, 27);
-            this.btnF.TabIndex = 50;
-            this.btnF.Text = "F";
-            this.btnF.UseVisualStyleBackColor = true;
-            this.btnF.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btnB
-            // 
-            this.btnB.Location = new System.Drawing.Point(358, 206);
-            this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(31, 27);
-            this.btnB.TabIndex = 50;
-            this.btnB.Text = "B";
-            this.btnB.UseVisualStyleBackColor = true;
-            // 
-            // btn7
-            // 
-            this.btn7.Location = new System.Drawing.Point(358, 172);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(31, 27);
-            this.btn7.TabIndex = 50;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btnE
-            // 
-            this.btnE.Location = new System.Drawing.Point(321, 239);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(31, 27);
-            this.btnE.TabIndex = 50;
-            this.btnE.Text = "E";
-            this.btnE.UseVisualStyleBackColor = true;
-            this.btnE.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn3
-            // 
-            this.btn3.Location = new System.Drawing.Point(358, 139);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(31, 27);
-            this.btn3.TabIndex = 50;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btnA
-            // 
-            this.btnA.Location = new System.Drawing.Point(321, 206);
-            this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(31, 27);
-            this.btnA.TabIndex = 50;
-            this.btnA.Text = "A";
-            this.btnA.UseVisualStyleBackColor = true;
-            this.btnA.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn6
-            // 
-            this.btn6.Location = new System.Drawing.Point(321, 172);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(31, 27);
-            this.btn6.TabIndex = 50;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btnD
-            // 
-            this.btnD.Location = new System.Drawing.Point(284, 239);
-            this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(31, 27);
-            this.btnD.TabIndex = 50;
-            this.btnD.Text = "D";
-            this.btnD.UseVisualStyleBackColor = true;
-            this.btnD.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn2
-            // 
-            this.btn2.Location = new System.Drawing.Point(321, 139);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(31, 27);
-            this.btn2.TabIndex = 50;
-            this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn9
-            // 
-            this.btn9.Location = new System.Drawing.Point(284, 206);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(31, 27);
-            this.btn9.TabIndex = 50;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn5
-            // 
-            this.btn5.Location = new System.Drawing.Point(284, 172);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(31, 27);
-            this.btn5.TabIndex = 50;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btnC
-            // 
-            this.btnC.Location = new System.Drawing.Point(247, 239);
-            this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(31, 27);
-            this.btnC.TabIndex = 50;
-            this.btnC.Text = "C";
-            this.btnC.UseVisualStyleBackColor = true;
-            this.btnC.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn1
-            // 
-            this.btn1.Location = new System.Drawing.Point(284, 139);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(31, 27);
-            this.btn1.TabIndex = 50;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn8
-            // 
-            this.btn8.Location = new System.Drawing.Point(247, 206);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(31, 27);
-            this.btn8.TabIndex = 50;
-            this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn
-            // 
-            this.btn.Location = new System.Drawing.Point(247, 172);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(31, 27);
-            this.btn.TabIndex = 50;
-            this.btn.Text = "4";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn0_Click);
-            // 
-            // btn0
-            // 
-            this.btn0.Location = new System.Drawing.Point(247, 139);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(31, 27);
-            this.btn0.TabIndex = 50;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.btn0_Click);
-            // 
             // btnCalculateCRCInHex
             // 
             this.btnCalculateCRCInHex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalculateCRCInHex.Location = new System.Drawing.Point(245, 363);
+            this.btnCalculateCRCInHex.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCalculateCRCInHex.Location = new System.Drawing.Point(246, 395);
             this.btnCalculateCRCInHex.Name = "btnCalculateCRCInHex";
-            this.btnCalculateCRCInHex.Size = new System.Drawing.Size(107, 47);
+            this.btnCalculateCRCInHex.Size = new System.Drawing.Size(125, 30);
             this.btnCalculateCRCInHex.TabIndex = 46;
             this.btnCalculateCRCInHex.Text = "Calculate Checksum";
             this.btnCalculateCRCInHex.UseVisualStyleBackColor = true;
@@ -2307,7 +2293,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 494);
+            this.label15.Location = new System.Drawing.Point(6, 488);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 16);
             this.label15.TabIndex = 40;
@@ -2317,7 +2303,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(6, 425);
+            this.label16.Location = new System.Drawing.Point(6, 419);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 16);
             this.label16.TabIndex = 41;
@@ -2326,7 +2312,7 @@
             // txtASCIIBytesInCHKCalculator
             // 
             this.txtASCIIBytesInCHKCalculator.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtASCIIBytesInCHKCalculator.Location = new System.Drawing.Point(9, 441);
+            this.txtASCIIBytesInCHKCalculator.Location = new System.Drawing.Point(9, 435);
             this.txtASCIIBytesInCHKCalculator.Multiline = true;
             this.txtASCIIBytesInCHKCalculator.Name = "txtASCIIBytesInCHKCalculator";
             this.txtASCIIBytesInCHKCalculator.Size = new System.Drawing.Size(520, 50);
@@ -2340,44 +2326,77 @@
             this.txtHEXBytesInCHKCalculator.Location = new System.Drawing.Point(9, 26);
             this.txtHEXBytesInCHKCalculator.Multiline = true;
             this.txtHEXBytesInCHKCalculator.Name = "txtHEXBytesInCHKCalculator";
-            this.txtHEXBytesInCHKCalculator.Size = new System.Drawing.Size(433, 64);
+            this.txtHEXBytesInCHKCalculator.Size = new System.Drawing.Size(520, 64);
             this.txtHEXBytesInCHKCalculator.TabIndex = 22;
             this.txtHEXBytesInCHKCalculator.TextChanged += new System.EventHandler(this.txtHEXBytes_TextChanged);
             // 
             // txtDecimalBytesInCHKCalculator
             // 
             this.txtDecimalBytesInCHKCalculator.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDecimalBytesInCHKCalculator.Location = new System.Drawing.Point(6, 513);
+            this.txtDecimalBytesInCHKCalculator.Location = new System.Drawing.Point(9, 506);
             this.txtDecimalBytesInCHKCalculator.Multiline = true;
             this.txtDecimalBytesInCHKCalculator.Name = "txtDecimalBytesInCHKCalculator";
-            this.txtDecimalBytesInCHKCalculator.Size = new System.Drawing.Size(523, 50);
+            this.txtDecimalBytesInCHKCalculator.Size = new System.Drawing.Size(519, 50);
             this.txtDecimalBytesInCHKCalculator.TabIndex = 23;
             this.txtDecimalBytesInCHKCalculator.TextChanged += new System.EventHandler(this.txtDecimalBytes_TextChanged);
-            this.txtDecimalBytesInCHKCalculator.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDecimalBytes_KeyDown);
             this.txtDecimalBytesInCHKCalculator.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDecimalBytes_KeyPress);
             // 
-            // tabPage1
+            // tpConvertor
             // 
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.txtConvertedBytes);
-            this.tabPage1.Controls.Add(this.txtIntNumberToConvert);
-            this.tabPage1.Controls.Add(this.rbCRC16Kermit);
-            this.tabPage1.Controls.Add(this.rbCRC16);
-            this.tabPage1.Controls.Add(this.rbMod95);
-            this.tabPage1.Controls.Add(this.rbXOR);
-            this.tabPage1.Controls.Add(this.lblActiveTCPConnections);
-            this.tabPage1.Controls.Add(this.btnActiveTCPConnections);
-            this.tabPage1.Controls.Add(this.btnSendToConsole);
-            this.tabPage1.Controls.Add(this.cbCheckSumTypes2);
-            this.tabPage1.Controls.Add(this.label21);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(540, 568);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Convertor";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpConvertor.Controls.Add(this.rbDouble);
+            this.tpConvertor.Controls.Add(this.rbInt32);
+            this.tpConvertor.Controls.Add(this.rbInt16);
+            this.tpConvertor.Controls.Add(this.label11);
+            this.tpConvertor.Controls.Add(this.label2);
+            this.tpConvertor.Controls.Add(this.txtConvertedBytes);
+            this.tpConvertor.Controls.Add(this.txtIntNumberToConvert);
+            this.tpConvertor.Controls.Add(this.rbCRC16Kermit);
+            this.tpConvertor.Controls.Add(this.rbCRC16);
+            this.tpConvertor.Controls.Add(this.rbMod95);
+            this.tpConvertor.Controls.Add(this.rbXOR);
+            this.tpConvertor.Controls.Add(this.lblActiveTCPConnections);
+            this.tpConvertor.Controls.Add(this.btnSendToConsole);
+            this.tpConvertor.Controls.Add(this.cbCheckSumTypes2);
+            this.tpConvertor.Controls.Add(this.label21);
+            this.tpConvertor.Location = new System.Drawing.Point(4, 22);
+            this.tpConvertor.Name = "tpConvertor";
+            this.tpConvertor.Padding = new System.Windows.Forms.Padding(3);
+            this.tpConvertor.Size = new System.Drawing.Size(583, 559);
+            this.tpConvertor.TabIndex = 2;
+            this.tpConvertor.Text = "Convertor";
+            this.tpConvertor.UseVisualStyleBackColor = true;
+            // 
+            // rbDouble
+            // 
+            this.rbDouble.AutoSize = true;
+            this.rbDouble.Location = new System.Drawing.Point(311, 103);
+            this.rbDouble.Name = "rbDouble";
+            this.rbDouble.Size = new System.Drawing.Size(48, 17);
+            this.rbDouble.TabIndex = 62;
+            this.rbDouble.Text = "Float";
+            this.rbDouble.UseVisualStyleBackColor = true;
+            // 
+            // rbInt32
+            // 
+            this.rbInt32.AutoSize = true;
+            this.rbInt32.Location = new System.Drawing.Point(245, 103);
+            this.rbInt32.Name = "rbInt32";
+            this.rbInt32.Size = new System.Drawing.Size(49, 17);
+            this.rbInt32.TabIndex = 62;
+            this.rbInt32.Text = "Int32";
+            this.rbInt32.UseVisualStyleBackColor = true;
+            // 
+            // rbInt16
+            // 
+            this.rbInt16.AutoSize = true;
+            this.rbInt16.Checked = true;
+            this.rbInt16.Location = new System.Drawing.Point(178, 103);
+            this.rbInt16.Name = "rbInt16";
+            this.rbInt16.Size = new System.Drawing.Size(49, 17);
+            this.rbInt16.TabIndex = 62;
+            this.rbInt16.TabStop = true;
+            this.rbInt16.Text = "Int16";
+            this.rbInt16.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -2414,6 +2433,7 @@
             this.rbCRC16Kermit.TabIndex = 55;
             this.rbCRC16Kermit.Text = "CRC16Kermit";
             this.rbCRC16Kermit.UseVisualStyleBackColor = true;
+            this.rbCRC16Kermit.Visible = false;
             // 
             // rbCRC16
             // 
@@ -2424,6 +2444,7 @@
             this.rbCRC16.TabIndex = 56;
             this.rbCRC16.Text = "CRC16";
             this.rbCRC16.UseVisualStyleBackColor = true;
+            this.rbCRC16.Visible = false;
             // 
             // rbMod95
             // 
@@ -2434,6 +2455,7 @@
             this.rbMod95.TabIndex = 57;
             this.rbMod95.Text = "MOD95";
             this.rbMod95.UseVisualStyleBackColor = true;
+            this.rbMod95.Visible = false;
             // 
             // rbXOR
             // 
@@ -2444,6 +2466,7 @@
             this.rbXOR.TabIndex = 58;
             this.rbXOR.Text = "XOR";
             this.rbXOR.UseVisualStyleBackColor = true;
+            this.rbXOR.Visible = false;
             // 
             // lblActiveTCPConnections
             // 
@@ -2452,16 +2475,7 @@
             this.lblActiveTCPConnections.Name = "lblActiveTCPConnections";
             this.lblActiveTCPConnections.Size = new System.Drawing.Size(255, 30);
             this.lblActiveTCPConnections.TabIndex = 54;
-            // 
-            // btnActiveTCPConnections
-            // 
-            this.btnActiveTCPConnections.Location = new System.Drawing.Point(55, 362);
-            this.btnActiveTCPConnections.Name = "btnActiveTCPConnections";
-            this.btnActiveTCPConnections.Size = new System.Drawing.Size(255, 23);
-            this.btnActiveTCPConnections.TabIndex = 53;
-            this.btnActiveTCPConnections.Text = "Active TCP Connections";
-            this.btnActiveTCPConnections.UseVisualStyleBackColor = true;
-            this.btnActiveTCPConnections.Click += new System.EventHandler(this.btnActiveTCPConnections_Click);
+            this.lblActiveTCPConnections.Visible = false;
             // 
             // btnSendToConsole
             // 
@@ -2472,6 +2486,7 @@
             this.btnSendToConsole.TabIndex = 52;
             this.btnSendToConsole.Text = "<< Send to Console";
             this.btnSendToConsole.UseVisualStyleBackColor = true;
+            this.btnSendToConsole.Visible = false;
             // 
             // cbCheckSumTypes2
             // 
@@ -2485,6 +2500,7 @@
             this.cbCheckSumTypes2.Name = "cbCheckSumTypes2";
             this.cbCheckSumTypes2.Size = new System.Drawing.Size(121, 21);
             this.cbCheckSumTypes2.TabIndex = 51;
+            this.cbCheckSumTypes2.Visible = false;
             // 
             // label21
             // 
@@ -2495,6 +2511,50 @@
             this.label21.Size = new System.Drawing.Size(55, 13);
             this.label21.TabIndex = 50;
             this.label21.Text = "CRC TYPE";
+            this.label21.Visible = false;
+            // 
+            // tpErrorMessages
+            // 
+            this.tpErrorMessages.Controls.Add(this.txtConsole);
+            this.tpErrorMessages.Controls.Add(this.toolStripErrorMessages);
+            this.tpErrorMessages.Location = new System.Drawing.Point(4, 22);
+            this.tpErrorMessages.Name = "tpErrorMessages";
+            this.tpErrorMessages.Padding = new System.Windows.Forms.Padding(3);
+            this.tpErrorMessages.Size = new System.Drawing.Size(583, 559);
+            this.tpErrorMessages.TabIndex = 3;
+            this.tpErrorMessages.Text = "Error Messages";
+            this.tpErrorMessages.UseVisualStyleBackColor = true;
+            // 
+            // txtConsole
+            // 
+            this.txtConsole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtConsole.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtConsole.Location = new System.Drawing.Point(3, 28);
+            this.txtConsole.Multiline = true;
+            this.txtConsole.Name = "txtConsole";
+            this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtConsole.Size = new System.Drawing.Size(577, 528);
+            this.txtConsole.TabIndex = 0;
+            // 
+            // toolStripErrorMessages
+            // 
+            this.toolStripErrorMessages.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbClearErrorMessages});
+            this.toolStripErrorMessages.Location = new System.Drawing.Point(3, 3);
+            this.toolStripErrorMessages.Name = "toolStripErrorMessages";
+            this.toolStripErrorMessages.Size = new System.Drawing.Size(577, 25);
+            this.toolStripErrorMessages.TabIndex = 1;
+            this.toolStripErrorMessages.Text = "toolStrip1";
+            // 
+            // tsbClearErrorMessages
+            // 
+            this.tsbClearErrorMessages.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbClearErrorMessages.Image = ((System.Drawing.Image)(resources.GetObject("tsbClearErrorMessages.Image")));
+            this.tsbClearErrorMessages.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClearErrorMessages.Name = "tsbClearErrorMessages";
+            this.tsbClearErrorMessages.Size = new System.Drawing.Size(38, 22);
+            this.tsbClearErrorMessages.Text = "Clear";
+            this.tsbClearErrorMessages.Click += new System.EventHandler(this.tsbClearErrorMessages_Click);
             // 
             // tlsMain2
             // 
@@ -2503,7 +2563,7 @@
             this.tsbConnectToComPort});
             this.tlsMain2.Location = new System.Drawing.Point(0, 0);
             this.tlsMain2.Name = "tlsMain2";
-            this.tlsMain2.Size = new System.Drawing.Size(548, 25);
+            this.tlsMain2.Size = new System.Drawing.Size(591, 25);
             this.tlsMain2.TabIndex = 3;
             this.tlsMain2.Text = "toolStrip4";
             // 
@@ -2525,89 +2585,31 @@
             this.tsbConnectToComPort.Text = "Connect";
             this.tsbConnectToComPort.Click += new System.EventHandler(this.tsbConnectToComPort_Click);
             // 
-            // chronometer1
+            // tsbShowLogs
             // 
-            this.chronometer1.Location = new System.Drawing.Point(164, 27);
-            this.chronometer1.Name = "chronometer1";
-            this.chronometer1.Size = new System.Drawing.Size(294, 64);
-            this.chronometer1.TabIndex = 30;
+            this.tsbShowLogs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbShowLogs.Image = ((System.Drawing.Image)(resources.GetObject("tsbShowLogs.Image")));
+            this.tsbShowLogs.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbShowLogs.Name = "tsbShowLogs";
+            this.tsbShowLogs.Size = new System.Drawing.Size(68, 22);
+            this.tsbShowLogs.Text = "Show Logs";
+            this.tsbShowLogs.Click += new System.EventHandler(this.tsbShowLogs_Click);
             // 
-            // sevenSegmentArray2
+            // toolStripSeparator14
             // 
-            this.sevenSegmentArray2.ArrayCount = 2;
-            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
-            this.sevenSegmentArray2.DecimalShow = false;
-            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
-            this.sevenSegmentArray2.ElementWidth = 10;
-            this.sevenSegmentArray2.ItalicFactor = 0F;
-            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
-            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
-            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
-            this.sevenSegmentArray2.TabIndex = 29;
-            this.sevenSegmentArray2.TabStop = false;
-            this.sevenSegmentArray2.Value = null;
-            // 
-            // shellControl1
-            // 
-            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.Location = new System.Drawing.Point(0, 24);
-            this.shellControl1.Name = "shellControl1";
-            this.shellControl1.Prompt = ">";
-            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
-            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
-            this.shellControl1.Size = new System.Drawing.Size(493, 529);
-            this.shellControl1.TabIndex = 26;
-            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
-            // 
-            // bitDisplay1
-            // 
-            this.bitDisplay1.Location = new System.Drawing.Point(110, 6);
-            this.bitDisplay1.Name = "bitDisplay1";
-            this.bitDisplay1.Size = new System.Drawing.Size(334, 49);
-            this.bitDisplay1.TabIndex = 7;
-            // 
-            // bitDisplay2
-            // 
-            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
-            this.bitDisplay2.Name = "bitDisplay2";
-            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
-            this.bitDisplay2.TabIndex = 3;
-            // 
-            // lbPyFiles
-            // 
-            this.lbPyFiles.FormattingEnabled = true;
-            this.lbPyFiles.Items.AddRange(new object[] {
-            "BCIP.py"});
-            this.lbPyFiles.Location = new System.Drawing.Point(427, 139);
-            this.lbPyFiles.Name = "lbPyFiles";
-            this.lbPyFiles.Size = new System.Drawing.Size(77, 121);
-            this.lbPyFiles.TabIndex = 54;
-            // 
-            // lnkApplyPython
-            // 
-            this.lnkApplyPython.AutoSize = true;
-            this.lnkApplyPython.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnkApplyPython.Location = new System.Drawing.Point(425, 263);
-            this.lnkApplyPython.Name = "lnkApplyPython";
-            this.lnkApplyPython.Size = new System.Drawing.Size(69, 13);
-            this.lnkApplyPython.TabIndex = 53;
-            this.lnkApplyPython.TabStop = true;
-            this.lnkApplyPython.Text = "Apply Python";
-            this.lnkApplyPython.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkApplyPython_LinkClicked);
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 690);
+            this.ClientSize = new System.Drawing.Size(1134, 719);
             this.Controls.Add(this.splitContainerMain);
-            this.Controls.Add(this.statusStripMain);
             this.Controls.Add(this.tlsMain);
             this.Controls.Add(this.menuStripMain);
+            this.Controls.Add(this.tlsSend);
+            this.Controls.Add(this.statusStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "frmMain";
@@ -2621,6 +2623,8 @@
             this.cmsInstructionsGrid.ResumeLayout(false);
             this.tlsMain.ResumeLayout(false);
             this.tlsMain.PerformLayout();
+            this.tlsSend.ResumeLayout(false);
+            this.tlsSend.PerformLayout();
             this.splitContainerMain.Panel1.ResumeLayout(false);
             this.splitContainerMain.Panel2.ResumeLayout(false);
             this.splitContainerMain.Panel2.PerformLayout();
@@ -2636,8 +2640,6 @@
             this.tlsInstructionsGrid.PerformLayout();
             this.pnlInstructionsBottom.ResumeLayout(false);
             this.pnlInstructionsBottom.PerformLayout();
-            this.tlsSend.ResumeLayout(false);
-            this.tlsSend.PerformLayout();
             this.tpDeviceInfo.ResumeLayout(false);
             this.tpDeviceInfo.PerformLayout();
             this.pnlDeviceInformation.ResumeLayout(false);
@@ -2682,9 +2684,15 @@
             this.tlsIncomingBytes.PerformLayout();
             this.tpTools.ResumeLayout(false);
             this.tpTools.PerformLayout();
+            this.pnlPythonTools.ResumeLayout(false);
+            this.pnlPythonTools.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckSums)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tpConvertor.ResumeLayout(false);
+            this.tpConvertor.PerformLayout();
+            this.tpErrorMessages.ResumeLayout(false);
+            this.tpErrorMessages.PerformLayout();
+            this.toolStripErrorMessages.ResumeLayout(false);
+            this.toolStripErrorMessages.PerformLayout();
             this.tlsMain2.ResumeLayout(false);
             this.tlsMain2.PerformLayout();
             this.ResumeLayout(false);
@@ -2724,7 +2732,7 @@
         private System.Windows.Forms.ToolStripButton tsbSendBytesToDevice;
         private System.Windows.Forms.TabPage tpDeviceInfo;
         private System.Windows.Forms.Panel pnlDeviceInformation;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDeviceInformationTitle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -2822,7 +2830,6 @@
         private System.Windows.Forms.TextBox txtTCPClientCommunicationTimeOut;
         private System.Windows.Forms.TextBox txtDelayTime;
         private System.Windows.Forms.Label lblBuildDate;
-        private System.Windows.Forms.TabPage tpStatusBits;
         private System.Windows.Forms.CheckBox chkConditionalReading;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEndByte;
@@ -2831,32 +2838,14 @@
         private System.Windows.Forms.ToolStripButton tsbClearBeforeSend;
         private System.Windows.Forms.CheckBox chkSaveLog;
         private System.Windows.Forms.TextBox txtWorkbenchCurrentCommand;
-        private System.Windows.Forms.CheckBox chkAddZeroToHexKeyboard;
-        private System.Windows.Forms.Button btnF;
-        private System.Windows.Forms.Button btnB;
-        private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btnE;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btnA;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btnD;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.Button btnC;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn;
-        private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnCalculateCRCInHex;
         private System.Windows.Forms.DataGridView dgvCheckSums;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tpConvertor;
         private System.Windows.Forms.RadioButton rbCRC16Kermit;
         private System.Windows.Forms.RadioButton rbCRC16;
         private System.Windows.Forms.RadioButton rbMod95;
         private System.Windows.Forms.RadioButton rbXOR;
         private System.Windows.Forms.ListBox lblActiveTCPConnections;
-        private System.Windows.Forms.Button btnActiveTCPConnections;
         private System.Windows.Forms.Button btnSendToConsole;
         private System.Windows.Forms.ComboBox cbCheckSumTypes2;
         private System.Windows.Forms.Label label21;
@@ -2900,7 +2889,7 @@
         private System.Windows.Forms.Label label2;
         private ShellControl shellControl1;
         private System.Windows.Forms.RadioButton rbConsoleIsInASCIIMode;
-        private System.Windows.Forms.ToolStripComboBox cbCommunicationType;
+        private System.Windows.Forms.ToolStripComboBox cbConnectionType;
         private System.Windows.Forms.ToolStripLabel tslConnectionType;
         private System.Windows.Forms.Panel pnlInstructionsTop;
         private BitDisplay bitDisplay1;
@@ -2913,7 +2902,25 @@
         private System.Windows.Forms.RadioButton rbConsoleIsInPythonMode;
         private System.Windows.Forms.ToolStripMenuItem miPythonConsole;
         private System.Windows.Forms.ListBox lbPyFiles;
-        private System.Windows.Forms.LinkLabel lnkApplyPython;
+        private System.Windows.Forms.RadioButton rbDouble;
+        private System.Windows.Forms.RadioButton rbInt16;
+        private System.Windows.Forms.RadioButton rbInt32;
+        private System.Windows.Forms.TabPage tpErrorMessages;
+        private System.Windows.Forms.TextBox txtConsole;
+        private System.Windows.Forms.ToolStrip toolStripErrorMessages;
+        private System.Windows.Forms.LinkLabel lmkEditPythonCode;
+        private System.Windows.Forms.ToolStripButton tsbSendViaPython;
+        private System.Windows.Forms.LinkLabel lnkReloadPythonFiles;
+        private System.Windows.Forms.Panel pnlPythonTools;
+        private System.Windows.Forms.Button btnApplyPythonCode;
+        private System.Windows.Forms.ToolStripComboBox cbPythonSenders;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton tsbErrorMessageClear;
+        private System.Windows.Forms.ToolStripButton tsbClearErrorMessages;
+        private System.Windows.Forms.ToolStripButton tsbMoveTimerRowUp;
+        private System.Windows.Forms.ToolStripButton tsbMoveTimerRowDown;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripButton tsbShowLogs;
     }
 }
 

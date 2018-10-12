@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>XicomHPA For Simulator</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.103</IP>
+    <Port>2000</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>02 30 3F 41 54 49 56 03 04</InstructionBytes>
+    <Explanation>read all values</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>02 30 3F 41 54 49 56 03 04,	read all values
+02 30 31 03 00,	get summary status
+----  CONTROL COMMANDS	
+02 30 49 03 78,	rf off
+02 30 4A 03 7B,	rf on
+02 30 40 03 71,	transmit
+02 30 41 03 70, standby</Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586939742717572650</ID>
+    <Explanation>get summary status</Explanation>
+    <InstructionBytes>02 30 31 03 00</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586939742477014327</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>----  CONTROL COMMANDS</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586939741027244870</ID>
+    <Explanation>rf off</Explanation>
+    <InstructionBytes>02 30 49 03 78</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586939740890359262</ID>
+    <Explanation>rf on</Explanation>
+    <InstructionBytes>02 30 4A 03 7B</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586939740731259474</ID>
+    <Explanation>transmit</Explanation>
+    <InstructionBytes>02 30 40 03 71</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586939740585196945</ID>
+    <Explanation>standby</Explanation>
+    <InstructionBytes>02 30 41 03 70</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+</DeviceInstructions>

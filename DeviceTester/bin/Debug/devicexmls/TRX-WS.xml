@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>TRX-WS</DeviceName>
+    <Explanation>Transceiver Way Side</Explanation>
+    <IP>85.99.233.199</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,2 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>01 02 00 53 54 17 8D AE</InstructionBytes>
+    <Explanation>STATUS</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586696689777531217</ID>
+    <Explanation>RELAY 1 ON</Explanation>
+    <InstructionBytes>01 03 00 52 4F 01 17 9F 4E</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586635566366145980</ID>
+    <Explanation>RELAY 1 OFF</Explanation>
+    <InstructionBytes>01 03 00 52 43 01 17 3C EB</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586632289328361919</ID>
+    <Explanation>RELAY 2 ON</Explanation>
+    <InstructionBytes>01 03 00 52 4F 02 17 F7 64</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586632115428859084</ID>
+    <Explanation>RELAY 2 OFF</Explanation>
+    <InstructionBytes>01 03 00 52 43 02 17 54 C1</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+</DeviceInstructions>

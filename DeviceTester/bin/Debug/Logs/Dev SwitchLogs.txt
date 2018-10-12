@@ -1,0 +1,648 @@
+10/12/2017 6:19:18 PM,Use
+10/12/2017 6:19:19 PM,commands: A,a,B,b,s,c.
+Use
+10/12/2017 6:19:25 PM,U
+10/12/2017 6:19:25 PM,seU
+10/12/2017 6:19:25 PM,coseU
+10/12/2017 6:19:25 PM,mma coseU
+10/12/2017 6:19:25 PM,ndmma coseU
+10/12/2017 6:19:25 PM,s: ndmma coseU
+10/12/2017 6:19:25 PM,A,as: ndmma coseU
+10/12/2017 6:19:25 PM,,BA,as: ndmma coseU
+10/12/2017 6:19:25 PM,,b,,BA,as: ndmma coseU
+10/12/2017 6:19:25 PM,s,,b,,BA,as: ndmma coseU
+10/12/2017 6:19:25 PM,c.s,,b,,BA,as: ndmma coseU
+10/12/2017 6:19:25 PM,c.s,,b,,BA,as: ndmma coseU
+10/12/2017 6:19:26 PM,U
+10/12/2017 6:19:26 PM,seU
+10/12/2017 6:19:26 PM,cseU
+10/12/2017 6:19:26 PM,omm cseU
+10/12/2017 6:19:26 PM,andomm cseU
+10/12/2017 6:19:26 PM,s:andomm cseU
+10/12/2017 6:19:26 PM,A,s:andomm cseU
+10/12/2017 6:19:26 PM,a,B A,s:andomm cseU
+10/12/2017 6:19:26 PM,,b,a,B A,s:andomm cseU
+10/12/2017 6:19:26 PM,s,c,b,a,B A,s:andomm cseU
+10/12/2017 6:19:26 PM,.
+s,c,b,a,B A,s:andomm cseU
+10/12/2017 6:19:27 PM,U
+10/12/2017 6:19:27 PM,seU
+10/12/2017 6:19:27 PM,cseU
+10/12/2017 6:19:27 PM,omm cseU
+10/12/2017 6:19:27 PM,andomm cseU
+10/12/2017 6:19:27 PM,s:andomm cseU
+10/12/2017 6:19:27 PM,As:andomm cseU
+10/12/2017 6:19:27 PM,,a As:andomm cseU
+10/12/2017 6:19:27 PM,,B,,a As:andomm cseU
+10/12/2017 6:19:27 PM,b,,B,,a As:andomm cseU
+10/12/2017 6:19:27 PM,s,cb,,B,,a As:andomm cseU
+10/12/2017 6:19:27 PM,.s,cb,,B,,a As:andomm cseU
+10/12/2017 6:19:27 PM,.s,cb,,B,,a As:andomm cseU
+10/12/2017 6:19:28 PM,U
+10/12/2017 6:19:28 PM,seU
+10/12/2017 6:19:28 PM,coseU
+10/12/2017 6:19:28 PM,mma coseU
+10/12/2017 6:19:28 PM,ndsmma coseU
+10/12/2017 6:19:28 PM,: ndsmma coseU
+10/12/2017 6:19:28 PM,A,a: ndsmma coseU
+10/12/2017 6:19:28 PM,,B,A,a: ndsmma coseU
+10/12/2017 6:19:28 PM,b,,B,A,a: ndsmma coseU
+10/12/2017 6:19:28 PM,s,cb,,B,A,a: ndsmma coseU
+10/12/2017 6:19:28 PM,.
+s,cb,,B,A,a: ndsmma coseU
+10/12/2017 6:19:30 PM,U
+10/12/2017 6:19:30 PM,seU
+10/12/2017 6:19:30 PM,coseU
+10/12/2017 6:19:30 PM,mm coseU
+10/12/2017 6:19:30 PM,anmm coseU
+10/12/2017 6:19:30 PM,ds:anmm coseU
+10/12/2017 6:19:30 PM,Ads:anmm coseU
+10/12/2017 6:19:30 PM,,a, Ads:anmm coseU
+10/12/2017 6:19:30 PM,B,,a, Ads:anmm coseU
+10/12/2017 6:19:30 PM,b,sB,,a, Ads:anmm coseU
+10/12/2017 6:19:30 PM,,b,sB,,a, Ads:anmm coseU
+10/12/2017 6:19:30 PM,c.,b,sB,,a, Ads:anmm coseU
+10/12/2017 6:19:30 PM,c.,b,sB,,a, Ads:anmm coseU
+10/12/2017 6:19:31 PM,U
+10/12/2017 6:19:31 PM,seU
+10/12/2017 6:19:31 PM,cseU
+10/12/2017 6:19:31 PM,om cseU
+10/12/2017 6:19:31 PM,manom cseU
+10/12/2017 6:19:31 PM,dsmanom cseU
+10/12/2017 6:19:31 PM,: Adsmanom cseU
+10/12/2017 6:19:31 PM,,a: Adsmanom cseU
+10/12/2017 6:19:31 PM,,B,,a: Adsmanom cseU
+10/12/2017 6:19:31 PM,b,,B,,a: Adsmanom cseU
+10/12/2017 6:19:31 PM,s,c.b,,B,,a: Adsmanom cseU
+10/12/2017 6:19:31 PM,s,c.b,,B,,a: Adsmanom cseU
+10/12/2017 6:19:34 PM,U
+10/12/2017 6:19:34 PM,seU
+10/12/2017 6:19:34 PM,coseU
+10/12/2017 6:19:34 PM,mm coseU
+10/12/2017 6:19:34 PM,andmm coseU
+10/12/2017 6:19:34 PM,s:andmm coseU
+10/12/2017 6:19:34 PM,A,s:andmm coseU
+10/12/2017 6:19:34 PM,a, A,s:andmm coseU
+10/12/2017 6:19:34 PM,B,ba, A,s:andmm coseU
+10/12/2017 6:19:34 PM,,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:34 PM,,c.,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:34 PM,,c.,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:35 PM,U
+10/12/2017 6:19:35 PM,seU
+10/12/2017 6:19:35 PM,cseU
+10/12/2017 6:19:35 PM,omm cseU
+10/12/2017 6:19:35 PM,anomm cseU
+10/12/2017 6:19:35 PM,ds:anomm cseU
+10/12/2017 6:19:35 PM,A,ds:anomm cseU
+10/12/2017 6:19:35 PM,a, A,ds:anomm cseU
+10/12/2017 6:19:35 PM,B,a, A,ds:anomm cseU
+10/12/2017 6:19:35 PM,b,B,a, A,ds:anomm cseU
+10/12/2017 6:19:35 PM,s,cb,B,a, A,ds:anomm cseU
+10/12/2017 6:19:35 PM,.s,cb,B,a, A,ds:anomm cseU
+10/12/2017 6:19:35 PM,.s,cb,B,a, A,ds:anomm cseU
+10/12/2017 6:19:36 PM,U
+10/12/2017 6:19:36 PM,seU
+10/12/2017 6:19:36 PM,cseU
+10/12/2017 6:19:36 PM,omm cseU
+10/12/2017 6:19:36 PM,andomm cseU
+10/12/2017 6:19:36 PM,s:andomm cseU
+10/12/2017 6:19:36 PM,As:andomm cseU
+10/12/2017 6:19:36 PM,,a As:andomm cseU
+10/12/2017 6:19:36 PM,,B,,a As:andomm cseU
+10/12/2017 6:19:36 PM,b,s,B,,a As:andomm cseU
+10/12/2017 6:19:36 PM,,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:36 PM,.,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:36 PM,.,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:36 PM,U
+10/12/2017 6:19:36 PM,seU
+10/12/2017 6:19:36 PM,coseU
+10/12/2017 6:19:36 PM,mm coseU
+10/12/2017 6:19:36 PM,ands:mm coseU
+10/12/2017 6:19:36 PM,Aands:mm coseU
+10/12/2017 6:19:36 PM,,a Aands:mm coseU
+10/12/2017 6:19:36 PM,,B,a Aands:mm coseU
+10/12/2017 6:19:36 PM,,b,,B,a Aands:mm coseU
+10/12/2017 6:19:36 PM,s,c,b,,B,a Aands:mm coseU
+10/12/2017 6:19:36 PM,.s,c,b,,B,a Aands:mm coseU
+10/12/2017 6:19:36 PM,.s,c,b,,B,a Aands:mm coseU
+10/12/2017 6:19:37 PM,U
+10/12/2017 6:19:37 PM,seU
+10/12/2017 6:19:37 PM,cseU
+10/12/2017 6:19:37 PM,omm cseU
+10/12/2017 6:19:37 PM,anomm cseU
+10/12/2017 6:19:37 PM,ds:anomm cseU
+10/12/2017 6:19:37 PM,A,ds:anomm cseU
+10/12/2017 6:19:37 PM,a, A,ds:anomm cseU
+10/12/2017 6:19:37 PM,B,ba, A,ds:anomm cseU
+10/12/2017 6:19:37 PM,,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:37 PM,,c.,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:37 PM,,c.,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:37 PM,U
+10/12/2017 6:19:37 PM,seU
+10/12/2017 6:19:37 PM,cseU
+10/12/2017 6:19:37 PM,omm cseU
+10/12/2017 6:19:37 PM,anomm cseU
+10/12/2017 6:19:37 PM,dsanomm cseU
+10/12/2017 6:19:37 PM,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,a,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,B,ba,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,,sB,ba,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,,c,sB,ba,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,.
+,c,sB,ba,: A,dsanomm cseU
+10/12/2017 6:19:37 PM,U
+10/12/2017 6:19:37 PM,seU
+10/12/2017 6:19:37 PM,coseU
+10/12/2017 6:19:37 PM,mm coseU
+10/12/2017 6:19:37 PM,andmm coseU
+10/12/2017 6:19:37 PM,s:andmm coseU
+10/12/2017 6:19:37 PM,A,s:andmm coseU
+10/12/2017 6:19:37 PM,a, A,s:andmm coseU
+10/12/2017 6:19:37 PM,B,ba, A,s:andmm coseU
+10/12/2017 6:19:37 PM,,s,B,ba, A,s:andmm coseU
+10/12/2017 6:19:37 PM,c.,s,B,ba, A,s:andmm coseU
+10/12/2017 6:19:37 PM,c.,s,B,ba, A,s:andmm coseU
+10/12/2017 6:19:37 PM,U
+10/12/2017 6:19:37 PM,sU
+10/12/2017 6:19:37 PM,e csU
+10/12/2017 6:19:37 PM,ome csU
+10/12/2017 6:19:37 PM,manome csU
+10/12/2017 6:19:37 PM,dsmanome csU
+10/12/2017 6:19:37 PM,: Adsmanome csU
+10/12/2017 6:19:37 PM,,a: Adsmanome csU
+10/12/2017 6:19:37 PM,,B,,a: Adsmanome csU
+10/12/2017 6:19:37 PM,b,s,B,,a: Adsmanome csU
+10/12/2017 6:19:37 PM,,cb,s,B,,a: Adsmanome csU
+10/12/2017 6:19:37 PM,.
+,cb,s,B,,a: Adsmanome csU
+10/12/2017 6:19:37 PM,U
+10/12/2017 6:19:37 PM,seU
+10/12/2017 6:19:37 PM,cseU
+10/12/2017 6:19:37 PM,omm cseU
+10/12/2017 6:19:37 PM,andomm cseU
+10/12/2017 6:19:37 PM,s:andomm cseU
+10/12/2017 6:19:37 PM,A,s:andomm cseU
+10/12/2017 6:19:37 PM,a, A,s:andomm cseU
+10/12/2017 6:19:37 PM,B,ba, A,s:andomm cseU
+10/12/2017 6:19:37 PM,,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:37 PM,,c.,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:37 PM,,c.,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:38 PM,U
+10/12/2017 6:19:38 PM,seU
+10/12/2017 6:19:38 PM,cseU
+10/12/2017 6:19:38 PM,omm cseU
+10/12/2017 6:19:38 PM,andomm cseU
+10/12/2017 6:19:38 PM,s:andomm cseU
+10/12/2017 6:19:38 PM,As:andomm cseU
+10/12/2017 6:19:38 PM,,a As:andomm cseU
+10/12/2017 6:19:38 PM,,B,,a As:andomm cseU
+10/12/2017 6:19:38 PM,b,s,B,,a As:andomm cseU
+10/12/2017 6:19:38 PM,,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:38 PM,.,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:38 PM,.,cb,s,B,,a As:andomm cseU
+10/12/2017 6:19:38 PM,U
+10/12/2017 6:19:38 PM,seU
+10/12/2017 6:19:38 PM,cseU
+10/12/2017 6:19:38 PM,omm cseU
+10/12/2017 6:19:38 PM,andomm cseU
+10/12/2017 6:19:38 PM,s:andomm cseU
+10/12/2017 6:19:38 PM,A,s:andomm cseU
+10/12/2017 6:19:38 PM,a, A,s:andomm cseU
+10/12/2017 6:19:38 PM,B,ba, A,s:andomm cseU
+10/12/2017 6:19:38 PM,,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:38 PM,,c.,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:38 PM,,c.,sB,ba, A,s:andomm cseU
+10/12/2017 6:19:38 PM,U
+10/12/2017 6:19:38 PM,seU
+10/12/2017 6:19:38 PM,coseU
+10/12/2017 6:19:38 PM,mm coseU
+10/12/2017 6:19:38 PM,andmm coseU
+10/12/2017 6:19:38 PM,s: andmm coseU
+10/12/2017 6:19:38 PM,A,s: andmm coseU
+10/12/2017 6:19:38 PM,a,BA,s: andmm coseU
+10/12/2017 6:19:38 PM,,ba,BA,s: andmm coseU
+10/12/2017 6:19:38 PM,,s,,ba,BA,s: andmm coseU
+10/12/2017 6:19:38 PM,c.,s,,ba,BA,s: andmm coseU
+10/12/2017 6:19:38 PM,c.,s,,ba,BA,s: andmm coseU
+10/12/2017 6:19:39 PM,U
+10/12/2017 6:19:39 PM,se U
+10/12/2017 6:19:39 PM,comse U
+10/12/2017 6:19:39 PM,macomse U
+10/12/2017 6:19:39 PM,ndsmacomse U
+10/12/2017 6:19:39 PM,: Andsmacomse U
+10/12/2017 6:19:39 PM,,a: Andsmacomse U
+10/12/2017 6:19:39 PM,,B,,a: Andsmacomse U
+10/12/2017 6:19:39 PM,b,,B,,a: Andsmacomse U
+10/12/2017 6:19:39 PM,s,b,,B,,a: Andsmacomse U
+10/12/2017 6:19:39 PM,c.s,b,,B,,a: Andsmacomse U
+10/12/2017 6:19:39 PM,c.s,b,,B,,a: Andsmacomse U
+10/12/2017 6:19:48 PM,U
+10/12/2017 6:19:48 PM,seU
+10/12/2017 6:19:48 PM,coseU
+10/12/2017 6:19:48 PM,mm coseU
+10/12/2017 6:19:48 PM,andmm coseU
+10/12/2017 6:19:48 PM,s:andmm coseU
+10/12/2017 6:19:48 PM,A,as:andmm coseU
+10/12/2017 6:19:48 PM,,B, A,as:andmm coseU
+10/12/2017 6:19:48 PM,b,,B, A,as:andmm coseU
+10/12/2017 6:19:48 PM,s,cb,,B, A,as:andmm coseU
+10/12/2017 6:19:48 PM,.s,cb,,B, A,as:andmm coseU
+10/12/2017 6:19:48 PM,.s,cb,,B, A,as:andmm coseU
+10/12/2017 6:19:48 PM,U
+10/12/2017 6:19:48 PM,seU
+10/12/2017 6:19:48 PM,seU
+10/12/2017 6:19:48 PM,com seU
+10/12/2017 6:19:48 PM,mancom seU
+10/12/2017 6:19:48 PM,dsmancom seU
+10/12/2017 6:19:48 PM,: dsmancom seU
+10/12/2017 6:19:48 PM,A,a: dsmancom seU
+10/12/2017 6:19:48 PM,,BA,a: dsmancom seU
+10/12/2017 6:19:48 PM,,b,,BA,a: dsmancom seU
+10/12/2017 6:19:48 PM,s,c,b,,BA,a: dsmancom seU
+10/12/2017 6:19:48 PM,.
+s,c,b,,BA,a: dsmancom seU
+10/12/2017 6:19:49 PM,U
+10/12/2017 6:19:49 PM,seU
+10/12/2017 6:19:49 PM,seU
+10/12/2017 6:19:49 PM,comm seU
+10/12/2017 6:19:49 PM,ancomm seU
+10/12/2017 6:19:49 PM,ds:ancomm seU
+10/12/2017 6:19:49 PM,Ads:ancomm seU
+10/12/2017 6:19:49 PM,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,,B,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,b,,B,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,s,cb,,B,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,.s,cb,,B,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,.s,cb,,B,,a Ads:ancomm seU
+10/12/2017 6:19:49 PM,U
+10/12/2017 6:19:49 PM,seU
+10/12/2017 6:19:49 PM,cseU
+10/12/2017 6:19:49 PM,omm cseU
+10/12/2017 6:19:49 PM,andomm cseU
+10/12/2017 6:19:49 PM,s: andomm cseU
+10/12/2017 6:19:49 PM,A,as: andomm cseU
+10/12/2017 6:19:49 PM,,BA,as: andomm cseU
+10/12/2017 6:19:49 PM,,b,,BA,as: andomm cseU
+10/12/2017 6:19:49 PM,s,c,b,,BA,as: andomm cseU
+10/12/2017 6:19:49 PM,.s,c,b,,BA,as: andomm cseU
+10/12/2017 6:19:49 PM,.s,c,b,,BA,as: andomm cseU
+10/12/2017 6:19:50 PM,U
+10/12/2017 6:19:50 PM,seU
+10/12/2017 6:19:50 PM,coseU
+10/12/2017 6:19:50 PM,mm coseU
+10/12/2017 6:19:50 PM,andmm coseU
+10/12/2017 6:19:50 PM,s:andmm coseU
+10/12/2017 6:19:50 PM,A,s:andmm coseU
+10/12/2017 6:19:50 PM,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,B,ba, A,s:andmm coseU
+10/12/2017 6:19:50 PM,,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:50 PM,,c,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:50 PM,.
+,c,sB,ba, A,s:andmm coseU
+10/12/2017 6:19:50 PM,U
+10/12/2017 6:19:50 PM,seU
+10/12/2017 6:19:50 PM,coseU
+10/12/2017 6:19:50 PM,mm coseU
+10/12/2017 6:19:50 PM,andmm coseU
+10/12/2017 6:19:50 PM,s:andmm coseU
+10/12/2017 6:19:50 PM,A,s:andmm coseU
+10/12/2017 6:19:50 PM,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,B,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,b,sB,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,,cb,sB,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,.
+,cb,sB,a, A,s:andmm coseU
+10/12/2017 6:19:50 PM,U
+10/12/2017 6:19:50 PM,seU
+10/12/2017 6:19:50 PM,cseU
+10/12/2017 6:19:50 PM,omm cseU
+10/12/2017 6:19:50 PM,anomm cseU
+10/12/2017 6:19:50 PM,dsanomm cseU
+10/12/2017 6:19:50 PM,: dsanomm cseU
+10/12/2017 6:19:50 PM,A,a: dsanomm cseU
+10/12/2017 6:19:50 PM,,B,A,a: dsanomm cseU
+10/12/2017 6:19:50 PM,b,,B,A,a: dsanomm cseU
+10/12/2017 6:19:50 PM,s,b,,B,A,a: dsanomm cseU
+10/12/2017 6:19:50 PM,c.s,b,,B,A,a: dsanomm cseU
+10/12/2017 6:19:50 PM,c.s,b,,B,A,a: dsanomm cseU
+10/12/2017 6:19:55 PM,U
+10/12/2017 6:19:55 PM,seU
+10/12/2017 6:19:55 PM,cseU
+10/12/2017 6:19:55 PM,omm cseU
+10/12/2017 6:19:55 PM,anomm cseU
+10/12/2017 6:19:55 PM,ds:anomm cseU
+10/12/2017 6:19:55 PM,A,ds:anomm cseU
+10/12/2017 6:19:55 PM,a, A,ds:anomm cseU
+10/12/2017 6:19:55 PM,B,ba, A,ds:anomm cseU
+10/12/2017 6:19:55 PM,,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:55 PM,,c,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:55 PM,.
+,c,sB,ba, A,ds:anomm cseU
+10/12/2017 6:19:56 PM,U
+10/12/2017 6:19:56 PM,seU
+10/12/2017 6:19:56 PM,cseU
+10/12/2017 6:19:56 PM,omm cseU
+10/12/2017 6:19:56 PM,aomm cseU
+10/12/2017 6:19:56 PM,nds:aomm cseU
+10/12/2017 6:19:56 PM,Ands:aomm cseU
+10/12/2017 6:19:56 PM,,a, Ands:aomm cseU
+10/12/2017 6:19:56 PM,B,b,a, Ands:aomm cseU
+10/12/2017 6:19:56 PM,,sB,b,a, Ands:aomm cseU
+10/12/2017 6:19:56 PM,,c.,sB,b,a, Ands:aomm cseU
+10/12/2017 6:19:56 PM,,c.,sB,b,a, Ands:aomm cseU
+10/12/2017 6:19:57 PM,U
+10/12/2017 6:19:57 PM,seU
+10/12/2017 6:19:57 PM,cseU
+10/12/2017 6:19:57 PM,omm cseU
+10/12/2017 6:19:57 PM,anomm cseU
+10/12/2017 6:19:57 PM,ds:anomm cseU
+10/12/2017 6:19:57 PM,Ads:anomm cseU
+10/12/2017 6:19:57 PM,,a Ads:anomm cseU
+10/12/2017 6:19:57 PM,,B,,a Ads:anomm cseU
+10/12/2017 6:19:57 PM,b,s,B,,a Ads:anomm cseU
+10/12/2017 6:19:57 PM,,cb,s,B,,a Ads:anomm cseU
+10/12/2017 6:19:57 PM,.
+,cb,s,B,,a Ads:anomm cseU
+10/12/2017 6:20:07 PM,U
+10/12/2017 6:20:07 PM,seU
+10/12/2017 6:20:07 PM,coseU
+10/12/2017 6:20:07 PM,mm coseU
+10/12/2017 6:20:07 PM,andmm coseU
+10/12/2017 6:20:07 PM,s:andmm coseU
+10/12/2017 6:20:07 PM,A,s:andmm coseU
+10/12/2017 6:20:07 PM,a,B A,s:andmm coseU
+10/12/2017 6:20:07 PM,,b,a,B A,s:andmm coseU
+10/12/2017 6:20:07 PM,s,,b,a,B A,s:andmm coseU
+10/12/2017 6:20:07 PM,c.s,,b,a,B A,s:andmm coseU
+10/12/2017 6:20:07 PM,c.s,,b,a,B A,s:andmm coseU
+10/12/2017 6:20:07 PM,U
+10/12/2017 6:20:07 PM,seU
+10/12/2017 6:20:07 PM,cseU
+10/12/2017 6:20:07 PM,omm cseU
+10/12/2017 6:20:07 PM,andomm cseU
+10/12/2017 6:20:07 PM,s:andomm cseU
+10/12/2017 6:20:07 PM,A,s:andomm cseU
+10/12/2017 6:20:07 PM,a, A,s:andomm cseU
+10/12/2017 6:20:07 PM,B,a, A,s:andomm cseU
+10/12/2017 6:20:07 PM,b,sB,a, A,s:andomm cseU
+10/12/2017 6:20:07 PM,,c.b,sB,a, A,s:andomm cseU
+10/12/2017 6:20:07 PM,,c.b,sB,a, A,s:andomm cseU
+10/12/2017 6:20:07 PM,U
+10/12/2017 6:20:07 PM,seU
+10/12/2017 6:20:07 PM,cseU
+10/12/2017 6:20:07 PM,omm cseU
+10/12/2017 6:20:07 PM,anomm cseU
+10/12/2017 6:20:07 PM,ds:anomm cseU
+10/12/2017 6:20:07 PM,Ads:anomm cseU
+10/12/2017 6:20:07 PM,,a, Ads:anomm cseU
+10/12/2017 6:20:07 PM,B,,a, Ads:anomm cseU
+10/12/2017 6:20:07 PM,b,sB,,a, Ads:anomm cseU
+10/12/2017 6:20:07 PM,,cb,sB,,a, Ads:anomm cseU
+10/12/2017 6:20:07 PM,.,cb,sB,,a, Ads:anomm cseU
+10/12/2017 6:20:07 PM,.,cb,sB,,a, Ads:anomm cseU
+6/10/2018 5:16:51 PM,System.ArgumentNullException: Array cannot be null.
+Parameter name: bytes
+   at System.Text.Encoding.GetString(Byte[] bytes)
+   at DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 357
+   at DeviceTester.frmMain.SendViaPython(String bytesToSend, String pythonFilename) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs:line 225
+6/10/2018 5:17:07 PM,65,Led 1 On,32 32 70 105 108 101 32 34 67 58 92 89 97 110 100 101 120 68 105 115 107 92 95 95 83 79 70 84 87 65 82 69 92 67 35 46 78 69 84 92 67 35 32 80 114 111 106 101 99 116 115 92 68 101 118 105 99 101 84 101 115 116 101 114 ,  File "C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\PythonFiles\python_serial.py", line 13
+    def test()	
+              ^
+SyntaxError: invalid syntax
+ 0D 0A
+6/10/2018 5:17:18 PM,,32 32 70 105 108 101 32 34 67 58 92 89 97 110 100 101 120 68 105 115 107 92 95 95 83 79 70 84 87 65 82 69 92 67 35 46 78 69 84 92 67 35 32 80 114 111 106 101 99 116 115 92 68 101 118 105 99 101 84 101 115 116 101 114 ,  File "C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\PythonFiles\python_serial.py", line 13
+    def test()	
+              ^
+SyntaxError: invalid syntax
+ 0D 0A
+6/10/2018 5:17:26 PM,System.ArgumentNullException: Array cannot be null.
+Parameter name: bytes
+   at System.Text.Encoding.GetString(Byte[] bytes)
+   at DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 357
+   at DeviceTester.frmMain.SendViaPython(String bytesToSend, String pythonFilename) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs:line 225
+6/10/2018 5:30:05 PM,Use
+6/10/2018 5:30:05 PM,commands: A,a,B,b,s,c.
+Use
+6/10/2018 5:30:29 PM,Use c
+6/10/2018 5:30:29 PM,ommandsUse c
+6/10/2018 5:30:29 PM,: A,a,BommandsUse c
+6/10/2018 5:30:29 PM,,b,s,: A,a,BommandsUse c
+6/10/2018 5:30:29 PM,c.
+,b,s,: A,a,BommandsUse c
+6/10/2018 5:30:31 PM,U
+6/10/2018 5:30:31 PM,se commands: AU
+6/10/2018 5:30:31 PM,,a,B,b,se commands: AU
+6/10/2018 5:30:31 PM,s,c.,a,B,b,se commands: AU
+6/10/2018 5:30:31 PM,s,c.,a,B,b,se commands: AU
+6/10/2018 5:30:32 PM,U
+6/10/2018 5:30:32 PM,se commU
+6/10/2018 5:30:32 PM,ands: se commU
+6/10/2018 5:30:32 PM,A,a,ands: se commU
+6/10/2018 5:30:32 PM,B,b,s,cA,a,ands: se commU
+6/10/2018 5:30:32 PM,.
+B,b,s,cA,a,ands: se commU
+6/10/2018 5:30:33 PM,U
+6/10/2018 5:30:33 PM,se commands: A,a,B,U
+6/10/2018 5:30:33 PM,b,s,c.se commands: A,a,B,U
+6/10/2018 5:30:33 PM,b,s,c.se commands: A,a,B,U
+6/10/2018 5:30:33 PM,U
+6/10/2018 5:30:33 PM,se commands: AU
+6/10/2018 5:30:33 PM,,a,B,bse commands: AU
+6/10/2018 5:30:33 PM,,s,c.,a,B,bse commands: AU
+6/10/2018 5:30:33 PM,,s,c.,a,B,bse commands: AU
+6/10/2018 5:30:34 PM,U
+6/10/2018 5:30:34 PM,se commands: A,a,B,bU
+6/10/2018 5:30:34 PM,,s,c.se commands: A,a,B,bU
+6/10/2018 5:30:34 PM,,s,c.se commands: A,a,B,bU
+6/10/2018 5:30:34 PM,U
+6/10/2018 5:30:34 PM,seU
+6/10/2018 5:30:34 PM,comseU
+6/10/2018 5:30:34 PM,mands:  comseU
+6/10/2018 5:30:34 PM,A,a,Bmands:  comseU
+6/10/2018 5:30:34 PM,,b,sA,a,Bmands:  comseU
+6/10/2018 5:30:34 PM,,c.
+,b,sA,a,Bmands:  comseU
+6/10/2018 5:30:35 PM,U
+6/10/2018 5:30:35 PM,seU
+6/10/2018 5:30:35 PM,commaseU
+6/10/2018 5:30:35 PM,nds:  commaseU
+6/10/2018 5:30:35 PM,A,a,nds:  commaseU
+6/10/2018 5:30:35 PM,B,b,sA,a,nds:  commaseU
+6/10/2018 5:30:35 PM,,c.
+B,b,sA,a,nds:  commaseU
+6/10/2018 5:30:36 PM,U
+6/10/2018 5:30:36 PM,se coU
+6/10/2018 5:30:36 PM,mmanse coU
+6/10/2018 5:30:36 PM,ds: Ammanse coU
+6/10/2018 5:30:36 PM,,a,B,ds: Ammanse coU
+6/10/2018 5:30:36 PM,b,s,c,a,B,ds: Ammanse coU
+6/10/2018 5:30:36 PM,.
+b,s,c,a,B,ds: Ammanse coU
+6/10/2018 5:30:50 PM,U
+6/10/2018 5:30:50 PM,se commandsU
+6/10/2018 5:30:50 PM,: A,ase commandsU
+6/10/2018 5:30:50 PM,,B,b,s,: A,ase commandsU
+6/10/2018 5:30:50 PM,c.
+,B,b,s,: A,ase commandsU
+6/10/2018 5:30:59 PM,L
+6/10/2018 5:30:59 PM,ed 1 On.L
+6/10/2018 5:31:09 PM,L
+6/10/2018 5:31:09 PM,edL
+6/10/2018 5:31:09 PM,1 On.edL
+6/10/2018 5:31:11 PM,L
+6/10/2018 5:31:11 PM,ed 1 On.L
+6/10/2018 5:31:11 PM,L
+6/10/2018 5:31:11 PM,ed 1L
+6/10/2018 5:31:11 PM,On.ed 1L
+6/10/2018 5:31:12 PM,Led
+6/10/2018 5:31:12 PM,1 On.Led
+6/10/2018 5:31:31 PM,Led
+6/10/2018 5:31:31 PM,1 On.Led
+6/10/2018 5:34:23 PM,Led 1 On.
+6/10/2018 5:34:26 PM,Led
+6/10/2018 5:34:26 PM,1 On.Led
+6/10/2018 5:34:27 PM,L
+6/10/2018 5:34:27 PM,ed 1 On.L
+6/10/2018 5:34:27 PM,L
+6/10/2018 5:34:27 PM,ed 1 On.L
+6/10/2018 5:34:31 PM,Led 1 On.
+6/10/2018 5:34:32 PM,Led 1 On.
+6/10/2018 5:34:32 PM,Led 1 On.
+6/10/2018 5:34:33 PM,Led 1 On.
+6/10/2018 5:34:33 PM,Led 1 On.
+6/10/2018 5:34:34 PM,Led 1 On.
+6/10/2018 5:34:34 PM,Led 1 On.
+6/10/2018 5:34:34 PM,Led 1 On.
+6/10/2018 5:34:36 PM,Led 1 On.
+6/10/2018 5:34:46 PM,Led 1 On.
+6/10/2018 5:34:47 PM,Led
+6/10/2018 5:34:47 PM,1 On.Led
+6/10/2018 5:34:47 PM,Led 1
+6/10/2018 5:34:47 PM,On.Led 1
+6/10/2018 5:34:48 PM,Led
+6/10/2018 5:34:48 PM,1 On.Led
+6/10/2018 5:34:48 PM,Led
+6/10/2018 5:34:48 PM,1 On.Led
+6/10/2018 5:34:49 PM,Led 1
+6/10/2018 5:34:49 PM,On.Led 1
+6/10/2018 5:34:53 PM,Led 1 O
+6/10/2018 5:34:53 PM,n.Led 1 O
+6/10/2018 5:34:53 PM,Led
+6/10/2018 5:34:53 PM,1 On.Led
+6/10/2018 5:34:54 PM,Led 1 On.
+6/10/2018 5:34:54 PM,Led 1 O
+6/10/2018 5:34:54 PM,n.Led 1 O
+6/10/2018 5:34:59 PM,Led 1 On.
+6/10/2018 5:34:59 PM,Led 1 On.
+6/10/2018 5:35:00 PM,Led 1 On.
+6/10/2018 5:35:00 PM,Led 1 On.
+6/10/2018 5:35:01 PM,Led 1
+6/10/2018 5:35:01 PM,On.Led 1
+6/10/2018 5:35:01 PM,Led 1 On.
+6/10/2018 5:35:01 PM,Led 1
+6/10/2018 5:35:01 PM,On.Led 1
+6/10/2018 5:35:01 PM,Led 1 On
+6/10/2018 5:35:01 PM,.Led 1 On
+6/10/2018 5:35:02 PM,Led 1 On
+6/10/2018 5:35:02 PM,.Led 1 On
+6/10/2018 5:35:05 PM,Led 1
+6/10/2018 5:35:05 PM,On.Led 1
+6/10/2018 5:35:06 PM,Led 1
+6/10/2018 5:35:06 PM,On.Led 1
+6/10/2018 5:35:06 PM,Led 1 On.
+6/10/2018 5:35:06 PM,Led 1 On.
+6/10/2018 5:35:10 PM,Led 1 On.
+6/10/2018 5:35:11 PM,Led 1 On.
+6/10/2018 5:35:11 PM,Led 1 On.
+6/10/2018 5:35:11 PM,Led 1 On.
+6/10/2018 5:35:11 PM,Led 1 On.
+6/10/2018 5:35:11 PM,Led 1 On.
+6/10/2018 5:35:12 PM,Led 1 On.
+6/10/2018 5:35:12 PM,Led 1 On.
+6/10/2018 5:35:12 PM,Led 1 On.
+6/10/2018 5:35:12 PM,Led 1 On.
+6/10/2018 5:35:15 PM,Use commands: A,
+6/10/2018 5:35:15 PM,a,B,b,s,c.
+Use commands: A,
+6/10/2018 5:35:16 PM,Use commands:
+6/10/2018 5:35:16 PM,A,a,B,b,s,c.
+Use commands:
+6/10/2018 5:35:17 PM,Use commands: A,
+6/10/2018 5:35:17 PM,a,B,b,s,c.
+Use commands: A,
+6/10/2018 5:35:17 PM,Use comman
+6/10/2018 5:35:17 PM,ds: A,a,B,b,s,c.Use comman
+6/10/2018 5:35:17 PM,ds: A,a,B,b,s,c.Use comman
+6/10/2018 5:35:19 PM,Use command
+6/10/2018 5:35:19 PM,s: A,a,B,b,s,c.
+Use command
+6/10/2018 5:35:20 PM,Use commands: A,a
+6/10/2018 5:35:20 PM,,B,b,s,c.
+Use commands: A,a
+6/10/2018 5:35:23 PM,Use commands: A,a,B,b,s,c
+6/10/2018 5:35:23 PM,.
+Use commands: A,a,B,b,s,c
+6/10/2018 5:35:24 PM,Use commands: A,a,B,
+6/10/2018 5:35:24 PM,b,s,c.
+Use commands: A,a,B,
+6/10/2018 5:35:25 PM,Use commands: A,a,B,b,s
+6/10/2018 5:35:25 PM,,c.
+Use commands: A,a,B,b,s
+6/10/2018 5:35:25 PM,Use commands: A,a,B,b,
+6/10/2018 5:35:25 PM,s,c.
+Use commands: A,a,B,b,
+6/10/2018 5:35:26 PM,Use commands: A,a,B,
+6/10/2018 5:35:26 PM,b,s,c.
+Use commands: A,a,B,
+6/10/2018 5:35:26 PM,Use commands: A,a,B,b
+6/10/2018 5:35:26 PM,,s,c.
+Use commands: A,a,B,b
+6/10/2018 5:35:27 PM,Use commands: A,a,B,b,s,
+6/10/2018 5:35:27 PM,c.
+Use commands: A,a,B,b,s,
+6/10/2018 5:35:28 PM,Use commands: A,a,B,b,
+6/10/2018 5:35:28 PM,s,c.
+Use commands: A,a,B,b,
+6/10/2018 5:35:29 PM,Use commands: A,a,B,
+6/10/2018 5:35:29 PM,b,s,c.
+Use commands: A,a,B,
+6/10/2018 5:35:32 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:33 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:34 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:34 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:35 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:36 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:36 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:38 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:39 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:39 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:35:40 PM,Use commands: A,a,B,b,s,c.
+6/10/2018 5:37:15 PM,Led 1 On.
+6/10/2018 5:37:19 PM,Led
+6/10/2018 5:37:19 PM,1 OnLed
+6/10/2018 5:37:19 PM,. 1 OnLed
+6/10/2018 5:37:19 PM,L
+6/10/2018 5:37:19 PM,ed 1L
+6/10/2018 5:37:19 PM,On.ed 1L
+6/10/2018 5:37:20 PM,Le
+6/10/2018 5:37:20 PM,d 1 On.Le
+6/10/2018 5:37:20 PM,Le
+6/10/2018 5:37:20 PM,d 1 OLe
+6/10/2018 5:37:20 PM,n.d 1 OLe
+6/10/2018 5:37:20 PM,L
+6/10/2018 5:37:20 PM,ed 1L
+6/10/2018 5:37:20 PM,On.ed 1L
+6/10/2018 5:37:20 PM,L
+6/10/2018 5:37:20 PM,ed 1 On.L
+6/10/2018 5:37:20 PM,Le
+6/10/2018 5:37:20 PM,d 1 OLe
+6/10/2018 5:37:20 PM,n.d 1 OLe
+6/10/2018 5:37:22 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:23 PM,Led 1 On.
+6/10/2018 5:37:24 PM,Led 1 On.
+6/10/2018 5:37:24 PM,Led 1 On.

@@ -3,7 +3,7 @@
   <DeviceInfo>
     <DeviceName>Newtex AZ110</DeviceName>
     <Explanation>Modulator</Explanation>
-    <IP>192.168.1.105</IP>
+    <IP>192.168.1.104</IP>
     <Port>5933</Port>
     <CheckSumType>CheckSum,1 Byte</CheckSumType>
     <InstructionStructure>Start Byte=2, Address(Example:100), Command (3 bytes), ? (ASCII=63),End=3, CheckSum (1 byte) (Total:8 bytes) </InstructionStructure>
@@ -12,7 +12,7 @@
     <ID>1</ID>
     <Order>2</Order>
     <InstructionBytes>02 64 43 41 73 3F 03 2B</InstructionBytes>
-    <Explanation>CAs:</Explanation>
+    <Explanation>CAs: Get Alarms</Explanation>
     <CheckSum>1</CheckSum>
   </Instruction>
   <Instruction>

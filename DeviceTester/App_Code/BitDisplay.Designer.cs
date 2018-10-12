@@ -50,82 +50,98 @@
             // lblBit7
             // 
             this.lblBit7.AutoSize = true;
+            this.lblBit7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit7.Location = new System.Drawing.Point(5, 7);
             this.lblBit7.Name = "lblBit7";
             this.lblBit7.Size = new System.Drawing.Size(24, 23);
             this.lblBit7.TabIndex = 0;
             this.lblBit7.Text = "1";
+            this.lblBit7.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit6
             // 
             this.lblBit6.AutoSize = true;
+            this.lblBit6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit6.Location = new System.Drawing.Point(35, 7);
             this.lblBit6.Name = "lblBit6";
             this.lblBit6.Size = new System.Drawing.Size(24, 23);
             this.lblBit6.TabIndex = 0;
             this.lblBit6.Text = "1";
+            this.lblBit6.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit5
             // 
             this.lblBit5.AutoSize = true;
+            this.lblBit5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit5.Location = new System.Drawing.Point(65, 7);
             this.lblBit5.Name = "lblBit5";
             this.lblBit5.Size = new System.Drawing.Size(24, 23);
             this.lblBit5.TabIndex = 0;
             this.lblBit5.Text = "1";
+            this.lblBit5.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit4
             // 
             this.lblBit4.AutoSize = true;
+            this.lblBit4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit4.Location = new System.Drawing.Point(95, 7);
             this.lblBit4.Name = "lblBit4";
             this.lblBit4.Size = new System.Drawing.Size(24, 23);
             this.lblBit4.TabIndex = 0;
             this.lblBit4.Text = "1";
+            this.lblBit4.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit3
             // 
             this.lblBit3.AutoSize = true;
+            this.lblBit3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit3.Location = new System.Drawing.Point(125, 7);
             this.lblBit3.Name = "lblBit3";
             this.lblBit3.Size = new System.Drawing.Size(24, 23);
             this.lblBit3.TabIndex = 0;
             this.lblBit3.Text = "1";
+            this.lblBit3.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit2
             // 
             this.lblBit2.AutoSize = true;
+            this.lblBit2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit2.Location = new System.Drawing.Point(155, 7);
             this.lblBit2.Name = "lblBit2";
             this.lblBit2.Size = new System.Drawing.Size(24, 23);
             this.lblBit2.TabIndex = 0;
             this.lblBit2.Text = "1";
+            this.lblBit2.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit1
             // 
             this.lblBit1.AutoSize = true;
+            this.lblBit1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit1.Location = new System.Drawing.Point(185, 7);
             this.lblBit1.Name = "lblBit1";
             this.lblBit1.Size = new System.Drawing.Size(24, 23);
             this.lblBit1.TabIndex = 0;
             this.lblBit1.Text = "1";
+            this.lblBit1.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // lblBit0
             // 
             this.lblBit0.AutoSize = true;
+            this.lblBit0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBit0.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBit0.Location = new System.Drawing.Point(215, 7);
             this.lblBit0.Name = "lblBit0";
             this.lblBit0.Size = new System.Drawing.Size(24, 23);
             this.lblBit0.TabIndex = 0;
             this.lblBit0.Text = "1";
+            this.lblBit0.DoubleClick += new System.EventHandler(this.ToggleBit);
             // 
             // label1
             // 

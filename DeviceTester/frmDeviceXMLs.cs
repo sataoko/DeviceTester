@@ -92,10 +92,10 @@ namespace DeviceTester
             string fileName = GetParentNodeTexts(node, node.Text);
             lblSelectedFile.Text = GetFileName(fileName);
             lblSelectedFile.Tag = fileName;
-            return;
-            DeviceXMLFilePath = node.Text;
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+
+            //DeviceXMLFilePath = node.Text;
+            //this.DialogResult = DialogResult.OK;
+            //this.Close();
         }
 
         private void trvFiles_DoubleClick(object sender, EventArgs e)

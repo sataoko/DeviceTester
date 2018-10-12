@@ -106,7 +106,7 @@ namespace DeviceTester
         private void SendSingleCommand(string command)
         {
             byte[] bytesToSend = new byte[5000];
-            bytesToSend = Common.GetBytes(command);
+            bytesToSend = GetBytes(command);
 
             byte[] receivedBytes = new byte[10000];
             receivedBytes = RequestData(bytesToSend);
@@ -126,11 +126,27 @@ namespace DeviceTester
             txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(receivedBytes);
         }
 
+        public static byte[] GetBytes(string byteStringWithComma)
+        {
+
+            if (string.IsNullOrEmpty(byteStringWithComma)) return null;
+            string[] bytes = byteStringWithComma.Split(',');
+
+            byte[] bytesToSend = new byte[bytes.Length];
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                int k = Convert.ToInt16(bytes[i]);
+                bytesToSend[i] = (byte)k;
+            }
+
+            return bytesToSend;
+        }
+
         private void SendSingleCommand2(string command)
         {
-            TCPConnection tcp = new TCPConnection(txtIP.Text,Convert.ToInt32(txtPort.Text));
+            TCPConnection tcp = new TCPConnection(txtIP.Text,Convert.ToUInt16(txtPort.Text));
             byte[] bytesToSend = new byte[5000];
-            bytesToSend = Common.GetBytes(command);
+            bytesToSend = GetBytes(command);
 
             byte[] receivedBytes = new byte[10000];
             receivedBytes = tcp.RequestData(bytesToSend);

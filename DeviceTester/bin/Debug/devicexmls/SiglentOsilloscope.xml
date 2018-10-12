@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Sıglent OSC</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>192.168.1.161</IP>
+    <Port>4001</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>*IDN?</InstructionBytes>
+    <Explanation>device info</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586739273755066284</ID>
+    <Explanation>all status</Explanation>
+    <InstructionBytes>ALST?</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739272398223679</ID>
+    <Explanation>set Volt  Div to 200 ms</Explanation>
+    <InstructionBytes>C1:VDIV 200E-3 V</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739271744115867</ID>
+    <Explanation>set Volt Div to 100 ms</Explanation>
+    <InstructionBytes>C1:VDIV 100E-3 V</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739271056595903</ID>
+    <Explanation>set Time Div to 1000 microseconds</Explanation>
+    <InstructionBytes>TDIV 1000US</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739269648315985</ID>
+    <Explanation>set Time Div to 250 microseconds</Explanation>
+    <InstructionBytes>TDIV 250US</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739254099558328</ID>
+    <Explanation>cursor auto</Explanation>
+    <InstructionBytes>CRAU</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739253387005605</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>C1: CRST VREF, 3DIV, VDIF, −1DIV</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739252796273600</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>CURSOR_SET?</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739251187098109</ID>
+    <Explanation>auto scale</Explanation>
+    <InstructionBytes>ASET </InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739241991366640</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>AUTTS SP</InstructionBytes>
+    <Order>12</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586739238899368294</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>AUTTS MP</InstructionBytes>
+    <Order>13</Order>
+  </Instruction>
+</DeviceInstructions>

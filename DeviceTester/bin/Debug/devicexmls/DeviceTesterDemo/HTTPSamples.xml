@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Device Name</DeviceName>
+    <Explanation>
+    </Explanation>
+    <IP>94.73.148.206</IP>
+    <Port>80</Port>
+    <CheckSumType>CheckSum,1 Byte</CheckSumType>
+    <InstructionStructure>xxx</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>2</Order>
+    <InstructionBytes>47 45 54 20 2F 20 48 54 54 50 2F 31 2E 31 0D 0A 68 6F 73 74 3A 20 77 77 77 2E 75 6E 69 7A 61 79 6E 2E 63 6F 6D 0D 0A 0D 0A</InstructionBytes>
+    <Explanation>GET / HTTP/1.1 host: www.google.it</Explanation>
+    <CheckSum>1</CheckSum>
+  </Instruction>
+  <WorkbenchData>
+    <ID>1</ID>
+    <Instructions>
+    </Instructions>
+  </WorkbenchData>
+  <Instruction>
+    <ID>-8586942140827945009</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>47 45 54 20 2F 20 48 54 54 50 2F 31 2E 31 0D 0A 68 6F 73 74 3A 20 77 77 77 2E 67 6F 6F 67 6C 65 2E 69 74 0D 0A 0D 0A</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586942127428854017</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>474554202F20485454502F312E310D0A686F73743A207777772E676F6F676C652E69740D0A0D0A </InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586942117889800699</ID>
+    <Explanation>GET / HTTP/1.1 host: www.unizayn.com</Explanation>
+    <InstructionBytes>47 45 54 20 2F 20 48 54 54 50 2F 31 2E 31 0D 0A 68 6F 73 74 3A 20 77 77 77 2E 75 6E 69 7A 61 79 6E 2E 63 6F 6D 0D 0A 0D 0A</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+</DeviceInstructions>

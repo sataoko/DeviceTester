@@ -18,7 +18,7 @@ namespace DeviceTester
 
         public bool ConditionalReading = false;
         public byte EndByte = 3;
-        public int ReadBufferSize = 100;
+        public Int32 ReadBufferSize = 100;
 
         private int _communicationTimeOut = 500;
         public int CommunicationTimeOut
@@ -34,19 +34,17 @@ namespace DeviceTester
             }
         }
 
-        public TCPConnection(string IP, int port)
+        public TCPConnection(string IP, UInt16 port)
         {
             try
             {
                 _tcpClient = new TcpClient(IP, port);
                 _stream = _tcpClient.GetStream();
-
             }
             catch (Exception )
             {
                 
             }
-            
             //_tcpClient.ReceiveTimeout = _communicationTimeOut;
             //_tcpClient.SendTimeout = _communicationTimeOut;
             //_stream.ReadTimeout = _communicationTimeOut;
@@ -74,6 +72,8 @@ namespace DeviceTester
                 }
                 else _tcpClient.Close();
 
+                System.Threading.Thread.Sleep(Delay);
+
                 bool goOnReading = true;
                 if (_stream.CanRead)
                 {
@@ -98,7 +98,6 @@ namespace DeviceTester
                     }
                     else
                     {
-                        System.Threading.Thread.Sleep(Delay);
                         _stream.Read(incomingByteArray, 0, ReadBufferSize);
                     }
 
@@ -121,7 +120,7 @@ namespace DeviceTester
 
                 return incomingByteArray;
             }
-            catch (Exception exp)
+            catch (Exception)
             {
                 //System.Windows.Forms.MessageBox.Show(exp.ToString());
                 return null;

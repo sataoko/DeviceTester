@@ -9,7 +9,7 @@
     <ProjectGuid>{08E0D5AE-315D-40AC-9D16-B3F5BCDFD612}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TCPDeviceTester</RootNamespace>
+    <RootNamespace>DeviceTester</RootNamespace>
     <AssemblyName>DeviceTester</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -63,6 +63,10 @@
     <Reference Include="DiffieHellman">
       <HintPath>..\..\..\..\..\..\__Software\__C#.NET Folders\C#.Net Projects\MySSH\MySSH\bin\Debug\DiffieHellman.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.TextEditor, Version=4.0.2.6466, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Org.Mentalis.Security">
       <HintPath>..\..\..\..\..\..\__Software\__C#.NET Folders\C#.Net Projects\MySSH\MySSH\bin\Debug\Org.Mentalis.Security.dll</HintPath>
     </Reference>
@@ -99,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_CodeUnitTests\GetCRCTests.cs" />
+    <Compile Include="App_Code\ByteArrayToHex.cs" />
     <Compile Include="App_Code\SerialReaderThread.cs" />
     <Compile Include="App_Code\Structures\CheckSumRV.cs" />
     <Compile Include="App_Code\CL.cs" />
@@ -147,6 +152,12 @@
     <Compile Include="frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHexKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHexKeyboard.Designer.cs">
+      <DependentUpon>frmHexKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHTTPTester.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,17 +200,17 @@
     <Compile Include="frmNewFilename.Designer.cs">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPython.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPython.Designer.cs">
-      <DependentUpon>frmPython.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSerialPortTerminal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSerialPortTerminal.Designer.cs">
       <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowLogs.Designer.cs">
+      <DependentUpon>frmShowLogs.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSSH.cs">
       <SubType>Form</SubType>
@@ -252,7 +263,12 @@
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHTTPTester.resx" />
+    <EmbeddedResource Include="frmHexKeyboard.resx">
+      <DependentUpon>frmHexKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHTTPTester.resx">
+      <DependentUpon>frmHTTPTester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInputBox.resx">
       <DependentUpon>frmInputBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,11 +284,11 @@
     <EmbeddedResource Include="frmNewFilename.resx">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPython.resx">
-      <DependentUpon>frmPython.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSerialPortTerminal.resx">
       <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowLogs.resx">
+      <DependentUpon>frmShowLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSSH.resx">
       <DependentUpon>frmSSH.cs</DependentUpon>
@@ -327,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Graph.ico" />
+    <None Include="Resources\grey_dot.png" />
+    <None Include="Resources\snmp-icon.png" />
+    <None Include="Resources\python-icon.png" />
     <None Include="Resources\rightArrow.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\green_light.png" />
