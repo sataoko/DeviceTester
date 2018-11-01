@@ -49,7 +49,7 @@ namespace DeviceTester
             }
         }
 
-        public bool CheckNetworkConnection(string IP,int timeout)
+        public bool CheckNetworkConnection(string IP, int timeout)
         {
             if (string.IsNullOrEmpty(IP)) return false;
             try
@@ -372,7 +372,7 @@ namespace DeviceTester
                 dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), (char)bytesToShow[i], c.DecimalToHex(bytesToShow[i].ToString()));
             }
 
-            if (chkSaveLog.Checked) SaveInstructionLog(txtSentCommand.Text , bytesInHex , txtReceivedBytesASCII.Text);
+            if (chkSaveLog.Checked) SaveInstructionLog(txtSentCommand.Text, bytesInHex, txtReceivedBytesASCII.Text);
 
             return txtReceivedBytesASCII.Text;
         }
@@ -388,7 +388,7 @@ namespace DeviceTester
                 xmlLog.Append("<log>");
                 xmlLog.Append("<datetime>" + DateTime.Now + "</datetime>");
                 xmlLog.Append("<Instruction>This is error log.</Instruction>");
-                xmlLog.Append("<ReceivedDataInHEX>"+logText+"</ReceivedDataInHEX>");
+                xmlLog.Append("<ReceivedDataInHEX>" + logText + "</ReceivedDataInHEX>");
                 xmlLog.Append("<ReceivedDataInASCII></ReceivedDataInASCII>");
                 xmlLog.Append("</log>");
                 sw.WriteLine(logText);
@@ -404,7 +404,7 @@ namespace DeviceTester
             {
                 StringBuilder xmlLog = new StringBuilder();
                 xmlLog.Append("<log>");
-                xmlLog.Append("<datetime>"+DateTime.Now+"</datetime>");
+                xmlLog.Append("<datetime>" + DateTime.Now + "</datetime>");
                 xmlLog.Append("<Instruction>" + instruction + "</Instruction>");
                 xmlLog.Append("<ReceivedDataInHEX>" + bytesInHex + "</ReceivedDataInHEX>");
                 xmlLog.Append("<ReceivedDataInASCII>" + bytesInASCII + "</ReceivedDataInASCII>");
@@ -633,7 +633,7 @@ namespace DeviceTester
         {
             if (tsbConnectToIP.Text == "Connect")
             {
-                if (CheckNetworkConnection(txtCurrentIP.Text,_pingTimeOut))
+                if (CheckNetworkConnection(txtCurrentIP.Text, _pingTimeOut))
                 {
                     try
                     {
@@ -708,7 +708,7 @@ namespace DeviceTester
 
         private void tsbPing_Click(object sender, EventArgs e)
         {
-            if (CheckNetworkConnection(txtCurrentIP.Text,_pingTimeOut)) MessageBox.Show("OK"); else MessageBox.Show("Not OK.");
+            if (CheckNetworkConnection(txtCurrentIP.Text, _pingTimeOut)) MessageBox.Show("OK"); else MessageBox.Show("Not OK.");
         }
 
         private void tsbPingPort_Click(object sender, EventArgs e)
@@ -965,8 +965,8 @@ namespace DeviceTester
                 }
             }
         }
-        
-        
+
+
 
         #endregion
 
@@ -995,13 +995,13 @@ namespace DeviceTester
         {
             if (txtASCIIBytesInCHKCalculator.Focused)
             {
-                
+
                 Convertor c = new Convertor();
                 c.AsciiToDecimalIntoTextBox((sender as TextBox), txtDecimalBytesInCHKCalculator);
                 c.DecimalToHexIntoTextBox(txtDecimalBytesInCHKCalculator, txtHEXBytesInCHKCalculator);
                 DisplayCRCValuesInGrid();
             }
-        }        
+        }
 
         private void txtDecimalBytes_TextChanged(object sender, EventArgs e)
         {
@@ -1072,8 +1072,8 @@ namespace DeviceTester
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtDelayTime.Text))
-            System.Threading.Thread.Sleep(Convert.ToInt32(txtDelayTime.Text));
+            if (!string.IsNullOrEmpty(txtDelayTime.Text))
+                System.Threading.Thread.Sleep(Convert.ToInt32(txtDelayTime.Text));
 
             RxString = serialPort1.ReadExisting();
             //System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(DisplayText));
@@ -1564,16 +1564,18 @@ namespace DeviceTester
 
         private void GetBitsInHexBoxByte()
         {
-            if (hexReceivedBytes.ByteProvider != null)
-                if (hexReceivedBytes.CurrentPositionInLine >= 0)
+            if ((hexReceivedBytes.ByteProvider != null) && (hexReceivedBytes.CurrentPositionInLine >= 0))
+            {
+                long position = (hexReceivedBytes.CurrentLine - 1) * 16 + hexReceivedBytes.CurrentPositionInLine - 1;
+                if (position < hexReceivedBytes.ByteProvider.Length)
                 {
-                    long position = (hexReceivedBytes.CurrentLine - 1) * 16 + hexReceivedBytes.CurrentPositionInLine - 1;
                     byte b = hexReceivedBytes.ByteProvider.ReadByte(position);
 
                     lblByteNo.Text = "Byte No " + position.ToString() + "> " + b.ToString();
 
                     bitDisplay1.ShowBitsOfByte(b);
                 }
+            }
         }
 
         private void hexBox_MouseClick(object sender, MouseEventArgs e)
@@ -1674,7 +1676,7 @@ namespace DeviceTester
                 this.dgvTimerInstructions.Rows[a - 1].Selected = true;
             }
 
-            
+
         }
 
         private void tsbMoveTimerRowDown_Click(object sender, EventArgs e)
@@ -1697,6 +1699,11 @@ namespace DeviceTester
         {
             frmShowLogs x = new frmShowLogs();
             x.Show();
+        }
+
+        private void miCopyHexBoxToClipboard_Click(object sender, EventArgs e)
+        {
+            hexReceivedBytes.CopyHex();
         }
     }
 }

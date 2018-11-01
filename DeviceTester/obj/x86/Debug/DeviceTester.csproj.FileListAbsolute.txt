@@ -262,7 +262,6 @@ C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\xunit.core.xml
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\xunit.execution.desktop.pdb
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\bin\Debug\xunit.execution.desktop.xml
-C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojResolveAssemblyReference.cache
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.BitDisplay.resources
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.Chronometer.resources
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.frmComPortSettings.resources
@@ -326,3 +325,5 @@ G:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\De
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.frmHTTPTester.resources
 G:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.frmHTTPTester.resources
 C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.frmShowLogs.resources
+C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csprojAssemblyReference.cache
+C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\obj\x86\Debug\DeviceTester.csproj.CopyComplete

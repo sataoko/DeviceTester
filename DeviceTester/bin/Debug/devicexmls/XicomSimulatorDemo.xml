@@ -4,7 +4,7 @@
     <DeviceName>XicomHPA For Simulator</DeviceName>
     <Explanation>
     </Explanation>
-    <IP>192.168.1.103</IP>
+    <IP>192.168.1.101</IP>
     <Port>2000</Port>
     <CheckSumType>CheckSum,1 Byte</CheckSumType>
     <InstructionStructure>xxx</InstructionStructure>

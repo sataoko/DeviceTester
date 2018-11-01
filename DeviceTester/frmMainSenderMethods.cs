@@ -119,8 +119,8 @@ namespace DeviceTester
 
         private void SendViaTCPStandard(byte[] bytesToSend)
         {
-            if (CheckNetworkConnection(txtCurrentIP.Text,_pingTimeOut))
-            {
+            //if (CheckNetworkConnection(txtCurrentIP.Text,_pingTimeOut))
+            //{
                 try
                 {
                     var stopWatch = new System.Diagnostics.Stopwatch();
@@ -154,12 +154,12 @@ namespace DeviceTester
                 {
                     SaveLog(exc.ToString());
                 }
-            }
-            else
-            {
-                txtReceivedBytesASCII.Text = "IP problem. Check IP address.";
-                SaveLog("IP Problem");
-            };
+            //}
+            //else
+            //{
+            //    txtReceivedBytesASCII.Text = "IP problem. Check IP address.";
+            //    SaveLog("IP Problem");
+            //};
         }
 
         private void SendViaUDP(byte[] bytesToSend)
@@ -236,7 +236,6 @@ namespace DeviceTester
         private void sendSetCommand(string OID, string parameters)
         {
             //tmrRequest.Enabled = false;
-
 
             UdpTarget target = new UdpTarget((IPAddress)new IpAddress(txtCurrentIP.Text));
             Pdu pdu = new Pdu(PduType.Set);

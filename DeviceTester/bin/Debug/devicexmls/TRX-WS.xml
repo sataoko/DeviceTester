@@ -44,4 +44,23 @@
     <InstructionBytes>01 03 00 52 43 02 17 54 C1</InstructionBytes>
     <Order>6</Order>
   </Instruction>
+  <Instruction>
+    <ID>-8586607997369244366</ID>
+    <Explanation>get conditions</Explanation>
+    <InstructionBytes>01 02 00 43 47 17 E1 94</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586606798291569694</ID>
+    <Explanation>get actions</Explanation>
+    <InstructionBytes>01 02 00 41 47 17 59 21</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586606343023218032</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>01 0E 00 41 53 01 01 01 05 01 05 05 02 05 05 03 05 17 F9 0B</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
 </DeviceInstructions>

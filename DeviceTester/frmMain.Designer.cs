@@ -199,6 +199,8 @@
             this.tbcIncomingBytes = new System.Windows.Forms.TabControl();
             this.tpTextView = new System.Windows.Forms.TabPage();
             this.hexReceivedBytes = new Be.Windows.Forms.HexBox();
+            this.ctxHexBoxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.miCopyHexBoxToClipboard = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlBitsHolder = new System.Windows.Forms.Panel();
             this.bitDisplay1 = new DeviceTester.BitDisplay();
             this.lblByteNo = new System.Windows.Forms.Label();
@@ -218,6 +220,8 @@
             this.tsbClearIncomingBytes = new System.Windows.Forms.ToolStripButton();
             this.tsbChangeMainConsoleStyle = new System.Windows.Forms.ToolStripButton();
             this.tsbClearBeforeSend = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbShowLogs = new System.Windows.Forms.ToolStripButton();
             this.tpTools = new System.Windows.Forms.TabPage();
             this.pnlPythonTools = new System.Windows.Forms.Panel();
             this.btnApplyPythonCode = new System.Windows.Forms.Button();
@@ -259,8 +263,6 @@
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
-            this.tsbShowLogs = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.cmsInstructionsGrid.SuspendLayout();
@@ -295,6 +297,7 @@
             this.tpIncomingBytes.SuspendLayout();
             this.tbcIncomingBytes.SuspendLayout();
             this.tpTextView.SuspendLayout();
+            this.ctxHexBoxMenu.SuspendLayout();
             this.pnlBitsHolder.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tpGridView.SuspendLayout();
@@ -320,7 +323,7 @@
             this.lblCommandExecutionTime});
             this.statusStripMain.Location = new System.Drawing.Point(0, 697);
             this.statusStripMain.Name = "statusStripMain";
-            this.statusStripMain.Size = new System.Drawing.Size(1134, 22);
+            this.statusStripMain.Size = new System.Drawing.Size(1084, 22);
             this.statusStripMain.TabIndex = 0;
             this.statusStripMain.Text = "statusStrip1";
             // 
@@ -362,7 +365,7 @@
             this.aboutToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1134, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(1084, 24);
             this.menuStripMain.TabIndex = 1;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -645,7 +648,7 @@
             this.tlsMain.Location = new System.Drawing.Point(0, 24);
             this.tlsMain.Name = "tlsMain";
             this.tlsMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.tlsMain.Size = new System.Drawing.Size(1134, 25);
+            this.tlsMain.Size = new System.Drawing.Size(1084, 25);
             this.tlsMain.TabIndex = 7;
             this.tlsMain.Text = "toolStripIPPort";
             // 
@@ -766,7 +769,7 @@
             this.toolStripSeparator6});
             this.tlsSend.Location = new System.Drawing.Point(0, 659);
             this.tlsSend.Name = "tlsSend";
-            this.tlsSend.Size = new System.Drawing.Size(1134, 38);
+            this.tlsSend.Size = new System.Drawing.Size(1084, 38);
             this.tlsSend.TabIndex = 4;
             this.tlsSend.Text = "toolStrip2";
             // 
@@ -894,8 +897,8 @@
             // 
             this.splitContainerMain.Panel2.Controls.Add(this.tbcTools);
             this.splitContainerMain.Panel2.Controls.Add(this.tlsMain2);
-            this.splitContainerMain.Size = new System.Drawing.Size(1134, 610);
-            this.splitContainerMain.SplitterDistance = 539;
+            this.splitContainerMain.Size = new System.Drawing.Size(1084, 610);
+            this.splitContainerMain.SplitterDistance = 500;
             this.splitContainerMain.TabIndex = 2;
             // 
             // pnlInstructions
@@ -905,7 +908,7 @@
             this.pnlInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInstructions.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructions.Name = "pnlInstructions";
-            this.pnlInstructions.Size = new System.Drawing.Size(539, 610);
+            this.pnlInstructions.Size = new System.Drawing.Size(500, 610);
             this.pnlInstructions.TabIndex = 2;
             // 
             // tbcDevice
@@ -921,7 +924,7 @@
             this.tbcDevice.Location = new System.Drawing.Point(0, 5);
             this.tbcDevice.Name = "tbcDevice";
             this.tbcDevice.SelectedIndex = 0;
-            this.tbcDevice.Size = new System.Drawing.Size(539, 605);
+            this.tbcDevice.Size = new System.Drawing.Size(500, 605);
             this.tbcDevice.TabIndex = 0;
             // 
             // tpDeviceCommands
@@ -933,7 +936,7 @@
             this.tpDeviceCommands.Location = new System.Drawing.Point(4, 29);
             this.tpDeviceCommands.Name = "tpDeviceCommands";
             this.tpDeviceCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeviceCommands.Size = new System.Drawing.Size(531, 572);
+            this.tpDeviceCommands.Size = new System.Drawing.Size(492, 572);
             this.tpDeviceCommands.TabIndex = 0;
             this.tpDeviceCommands.Text = "Device Commands";
             this.tpDeviceCommands.UseVisualStyleBackColor = true;
@@ -960,7 +963,7 @@
             this.dgvInstructions.Name = "dgvInstructions";
             this.dgvInstructions.RowHeadersVisible = false;
             this.dgvInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInstructions.Size = new System.Drawing.Size(525, 462);
+            this.dgvInstructions.Size = new System.Drawing.Size(486, 462);
             this.dgvInstructions.TabIndex = 3;
             this.dgvInstructions.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvInstructions_CellBeginEdit);
             this.dgvInstructions.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstructions_CellEndEdit);
@@ -972,7 +975,7 @@
             this.pnlDeviceInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDeviceInfo.Location = new System.Drawing.Point(3, 3);
             this.pnlDeviceInfo.Name = "pnlDeviceInfo";
-            this.pnlDeviceInfo.Size = new System.Drawing.Size(525, 29);
+            this.pnlDeviceInfo.Size = new System.Drawing.Size(486, 29);
             this.pnlDeviceInfo.TabIndex = 5;
             // 
             // tlsInstructionsGrid
@@ -990,7 +993,7 @@
             this.tsbConvertToHex});
             this.tlsInstructionsGrid.Location = new System.Drawing.Point(0, 4);
             this.tlsInstructionsGrid.Name = "tlsInstructionsGrid";
-            this.tlsInstructionsGrid.Size = new System.Drawing.Size(525, 25);
+            this.tlsInstructionsGrid.Size = new System.Drawing.Size(486, 25);
             this.tlsInstructionsGrid.TabIndex = 15;
             this.tlsInstructionsGrid.Text = "toolStrip3";
             // 
@@ -1089,7 +1092,7 @@
             this.pnlInstructionsBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlInstructionsBottom.Location = new System.Drawing.Point(3, 494);
             this.pnlInstructionsBottom.Name = "pnlInstructionsBottom";
-            this.pnlInstructionsBottom.Size = new System.Drawing.Size(525, 75);
+            this.pnlInstructionsBottom.Size = new System.Drawing.Size(486, 75);
             this.pnlInstructionsBottom.TabIndex = 6;
             // 
             // chkUseCheckSum
@@ -1806,7 +1809,7 @@
             this.pnlInstructionsTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInstructionsTop.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructionsTop.Name = "pnlInstructionsTop";
-            this.pnlInstructionsTop.Size = new System.Drawing.Size(539, 5);
+            this.pnlInstructionsTop.Size = new System.Drawing.Size(500, 5);
             this.pnlInstructionsTop.TabIndex = 1;
             // 
             // tbcTools
@@ -1819,7 +1822,7 @@
             this.tbcTools.Location = new System.Drawing.Point(0, 25);
             this.tbcTools.Name = "tbcTools";
             this.tbcTools.SelectedIndex = 0;
-            this.tbcTools.Size = new System.Drawing.Size(591, 585);
+            this.tbcTools.Size = new System.Drawing.Size(580, 585);
             this.tbcTools.TabIndex = 16;
             // 
             // tpIncomingBytes
@@ -1830,7 +1833,7 @@
             this.tpIncomingBytes.Location = new System.Drawing.Point(4, 22);
             this.tpIncomingBytes.Name = "tpIncomingBytes";
             this.tpIncomingBytes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIncomingBytes.Size = new System.Drawing.Size(583, 559);
+            this.tpIncomingBytes.Size = new System.Drawing.Size(572, 559);
             this.tpIncomingBytes.TabIndex = 0;
             this.tpIncomingBytes.Text = "Incoming Bytes";
             this.tpIncomingBytes.UseVisualStyleBackColor = true;
@@ -1841,7 +1844,7 @@
             this.chkSaveLog.AutoSize = true;
             this.chkSaveLog.Checked = true;
             this.chkSaveLog.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSaveLog.Location = new System.Drawing.Point(442, 536);
+            this.chkSaveLog.Location = new System.Drawing.Point(431, 536);
             this.chkSaveLog.Name = "chkSaveLog";
             this.chkSaveLog.Size = new System.Drawing.Size(131, 17);
             this.chkSaveLog.TabIndex = 33;
@@ -1856,7 +1859,7 @@
             this.tbcIncomingBytes.Location = new System.Drawing.Point(3, 3);
             this.tbcIncomingBytes.Name = "tbcIncomingBytes";
             this.tbcIncomingBytes.SelectedIndex = 0;
-            this.tbcIncomingBytes.Size = new System.Drawing.Size(577, 528);
+            this.tbcIncomingBytes.Size = new System.Drawing.Size(566, 528);
             this.tbcIncomingBytes.TabIndex = 0;
             // 
             // tpTextView
@@ -1868,7 +1871,7 @@
             this.tpTextView.Location = new System.Drawing.Point(4, 22);
             this.tpTextView.Name = "tpTextView";
             this.tpTextView.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTextView.Size = new System.Drawing.Size(569, 502);
+            this.tpTextView.Size = new System.Drawing.Size(558, 502);
             this.tpTextView.TabIndex = 0;
             this.tpTextView.Text = "Text View";
             this.tpTextView.UseVisualStyleBackColor = true;
@@ -1876,6 +1879,8 @@
             // hexReceivedBytes
             // 
             this.hexReceivedBytes.AllowDrop = true;
+            this.hexReceivedBytes.BackColor = System.Drawing.Color.SeaShell;
+            this.hexReceivedBytes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             // 
             // 
             // 
@@ -1884,19 +1889,35 @@
             this.hexReceivedBytes.BuiltInContextMenu.PasteMenuItemText = "Paste ";
             this.hexReceivedBytes.BuiltInContextMenu.SelectAllMenuItemText = "Select All ";
             this.hexReceivedBytes.ColumnInfoVisible = true;
+            this.hexReceivedBytes.ContextMenuStrip = this.ctxHexBoxMenu;
             this.hexReceivedBytes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hexReceivedBytes.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hexReceivedBytes.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hexReceivedBytes.GroupSeparatorVisible = true;
             this.hexReceivedBytes.InfoForeColor = System.Drawing.Color.Silver;
             this.hexReceivedBytes.Location = new System.Drawing.Point(3, 28);
             this.hexReceivedBytes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.hexReceivedBytes.Name = "hexReceivedBytes";
             this.hexReceivedBytes.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexReceivedBytes.Size = new System.Drawing.Size(563, 151);
+            this.hexReceivedBytes.Size = new System.Drawing.Size(552, 151);
             this.hexReceivedBytes.StringViewVisible = true;
             this.hexReceivedBytes.TabIndex = 33;
             this.hexReceivedBytes.UseFixedBytesPerLine = true;
             this.hexReceivedBytes.VScrollBarVisible = true;
             this.hexReceivedBytes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.hexBox_MouseClick);
+            // 
+            // ctxHexBoxMenu
+            // 
+            this.ctxHexBoxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miCopyHexBoxToClipboard});
+            this.ctxHexBoxMenu.Name = "ctxHexBoxMenu";
+            this.ctxHexBoxMenu.Size = new System.Drawing.Size(225, 26);
+            // 
+            // miCopyHexBoxToClipboard
+            // 
+            this.miCopyHexBoxToClipboard.Name = "miCopyHexBoxToClipboard";
+            this.miCopyHexBoxToClipboard.Size = new System.Drawing.Size(224, 22);
+            this.miCopyHexBoxToClipboard.Text = "Copy Selection To Clipboard";
+            this.miCopyHexBoxToClipboard.Click += new System.EventHandler(this.miCopyHexBoxToClipboard_Click);
             // 
             // pnlBitsHolder
             // 
@@ -1905,7 +1926,7 @@
             this.pnlBitsHolder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBitsHolder.Location = new System.Drawing.Point(3, 179);
             this.pnlBitsHolder.Name = "pnlBitsHolder";
-            this.pnlBitsHolder.Size = new System.Drawing.Size(563, 64);
+            this.pnlBitsHolder.Size = new System.Drawing.Size(552, 64);
             this.pnlBitsHolder.TabIndex = 34;
             // 
             // bitDisplay1
@@ -1931,7 +1952,7 @@
             this.txtSentCommand.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSentCommand.Location = new System.Drawing.Point(3, 3);
             this.txtSentCommand.Name = "txtSentCommand";
-            this.txtSentCommand.Size = new System.Drawing.Size(563, 25);
+            this.txtSentCommand.Size = new System.Drawing.Size(552, 25);
             this.txtSentCommand.TabIndex = 32;
             // 
             // panel3
@@ -1940,18 +1961,20 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(3, 243);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 256);
+            this.panel3.Size = new System.Drawing.Size(552, 256);
             this.panel3.TabIndex = 30;
             // 
             // txtReceivedBytesASCII
             // 
+            this.txtReceivedBytesASCII.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtReceivedBytesASCII.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReceivedBytesASCII.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtReceivedBytesASCII.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtReceivedBytesASCII.Location = new System.Drawing.Point(0, 0);
             this.txtReceivedBytesASCII.Multiline = true;
             this.txtReceivedBytesASCII.Name = "txtReceivedBytesASCII";
             this.txtReceivedBytesASCII.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(563, 256);
+            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(552, 256);
             this.txtReceivedBytesASCII.TabIndex = 29;
             // 
             // tpGridView
@@ -2068,7 +2091,7 @@
             this.tsbShowLogs});
             this.tlsIncomingBytes.Location = new System.Drawing.Point(3, 531);
             this.tlsIncomingBytes.Name = "tlsIncomingBytes";
-            this.tlsIncomingBytes.Size = new System.Drawing.Size(577, 25);
+            this.tlsIncomingBytes.Size = new System.Drawing.Size(566, 25);
             this.tlsIncomingBytes.TabIndex = 0;
             this.tlsIncomingBytes.Text = "toolStrip1";
             // 
@@ -2103,6 +2126,21 @@
             this.tsbClearBeforeSend.Name = "tsbClearBeforeSend";
             this.tsbClearBeforeSend.Size = new System.Drawing.Size(104, 22);
             this.tsbClearBeforeSend.Text = "Clear Before Send";
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbShowLogs
+            // 
+            this.tsbShowLogs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbShowLogs.Image = ((System.Drawing.Image)(resources.GetObject("tsbShowLogs.Image")));
+            this.tsbShowLogs.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbShowLogs.Name = "tsbShowLogs";
+            this.tsbShowLogs.Size = new System.Drawing.Size(68, 22);
+            this.tsbShowLogs.Text = "Show Logs";
+            this.tsbShowLogs.Click += new System.EventHandler(this.tsbShowLogs_Click);
             // 
             // tpTools
             // 
@@ -2563,7 +2601,7 @@
             this.tsbConnectToComPort});
             this.tlsMain2.Location = new System.Drawing.Point(0, 0);
             this.tlsMain2.Name = "tlsMain2";
-            this.tlsMain2.Size = new System.Drawing.Size(591, 25);
+            this.tlsMain2.Size = new System.Drawing.Size(580, 25);
             this.tlsMain2.TabIndex = 3;
             this.tlsMain2.Text = "toolStrip4";
             // 
@@ -2585,26 +2623,11 @@
             this.tsbConnectToComPort.Text = "Connect";
             this.tsbConnectToComPort.Click += new System.EventHandler(this.tsbConnectToComPort_Click);
             // 
-            // tsbShowLogs
-            // 
-            this.tsbShowLogs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbShowLogs.Image = ((System.Drawing.Image)(resources.GetObject("tsbShowLogs.Image")));
-            this.tsbShowLogs.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbShowLogs.Name = "tsbShowLogs";
-            this.tsbShowLogs.Size = new System.Drawing.Size(68, 22);
-            this.tsbShowLogs.Text = "Show Logs";
-            this.tsbShowLogs.Click += new System.EventHandler(this.tsbShowLogs_Click);
-            // 
-            // toolStripSeparator14
-            // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 25);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 719);
+            this.ClientSize = new System.Drawing.Size(1084, 719);
             this.Controls.Add(this.splitContainerMain);
             this.Controls.Add(this.tlsMain);
             this.Controls.Add(this.menuStripMain);
@@ -2672,6 +2695,7 @@
             this.tbcIncomingBytes.ResumeLayout(false);
             this.tpTextView.ResumeLayout(false);
             this.tpTextView.PerformLayout();
+            this.ctxHexBoxMenu.ResumeLayout(false);
             this.pnlBitsHolder.ResumeLayout(false);
             this.pnlBitsHolder.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -2921,6 +2945,8 @@
         private System.Windows.Forms.ToolStripButton tsbMoveTimerRowDown;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton tsbShowLogs;
+        private System.Windows.Forms.ContextMenuStrip ctxHexBoxMenu;
+        private System.Windows.Forms.ToolStripMenuItem miCopyHexBoxToClipboard;
     }
 }
 
