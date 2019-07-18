@@ -2611,9 +2611,9 @@
             // 
             // bitDisplay1
             // 
-            this.bitDisplay1.Location = new System.Drawing.Point(110, 6);
+            this.bitDisplay1.Location = new System.Drawing.Point(110, 4);
             this.bitDisplay1.Name = "bitDisplay1";
-            this.bitDisplay1.Size = new System.Drawing.Size(423, 49);
+            this.bitDisplay1.Size = new System.Drawing.Size(423, 54);
             this.bitDisplay1.TabIndex = 7;
             // 
             // bitDisplay2

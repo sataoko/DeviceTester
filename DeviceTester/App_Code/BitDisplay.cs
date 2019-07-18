@@ -26,44 +26,10 @@ namespace DeviceTester
             lblBit7.Text = s[0].ToString();
 
             txtDecimalValue.Text = b.ToString();
+            GetASCIIView(b);
         }
 
-        private void CalculateBits()
-        {
-            double sum = 0;
-            sum += (lblBit0.Text == "1" ? 1 : 0) * Math.Pow(2, 0);
-            sum += (lblBit1.Text == "1" ? 1 : 0) * Math.Pow(2, 1);
-            sum += (lblBit2.Text == "1" ? 1 : 0) * Math.Pow(2, 2);
-            sum += (lblBit3.Text == "1" ? 1 : 0) * Math.Pow(2, 3);
-            sum += (lblBit4.Text == "1" ? 1 : 0) * Math.Pow(2, 4);
-            sum += (lblBit5.Text == "1" ? 1 : 0) * Math.Pow(2, 5);
-            sum += (lblBit6.Text == "1" ? 1 : 0) * Math.Pow(2, 6);
-            sum += (lblBit7.Text == "1" ? 1 : 0) * Math.Pow(2, 7);
-            txtDecimalValue.Text = sum.ToString();
-
-            //byte[] arr = BitConverter.GetBytes(sum);
-            //lblASCII.Text = Encoding.ASCII.GetString(arr);
-            txtASCII.Text = Convert.ToChar((int)sum).ToString();
-        }
-
-        public BitDisplay()
-        {
-            InitializeComponent();
-        }
-
-        internal void Clear()
-        {
-            ShowBitsOfByte(0);
-        }
-
-        private void ToggleBit(object sender, EventArgs e)
-        {
-            Label label = sender as Label;
-            if (label.Text == "0") label.Text = "1"; else label.Text = "0";
-            CalculateBits();
-        }
-
-        private void SetValue(byte value)
+        private void GetBitView(byte value)
         {
             try
             {
@@ -85,10 +51,64 @@ namespace DeviceTester
             }
         }
 
+        private byte GetLabelBitValue(Label bitLabel)
+        {
+            byte bitValue = bitLabel.Text == "1" ? Convert.ToByte(1) : Convert.ToByte(0);
+            return bitValue;
+        }
+
+        private void CalculateBits()
+        {
+            byte sum = Convert.ToByte(GetLabelBitValue(lblBit0) * 1);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit1) * 2);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit2) * 4);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit3) * 8);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit4) * 16);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit5) * 32);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit6) * 64);
+            sum += Convert.ToByte(GetLabelBitValue(lblBit7) * 128);
+
+            txtDecimalValue.Text = sum.ToString();
+
+            //byte[] arr = BitConverter.GetBytes(sum);
+            //lblASCII.Text = Encoding.ASCII.GetString(arr);
+            GetASCIIView(sum);
+        }
+
+        private void GetASCIIView(byte value)
+        {
+            try
+            {
+                txtASCII.Text = Convert.ToChar(value).ToString();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public BitDisplay()
+        {
+            InitializeComponent();
+        }
+
+        internal void Clear()
+        {
+            ShowBitsOfByte(0);
+        }
+
+        private void ToggleBit(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            if (label.Text == "0") label.Text = "1"; else label.Text = "0";
+            CalculateBits();
+        }
+
         private string GetBool(bool value)
         {
             if (value) return "1"; else return "0";
         }
+
         private void TxtDecimalValue_TextChanged(object sender, EventArgs e)
         {
             try
@@ -105,17 +125,19 @@ namespace DeviceTester
                 txtDecimalValue.Text = "0";
             }
         }
+
         private void TxtDecimalValue_KeyUp(object sender, KeyEventArgs e)
         {
             try
             {
                 if (string.IsNullOrEmpty(txtDecimalValue.Text))
-                    SetValue(0);
+                    GetBitView(0);
                 else
                 {
                     int b = Convert.ToInt16(txtDecimalValue.Text);
                     if ((b > 255) || (b < 0)) b = 0;
-                    SetValue((byte)b);
+                    GetBitView((byte)b);
+                    GetASCIIView((byte)b);
                 }
             }
             catch (Exception exc)
@@ -128,8 +150,8 @@ namespace DeviceTester
         {
             if (string.IsNullOrEmpty(txtASCII.Text))
             {
-                SetValue(0);
-                txtASCII.Text = "0";
+                GetBitView(0);
+                txtDecimalValue.Text = "0";
             }
             else
             {
@@ -137,8 +159,11 @@ namespace DeviceTester
                 {
                     char c = Convert.ToChar(txtASCII.Text);
                     int i = Convert.ToInt16(c);
-                    SetValue((byte)i);
-                    txtDecimalValue.Text = i.ToString();
+                    if (i < 256)
+                    {
+                        GetBitView((byte)i);
+                        txtDecimalValue.Text = i.ToString();
+                    } 
                 }
                 catch (Exception)
                 {

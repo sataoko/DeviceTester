@@ -46,6 +46,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtDecimalValue = new System.Windows.Forms.TextBox();
             this.txtASCII = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblBit7
@@ -223,7 +225,7 @@
             this.txtDecimalValue.MaxLength = 3;
             this.txtDecimalValue.Name = "txtDecimalValue";
             this.txtDecimalValue.Size = new System.Drawing.Size(71, 33);
-            this.txtDecimalValue.TabIndex = 2;
+            this.txtDecimalValue.TabIndex = 1;
             this.txtDecimalValue.TextChanged += new System.EventHandler(this.TxtDecimalValue_TextChanged);
             this.txtDecimalValue.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtDecimalValue_KeyUp);
             // 
@@ -237,6 +239,26 @@
             this.txtASCII.TabIndex = 2;
             this.txtASCII.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtASCII_KeyUp);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(279, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 12);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "0-255";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(341, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 12);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ASCII";
+            // 
             // BitDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +270,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -260,7 +284,7 @@
             this.Controls.Add(this.lblBit6);
             this.Controls.Add(this.lblBit7);
             this.Name = "BitDisplay";
-            this.Size = new System.Drawing.Size(421, 49);
+            this.Size = new System.Drawing.Size(421, 59);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +310,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDecimalValue;
         private System.Windows.Forms.TextBox txtASCII;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
