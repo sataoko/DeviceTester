@@ -128,22 +128,25 @@
     <Compile Include="App_Code\BitDisplay.Designer.cs">
       <DependentUpon>BitDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chronometer.cs">
+    <Compile Include="App_Code\Chronometer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Chronometer.Designer.cs">
+    <Compile Include="App_Code\Chronometer.Designer.cs">
       <DependentUpon>Chronometer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmComPortSettings.cs">
+    <Compile Include="frmMainSerialPortMethods.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmComPortSettings.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmComPortSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputSelectionWindows\frmComPortSettings.Designer.cs">
       <DependentUpon>frmComPortSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDeviceXMLs.cs">
+    <Compile Include="InputSelectionWindows\frmDeviceXMLs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDeviceXMLs.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmDeviceXMLs.Designer.cs">
       <DependentUpon>frmDeviceXMLs.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHelp.cs">
@@ -152,22 +155,22 @@
     <Compile Include="frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHexKeyboard.cs">
+    <Compile Include="InputSelectionWindows\frmHexKeyboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHexKeyboard.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmHexKeyboard.Designer.cs">
       <DependentUpon>frmHexKeyboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHTTPTester.cs">
+    <Compile Include="Tools\frmHTTPTester.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHTTPTester.Designer.cs">
+    <Compile Include="Tools\frmHTTPTester.Designer.cs">
       <DependentUpon>frmHTTPTester.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInputBox.cs">
+    <Compile Include="InputSelectionWindows\frmInputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInputBox.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmInputBox.Designer.cs">
       <DependentUpon>frmInputBox.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
@@ -182,28 +185,28 @@
     <Compile Include="frmMainSenderMethods.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNetworkCommands.cs">
+    <Compile Include="InputSelectionWindows\frmNetworkCommands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNetworkCommands.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmNetworkCommands.Designer.cs">
       <DependentUpon>frmNetworkCommands.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNetworkTools.cs">
+    <Compile Include="Tools\frmNetworkTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNetworkTools.Designer.cs">
+    <Compile Include="Tools\frmNetworkTools.Designer.cs">
       <DependentUpon>frmNetworkTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewFilename.cs">
+    <Compile Include="InputSelectionWindows\frmNewFilename.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewFilename.Designer.cs">
+    <Compile Include="InputSelectionWindows\frmNewFilename.Designer.cs">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSerialPortTerminal.cs">
+    <Compile Include="TestWındows\frmSerialPortTerminal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSerialPortTerminal.Designer.cs">
+    <Compile Include="TestWındows\frmSerialPortTerminal.Designer.cs">
       <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmShowLogs.cs">
@@ -224,10 +227,10 @@
     <Compile Include="frmSuperConsole.Designer.cs">
       <DependentUpon>frmSuperConsole.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTryCommands.cs">
+    <Compile Include="TestWındows\frmTryCommands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTryCommands.Designer.cs">
+    <Compile Include="TestWındows\frmTryCommands.Designer.cs">
       <DependentUpon>frmTryCommands.cs</DependentUpon>
     </Compile>
     <Compile Include="App_Code\GetCRC.cs" />
@@ -251,40 +254,40 @@
     <EmbeddedResource Include="App_Code\BitDisplay.resx">
       <DependentUpon>BitDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chronometer.resx">
+    <EmbeddedResource Include="App_Code\Chronometer.resx">
       <DependentUpon>Chronometer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmComPortSettings.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmComPortSettings.resx">
       <DependentUpon>frmComPortSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDeviceXMLs.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmDeviceXMLs.resx">
       <DependentUpon>frmDeviceXMLs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHexKeyboard.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmHexKeyboard.resx">
       <DependentUpon>frmHexKeyboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHTTPTester.resx">
+    <EmbeddedResource Include="Tools\frmHTTPTester.resx">
       <DependentUpon>frmHTTPTester.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInputBox.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmInputBox.resx">
       <DependentUpon>frmInputBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNetworkCommands.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmNetworkCommands.resx">
       <DependentUpon>frmNetworkCommands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNetworkTools.resx">
+    <EmbeddedResource Include="Tools\frmNetworkTools.resx">
       <DependentUpon>frmNetworkTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewFilename.resx">
+    <EmbeddedResource Include="InputSelectionWindows\frmNewFilename.resx">
       <DependentUpon>frmNewFilename.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSerialPortTerminal.resx">
+    <EmbeddedResource Include="TestWındows\frmSerialPortTerminal.resx">
       <DependentUpon>frmSerialPortTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowLogs.resx">
@@ -296,7 +299,7 @@
     <EmbeddedResource Include="frmSuperConsole.resx">
       <DependentUpon>frmSuperConsole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTryCommands.resx">
+    <EmbeddedResource Include="TestWındows\frmTryCommands.resx">
       <DependentUpon>frmTryCommands.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

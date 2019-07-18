@@ -1,2 +1,150 @@
-30.05.2017 03:07:03,,
-30.05.2017 03:07:24,02 64 43 41 73 3F 03 2B,CAs:,
+29.06.2017 21:42:40,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+07.08.2017 00:10:34,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+07.08.2017 11:03:41,02 64 4F 4F 46 3F 03 1C, output freq.,6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+07.08.2017 22:00:22,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+22.09.2017 10:56:57,02 64 43 41 73 3F 03 2B,CAs:,68 69 78 69 77 69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,DENEME
+22.09.2017 12:59:04,02 64 43 41 73 3F 03 2B,CAs:,68 69 78 69 77 69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,DENEME
+22.09.2017 12:59:15,02 64 43 41 73 3F 03 2B,CAs:,68 69 78 69 77 69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,DENEME
+15.10.2017 14:47:43,IP Problem
+15.10.2017 14:49:19,IP Problem
+16.10.2017 22:41:16,02 64 43 41 73 3F 03 2B,CAs:,21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:29,02 64 4F 4F 46 3F 03 1C,(Output Frequency),21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:30,02 64 4F 4F 46 3F 03 1C,(Output Frequency),21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:30,02 64 4F 4F 46 3F 03 1C,(Output Frequency),21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:32,02 64 74 78 73 3F 03 25,(Transmit Status),21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:33,02 64 74 78 73 3F 03 25,(Transmit Status),21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:34,02 64 43 41 73 3F 03 2B,CAs:,21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:41:35,02 64 43 41 73 3F 03 2B,CAs:,21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:49:54,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 22:49:57,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 22:50:00,02 64 74 78 73 3F 03 25,(Transmit Status),6 100 116 120 115 63 48 3 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dtxs?0
+16.10.2017 22:50:10,02 64 43 41 73 3F 03 2B,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 22:50:11,02 64 4F 4F 46 3F 03 1C,6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 22:50:12,02 64 4F 4F 4C 3F 03 16,6 100 79 79 76 63 50 48 3 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOL?20
+16.10.2017 22:50:13,02 64 43 41 73 3F 03 2B,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 22:50:14,02 64 4F 4F 46 3F 03 1C,6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 22:50:33,02 64 4F 4F 46 3F 03 1C, output freq.,6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 22:50:35,02644F4F463F031C, output freq.,6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 22:50:37,02 64 43 41 6D 3F 03 35, CAm? alarm mode,21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+16.10.2017 22:50:43,02 64 43 41 73 3F 03 2B, CAs? current alarm status,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 22:55:55,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 23:03:32,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+16.10.2017 23:03:35,02 64 74 78 73 3F 03 25,(Transmit Status),6 100 116 120 115 63 48 3 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dtxs?0
+16.10.2017 23:33:09,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+16.10.2017 23:33:12,02 64 74 78 73 3F 03 25,(Transmit Status),6 100 116 120 115 63 48 3 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dtxs?0
+17.10.2017 00:13:05,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:13:15,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:25:15,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:25:17,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:25:21,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:27:58,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:36:23,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:38:12,System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:42:16,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:42:31,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:16,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:18,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:22,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:23,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:23,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:36,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+17.10.2017 00:44:40,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:41,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:42,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 329
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:44:59,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+17.10.2017 00:46:53,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 337
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:47:00,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 337
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 00:47:05,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 337
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 01:03:29,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+17.10.2017 01:03:32,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:31,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:35,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:40,,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:41,,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:42,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:44,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:45,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:46,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:47,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:47,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:48,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 12:43:49,,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:50,,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:50,,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 12:43:55,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 14:45:37,02 64 43 41 73 3F 03 2B, CAs? current alarm status,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 15:31:31,02 64 43 41 73 3F 03 2B, CAs? current alarm status,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 16:06:08,02 64 43 41 73 3F 03 2B,CAs:,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 16:08:21,02 64 43 41 73 3F 03 2B,CAs: Get Alarms,6 100 67 65 115 63 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000000000000000000000000000
+17.10.2017 16:08:33,02 64 43 41 73 3F 03 2B,CAs: Get Alarms,6 100 67 65 115 63 48 48 48 49 49 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000110000000000000000000000
+17.10.2017 16:08:33,02 64 43 41 73 3F 03 2B,CAs: Get Alarms,6 100 67 65 115 63 48 48 48 49 49 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 48 3 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dCAs?000110000000000000000000000
+17.10.2017 16:08:38,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 49 50 53 48 48 48 3 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?125000
+17.10.2017 16:08:47,02 64 4F 4F 46 3F 03 1C,(Output Frequency),6 100 79 79 70 63 53 48 48 3 45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,dOOF?500-
+17.10.2017 16:10:02,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252
+17.10.2017 16:10:06,System.IndexOutOfRangeException: Dizin, dizi sınırlarının dışındaydı.
+   konum: DeviceTester.frmMain.ShowBytesInTextBoxes(Byte[] bytesToShow) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs içinde: satır 334
+   konum: DeviceTester.frmMain.SendViaPython(String bytesToSend) C:\Dropbox\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs içinde: satır 252

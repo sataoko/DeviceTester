@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceInstructions>
+  <DeviceInfo>
+    <DeviceName>Dev Switch</DeviceName>
+    <Explanation>Switch</Explanation>
+    <IP>10.0.0.211</IP>
+    <Port>4001</Port>
+    <CheckSumType>EXOR</CheckSumType>
+    <InstructionStructure>123,Addres,Command Length,Parameters,125,CheckSum ...</InstructionStructure>
+  </DeviceInfo>
+  <Instruction>
+    <ID>1</ID>
+    <Order>1</Order>
+    <InstructionBytes>65</InstructionBytes>
+    <Explanation>Led 1 On</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8588771259775244558</ID>
+    <Order>2</Order>
+    <InstructionBytes>97</InstructionBytes>
+    <Explanation>aa</Explanation>
+  </Instruction>
+  <Instruction>
+    <ID>-8588771255008682058</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>66</InstructionBytes>
+    <Order>3</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588769615832588308</ID>
+    <Explanation>aaaa</Explanation>
+    <InstructionBytes>41</InstructionBytes>
+    <Order>4</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075676437351585</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>98</InstructionBytes>
+    <Order>5</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8588075673462031406</ID>
+    <Explanation>sfgdsfg</Explanation>
+    <InstructionBytes>fasdgd</InstructionBytes>
+    <Order>6</Order>
+  </Instruction>
+</DeviceInstructions>

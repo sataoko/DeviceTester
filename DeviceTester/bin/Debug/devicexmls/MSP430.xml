@@ -11,38 +11,71 @@
   <Instruction>
     <ID>1</ID>
     <Order>1</Order>
-    <InstructionBytes>65</InstructionBytes>
+    <InstructionBytes>A</InstructionBytes>
     <Explanation>Led 1 On</Explanation>
   </Instruction>
   <Instruction>
     <ID>-8588771259775244558</ID>
     <Order>2</Order>
-    <InstructionBytes>97</InstructionBytes>
-    <Explanation>aa</Explanation>
+    <InstructionBytes>61</InstructionBytes>
+    <Explanation>red led off</Explanation>
   </Instruction>
   <Instruction>
     <ID>-8588771255008682058</ID>
-    <Explanation>aaaa</Explanation>
-    <InstructionBytes>66</InstructionBytes>
+    <Explanation>red led on</Explanation>
+    <InstructionBytes>41</InstructionBytes>
     <Order>3</Order>
   </Instruction>
   <Instruction>
     <ID>-8588769615832588308</ID>
-    <Explanation>aaaa</Explanation>
-    <InstructionBytes>41</InstructionBytes>
+    <Explanation>green led off</Explanation>
+    <InstructionBytes>62</InstructionBytes>
     <Order>4</Order>
   </Instruction>
   <Instruction>
     <ID>-8588075676437351585</ID>
-    <Explanation>
-    </Explanation>
-    <InstructionBytes>98</InstructionBytes>
+    <Explanation>green led on</Explanation>
+    <InstructionBytes>42</InstructionBytes>
     <Order>5</Order>
   </Instruction>
   <Instruction>
     <ID>-8588075673462031406</ID>
-    <Explanation>sfgdsfg</Explanation>
-    <InstructionBytes>fasdgd</InstructionBytes>
+    <Explanation>read led status</Explanation>
+    <InstructionBytes>73</InstructionBytes>
     <Order>6</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8587846880980060017</ID>
+    <Explanation>s2 button state</Explanation>
+    <InstructionBytes>63</InstructionBytes>
+    <Order>7</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586937852187071711</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>A</InstructionBytes>
+    <Order>8</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586937852102305062</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>a</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586937852043196199</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>B</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586937851963326248</ID>
+    <Explanation>
+    </Explanation>
+    <InstructionBytes>b</InstructionBytes>
+    <Order>11</Order>
   </Instruction>
 </DeviceInstructions>

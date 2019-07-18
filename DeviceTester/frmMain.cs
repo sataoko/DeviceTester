@@ -124,13 +124,9 @@ namespace DeviceTester
         private void frmMain_Load(object sender, EventArgs e)
         {
             GetBuildDate();
-
             SetConnectionType(ConnectionType.TCPIPStandard);
-
             LoadParameters(); //IP, port, ComPort params from Start.ini
-
             LoadPythonFiles();
-
             tbcDevice.SelectedIndex = 0;
             //tsbErrorMessageClear.Image = 
         }
@@ -368,7 +364,7 @@ namespace DeviceTester
             for (int i = 0; i < readSize; i++)
             {
                 //  txtReceivedBytesASCII.Text += bytesToShow[i].ToString() + _delimiter;
-                bytesInHex += bytesToShow[i].ToString() + " ";
+                bytesInHex += c.DecimalToHex(bytesToShow[i].ToString()) + " ";
                 dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), (char)bytesToShow[i], c.DecimalToHex(bytesToShow[i].ToString()));
             }
 
@@ -1026,122 +1022,7 @@ namespace DeviceTester
 
         #region SERIAL PORT METHODS
 
-        string RxString;
-
-        private void SetSerialPortParameters(string comPort, int baudRate, string parity, byte dataBits, string stopBits)
-        {
-            try
-            {
-                serialPort1.PortName = comPort;
-                serialPort1.BaudRate = baudRate;
-                serialPort1.DataBits = dataBits;
-
-                serialPort1.Parity = (System.IO.Ports.Parity)Enum.Parse(typeof(System.IO.Ports.Parity), parity, true);
-                serialPort1.StopBits = (System.IO.Ports.StopBits)Enum.Parse(typeof(System.IO.Ports.StopBits), stopBits, true);
-
-                lblComPortInfo.Text = serialPort1.PortName + "," + serialPort1.BaudRate + "," + serialPort1.Parity + "," + serialPort1.DataBits + "," + serialPort1.StopBits;
-            }
-            catch (Exception)
-            {
-                lblComPortInfo.Text = "Error in com port parameters.";
-            }
-
-
-            //if (parity == "None") serialPort1.Parity = System.IO.Ports.Parity.None;
-            //if (parity == "Odd") serialPort1.Parity = System.IO.Ports.Parity.Odd;
-            //if (parity == "Even") serialPort1.Parity = System.IO.Ports.Parity.Even;
-            //if (parity == "Mark") serialPort1.Parity = System.IO.Ports.Parity.Mark;
-            //if (parity == "Space") serialPort1.Parity = System.IO.Ports.Parity.Space;
-
-            //if (stopBits == "None") serialPort1.StopBits = System.IO.Ports.StopBits.None;
-            //if (stopBits == "One") serialPort1.StopBits = System.IO.Ports.StopBits.One;
-            //if (stopBits == "Two") serialPort1.StopBits = System.IO.Ports.StopBits.Two;
-            //if (stopBits == "OnePointFive") serialPort1.StopBits = System.IO.Ports.StopBits.OnePointFive;
-
-
-        }
-
-        private void tsbComPortSettings_Click(object sender, EventArgs e)
-        {
-            frmComPortSettings x = new frmComPortSettings();
-            if (x.ShowDialog() == DialogResult.OK)
-            {
-                SetSerialPortParameters(x.ComPort, x.BaudRate, x.Parity, x.DataBits, x.StopBits);
-            }
-        }
-
-        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtDelayTime.Text))
-                System.Threading.Thread.Sleep(Convert.ToInt32(txtDelayTime.Text));
-
-            RxString = serialPort1.ReadExisting();
-            //System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(DisplayText));
-            //this.Invoke(new EventHandler(DisplayText));
-            //x.Start();
-            DisplayText();
-
-            if (chkSaveLog.Checked)
-            {
-                //System.Threading.Thread.Sleep(1000);
-                SaveLog(txtReceivedBytesASCII.Text.Trim());
-
-            }
-        }
-
-        private delegate void DisplayTextDelegate();
-
-        private void DisplayText()
-        {
-            if (this.InvokeRequired)
-            {
-                DisplayTextDelegate d = new DisplayTextDelegate(DisplayText);
-                this.Invoke(d);
-            }
-            else
-            {
-                txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, RxString);
-                DynamicByteProvider b = new DynamicByteProvider(Encoding.ASCII.GetBytes(RxString));
-                hexReceivedBytes.ByteProvider = b;
-            }
-        }
-
-        private void tsbSendToComPort_Click(object sender, EventArgs e)
-        {
-            if (dgvInstructions.CurrentRow != null)
-            {
-                string bytes = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
-                byte[] bytesToSend = GetBytes(bytes);
-                serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
-            }
-        }
-
-        private void tsbConnectToComPort_Click(object sender, EventArgs e)
-        {
-            if (serialPort1.IsOpen)
-            {
-                serialPort1.Close();
-                tsbConnectToComPort.Text = "Connect";
-                tsbConnectToComPort.Image = Properties.Resources.red_light;
-                SetConnectionType(ConnectionType.TCPIPStandard);
-            }
-            else
-            {
-                try
-                {
-                    serialPort1.Open();
-                    tsbConnectToComPort.Text = "Disconnect";
-                    tsbConnectToComPort.Image = Properties.Resources.green_light;
-                    SetConnectionType(ConnectionType.ComPort);
-                }
-                catch (Exception exp)
-                {
-                    MessageBox.Show(exp.ToString());
-                }
-
-            }
-        }
-
+        
         #endregion
 
         #region COMMAND CONSOLE RELATED METHODS       

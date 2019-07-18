@@ -40,6 +40,10 @@ namespace DeviceTester
             sum += (lblBit6.Text == "1" ? 1 : 0) * Math.Pow(2, 6);
             sum += (lblBit7.Text == "1" ? 1 : 0) * Math.Pow(2, 7);
             txtDecimalValue.Text = sum.ToString();
+
+            //byte[] arr = BitConverter.GetBytes(sum);
+            //lblASCII.Text = Encoding.ASCII.GetString(arr);
+            txtASCII.Text = Convert.ToChar((int)sum).ToString();
         }
 
         public BitDisplay()
@@ -57,6 +61,89 @@ namespace DeviceTester
             Label label = sender as Label;
             if (label.Text == "0") label.Text = "1"; else label.Text = "0";
             CalculateBits();
+        }
+
+        private void SetValue(byte value)
+        {
+            try
+            {
+                System.Collections.BitArray myBA = new System.Collections.BitArray(BitConverter.GetBytes(value).ToArray());
+
+                lblBit0.Text = GetBool(myBA.Get(0));
+                lblBit1.Text = GetBool(myBA.Get(1));
+                lblBit2.Text = GetBool(myBA.Get(2));
+                lblBit3.Text = GetBool(myBA.Get(3));
+                lblBit4.Text = GetBool(myBA.Get(4));
+                lblBit5.Text = GetBool(myBA.Get(5));
+                lblBit6.Text = GetBool(myBA.Get(6));
+                lblBit7.Text = GetBool(myBA.Get(7));
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        private string GetBool(bool value)
+        {
+            if (value) return "1"; else return "0";
+        }
+        private void TxtDecimalValue_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int b = Convert.ToInt16(txtDecimalValue.Text);
+                if (b > 255)
+                {
+                    txtDecimalValue.Text = "255";
+                }
+                if (b < 0) txtDecimalValue.Text = "0";
+            }
+            catch (Exception)
+            {
+                txtDecimalValue.Text = "0";
+            }
+        }
+        private void TxtDecimalValue_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtDecimalValue.Text))
+                    SetValue(0);
+                else
+                {
+                    int b = Convert.ToInt16(txtDecimalValue.Text);
+                    if ((b > 255) || (b < 0)) b = 0;
+                    SetValue((byte)b);
+                }
+            }
+            catch (Exception exc)
+            {
+
+            }
+        }
+
+        private void TxtASCII_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtASCII.Text))
+            {
+                SetValue(0);
+                txtASCII.Text = "0";
+            }
+            else
+            {
+                try
+                {
+                    char c = Convert.ToChar(txtASCII.Text);
+                    int i = Convert.ToInt16(c);
+                    SetValue((byte)i);
+                    txtDecimalValue.Text = i.ToString();
+                }
+                catch (Exception)
+                {
+                }
+            }
         }
     }
 }

@@ -63,6 +63,8 @@ namespace DeviceTester
             stopWatch.Start();
             try
             {
+                _serialPortBuffer.Clear();
+                _serialPortPacketCount = 0;
                 if (serialPort1.IsOpen)
                     serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
             }

@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DeviceTester.TCPConnection.set_CommunicationTimeOut(Int32 value) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\App_Code\TCPConnection.cs:line 30
+   at DeviceTester.frmMain.SendViaTCPStandard(Byte[] bytesToSend) in C:\YandexDisk\__SOFTWARE\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMainSenderMethods.cs:line 135
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Use commands: A,a,B,b,s,c.
+Led 1 Off.
+Led 1 O
+Led 1 On.Led 1 O
+Led 1 On.
+Led 1 On.
+Led 1 On.
+L
+Led 1L
+Led 1 On.Led 1L
+Led 1 On.Led 1 On.
+Use commands: A,a,B,b,s,c.
+Led 1 Off.

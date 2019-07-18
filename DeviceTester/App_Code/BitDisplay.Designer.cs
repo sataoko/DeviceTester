@@ -45,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDecimalValue = new System.Windows.Forms.TextBox();
+            this.txtASCII = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblBit7
@@ -219,14 +220,28 @@
             // 
             this.txtDecimalValue.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtDecimalValue.Location = new System.Drawing.Point(258, 9);
+            this.txtDecimalValue.MaxLength = 3;
             this.txtDecimalValue.Name = "txtDecimalValue";
             this.txtDecimalValue.Size = new System.Drawing.Size(71, 33);
             this.txtDecimalValue.TabIndex = 2;
+            this.txtDecimalValue.TextChanged += new System.EventHandler(this.TxtDecimalValue_TextChanged);
+            this.txtDecimalValue.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtDecimalValue_KeyUp);
+            // 
+            // txtASCII
+            // 
+            this.txtASCII.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtASCII.Location = new System.Drawing.Point(335, 9);
+            this.txtASCII.MaxLength = 1;
+            this.txtASCII.Name = "txtASCII";
+            this.txtASCII.Size = new System.Drawing.Size(43, 33);
+            this.txtASCII.TabIndex = 2;
+            this.txtASCII.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtASCII_KeyUp);
             // 
             // BitDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtASCII);
             this.Controls.Add(this.txtDecimalValue);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -245,7 +260,7 @@
             this.Controls.Add(this.lblBit6);
             this.Controls.Add(this.lblBit7);
             this.Name = "BitDisplay";
-            this.Size = new System.Drawing.Size(341, 49);
+            this.Size = new System.Drawing.Size(421, 49);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +285,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDecimalValue;
+        private System.Windows.Forms.TextBox txtASCII;
     }
 }

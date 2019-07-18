@@ -3,7 +3,7 @@
   <DeviceInfo>
     <DeviceName>TRX-WS</DeviceName>
     <Explanation>Transceiver Way Side</Explanation>
-    <IP>85.99.233.199</IP>
+    <IP>85.99.233.128</IP>
     <Port>4001</Port>
     <CheckSumType>CheckSum,2 Byte</CheckSumType>
     <InstructionStructure>xxx</InstructionStructure>
@@ -45,22 +45,40 @@
     <Order>6</Order>
   </Instruction>
   <Instruction>
-    <ID>-8586607997369244366</ID>
-    <Explanation>get conditions</Explanation>
-    <InstructionBytes>01 02 00 43 47 17 E1 94</InstructionBytes>
+    <ID>-8586608828288157646</ID>
+    <Explanation>CONDITIONS GET 02</Explanation>
+    <InstructionBytes>01 03 00 43 47 02 17 2F 7D</InstructionBytes>
     <Order>7</Order>
   </Instruction>
   <Instruction>
-    <ID>-8586606798291569694</ID>
-    <Explanation>get actions</Explanation>
+    <ID>-8586608823901985469</ID>
+    <Explanation>ACTIONS GET</Explanation>
     <InstructionBytes>01 02 00 41 47 17 59 21</InstructionBytes>
     <Order>8</Order>
   </Instruction>
   <Instruction>
-    <ID>-8586606343023218032</ID>
+    <ID>-8586606326916889537</ID>
+    <Explanation>TYPE SET 1</Explanation>
+    <InstructionBytes>01 03 00 54 53 01 17 33 25</InstructionBytes>
+    <Order>9</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586596774480254213</ID>
+    <Explanation> TYPE SET 2</Explanation>
+    <InstructionBytes>01 03 00 54 53 02 17 5B 0F</InstructionBytes>
+    <Order>10</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586596766977107350</ID>
+    <Explanation>TYPE GET</Explanation>
+    <InstructionBytes>01 02 00 54 47 17 71 9D</InstructionBytes>
+    <Order>11</Order>
+  </Instruction>
+  <Instruction>
+    <ID>-8586595961420570240</ID>
     <Explanation>
     </Explanation>
-    <InstructionBytes>01 0E 00 41 53 01 01 01 05 01 05 05 02 05 05 03 05 17 F9 0B</InstructionBytes>
-    <Order>9</Order>
+    <InstructionBytes>01 03 00 43 47 03 17 F7 64</InstructionBytes>
+    <Order>12</Order>
   </Instruction>
 </DeviceInstructions>

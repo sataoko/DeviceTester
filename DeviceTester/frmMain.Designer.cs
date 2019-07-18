@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCurrentXML = new System.Windows.Forms.ToolStripStatusLabel();
@@ -174,8 +174,6 @@
             this.tsbMoveTimerRowUp = new System.Windows.Forms.ToolStripButton();
             this.tsbMoveTimerRowDown = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chronometer1 = new DeviceTester.Chronometer();
-            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
             this.tlsTimerCommandsControl = new System.Windows.Forms.ToolStrip();
             this.tsbStartTimer = new System.Windows.Forms.ToolStripButton();
             this.tsbStopTimer2 = new System.Windows.Forms.ToolStripButton();
@@ -184,7 +182,6 @@
             this.tsbSetTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tsbToogleCounterTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tpConsole = new System.Windows.Forms.TabPage();
-            this.shellControl1 = new DeviceTester.ShellControl();
             this.pnlConsoleBottom = new System.Windows.Forms.Panel();
             this.lnkSelectDOSCommand = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -202,7 +199,6 @@
             this.ctxHexBoxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.miCopyHexBoxToClipboard = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlBitsHolder = new System.Windows.Forms.Panel();
-            this.bitDisplay1 = new DeviceTester.BitDisplay();
             this.lblByteNo = new System.Windows.Forms.Label();
             this.txtSentCommand = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -214,7 +210,6 @@
             this.ASCII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBits = new System.Windows.Forms.Panel();
-            this.bitDisplay2 = new DeviceTester.BitDisplay();
             this.lblBits = new System.Windows.Forms.Label();
             this.tlsIncomingBytes = new System.Windows.Forms.ToolStrip();
             this.tsbClearIncomingBytes = new System.Windows.Forms.ToolStripButton();
@@ -263,6 +258,11 @@
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
+            this.chronometer1 = new DeviceTester.Chronometer();
+            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
+            this.shellControl1 = new DeviceTester.ShellControl();
+            this.bitDisplay1 = new DeviceTester.BitDisplay();
+            this.bitDisplay2 = new DeviceTester.BitDisplay();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.cmsInstructionsGrid.SuspendLayout();
@@ -898,7 +898,7 @@
             this.splitContainerMain.Panel2.Controls.Add(this.tbcTools);
             this.splitContainerMain.Panel2.Controls.Add(this.tlsMain2);
             this.splitContainerMain.Size = new System.Drawing.Size(1084, 610);
-            this.splitContainerMain.SplitterDistance = 500;
+            this.splitContainerMain.SplitterDistance = 499;
             this.splitContainerMain.TabIndex = 2;
             // 
             // pnlInstructions
@@ -908,7 +908,7 @@
             this.pnlInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInstructions.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructions.Name = "pnlInstructions";
-            this.pnlInstructions.Size = new System.Drawing.Size(500, 610);
+            this.pnlInstructions.Size = new System.Drawing.Size(499, 610);
             this.pnlInstructions.TabIndex = 2;
             // 
             // tbcDevice
@@ -924,7 +924,7 @@
             this.tbcDevice.Location = new System.Drawing.Point(0, 5);
             this.tbcDevice.Name = "tbcDevice";
             this.tbcDevice.SelectedIndex = 0;
-            this.tbcDevice.Size = new System.Drawing.Size(500, 605);
+            this.tbcDevice.Size = new System.Drawing.Size(499, 605);
             this.tbcDevice.TabIndex = 0;
             // 
             // tpDeviceCommands
@@ -936,34 +936,34 @@
             this.tpDeviceCommands.Location = new System.Drawing.Point(4, 29);
             this.tpDeviceCommands.Name = "tpDeviceCommands";
             this.tpDeviceCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeviceCommands.Size = new System.Drawing.Size(492, 572);
+            this.tpDeviceCommands.Size = new System.Drawing.Size(491, 572);
             this.tpDeviceCommands.TabIndex = 0;
             this.tpDeviceCommands.Text = "Device Commands";
             this.tpDeviceCommands.UseVisualStyleBackColor = true;
             // 
             // dgvInstructions
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgvInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgvInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInstructions.BackgroundColor = System.Drawing.Color.White;
             this.dgvInstructions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInstructions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvInstructions.ColumnHeadersHeight = 30;
             this.dgvInstructions.ContextMenuStrip = this.cmsInstructionsGrid;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInstructions.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInstructions.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInstructions.Location = new System.Drawing.Point(3, 32);
             this.dgvInstructions.Name = "dgvInstructions";
             this.dgvInstructions.RowHeadersVisible = false;
             this.dgvInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInstructions.Size = new System.Drawing.Size(486, 462);
+            this.dgvInstructions.Size = new System.Drawing.Size(485, 462);
             this.dgvInstructions.TabIndex = 3;
             this.dgvInstructions.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvInstructions_CellBeginEdit);
             this.dgvInstructions.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInstructions_CellEndEdit);
@@ -975,7 +975,7 @@
             this.pnlDeviceInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDeviceInfo.Location = new System.Drawing.Point(3, 3);
             this.pnlDeviceInfo.Name = "pnlDeviceInfo";
-            this.pnlDeviceInfo.Size = new System.Drawing.Size(486, 29);
+            this.pnlDeviceInfo.Size = new System.Drawing.Size(485, 29);
             this.pnlDeviceInfo.TabIndex = 5;
             // 
             // tlsInstructionsGrid
@@ -993,7 +993,7 @@
             this.tsbConvertToHex});
             this.tlsInstructionsGrid.Location = new System.Drawing.Point(0, 4);
             this.tlsInstructionsGrid.Name = "tlsInstructionsGrid";
-            this.tlsInstructionsGrid.Size = new System.Drawing.Size(486, 25);
+            this.tlsInstructionsGrid.Size = new System.Drawing.Size(485, 25);
             this.tlsInstructionsGrid.TabIndex = 15;
             this.tlsInstructionsGrid.Text = "toolStrip3";
             // 
@@ -1071,7 +1071,7 @@
             this.tsbConvertToHex.Image = ((System.Drawing.Image)(resources.GetObject("tsbConvertToHex.Image")));
             this.tsbConvertToHex.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConvertToHex.Name = "tsbConvertToHex";
-            this.tsbConvertToHex.Size = new System.Drawing.Size(92, 22);
+            this.tsbConvertToHex.Size = new System.Drawing.Size(92, 19);
             this.tsbConvertToHex.Text = "Convert To Hex";
             this.tsbConvertToHex.Click += new System.EventHandler(this.tsbConvertToHex_Click);
             // 
@@ -1092,14 +1092,14 @@
             this.pnlInstructionsBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlInstructionsBottom.Location = new System.Drawing.Point(3, 494);
             this.pnlInstructionsBottom.Name = "pnlInstructionsBottom";
-            this.pnlInstructionsBottom.Size = new System.Drawing.Size(486, 75);
+            this.pnlInstructionsBottom.Size = new System.Drawing.Size(485, 75);
             this.pnlInstructionsBottom.TabIndex = 6;
             // 
             // chkUseCheckSum
             // 
             this.chkUseCheckSum.AutoSize = true;
             this.chkUseCheckSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chkUseCheckSum.Location = new System.Drawing.Point(410, 12);
+            this.chkUseCheckSum.Location = new System.Drawing.Point(384, 13);
             this.chkUseCheckSum.Name = "chkUseCheckSum";
             this.chkUseCheckSum.Size = new System.Drawing.Size(99, 17);
             this.chkUseCheckSum.TabIndex = 2;
@@ -1195,7 +1195,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(407, 34);
+            this.label9.Location = new System.Drawing.Point(381, 35);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 28;
@@ -1205,7 +1205,7 @@
             // 
             this.txtEndByte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEndByte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndByte.Location = new System.Drawing.Point(460, 34);
+            this.txtEndByte.Location = new System.Drawing.Point(437, 35);
             this.txtEndByte.Name = "txtEndByte";
             this.txtEndByte.Size = new System.Drawing.Size(28, 13);
             this.txtEndByte.TabIndex = 27;
@@ -1228,7 +1228,7 @@
             this.tpDeviceInfo.Location = new System.Drawing.Point(4, 29);
             this.tpDeviceInfo.Name = "tpDeviceInfo";
             this.tpDeviceInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeviceInfo.Size = new System.Drawing.Size(531, 572);
+            this.tpDeviceInfo.Size = new System.Drawing.Size(491, 572);
             this.tpDeviceInfo.TabIndex = 1;
             this.tpDeviceInfo.Text = "Device Info";
             this.tpDeviceInfo.UseVisualStyleBackColor = true;
@@ -1263,7 +1263,7 @@
             this.pnlDeviceInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDeviceInformation.Location = new System.Drawing.Point(3, 3);
             this.pnlDeviceInformation.Name = "pnlDeviceInformation";
-            this.pnlDeviceInformation.Size = new System.Drawing.Size(525, 24);
+            this.pnlDeviceInformation.Size = new System.Drawing.Size(485, 24);
             this.pnlDeviceInformation.TabIndex = 22;
             // 
             // lblDeviceInformationTitle
@@ -1363,7 +1363,7 @@
             this.tpCommandWorkbench.Controls.Add(this.tlsCommandWorkbench);
             this.tpCommandWorkbench.Location = new System.Drawing.Point(4, 29);
             this.tpCommandWorkbench.Name = "tpCommandWorkbench";
-            this.tpCommandWorkbench.Size = new System.Drawing.Size(531, 572);
+            this.tpCommandWorkbench.Size = new System.Drawing.Size(491, 572);
             this.tpCommandWorkbench.TabIndex = 4;
             this.tpCommandWorkbench.Text = "Command Workbench";
             this.tpCommandWorkbench.UseVisualStyleBackColor = true;
@@ -1378,7 +1378,7 @@
             this.txtWorkbench.Multiline = true;
             this.txtWorkbench.Name = "txtWorkbench";
             this.txtWorkbench.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWorkbench.Size = new System.Drawing.Size(531, 480);
+            this.txtWorkbench.Size = new System.Drawing.Size(491, 480);
             this.txtWorkbench.TabIndex = 18;
             this.txtWorkbench.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtWorkbench_MouseClick);
             // 
@@ -1389,7 +1389,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(531, 67);
+            this.panel5.Size = new System.Drawing.Size(491, 67);
             this.panel5.TabIndex = 17;
             // 
             // txtWorkbenchCurrentCommand
@@ -1408,7 +1408,7 @@
             this.tsbSendFromWorkbench});
             this.tlsCommandWorkbenchSend.Location = new System.Drawing.Point(0, 42);
             this.tlsCommandWorkbenchSend.Name = "tlsCommandWorkbenchSend";
-            this.tlsCommandWorkbenchSend.Size = new System.Drawing.Size(531, 25);
+            this.tlsCommandWorkbenchSend.Size = new System.Drawing.Size(491, 25);
             this.tlsCommandWorkbenchSend.TabIndex = 5;
             this.tlsCommandWorkbenchSend.Text = "toolStrip7";
             // 
@@ -1438,7 +1438,7 @@
             this.toolStripSeparator7});
             this.tlsCommandWorkbench.Location = new System.Drawing.Point(0, 0);
             this.tlsCommandWorkbench.Name = "tlsCommandWorkbench";
-            this.tlsCommandWorkbench.Size = new System.Drawing.Size(531, 25);
+            this.tlsCommandWorkbench.Size = new System.Drawing.Size(491, 25);
             this.tlsCommandWorkbench.TabIndex = 16;
             this.tlsCommandWorkbench.Text = "toolStrip6";
             // 
@@ -1506,15 +1506,15 @@
             this.tpTimerCommandList.Location = new System.Drawing.Point(4, 29);
             this.tpTimerCommandList.Name = "tpTimerCommandList";
             this.tpTimerCommandList.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTimerCommandList.Size = new System.Drawing.Size(531, 572);
+            this.tpTimerCommandList.Size = new System.Drawing.Size(491, 572);
             this.tpTimerCommandList.TabIndex = 5;
             this.tpTimerCommandList.Text = "Timer Command List";
             this.tpTimerCommandList.UseVisualStyleBackColor = true;
             // 
             // dgvTimerInstructions
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvTimerInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvTimerInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTimerInstructions.BackgroundColor = System.Drawing.Color.White;
             this.dgvTimerInstructions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvTimerInstructions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -1524,20 +1524,20 @@
             this.InstructionBytes,
             this.Explanation});
             this.dgvTimerInstructions.ContextMenuStrip = this.cmsInstructionsGrid;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTimerInstructions.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTimerInstructions.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTimerInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTimerInstructions.Location = new System.Drawing.Point(3, 28);
             this.dgvTimerInstructions.Name = "dgvTimerInstructions";
             this.dgvTimerInstructions.RowHeadersVisible = false;
             this.dgvTimerInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTimerInstructions.Size = new System.Drawing.Size(525, 441);
+            this.dgvTimerInstructions.Size = new System.Drawing.Size(485, 441);
             this.dgvTimerInstructions.TabIndex = 9;
             // 
             // InstructionBytes
@@ -1560,7 +1560,7 @@
             this.tsbMoveTimerRowDown});
             this.tlsTimerCommandList.Location = new System.Drawing.Point(3, 3);
             this.tlsTimerCommandList.Name = "tlsTimerCommandList";
-            this.tlsTimerCommandList.Size = new System.Drawing.Size(525, 25);
+            this.tlsTimerCommandList.Size = new System.Drawing.Size(485, 25);
             this.tlsTimerCommandList.TabIndex = 8;
             this.tlsTimerCommandList.Text = "toolStrip8";
             // 
@@ -1603,32 +1603,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(3, 469);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 100);
+            this.panel1.Size = new System.Drawing.Size(485, 100);
             this.panel1.TabIndex = 7;
-            // 
-            // chronometer1
-            // 
-            this.chronometer1.Location = new System.Drawing.Point(164, 27);
-            this.chronometer1.Name = "chronometer1";
-            this.chronometer1.Size = new System.Drawing.Size(294, 64);
-            this.chronometer1.TabIndex = 30;
-            // 
-            // sevenSegmentArray2
-            // 
-            this.sevenSegmentArray2.ArrayCount = 2;
-            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
-            this.sevenSegmentArray2.DecimalShow = false;
-            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
-            this.sevenSegmentArray2.ElementWidth = 10;
-            this.sevenSegmentArray2.ItalicFactor = 0F;
-            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
-            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
-            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
-            this.sevenSegmentArray2.TabIndex = 29;
-            this.sevenSegmentArray2.TabStop = false;
-            this.sevenSegmentArray2.Value = null;
             // 
             // tlsTimerCommandsControl
             // 
@@ -1641,7 +1617,7 @@
             this.tsbToogleCounterTimerInterval});
             this.tlsTimerCommandsControl.Location = new System.Drawing.Point(0, 0);
             this.tlsTimerCommandsControl.Name = "tlsTimerCommandsControl";
-            this.tlsTimerCommandsControl.Size = new System.Drawing.Size(525, 25);
+            this.tlsTimerCommandsControl.Size = new System.Drawing.Size(485, 25);
             this.tlsTimerCommandsControl.TabIndex = 4;
             this.tlsTimerCommandsControl.Text = "toolStrip8";
             // 
@@ -1704,24 +1680,10 @@
             this.tpConsole.Controls.Add(this.panel4);
             this.tpConsole.Location = new System.Drawing.Point(4, 29);
             this.tpConsole.Name = "tpConsole";
-            this.tpConsole.Size = new System.Drawing.Size(531, 572);
+            this.tpConsole.Size = new System.Drawing.Size(491, 572);
             this.tpConsole.TabIndex = 3;
             this.tpConsole.Text = "Console";
             this.tpConsole.UseVisualStyleBackColor = true;
-            // 
-            // shellControl1
-            // 
-            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.Location = new System.Drawing.Point(0, 24);
-            this.shellControl1.Name = "shellControl1";
-            this.shellControl1.Prompt = ">";
-            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
-            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
-            this.shellControl1.Size = new System.Drawing.Size(531, 520);
-            this.shellControl1.TabIndex = 26;
-            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
             // 
             // pnlConsoleBottom
             // 
@@ -1729,7 +1691,7 @@
             this.pnlConsoleBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlConsoleBottom.Location = new System.Drawing.Point(0, 544);
             this.pnlConsoleBottom.Name = "pnlConsoleBottom";
-            this.pnlConsoleBottom.Size = new System.Drawing.Size(531, 28);
+            this.pnlConsoleBottom.Size = new System.Drawing.Size(491, 28);
             this.pnlConsoleBottom.TabIndex = 25;
             // 
             // lnkSelectDOSCommand
@@ -1754,7 +1716,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(531, 24);
+            this.panel4.Size = new System.Drawing.Size(491, 24);
             this.panel4.TabIndex = 23;
             // 
             // rbConsoleIsInASCIIMode
@@ -1809,7 +1771,7 @@
             this.pnlInstructionsTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInstructionsTop.Location = new System.Drawing.Point(0, 0);
             this.pnlInstructionsTop.Name = "pnlInstructionsTop";
-            this.pnlInstructionsTop.Size = new System.Drawing.Size(500, 5);
+            this.pnlInstructionsTop.Size = new System.Drawing.Size(499, 5);
             this.pnlInstructionsTop.TabIndex = 1;
             // 
             // tbcTools
@@ -1822,7 +1784,7 @@
             this.tbcTools.Location = new System.Drawing.Point(0, 25);
             this.tbcTools.Name = "tbcTools";
             this.tbcTools.SelectedIndex = 0;
-            this.tbcTools.Size = new System.Drawing.Size(580, 585);
+            this.tbcTools.Size = new System.Drawing.Size(581, 585);
             this.tbcTools.TabIndex = 16;
             // 
             // tpIncomingBytes
@@ -1833,7 +1795,7 @@
             this.tpIncomingBytes.Location = new System.Drawing.Point(4, 22);
             this.tpIncomingBytes.Name = "tpIncomingBytes";
             this.tpIncomingBytes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIncomingBytes.Size = new System.Drawing.Size(572, 559);
+            this.tpIncomingBytes.Size = new System.Drawing.Size(573, 559);
             this.tpIncomingBytes.TabIndex = 0;
             this.tpIncomingBytes.Text = "Incoming Bytes";
             this.tpIncomingBytes.UseVisualStyleBackColor = true;
@@ -1844,11 +1806,11 @@
             this.chkSaveLog.AutoSize = true;
             this.chkSaveLog.Checked = true;
             this.chkSaveLog.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSaveLog.Location = new System.Drawing.Point(431, 536);
+            this.chkSaveLog.Location = new System.Drawing.Point(491, 536);
             this.chkSaveLog.Name = "chkSaveLog";
-            this.chkSaveLog.Size = new System.Drawing.Size(131, 17);
+            this.chkSaveLog.Size = new System.Drawing.Size(72, 17);
             this.chkSaveLog.TabIndex = 33;
-            this.chkSaveLog.Text = "Save Log To Text File";
+            this.chkSaveLog.Text = "Save Log";
             this.chkSaveLog.UseVisualStyleBackColor = true;
             // 
             // tbcIncomingBytes
@@ -1859,7 +1821,7 @@
             this.tbcIncomingBytes.Location = new System.Drawing.Point(3, 3);
             this.tbcIncomingBytes.Name = "tbcIncomingBytes";
             this.tbcIncomingBytes.SelectedIndex = 0;
-            this.tbcIncomingBytes.Size = new System.Drawing.Size(566, 528);
+            this.tbcIncomingBytes.Size = new System.Drawing.Size(567, 528);
             this.tbcIncomingBytes.TabIndex = 0;
             // 
             // tpTextView
@@ -1871,7 +1833,7 @@
             this.tpTextView.Location = new System.Drawing.Point(4, 22);
             this.tpTextView.Name = "tpTextView";
             this.tpTextView.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTextView.Size = new System.Drawing.Size(558, 502);
+            this.tpTextView.Size = new System.Drawing.Size(559, 502);
             this.tpTextView.TabIndex = 0;
             this.tpTextView.Text = "Text View";
             this.tpTextView.UseVisualStyleBackColor = true;
@@ -1898,7 +1860,7 @@
             this.hexReceivedBytes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.hexReceivedBytes.Name = "hexReceivedBytes";
             this.hexReceivedBytes.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexReceivedBytes.Size = new System.Drawing.Size(552, 151);
+            this.hexReceivedBytes.Size = new System.Drawing.Size(553, 151);
             this.hexReceivedBytes.StringViewVisible = true;
             this.hexReceivedBytes.TabIndex = 33;
             this.hexReceivedBytes.UseFixedBytesPerLine = true;
@@ -1926,15 +1888,8 @@
             this.pnlBitsHolder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBitsHolder.Location = new System.Drawing.Point(3, 179);
             this.pnlBitsHolder.Name = "pnlBitsHolder";
-            this.pnlBitsHolder.Size = new System.Drawing.Size(552, 64);
+            this.pnlBitsHolder.Size = new System.Drawing.Size(553, 64);
             this.pnlBitsHolder.TabIndex = 34;
-            // 
-            // bitDisplay1
-            // 
-            this.bitDisplay1.Location = new System.Drawing.Point(110, 6);
-            this.bitDisplay1.Name = "bitDisplay1";
-            this.bitDisplay1.Size = new System.Drawing.Size(334, 49);
-            this.bitDisplay1.TabIndex = 7;
             // 
             // lblByteNo
             // 
@@ -1952,7 +1907,7 @@
             this.txtSentCommand.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSentCommand.Location = new System.Drawing.Point(3, 3);
             this.txtSentCommand.Name = "txtSentCommand";
-            this.txtSentCommand.Size = new System.Drawing.Size(552, 25);
+            this.txtSentCommand.Size = new System.Drawing.Size(553, 25);
             this.txtSentCommand.TabIndex = 32;
             // 
             // panel3
@@ -1961,7 +1916,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(3, 243);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(552, 256);
+            this.panel3.Size = new System.Drawing.Size(553, 256);
             this.panel3.TabIndex = 30;
             // 
             // txtReceivedBytesASCII
@@ -1974,7 +1929,7 @@
             this.txtReceivedBytesASCII.Multiline = true;
             this.txtReceivedBytesASCII.Name = "txtReceivedBytesASCII";
             this.txtReceivedBytesASCII.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(552, 256);
+            this.txtReceivedBytesASCII.Size = new System.Drawing.Size(553, 256);
             this.txtReceivedBytesASCII.TabIndex = 29;
             // 
             // tpGridView
@@ -1984,15 +1939,15 @@
             this.tpGridView.Location = new System.Drawing.Point(4, 22);
             this.tpGridView.Name = "tpGridView";
             this.tpGridView.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGridView.Size = new System.Drawing.Size(569, 502);
+            this.tpGridView.Size = new System.Drawing.Size(559, 502);
             this.tpGridView.TabIndex = 1;
             this.tpGridView.Text = "Grid View";
             this.tpGridView.UseVisualStyleBackColor = true;
             // 
             // dgvIncomingBytes
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgvIncomingBytes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgvIncomingBytes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvIncomingBytes.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvIncomingBytes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvIncomingBytes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -2002,28 +1957,28 @@
             this.Decimal,
             this.ASCII,
             this.HEX});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIncomingBytes.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIncomingBytes.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvIncomingBytes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvIncomingBytes.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvIncomingBytes.Location = new System.Drawing.Point(3, 3);
             this.dgvIncomingBytes.Name = "dgvIncomingBytes";
             this.dgvIncomingBytes.RowHeadersVisible = false;
             this.dgvIncomingBytes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIncomingBytes.Size = new System.Drawing.Size(563, 414);
+            this.dgvIncomingBytes.Size = new System.Drawing.Size(553, 414);
             this.dgvIncomingBytes.TabIndex = 0;
             this.dgvIncomingBytes.SelectionChanged += new System.EventHandler(this.dgvIncomingBytes_SelectionChanged);
             // 
             // ByteNo
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ByteNo.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ByteNo.DefaultCellStyle = dataGridViewCellStyle6;
             this.ByteNo.HeaderText = "Byte No";
             this.ByteNo.Name = "ByteNo";
             this.ByteNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2031,24 +1986,24 @@
             // 
             // Decimal
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Decimal.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Decimal.DefaultCellStyle = dataGridViewCellStyle7;
             this.Decimal.HeaderText = "Decimal";
             this.Decimal.Name = "Decimal";
             this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ASCII
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ASCII.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ASCII.DefaultCellStyle = dataGridViewCellStyle8;
             this.ASCII.HeaderText = "ASCII";
             this.ASCII.Name = "ASCII";
             this.ASCII.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // HEX
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.HEX.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.HEX.DefaultCellStyle = dataGridViewCellStyle9;
             this.HEX.HeaderText = "HEX";
             this.HEX.Name = "HEX";
             this.HEX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2060,15 +2015,8 @@
             this.pnlBits.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBits.Location = new System.Drawing.Point(3, 417);
             this.pnlBits.Name = "pnlBits";
-            this.pnlBits.Size = new System.Drawing.Size(563, 82);
+            this.pnlBits.Size = new System.Drawing.Size(553, 82);
             this.pnlBits.TabIndex = 1;
-            // 
-            // bitDisplay2
-            // 
-            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
-            this.bitDisplay2.Name = "bitDisplay2";
-            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
-            this.bitDisplay2.TabIndex = 3;
             // 
             // lblBits
             // 
@@ -2091,7 +2039,7 @@
             this.tsbShowLogs});
             this.tlsIncomingBytes.Location = new System.Drawing.Point(3, 531);
             this.tlsIncomingBytes.Name = "tlsIncomingBytes";
-            this.tlsIncomingBytes.Size = new System.Drawing.Size(566, 25);
+            this.tlsIncomingBytes.Size = new System.Drawing.Size(567, 25);
             this.tlsIncomingBytes.TabIndex = 0;
             this.tlsIncomingBytes.Text = "toolStrip1";
             // 
@@ -2162,7 +2110,7 @@
             this.tpTools.Location = new System.Drawing.Point(4, 22);
             this.tpTools.Name = "tpTools";
             this.tpTools.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTools.Size = new System.Drawing.Size(583, 559);
+            this.tpTools.Size = new System.Drawing.Size(573, 559);
             this.tpTools.TabIndex = 1;
             this.tpTools.Text = "Checksum Calculator";
             this.tpTools.UseVisualStyleBackColor = true;
@@ -2262,8 +2210,8 @@
             // 
             // dgvCheckSums
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvCheckSums.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCheckSums.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCheckSums.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCheckSums.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCheckSums.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -2273,14 +2221,14 @@
             this.dgvCheckSums.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CheckSumType,
             this.ChecksumValue});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCheckSums.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCheckSums.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCheckSums.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvCheckSums.Location = new System.Drawing.Point(9, 118);
             this.dgvCheckSums.Name = "dgvCheckSums";
@@ -2399,7 +2347,7 @@
             this.tpConvertor.Location = new System.Drawing.Point(4, 22);
             this.tpConvertor.Name = "tpConvertor";
             this.tpConvertor.Padding = new System.Windows.Forms.Padding(3);
-            this.tpConvertor.Size = new System.Drawing.Size(583, 559);
+            this.tpConvertor.Size = new System.Drawing.Size(573, 559);
             this.tpConvertor.TabIndex = 2;
             this.tpConvertor.Text = "Convertor";
             this.tpConvertor.UseVisualStyleBackColor = true;
@@ -2558,7 +2506,7 @@
             this.tpErrorMessages.Location = new System.Drawing.Point(4, 22);
             this.tpErrorMessages.Name = "tpErrorMessages";
             this.tpErrorMessages.Padding = new System.Windows.Forms.Padding(3);
-            this.tpErrorMessages.Size = new System.Drawing.Size(583, 559);
+            this.tpErrorMessages.Size = new System.Drawing.Size(573, 559);
             this.tpErrorMessages.TabIndex = 3;
             this.tpErrorMessages.Text = "Error Messages";
             this.tpErrorMessages.UseVisualStyleBackColor = true;
@@ -2571,7 +2519,7 @@
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(577, 528);
+            this.txtConsole.Size = new System.Drawing.Size(567, 528);
             this.txtConsole.TabIndex = 0;
             // 
             // toolStripErrorMessages
@@ -2580,7 +2528,7 @@
             this.tsbClearErrorMessages});
             this.toolStripErrorMessages.Location = new System.Drawing.Point(3, 3);
             this.toolStripErrorMessages.Name = "toolStripErrorMessages";
-            this.toolStripErrorMessages.Size = new System.Drawing.Size(577, 25);
+            this.toolStripErrorMessages.Size = new System.Drawing.Size(567, 25);
             this.toolStripErrorMessages.TabIndex = 1;
             this.toolStripErrorMessages.Text = "toolStrip1";
             // 
@@ -2601,7 +2549,7 @@
             this.tsbConnectToComPort});
             this.tlsMain2.Location = new System.Drawing.Point(0, 0);
             this.tlsMain2.Name = "tlsMain2";
-            this.tlsMain2.Size = new System.Drawing.Size(580, 25);
+            this.tlsMain2.Size = new System.Drawing.Size(581, 25);
             this.tlsMain2.TabIndex = 3;
             this.tlsMain2.Text = "toolStrip4";
             // 
@@ -2622,6 +2570,58 @@
             this.tsbConnectToComPort.Size = new System.Drawing.Size(72, 22);
             this.tsbConnectToComPort.Text = "Connect";
             this.tsbConnectToComPort.Click += new System.EventHandler(this.tsbConnectToComPort_Click);
+            // 
+            // chronometer1
+            // 
+            this.chronometer1.Location = new System.Drawing.Point(164, 27);
+            this.chronometer1.Name = "chronometer1";
+            this.chronometer1.Size = new System.Drawing.Size(294, 64);
+            this.chronometer1.TabIndex = 30;
+            // 
+            // sevenSegmentArray2
+            // 
+            this.sevenSegmentArray2.ArrayCount = 2;
+            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
+            this.sevenSegmentArray2.DecimalShow = false;
+            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
+            this.sevenSegmentArray2.ElementWidth = 10;
+            this.sevenSegmentArray2.ItalicFactor = 0F;
+            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
+            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
+            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
+            this.sevenSegmentArray2.TabIndex = 29;
+            this.sevenSegmentArray2.TabStop = false;
+            this.sevenSegmentArray2.Value = null;
+            // 
+            // shellControl1
+            // 
+            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.Location = new System.Drawing.Point(0, 24);
+            this.shellControl1.Name = "shellControl1";
+            this.shellControl1.Prompt = ">";
+            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
+            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
+            this.shellControl1.Size = new System.Drawing.Size(491, 520);
+            this.shellControl1.TabIndex = 26;
+            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
+            // 
+            // bitDisplay1
+            // 
+            this.bitDisplay1.Location = new System.Drawing.Point(110, 6);
+            this.bitDisplay1.Name = "bitDisplay1";
+            this.bitDisplay1.Size = new System.Drawing.Size(423, 49);
+            this.bitDisplay1.TabIndex = 7;
+            // 
+            // bitDisplay2
+            // 
+            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
+            this.bitDisplay2.Name = "bitDisplay2";
+            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
+            this.bitDisplay2.TabIndex = 3;
             // 
             // frmMain
             // 

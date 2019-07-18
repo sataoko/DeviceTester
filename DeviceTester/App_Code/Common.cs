@@ -148,7 +148,7 @@ namespace DeviceTester
                 System.Net.NetworkInformation.Ping pinger = new System.Net.NetworkInformation.Ping();
 
                 System.Net.NetworkInformation.PingReply reply;
-                reply = pinger.Send(ipAddress, 5);
+                reply = pinger.Send(ipAddress, 50);
                 if (reply.Status == System.Net.NetworkInformation.IPStatus.Success)
                 {
                     return true;

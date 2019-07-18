@@ -1,22 +1,4 @@
-10/5/2015 3:47:04 PM,received bytes null
-10/5/2015 3:47:55 PM,received bytes null
-10/5/2015 3:48:10 PM,received bytes null
-12/10/2015 1:58:06 PM,System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
-   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
-   --- End of inner exception stack trace ---
-   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
-   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 423
-12/10/2015 1:58:16 PM,System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine. ---> System.Net.Sockets.SocketException: An established connection was aborted by the software in your host machine
-   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
-   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
-   --- End of inner exception stack trace ---
-   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
-   at TCPDeviceTester.frmMain.SendBytesToDevice(Byte[] bytesToSend) in F:\__DropBox\Dropbox\C#.NET\C# Projects\DeviceTester\DeviceTester\frmMain.cs:line 423
-12/10/2015 1:58:19 PM,IP Problem
-12/10/2015 1:58:21 PM,IP Problem
-12/10/2015 1:58:27 PM,received bytes null
-12/10/2015 1:58:32 PM,received bytes null
-12/30/2015 3:03:58 PM,IP Problem
-12/30/2015 3:04:00 PM,IP Problem
-12/30/2015 3:04:01 PM,IP Problem
+2/19/2018 11:50:33 PM,,21 100 6 5 3 8 20 0 255 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,d
+2/19/2018 11:50:53 PM,02 30 49 03 78,a,6 48 73 73 3 53 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,0II5
+2/19/2018 11:58:26 PM,,6 48 73 73 3 53 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,0II5
+2/19/2018 11:58:32 PM,,6 48 73 73 3 53 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ,0II5
