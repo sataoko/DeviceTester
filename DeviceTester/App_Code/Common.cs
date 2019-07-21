@@ -76,8 +76,11 @@ namespace DeviceTester
 
     */
 
+
         public static byte[] GetBytesFromHex(string hexString)
         {
+            hexString = hexString.Replace(" ", "");
+
             string[] bytes = new string[hexString.Length / 2];
 
             string s = string.Empty;
@@ -96,12 +99,29 @@ namespace DeviceTester
             byte[] bytesToSend = new byte[bytes.Length];
             for (int i = 0; i < bytes.Length; i++)
                 bytesToSend[i] = byte.Parse(bytes[i], System.Globalization.NumberStyles.HexNumber);
-            
+
             return bytesToSend;
 
         }
 
+        public static string GetString(byte[] byteArray)
+        {
+            string s = string.Empty;
+            for (int i = 0; i < byteArray.Length; i++)
+            {
+                if (byteArray[i] == 0) byteArray[i] = 46;
+            }
 
+            //return Encoding.ASCII.GetString(byteArray);
+            return ASCIIEncoding.Default.GetString(byteArray);
+
+            for (int i = 0; i < byteArray.Length; i++)
+            {
+                byte b = byteArray[i];
+                s += Convert.ToChar(b).ToString();
+            }
+            return s;
+        }
 
         public static string GetBits(byte b)
         {
@@ -170,8 +190,6 @@ namespace DeviceTester
 
             return  t.RequestData(command);
         }
-
-       
 
         public static DateTime RetrieveLinkerTimestamp()
         {

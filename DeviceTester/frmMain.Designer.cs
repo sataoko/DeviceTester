@@ -102,14 +102,15 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSendViaPython = new System.Windows.Forms.ToolStripButton();
             this.cbPythonSenders = new System.Windows.Forms.ToolStripComboBox();
+            this.tsbRunPythonInCommandPrompt = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSNMPSend = new System.Windows.Forms.ToolStripButton();
             this.tsbSNMPSet = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tslConnectionType = new System.Windows.Forms.ToolStripLabel();
             this.cbConnectionType = new System.Windows.Forms.ToolStripComboBox();
             this.tsbErrorMessageClear = new System.Windows.Forms.ToolStripButton();
-            this.tsbSendToComPort = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbTest = new System.Windows.Forms.ToolStripButton();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.pnlInstructions = new System.Windows.Forms.Panel();
             this.tbcDevice = new System.Windows.Forms.TabControl();
@@ -174,6 +175,8 @@
             this.tsbMoveTimerRowUp = new System.Windows.Forms.ToolStripButton();
             this.tsbMoveTimerRowDown = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chronometer1 = new DeviceTester.Chronometer();
+            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
             this.tlsTimerCommandsControl = new System.Windows.Forms.ToolStrip();
             this.tsbStartTimer = new System.Windows.Forms.ToolStripButton();
             this.tsbStopTimer2 = new System.Windows.Forms.ToolStripButton();
@@ -182,6 +185,7 @@
             this.tsbSetTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tsbToogleCounterTimerInterval = new System.Windows.Forms.ToolStripButton();
             this.tpConsole = new System.Windows.Forms.TabPage();
+            this.shellControl1 = new DeviceTester.ShellControl();
             this.pnlConsoleBottom = new System.Windows.Forms.Panel();
             this.lnkSelectDOSCommand = new System.Windows.Forms.LinkLabel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -199,6 +203,7 @@
             this.ctxHexBoxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.miCopyHexBoxToClipboard = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlBitsHolder = new System.Windows.Forms.Panel();
+            this.bitDisplay1 = new DeviceTester.BitDisplay();
             this.lblByteNo = new System.Windows.Forms.Label();
             this.txtSentCommand = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -210,6 +215,7 @@
             this.ASCII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBits = new System.Windows.Forms.Panel();
+            this.bitDisplay2 = new DeviceTester.BitDisplay();
             this.lblBits = new System.Windows.Forms.Label();
             this.tlsIncomingBytes = new System.Windows.Forms.ToolStrip();
             this.tsbClearIncomingBytes = new System.Windows.Forms.ToolStripButton();
@@ -258,11 +264,7 @@
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
-            this.chronometer1 = new DeviceTester.Chronometer();
-            this.sevenSegmentArray2 = new DeviceTester.SevenSegmentArray();
-            this.shellControl1 = new DeviceTester.ShellControl();
-            this.bitDisplay1 = new DeviceTester.BitDisplay();
-            this.bitDisplay2 = new DeviceTester.BitDisplay();
+            this.tsbGetPythonCommandLineText = new System.Windows.Forms.ToolStripButton();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.cmsInstructionsGrid.SuspendLayout();
@@ -347,6 +349,7 @@
             // 
             // lblComPortInfo
             // 
+            this.lblComPortInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblComPortInfo.Name = "lblComPortInfo";
             this.lblComPortInfo.Size = new System.Drawing.Size(16, 17);
             this.lblComPortInfo.Text = "...";
@@ -759,14 +762,16 @@
             this.toolStripSeparator13,
             this.tsbSendViaPython,
             this.cbPythonSenders,
+            this.tsbRunPythonInCommandPrompt,
+            this.tsbGetPythonCommandLineText,
+            this.toolStripSeparator6,
             this.btnSNMPSend,
             this.tsbSNMPSet,
             this.toolStripSeparator12,
             this.tslConnectionType,
             this.cbConnectionType,
             this.tsbErrorMessageClear,
-            this.tsbSendToComPort,
-            this.toolStripSeparator6});
+            this.tsbTest});
             this.tlsSend.Location = new System.Drawing.Point(0, 659);
             this.tlsSend.Name = "tlsSend";
             this.tlsSend.Size = new System.Drawing.Size(1084, 38);
@@ -815,6 +820,22 @@
             this.cbPythonSenders.Size = new System.Drawing.Size(121, 38);
             this.cbPythonSenders.Text = "python_socket.py";
             this.cbPythonSenders.SelectedIndexChanged += new System.EventHandler(this.cbPythonSenders_SelectedIndexChanged);
+            // 
+            // tsbRunPythonInCommandPrompt
+            // 
+            this.tsbRunPythonInCommandPrompt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRunPythonInCommandPrompt.Image = ((System.Drawing.Image)(resources.GetObject("tsbRunPythonInCommandPrompt.Image")));
+            this.tsbRunPythonInCommandPrompt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRunPythonInCommandPrompt.Name = "tsbRunPythonInCommandPrompt";
+            this.tsbRunPythonInCommandPrompt.Size = new System.Drawing.Size(23, 35);
+            this.tsbRunPythonInCommandPrompt.Text = "Run Python In Command Prompt";
+            this.tsbRunPythonInCommandPrompt.ToolTipText = "Run python in command prompt";
+            this.tsbRunPythonInCommandPrompt.Click += new System.EventHandler(this.TsbRunPythonInCommandPrompt_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
             // 
             // btnSNMPSend
             // 
@@ -867,21 +888,15 @@
             this.tsbErrorMessageClear.Text = "Error Message";
             this.tsbErrorMessageClear.Click += new System.EventHandler(this.tsbErrorMessageClear_Click);
             // 
-            // tsbSendToComPort
+            // tsbTest
             // 
-            this.tsbSendToComPort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbSendToComPort.Image = ((System.Drawing.Image)(resources.GetObject("tsbSendToComPort.Image")));
-            this.tsbSendToComPort.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSendToComPort.Name = "tsbSendToComPort";
-            this.tsbSendToComPort.Size = new System.Drawing.Size(105, 35);
-            this.tsbSendToComPort.Text = "Send to Com Port";
-            this.tsbSendToComPort.Visible = false;
-            this.tsbSendToComPort.Click += new System.EventHandler(this.tsbSendToComPort_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
+            this.tsbTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbTest.Image = ((System.Drawing.Image)(resources.GetObject("tsbTest.Image")));
+            this.tsbTest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbTest.Name = "tsbTest";
+            this.tsbTest.Size = new System.Drawing.Size(32, 35);
+            this.tsbTest.Text = "Test";
+            this.tsbTest.Click += new System.EventHandler(this.tsbTest_Click);
             // 
             // splitContainerMain
             // 
@@ -1606,6 +1621,30 @@
             this.panel1.Size = new System.Drawing.Size(485, 100);
             this.panel1.TabIndex = 7;
             // 
+            // chronometer1
+            // 
+            this.chronometer1.Location = new System.Drawing.Point(164, 27);
+            this.chronometer1.Name = "chronometer1";
+            this.chronometer1.Size = new System.Drawing.Size(294, 64);
+            this.chronometer1.TabIndex = 30;
+            // 
+            // sevenSegmentArray2
+            // 
+            this.sevenSegmentArray2.ArrayCount = 2;
+            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
+            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
+            this.sevenSegmentArray2.DecimalShow = false;
+            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
+            this.sevenSegmentArray2.ElementWidth = 10;
+            this.sevenSegmentArray2.ItalicFactor = 0F;
+            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
+            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
+            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
+            this.sevenSegmentArray2.TabIndex = 29;
+            this.sevenSegmentArray2.TabStop = false;
+            this.sevenSegmentArray2.Value = null;
+            // 
             // tlsTimerCommandsControl
             // 
             this.tlsTimerCommandsControl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1684,6 +1723,20 @@
             this.tpConsole.TabIndex = 3;
             this.tpConsole.Text = "Console";
             this.tpConsole.UseVisualStyleBackColor = true;
+            // 
+            // shellControl1
+            // 
+            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.Location = new System.Drawing.Point(0, 24);
+            this.shellControl1.Name = "shellControl1";
+            this.shellControl1.Prompt = ">";
+            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
+            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
+            this.shellControl1.Size = new System.Drawing.Size(491, 520);
+            this.shellControl1.TabIndex = 26;
+            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
             // 
             // pnlConsoleBottom
             // 
@@ -1891,6 +1944,13 @@
             this.pnlBitsHolder.Size = new System.Drawing.Size(553, 64);
             this.pnlBitsHolder.TabIndex = 34;
             // 
+            // bitDisplay1
+            // 
+            this.bitDisplay1.Location = new System.Drawing.Point(110, 4);
+            this.bitDisplay1.Name = "bitDisplay1";
+            this.bitDisplay1.Size = new System.Drawing.Size(423, 54);
+            this.bitDisplay1.TabIndex = 7;
+            // 
             // lblByteNo
             // 
             this.lblByteNo.AutoSize = true;
@@ -2017,6 +2077,13 @@
             this.pnlBits.Name = "pnlBits";
             this.pnlBits.Size = new System.Drawing.Size(553, 82);
             this.pnlBits.TabIndex = 1;
+            // 
+            // bitDisplay2
+            // 
+            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
+            this.bitDisplay2.Name = "bitDisplay2";
+            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
+            this.bitDisplay2.TabIndex = 3;
             // 
             // lblBits
             // 
@@ -2571,57 +2638,15 @@
             this.tsbConnectToComPort.Text = "Connect";
             this.tsbConnectToComPort.Click += new System.EventHandler(this.tsbConnectToComPort_Click);
             // 
-            // chronometer1
+            // tsbGetPythonCommandLineText
             // 
-            this.chronometer1.Location = new System.Drawing.Point(164, 27);
-            this.chronometer1.Name = "chronometer1";
-            this.chronometer1.Size = new System.Drawing.Size(294, 64);
-            this.chronometer1.TabIndex = 30;
-            // 
-            // sevenSegmentArray2
-            // 
-            this.sevenSegmentArray2.ArrayCount = 2;
-            this.sevenSegmentArray2.ColorBackground = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorDark = System.Drawing.Color.Black;
-            this.sevenSegmentArray2.ColorLight = System.Drawing.Color.Crimson;
-            this.sevenSegmentArray2.DecimalShow = false;
-            this.sevenSegmentArray2.ElementPadding = new System.Windows.Forms.Padding(4);
-            this.sevenSegmentArray2.ElementWidth = 10;
-            this.sevenSegmentArray2.ItalicFactor = 0F;
-            this.sevenSegmentArray2.Location = new System.Drawing.Point(27, 31);
-            this.sevenSegmentArray2.Name = "sevenSegmentArray2";
-            this.sevenSegmentArray2.Size = new System.Drawing.Size(71, 60);
-            this.sevenSegmentArray2.TabIndex = 29;
-            this.sevenSegmentArray2.TabStop = false;
-            this.sevenSegmentArray2.Value = null;
-            // 
-            // shellControl1
-            // 
-            this.shellControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shellControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.Location = new System.Drawing.Point(0, 24);
-            this.shellControl1.Name = "shellControl1";
-            this.shellControl1.Prompt = ">";
-            this.shellControl1.ShellTextBackColor = System.Drawing.Color.Black;
-            this.shellControl1.ShellTextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shellControl1.ShellTextForeColor = System.Drawing.Color.FloralWhite;
-            this.shellControl1.Size = new System.Drawing.Size(491, 520);
-            this.shellControl1.TabIndex = 26;
-            this.shellControl1.CommandEntered += new DeviceTester.EventCommandEntered(this.shellControl1_CommandEntered);
-            // 
-            // bitDisplay1
-            // 
-            this.bitDisplay1.Location = new System.Drawing.Point(110, 4);
-            this.bitDisplay1.Name = "bitDisplay1";
-            this.bitDisplay1.Size = new System.Drawing.Size(423, 54);
-            this.bitDisplay1.TabIndex = 7;
-            // 
-            // bitDisplay2
-            // 
-            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
-            this.bitDisplay2.Name = "bitDisplay2";
-            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
-            this.bitDisplay2.TabIndex = 3;
+            this.tsbGetPythonCommandLineText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbGetPythonCommandLineText.Image = ((System.Drawing.Image)(resources.GetObject("tsbGetPythonCommandLineText.Image")));
+            this.tsbGetPythonCommandLineText.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGetPythonCommandLineText.Name = "tsbGetPythonCommandLineText";
+            this.tsbGetPythonCommandLineText.Size = new System.Drawing.Size(23, 35);
+            this.tsbGetPythonCommandLineText.Text = "Copy Command To Clipboard";
+            this.tsbGetPythonCommandLineText.Click += new System.EventHandler(this.TsbGetPythonCommandLineText_Click);
             // 
             // frmMain
             // 
@@ -2802,7 +2827,7 @@
         private System.Windows.Forms.CheckBox chkUseCheckSum;
         private System.Windows.Forms.ToolStripStatusLabel lblConnectionType;
         private System.Windows.Forms.ToolStripButton tsbCalculateCheckSum;
-        private System.Windows.Forms.ToolStripButton tsbSendToComPort;
+        private System.Windows.Forms.ToolStripButton tsbTest;
         private System.Windows.Forms.ToolStripButton tsbConnectToComPort;
         private System.Windows.Forms.ToolStripStatusLabel lblComPortInfo;
         private System.Windows.Forms.ToolStrip tlsIncomingBytes;
@@ -2947,6 +2972,8 @@
         private System.Windows.Forms.ToolStripButton tsbShowLogs;
         private System.Windows.Forms.ContextMenuStrip ctxHexBoxMenu;
         private System.Windows.Forms.ToolStripMenuItem miCopyHexBoxToClipboard;
+        private System.Windows.Forms.ToolStripButton tsbRunPythonInCommandPrompt;
+        private System.Windows.Forms.ToolStripButton tsbGetPythonCommandLineText;
     }
 }
 

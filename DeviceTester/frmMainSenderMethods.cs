@@ -59,22 +59,26 @@ namespace DeviceTester
 
         private void SendViaSerialPort(byte[] bytesToSend)
         {
-            var stopWatch = new System.Diagnostics.Stopwatch();
-            stopWatch.Start();
-            try
+            if (serialPort1.IsOpen)
             {
-                _serialPortBuffer.Clear();
-                _serialPortPacketCount = 0;
-                if (serialPort1.IsOpen)
-                    serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
-            }
-            catch (Exception exc)
-            {
-                txtReceivedBytesASCII.Text = exc.ToString();
-            }
+                var stopWatch = new System.Diagnostics.Stopwatch();
+                stopWatch.Start();
+                try
+                {
+                    _serialPortBuffer.Clear();
+                    _serialPortPacketCount = 0;
 
-            stopWatch.Stop();
-            lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";
+                    serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
+                }
+                catch (Exception exc)
+                {
+                    txtReceivedBytesASCII.Text = exc.ToString();
+                }
+
+                stopWatch.Stop();
+                lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";
+            }
+            else MessageBox.Show("Open serial port.");
         }
 
         private void SendViaTCPConnected(byte[] bytesToSend)

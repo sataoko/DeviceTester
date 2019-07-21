@@ -29,7 +29,7 @@ namespace DeviceTester
                 serialPort1.Read(b, 0, serialPort1.BytesToRead);
                 for (int i = 0; i < b.Length; i++) _serialPortBuffer.Add(b[i]);
 
-                _rxString = serialPort1.ReadExisting();
+                //_rxString = serialPort1.ReadExisting();
 
                 //System.Threading.Thread x = new System.Threading.Thread(new System.Threading.ThreadStart(DisplayText));
                 //this.Invoke(new EventHandler(DisplayText));
@@ -66,15 +66,15 @@ namespace DeviceTester
 
                     byte[] byteArray = _serialPortBuffer.ToArray();
 
-                    //string s=string.Empty;
-                    //for (int i = 0; i < byteArray.Length; i++)
-                    //    s += Convert.ToChar(byteArray[i]).ToString();
-                    //txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, s);
-
-                    txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, System.Text.Encoding.UTF8.GetString(byteArray));
-
                     DynamicByteProvider b = new DynamicByteProvider(byteArray);
                     hexReceivedBytes.ByteProvider = b;
+
+                    string s = Common.GetString(byteArray);
+                    txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, s);
+
+                    //txtReceivedBytesASCII.Text = txtReceivedBytesASCII.Text.Insert(0, System.Text.Encoding.UTF8.GetString(byteArray));
+
+                    
                 }
                 catch (Exception exc)
                 {
@@ -111,45 +111,42 @@ namespace DeviceTester
             }
         }
 
-        private void tsbSendToComPort_Click(object sender, EventArgs e)
+
+        private void OpenSerialPort()
         {
-            if (dgvInstructions.CurrentRow != null)
+            try
             {
-                string bytes = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
-                byte[] bytesToSend = GetBytes(bytes);
-                serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
+                if(!serialPort1.IsOpen)
+                {
+                    serialPort1.Open();
+                    tsbConnectToComPort.Text = "Disconnect";
+                    tsbConnectToComPort.Image = Properties.Resources.green_light;
+                    SetConnectionType(ConnectionType.ComPort);
+                }
             }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+            }
+        }
+
+        private void CloseSerialPort()
+        {
+            serialPort1.Close();
+            tsbConnectToComPort.Text = "Connect";
+            tsbConnectToComPort.Image = Properties.Resources.red_light;
+            SetConnectionType(ConnectionType.TCPIPStandard);
         }
 
         private void tsbConnectToComPort_Click(object sender, EventArgs e)
         {
-            try
+            if (serialPort1.IsOpen)
             {
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Close();
-                    tsbConnectToComPort.Text = "Connect";
-                    tsbConnectToComPort.Image = Properties.Resources.red_light;
-                    SetConnectionType(ConnectionType.TCPIPStandard);
-                }
-                else
-                {
-                    try
-                    {
-                        serialPort1.Open();
-                        tsbConnectToComPort.Text = "Disconnect";
-                        tsbConnectToComPort.Image = Properties.Resources.green_light;
-                        SetConnectionType(ConnectionType.ComPort);
-                    }
-                    catch (Exception exp)
-                    {
-                        MessageBox.Show(exp.ToString());
-                    }
-                }
+                CloseSerialPort();
             }
-            catch (Exception exc)
+            else
             {
-                MessageBox.Show(exc.ToString());
+                OpenSerialPort();
             }
         }
     }

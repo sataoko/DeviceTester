@@ -131,9 +131,31 @@ namespace DeviceTester
             //tsbErrorMessageClear.Image = 
         }
 
-        private void tsbSendBytesToDevice_Click(object sender, EventArgs e)
+        private string GetSelectedByteArray()
         {
             if (tbcDevice.SelectedIndex == 0)
+            {
+                if (dgvInstructions.CurrentRow != null)
+                    return dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
+                else
+                {
+                    MessageBox.Show("Select a row.");
+                    return string.Empty;
+                }
+            }
+            else if (tbcDevice.SelectedIndex == 2)
+            {
+                return GetWorkbenchCurrentLineBytes();
+            }
+            else return string.Empty;
+        }
+
+        private void tsbSendBytesToDevice_Click(object sender, EventArgs e)
+        {
+            string bytes = GetSelectedByteArray();
+            if (!string.IsNullOrEmpty(bytes)) SendBytesToDevice(bytes);
+
+            /*if (tbcDevice.SelectedIndex == 0)
             {
                 if (dgvInstructions.CurrentRow != null)
                     SendBytesToDevice(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString());
@@ -143,7 +165,7 @@ namespace DeviceTester
             if (tbcDevice.SelectedIndex == 2)
             {
                 SendBytesToDevice(GetWorkbenchCurrentLineBytes());
-            }
+            }*/
         }
 
         private void tsbSendFromWorkbench_Click(object sender, EventArgs e)
@@ -151,22 +173,22 @@ namespace DeviceTester
             SendBytesToDevice(GetWorkbenchCurrentLineBytes());
         }
 
-        private void tsbSendViaPython_Click(object sender, EventArgs e)
+
+        private string GetPythonFileNameToExecute()
         {
             string pythonFilename = cbPythonSenders.Text;
             if (string.IsNullOrEmpty(pythonFilename)) pythonFilename = "python_socket.py";
 
-            if (tbcDevice.SelectedIndex == 0)
-            {
-                if (dgvInstructions.CurrentRow != null)
-                    SendViaPython(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString(), pythonFilename);
-                else MessageBox.Show("Select a row.");
-            }
+            if (pythonFilename == "python_serial.py") CloseSerialPort();
 
-            if (tbcDevice.SelectedIndex == 2)
-            {
-                SendViaPython(GetWorkbenchCurrentLineBytes(), pythonFilename);
-            }
+            return pythonFilename;
+        }
+
+        private void tsbSendViaPython_Click(object sender, EventArgs e)
+        {
+            string s = GetSelectedByteArray();
+            if(!string.IsNullOrEmpty(s))
+                SendViaPython(s, GetPythonFileNameToExecute());
         }
 
         private void cbPythonSenders_SelectedIndexChanged(object sender, EventArgs e)
@@ -352,7 +374,8 @@ namespace DeviceTester
                 WriteMessage(exc.ToString());
             }
 
-            txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(bytesToShow);
+            //txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(bytesToShow);
+            txtReceivedBytesASCII.Text = Common.GetString(bytesToShow);
 
             DynamicByteProvider b = new DynamicByteProvider(bytesToShow);
             hexReceivedBytes.ByteProvider = b;
@@ -1022,7 +1045,7 @@ namespace DeviceTester
 
         #region SERIAL PORT METHODS
 
-        
+
         #endregion
 
         #region COMMAND CONSOLE RELATED METHODS       
@@ -1585,6 +1608,46 @@ namespace DeviceTester
         private void miCopyHexBoxToClipboard_Click(object sender, EventArgs e)
         {
             hexReceivedBytes.CopyHex();
+        }
+
+        //private void tsbSendToComPort_Click(object sender, EventArgs e)
+        //{
+
+
+        //    if (dgvInstructions.CurrentRow != null)
+        //    {
+        //        string bytes = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
+        //        byte[] bytesToSend = GetBytes(bytes);
+        //        serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
+        //    }
+        //}
+
+        private void tsbTest_Click(object sender, EventArgs e)
+        {
+            byte[] b2 = Common.GetBytesFromHex("06 BF 00 43 47 AA AA 40 00 00 00 02 AA 01 AA AA 10 00 00 00 02 AA 02 AA AA 04 00 00 00 02 AA 03 AA AA 01 00 00 00 02 AA 04 AA AA 00 40 00 00 02 AA 05 AA AA 00 10 00 00 02 AA 06 AA AA 00 04 00 00 02 AA 07 AA AA 00 01 00 00 02 AA 08 AA AA 00 00 40 00 02 AA 01 AA AA 00 00 10 00 02 AA 02 AA AA 00 00 04 00 02 AA 03 AA AA 00 00 01 00 02 AA 04 AA AA 00 00 00 40 02 AA 05 AA AA 00 00 00 10 02 AA 06 AA AA 00 00 00 04 02 AA 07 AA AA 00 00 00 01 02 AA 08 AA AA 00 00 00 00 42 AA 01 AA AA 00 00 00 00 12 AA 02 AA AA 00 00 00 00 06 AA 03 AA AA 00 00 00 00 02 AA 04 AA AA 55 55 55 55 56 AA 05 17 31 52");
+            //byte[] b = Common.GetBytesFromHex(txtSentCommand.Text);
+
+            txtReceivedBytesASCII.Text = Common.GetString(b2); //System.Text.ASCIIEncoding.Default.GetString(b);
+        }
+
+        private void TsbRunPythonInCommandPrompt_Click(object sender, EventArgs e)
+        {
+            string pythonExePath = Ini.IniFile.GetValue("Python", "ExePath");
+            System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
+            proc.FileName = @"C:\windows\system32\cmd.exe";
+            string byteArray =
+            proc.Arguments = @"/k "+pythonExePath+" PythonFiles/"+cbPythonSenders.Text+" \"" +GetSelectedByteArray()+"\"";
+            System.Diagnostics.Process.Start(proc);
+        }
+
+        private void TsbGetPythonCommandLineText_Click(object sender, EventArgs e)
+        {
+            string pythonExePath = Ini.IniFile.GetValue("Python", "ExePath");
+            string s = pythonExePath + " PythonFiles/" +cbPythonSenders.Text+" \"" + GetSelectedByteArray() + "\"";
+            Clipboard.SetText(s);
+            System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
+            proc.FileName = @"C:\windows\system32\cmd.exe";
+            System.Diagnostics.Process.Start(proc);
         }
     }
 }
