@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+//using System.Text;
 
 namespace DeviceTester
 {
@@ -106,6 +106,14 @@ namespace DeviceTester
 
         public static string GetString(byte[] byteArray)
         {
+            string s = string.Empty;
+            for (int i = 0; i < byteArray.Length; i++)
+            {
+                if (byteArray[i] == 0) s += " ";else
+                s += (char)byteArray[i];
+            }
+                
+            return s;
             //string s = string.Empty;
             //for (int i = 0; i < byteArray.Length; i++)
             //{
@@ -113,7 +121,8 @@ namespace DeviceTester
             //}
 
             //return Encoding.ASCII.GetString(byteArray);
-            return ASCIIEncoding.Default.GetString(byteArray);
+            //return System.Text.ASCIIEncoding.Default.GetString(byteArray);
+            return System.Text.Encoding.Default.GetString(byteArray);
         }
 
         public static string GetBits(byte b)

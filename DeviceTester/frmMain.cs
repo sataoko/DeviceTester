@@ -346,13 +346,10 @@ namespace DeviceTester
             }
         }
 
-        private string ShowBytesInTextBoxes(byte[] bytesToShow)
+        private void ShowBytesInTextBoxes(byte[] bytesToShow)
         {
-            dgvIncomingBytes.Rows.Clear();
-
-            Convertor c = new Convertor();
-            
-
+            //SHOW ASCII
+            txtReceivedBytesASCII.Text = Common.GetString(bytesToShow);
             //SHOW HEX
             DynamicByteProvider b = new DynamicByteProvider(bytesToShow);
             hexReceivedBytes.ByteProvider = b;
@@ -368,17 +365,13 @@ namespace DeviceTester
             }
             
             if (bytesToShow.Length < readSize) readSize = bytesToShow.Length;
-
+            dgvIncomingBytes.Rows.Clear();
             for (int i = 0; i < readSize; i++)
                 dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), (char)bytesToShow[i], bytesToShow[i].ToString("X2"));
 
+            //LOG
             string bytesInHex = BitConverter.ToString(bytesToShow).Replace("-", " ");
             if (chkSaveLog.Checked) SaveInstructionLog(txtSentCommand.Text, bytesInHex, txtReceivedBytesASCII.Text);
-
-            //SHOW ASCII
-            txtReceivedBytesASCII.Text = Common.GetString(bytesToShow);
-
-            return txtReceivedBytesASCII.Text;
         }
 
         private void SaveLog(string logText)
@@ -1594,25 +1587,15 @@ namespace DeviceTester
         {
             hexReceivedBytes.CopyHex();
         }
-
-        //private void tsbSendToComPort_Click(object sender, EventArgs e)
-        //{
-
-
-        //    if (dgvInstructions.CurrentRow != null)
-        //    {
-        //        string bytes = dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString();
-        //        byte[] bytesToSend = GetBytes(bytes);
-        //        serialPort1.Write(bytesToSend, 0, bytesToSend.Length);
-        //    }
-        //}
-
+      
         private void tsbTest_Click(object sender, EventArgs e)
         {
             byte[] b2 = Common.GetBytesFromHex("06 BF 00 43 47 AA AA 40 00 00 00 02 AA 01 AA AA 10 00 00 00 02 AA 02 AA AA 04 00 00 00 02 AA 03 AA AA 01 00 00 00 02 AA 04 AA AA 00 40 00 00 02 AA 05 AA AA 00 10 00 00 02 AA 06 AA AA 00 04 00 00 02 AA 07 AA AA 00 01 00 00 02 AA 08 AA AA 00 00 40 00 02 AA 01 AA AA 00 00 10 00 02 AA 02 AA AA 00 00 04 00 02 AA 03 AA AA 00 00 01 00 02 AA 04 AA AA 00 00 00 40 02 AA 05 AA AA 00 00 00 10 02 AA 06 AA AA 00 00 00 04 02 AA 07 AA AA 00 00 00 01 02 AA 08 AA AA 00 00 00 00 42 AA 01 AA AA 00 00 00 00 12 AA 02 AA AA 00 00 00 00 06 AA 03 AA AA 00 00 00 00 02 AA 04 AA AA 55 55 55 55 56 AA 05 17 31 52");
             //byte[] b = Common.GetBytesFromHex(txtSentCommand.Text);
 
-            txtReceivedBytesASCII.Text = Common.GetString(b2); //System.Text.ASCIIEncoding.Default.GetString(b);
+            ShowBytesInTextBoxes(b2);
+
+            //txtReceivedBytesASCII.Text = Common.GetString(b2); //System.Text.ASCIIEncoding.Default.GetString(b);
         }
 
         private void TsbRunPythonInCommandPrompt_Click(object sender, EventArgs e)
