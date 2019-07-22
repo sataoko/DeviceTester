@@ -141,8 +141,7 @@ namespace DeviceTester
                     t.CommunicationTimeOut = Convert.ToInt16(txtTCPClientCommunicationTimeOut.Text);
                     t.ReadBufferSize = Convert.ToInt16(txtReadBufferSize.Text);
 
-                    byte[] receivedBytes = new byte[t.ReadBufferSize];
-                    receivedBytes = t.RequestData(bytesToSend);
+                    byte[] receivedBytes = t.RequestData(bytesToSend);
 
                     stopWatch.Stop();
                     lblCommandExecutionTime.Text = "Send and Read Time:" + stopWatch.ElapsedMilliseconds.ToString() + " ms";

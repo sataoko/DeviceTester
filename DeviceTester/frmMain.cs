@@ -154,18 +154,6 @@ namespace DeviceTester
         {
             string bytes = GetSelectedByteArray();
             if (!string.IsNullOrEmpty(bytes)) SendBytesToDevice(bytes);
-
-            /*if (tbcDevice.SelectedIndex == 0)
-            {
-                if (dgvInstructions.CurrentRow != null)
-                    SendBytesToDevice(dgvInstructions.CurrentRow.Cells["InstructionBytes"].Value.ToString());
-                else MessageBox.Show("Select a row.");
-            }
-
-            if (tbcDevice.SelectedIndex == 2)
-            {
-                SendBytesToDevice(GetWorkbenchCurrentLineBytes());
-            }*/
         }
 
         private void tsbSendFromWorkbench_Click(object sender, EventArgs e)
@@ -1648,6 +1636,12 @@ namespace DeviceTester
             System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
             proc.FileName = @"C:\windows\system32\cmd.exe";
             System.Diagnostics.Process.Start(proc);
+        }
+
+        private void MiCharMap_Click(object sender, EventArgs e)
+        {
+            frmCharMap x = new frmCharMap();
+            x.Show();
         }
     }
 }

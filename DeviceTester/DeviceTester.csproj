@@ -161,6 +161,12 @@
     <Compile Include="InputSelectionWindows\frmHexKeyboard.Designer.cs">
       <DependentUpon>frmHexKeyboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\frmCharMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmCharMap.Designer.cs">
+      <DependentUpon>frmCharMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\frmHTTPTester.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InputSelectionWindows\frmHexKeyboard.resx">
       <DependentUpon>frmHexKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmCharMap.resx">
+      <DependentUpon>frmCharMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\frmHTTPTester.resx">
       <DependentUpon>frmHTTPTester.cs</DependentUpon>

@@ -61,6 +61,7 @@
             this.miSSHTester = new System.Windows.Forms.ToolStripMenuItem();
             this.miSuperConsole = new System.Windows.Forms.ToolStripMenuItem();
             this.miPythonConsole = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCharMap = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,6 +104,7 @@
             this.tsbSendViaPython = new System.Windows.Forms.ToolStripButton();
             this.cbPythonSenders = new System.Windows.Forms.ToolStripComboBox();
             this.tsbRunPythonInCommandPrompt = new System.Windows.Forms.ToolStripButton();
+            this.tsbGetPythonCommandLineText = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSNMPSend = new System.Windows.Forms.ToolStripButton();
             this.tsbSNMPSet = new System.Windows.Forms.ToolStripButton();
@@ -264,7 +266,6 @@
             this.tlsMain2 = new System.Windows.Forms.ToolStrip();
             this.tsbComPortSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbConnectToComPort = new System.Windows.Forms.ToolStripButton();
-            this.tsbGetPythonCommandLineText = new System.Windows.Forms.ToolStripButton();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.cmsInstructionsGrid.SuspendLayout();
@@ -423,7 +424,8 @@
             this.miNetworkTools,
             this.miSSHTester,
             this.miSuperConsole,
-            this.miPythonConsole});
+            this.miPythonConsole,
+            this.miCharMap});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -462,6 +464,13 @@
             this.miPythonConsole.Size = new System.Drawing.Size(158, 22);
             this.miPythonConsole.Text = "Python Console";
             this.miPythonConsole.Click += new System.EventHandler(this.miPythonConsole_Click);
+            // 
+            // miCharMap
+            // 
+            this.miCharMap.Name = "miCharMap";
+            this.miCharMap.Size = new System.Drawing.Size(158, 22);
+            this.miCharMap.Text = "Char Map";
+            this.miCharMap.Click += new System.EventHandler(this.MiCharMap_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -831,6 +840,16 @@
             this.tsbRunPythonInCommandPrompt.Text = "Run Python In Command Prompt";
             this.tsbRunPythonInCommandPrompt.ToolTipText = "Run python in command prompt";
             this.tsbRunPythonInCommandPrompt.Click += new System.EventHandler(this.TsbRunPythonInCommandPrompt_Click);
+            // 
+            // tsbGetPythonCommandLineText
+            // 
+            this.tsbGetPythonCommandLineText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbGetPythonCommandLineText.Image = ((System.Drawing.Image)(resources.GetObject("tsbGetPythonCommandLineText.Image")));
+            this.tsbGetPythonCommandLineText.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGetPythonCommandLineText.Name = "tsbGetPythonCommandLineText";
+            this.tsbGetPythonCommandLineText.Size = new System.Drawing.Size(23, 35);
+            this.tsbGetPythonCommandLineText.Text = "Copy Command To Clipboard";
+            this.tsbGetPythonCommandLineText.Click += new System.EventHandler(this.TsbGetPythonCommandLineText_Click);
             // 
             // toolStripSeparator6
             // 
@@ -2638,16 +2657,6 @@
             this.tsbConnectToComPort.Text = "Connect";
             this.tsbConnectToComPort.Click += new System.EventHandler(this.tsbConnectToComPort_Click);
             // 
-            // tsbGetPythonCommandLineText
-            // 
-            this.tsbGetPythonCommandLineText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbGetPythonCommandLineText.Image = ((System.Drawing.Image)(resources.GetObject("tsbGetPythonCommandLineText.Image")));
-            this.tsbGetPythonCommandLineText.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGetPythonCommandLineText.Name = "tsbGetPythonCommandLineText";
-            this.tsbGetPythonCommandLineText.Size = new System.Drawing.Size(23, 35);
-            this.tsbGetPythonCommandLineText.Text = "Copy Command To Clipboard";
-            this.tsbGetPythonCommandLineText.Click += new System.EventHandler(this.TsbGetPythonCommandLineText_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2974,6 +2983,7 @@
         private System.Windows.Forms.ToolStripMenuItem miCopyHexBoxToClipboard;
         private System.Windows.Forms.ToolStripButton tsbRunPythonInCommandPrompt;
         private System.Windows.Forms.ToolStripButton tsbGetPythonCommandLineText;
+        private System.Windows.Forms.ToolStripMenuItem miCharMap;
     }
 }
 
