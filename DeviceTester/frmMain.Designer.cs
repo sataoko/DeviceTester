@@ -2099,9 +2099,9 @@
             // 
             // bitDisplay2
             // 
-            this.bitDisplay2.Location = new System.Drawing.Point(17, 16);
+            this.bitDisplay2.Location = new System.Drawing.Point(96, 6);
             this.bitDisplay2.Name = "bitDisplay2";
-            this.bitDisplay2.Size = new System.Drawing.Size(341, 49);
+            this.bitDisplay2.Size = new System.Drawing.Size(389, 60);
             this.bitDisplay2.TabIndex = 3;
             // 
             // lblBits

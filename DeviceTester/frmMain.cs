@@ -351,8 +351,13 @@ namespace DeviceTester
             dgvIncomingBytes.Rows.Clear();
 
             Convertor c = new Convertor();
-            int readSize = 100;
+            
 
+            //SHOW HEX
+            DynamicByteProvider b = new DynamicByteProvider(bytesToShow);
+            hexReceivedBytes.ByteProvider = b;
+            //SHOW IN GRID
+            int readSize = 100;
             try
             {
                 readSize = Convert.ToUInt16(txtReadBufferSize.Text);
@@ -361,25 +366,17 @@ namespace DeviceTester
             {
                 WriteMessage(exc.ToString());
             }
-
-            //txtReceivedBytesASCII.Text = ASCIIEncoding.ASCII.GetString(bytesToShow);
-            txtReceivedBytesASCII.Text = Common.GetString(bytesToShow);
-
-            DynamicByteProvider b = new DynamicByteProvider(bytesToShow);
-            hexReceivedBytes.ByteProvider = b;
-
-            string bytesInHex = string.Empty;
-
+            
             if (bytesToShow.Length < readSize) readSize = bytesToShow.Length;
 
             for (int i = 0; i < readSize; i++)
-            {
-                //  txtReceivedBytesASCII.Text += bytesToShow[i].ToString() + _delimiter;
-                bytesInHex += c.DecimalToHex(bytesToShow[i].ToString()) + " ";
-                dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), (char)bytesToShow[i], c.DecimalToHex(bytesToShow[i].ToString()));
-            }
+                dgvIncomingBytes.Rows.Add(i.ToString(), bytesToShow[i].ToString(), (char)bytesToShow[i], bytesToShow[i].ToString("X2"));
 
+            string bytesInHex = BitConverter.ToString(bytesToShow).Replace("-", " ");
             if (chkSaveLog.Checked) SaveInstructionLog(txtSentCommand.Text, bytesInHex, txtReceivedBytesASCII.Text);
+
+            //SHOW ASCII
+            txtReceivedBytesASCII.Text = Common.GetString(bytesToShow);
 
             return txtReceivedBytesASCII.Text;
         }
@@ -820,7 +817,7 @@ namespace DeviceTester
 
         #region CHECKSUM CALCULATOR METHODS
 
-        private string CalculateCheckSumInBSV(string blankSeparatedValue)
+        /*private string CalculateCheckSumInBSV(string blankSeparatedValue)
         {
             //byte[] byteArray = Common.GetBytes(blankSeparatedValue, ' ');
             byte[] byteArray = Common.ConvertHexStringToByteArray(blankSeparatedValue);
@@ -841,7 +838,7 @@ namespace DeviceTester
             //ctype = (CRCType)Enum.Parse(typeof(CRCType), cbCheckSumTypes.Text, true);
 
             return GetCRC.CalculateCheckSum(byteArray, ctype).HexString;
-        }
+        }*/
 
         private string CalculateCheckSum(string hexValue)
         {
